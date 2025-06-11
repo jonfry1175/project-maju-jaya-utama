@@ -8,81 +8,80 @@ const Header = () => {
 
   const navItems = [
     { name: "Beranda", href: "#hero" },
-    { name: "Tentang Kami", href: "#about" },
+    { name: "Tentang", href: "#about" },
     { name: "Layanan", href: "#services" },
-    { name: "Mengapa Kami", href: "#why-us" },
     { name: "Proses", href: "#process" },
     { name: "Kontak", href: "#contact" }
   ];
 
   return (
-    <header className="bg-white/95 backdrop-blur-md border-b border-border sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-4">
+    <header className="bg-background/80 blur-backdrop border-b border-border/60 sticky top-0 z-50 transition-all duration-300">
+      <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-brand rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">G</span>
+          {/* Logo - More Compact */}
+          <div className="flex items-center space-x-2.5">
+            <div className="w-9 h-9 bg-gradient-brand rounded-xl flex items-center justify-center shadow-soft">
+              <span className="text-white font-bold text-base">G</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-primary font-poppins">
+              <h1 className="text-lg font-bold text-primary font-poppins leading-tight">
                 Global Sinergi Kapital
               </h1>
-              <p className="text-sm text-muted-foreground">Mitra Strategis Anda Menuju IPO</p>
+              <p className="text-xs text-muted-foreground font-medium">Mitra Strategis IPO</p>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Refined */}
+          <nav className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
               >
                 {item.name}
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+          {/* CTA Buttons - More Professional */}
+          <div className="hidden lg:flex items-center space-x-3">
+            <Button variant="ghost" size="sm" className="text-sm font-medium">
               Konsultasi Gratis
             </Button>
-            <Button className="bg-gradient-brand hover:opacity-90" size="sm">
+            <Button className="bg-gradient-brand hover:opacity-90 shadow-brand text-sm font-medium px-6">
               Hubungi Kami
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2 hover:bg-muted/50 rounded-lg transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Enhanced */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
-            <nav className="flex flex-col space-y-4 mt-4">
+          <div className="lg:hidden mt-4 pb-4 border-t border-border/60 animate-fade-up">
+            <nav className="flex flex-col space-y-1 mt-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  className="px-4 py-3 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" size="sm">
+              <div className="flex flex-col space-y-2 pt-4 px-4">
+                <Button variant="ghost" size="sm" className="justify-start">
                   Konsultasi Gratis
                 </Button>
-                <Button className="bg-gradient-brand hover:opacity-90" size="sm">
+                <Button className="bg-gradient-brand hover:opacity-90 justify-start">
                   Hubungi Kami
                 </Button>
               </div>
