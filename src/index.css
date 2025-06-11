@@ -1,9 +1,9 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* Enhanced Professional Design System */
 
@@ -21,14 +21,17 @@
     --primary: 215 85% 12%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 343 68% 38%;
+    --secondary: 140 60% 35%;
     --secondary-foreground: 0 0% 98%;
 
-    --accent: 30 95% 48%;
+    --accent: 45 95% 48%;
     --accent-foreground: 215 85% 12%;
 
-    --success: 169 78% 42%;
+    --success: 140 70% 45%;
     --success-foreground: 0 0% 98%;
+
+    --info: 200 90% 40%;
+    --info-foreground: 0 0% 98%;
 
     --muted: 210 40% 98%;
     --muted-foreground: 215 20% 55%;
@@ -65,14 +68,17 @@
     --primary: 210 40% 98%;
     --primary-foreground: 215 85% 8%;
 
-    --secondary: 343 68% 45%;
+    --secondary: 140 60% 40%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217 32% 15%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 30 95% 55%;
+    --accent: 45 95% 55%;
     --accent-foreground: 215 85% 8%;
+
+    --success: 140 70% 50%;
+    --success-foreground: 210 40% 98%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
@@ -103,12 +109,25 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   
-  .font-poppins {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  .font-display {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  }
+  
+  .font-mono {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
   }
   
   .gradient-brand {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%) !important;
+  }
+  
+  .btn-gradient-brand {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%) !important;
+    color: white !important;
+  }
+  
+  .btn-gradient-brand:hover {
+    opacity: 0.9;
   }
   
   .gradient-accent {
@@ -154,6 +173,14 @@
     animation: scale-in 0.6s ease-out forwards;
   }
 
+  .animate-counter {
+    animation: counter 2s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
   @keyframes fade-up {
     from {
       opacity: 0;
@@ -184,6 +211,26 @@
     to {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+
+  @keyframes counter {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
     }
   }
 }

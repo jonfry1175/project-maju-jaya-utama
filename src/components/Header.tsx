@@ -1,33 +1,72 @@
 
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, Phone, MessageCircle, Globe, User } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { name: "Beranda", href: "#hero" },
-    { name: "Tentang", href: "#about" },
+    { name: "Tentang Kami", href: "#about" },
     { name: "Layanan", href: "#services" },
-    { name: "Proses", href: "#process" },
+    { name: "Proses IPO", href: "#process" },
+    { name: "Klien & Testimoni", href: "#testimonials" },
     { name: "Kontak", href: "#contact" }
   ];
 
   return (
-    <header className="bg-background/80 blur-backdrop border-b border-border/60 sticky top-0 z-50 transition-all duration-300">
-      <div className="container mx-auto px-6 py-3">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 blur-backdrop border-b border-border/60 shadow-soft' : 'bg-background/80 blur-backdrop border-b border-border/40'}`}>
+      {/* Top Bar */}
+      <div className="hidden lg:block bg-primary text-primary-foreground py-2">
+        <div className="container mx-auto px-6 flex items-center justify-between text-sm">
+          <div className="flex items-center space-x-6">
+            <a href="tel:+622112345678" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+              <Phone size={14} />
+              <span>(021) 1234-5678</span>
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+              <MessageCircle size={14} />
+              <span>WhatsApp</span>
+            </a>
+          </div>
+          <div className="flex items-center space-x-4">
+            <Button variant="ghost" size="sm" className="h-7 text-xs text-primary-foreground hover:text-primary-foreground hover:bg-white/10">
+              <User size={14} className="mr-1" />
+              Portal Klien
+            </Button>
+            <button className="flex items-center space-x-1 hover:opacity-80 transition-opacity">
+              <Globe size={14} />
+              <span>EN</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Header */}
+      <div className={`container mx-auto px-6 ${isScrolled ? 'py-3' : 'py-4'} transition-all duration-300`}>
         <div className="flex items-center justify-between">
           {/* Logo - More Compact */}
-          <div className="flex items-center space-x-2.5">
-            <div className="w-9 h-9 bg-gradient-brand rounded-xl flex items-center justify-center shadow-soft">
-              <span className="text-white font-bold text-base">G</span>
-            </div>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/logo.png" 
+              alt="Global Sinergi Kapital Logo" 
+              className="w-10 h-10 object-contain"
+            />
             <div>
-              <h1 className="text-lg font-bold text-primary font-poppins leading-tight">
+              <h1 className="text-xl font-bold text-primary font-display leading-tight">
                 Global Sinergi Kapital
               </h1>
-              <p className="text-xs text-muted-foreground font-medium">Mitra Strategis IPO</p>
+              <p className="text-xs text-muted-foreground font-medium">Konsultan IPO Terpercaya</p>
             </div>
           </div>
 
@@ -46,11 +85,12 @@ const Header = () => {
 
           {/* CTA Buttons - More Professional */}
           <div className="hidden lg:flex items-center space-x-3">
-            <Button variant="ghost" size="sm" className="text-sm font-medium">
+            <Button variant="outline" size="sm" className="text-sm font-medium border-primary/20 hover:border-primary/40">
+              <Phone size={16} className="mr-2" />
               Konsultasi Gratis
             </Button>
-            <Button className="bg-gradient-brand hover:opacity-90 shadow-brand text-sm font-medium px-6">
-              Hubungi Kami
+            <Button className="btn-gradient-brand shadow-brand text-sm font-medium px-6">
+              Mulai Perjalanan IPO
             </Button>
           </div>
 
@@ -78,12 +118,23 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-2 pt-4 px-4">
-                <Button variant="ghost" size="sm" className="justify-start">
+                <Button variant="outline" size="sm" className="justify-start border-primary/20">
+                  <Phone size={16} className="mr-2" />
                   Konsultasi Gratis
                 </Button>
-                <Button className="bg-gradient-brand hover:opacity-90 justify-start">
-                  Hubungi Kami
+                <Button className="btn-gradient-brand justify-start">
+                  Mulai Perjalanan IPO
                 </Button>
+                <div className="flex items-center justify-between pt-4 mt-4 border-t border-border/40">
+                  <a href="tel:+622112345678" className="flex items-center text-sm text-muted-foreground">
+                    <Phone size={14} className="mr-2" />
+                    (021) 1234-5678
+                  </a>
+                  <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground">
+                    <MessageCircle size={14} className="mr-2" />
+                    WhatsApp
+                  </a>
+                </div>
               </div>
             </nav>
           </div>
