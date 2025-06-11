@@ -1,65 +1,61 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Quote, Star, Building2, ChevronLeft, ChevronRight, TrendingUp, Award, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { Shield, Star, Target, Users, Brain, Award, ArrowRight, Rocket, Heart, Building } from "lucide-react";
 
 const TestimonialsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const testimonials = [
+  const whyChooseUs = [
     {
-      company: "PT Teknologi Nusantara Tbk",
-      person: "Budi Hartono",
-      position: "Chief Executive Officer",
-      sector: "Teknologi",
-      ipo_year: "2023",
-      ipo_value: "Rp 850 Miliar",
-      content: "Global Sinergi Kapital tidak hanya membantu kami dalam proses IPO, tetapi juga menjadi mitra strategis dalam transformasi perusahaan. Pendekatan mereka yang komprehensif dan pemahaman mendalam tentang pasar modal Indonesia sangat membantu kesuksesan IPO kami.",
-      rating: 5,
-      highlight: "Oversubscribed 3.2x"
+      icon: Brain,
+      title: "Pendekatan Inovatif",
+      description: "Metodologi modern dan teknologi terkini untuk proses IPO yang lebih efisien",
+      highlight: "Teknologi Terkini"
     },
     {
-      company: "PT Ritel Indonesia Sejahtera Tbk",
-      person: "Sarah Wijaya",
-      position: "Chief Financial Officer",
-      sector: "Perdagangan & Retail",
-      ipo_year: "2023",
-      ipo_value: "Rp 1.2 Triliun",
-      content: "Tim GSK sangat profesional dan responsif. Mereka memandu kami melalui setiap tahap IPO dengan detail dan memastikan kami siap menghadapi semua tantangan. Hasil IPO melebihi ekspektasi kami berkat strategi yang mereka susun.",
-      rating: 5,
-      highlight: "Harga saham naik 35% di hari pertama"
+      icon: Users,
+      title: "Tim Profesional",
+      description: "Para ahli dengan pengalaman ekstensif di pasar modal Indonesia dan internasional",
+      highlight: "30+ Profesional"
     },
     {
-      company: "PT Energi Hijau Mandiri Tbk",
-      person: "Ahmad Fauzi",
-      position: "Direktur Utama",
-      sector: "Energi Terbarukan",
-      ipo_year: "2022",
-      ipo_value: "Rp 2.5 Triliun",
-      content: "Keahlian GSK dalam menstruktur perusahaan dan menyiapkan dokumentasi IPO sangat luar biasa. Mereka memahami kompleksitas industri kami dan memberikan solusi yang tepat. IPO kami menjadi salah satu yang tersukses di sektor energi.",
-      rating: 5,
-      highlight: "IPO terbesar di sektor energi 2022"
+      icon: Shield,
+      title: "Integritas Tinggi",
+      description: "Komitmen pada transparansi dan etika bisnis tertinggi dalam setiap proses",
+      highlight: "100% Transparan"
     },
     {
-      company: "PT Logistik Digital Indonesia Tbk",
-      person: "Maya Kusuma",
-      position: "President Director",
-      sector: "Logistik & Transportasi",
-      ipo_year: "2024",
-      ipo_value: "Rp 650 Miliar",
-      content: "Dari awal hingga pencatatan di BEI, GSK selalu ada untuk kami. Mereka tidak hanya konsultan, tetapi partner yang benar-benar peduli dengan kesuksesan klien. Proses IPO yang kompleks menjadi lebih mudah dengan bimbingan mereka.",
-      rating: 5,
-      highlight: "Selesai 2 bulan lebih cepat"
+      icon: Target,
+      title: "Fokus Hasil",
+      description: "Dedikasi penuh untuk memastikan kesuksesan IPO setiap klien",
+      highlight: "Berorientasi Hasil"
     }
   ];
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  const uniqueValues = [
+    {
+      icon: Rocket,
+      title: "Proses Cepat & Efisien",
+      description: "Dengan sistem digital terintegrasi, kami mempercepat proses IPO tanpa mengurangi kualitas",
+      metrics: "6-12 bulan proses IPO"
+    },
+    {
+      icon: Heart,
+      title: "Pendampingan Personal",
+      description: "Setiap klien mendapat tim khusus yang memahami kebutuhan unik perusahaan Anda",
+      metrics: "Tim dedicated untuk setiap klien"
+    },
+    {
+      icon: Building,
+      title: "Jaringan Luas",
+      description: "Koneksi kuat dengan regulator, underwriter, dan investor institusi terkemuka",
+      metrics: "Akses ke ekosistem pasar modal"
+    },
+    {
+      icon: Award,
+      title: "Harga Kompetitif",
+      description: "Struktur biaya transparan dan kompetitif dengan value for money terbaik",
+      metrics: "Biaya efisien & transparan"
+    }
+  ];
 
   return (
     <section id="testimonials" className="py-24 bg-background">
@@ -68,141 +64,128 @@ const TestimonialsSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center bg-success/10 text-success px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-success/20">
             <Star className="w-4 h-4 mr-2" />
-            Testimoni Klien
+            Mengapa Memilih Kami
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold text-primary font-display mb-6 leading-tight">
-            Cerita Sukses dari
-            <span className="text-gradient block">127+ Perusahaan IPO</span>
+            Partner Terpercaya untuk
+            <span className="text-gradient block">Kesuksesan IPO Anda</span>
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Dengar langsung dari para pemimpin perusahaan yang telah berhasil melakukan IPO bersama Global Sinergi Kapital.
+            Global Sinergi Kapital hadir dengan pendekatan fresh dan inovatif untuk membantu perusahaan Indonesia go public dengan lebih efisien dan efektif.
           </p>
         </div>
 
-        {/* Main Testimonial Carousel */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <Card className="p-8 lg:p-12 bg-gradient-subtle border-2 border-border/60 relative overflow-hidden">
-            {/* Quote Icon */}
-            <Quote className="absolute top-8 left-8 w-12 h-12 text-primary/10" />
-            
-            {/* Testimonial Content */}
-            <div className="relative z-10">
-              <div className="flex items-start justify-between mb-8">
+        {/* Why Choose Us Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          {whyChooseUs.map((item, index) => (
+            <Card key={index} className="p-6 bg-gradient-subtle border-2 border-border/60 hover:border-primary/20 hover:shadow-brand transition-all duration-300 group">
+              <div className="space-y-4">
+                <div className="w-14 h-14 bg-gradient-brand rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="w-7 h-7 text-white" />
+                </div>
                 <div>
-                  <div className="flex items-center space-x-4 mb-3">
-                    <div className="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center">
-                      <Building2 className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-primary font-display">
-                        {testimonials[currentIndex].company}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {testimonials[currentIndex].sector} • IPO {testimonials[currentIndex].ipo_year}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Rating */}
-                <div className="flex items-center space-x-1">
-                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
-                </div>
-              </div>
-
-              {/* Testimonial Text */}
-              <blockquote className="text-lg lg:text-xl text-foreground leading-relaxed mb-8 italic">
-                "{testimonials[currentIndex].content}"
-              </blockquote>
-
-              {/* Author & Stats */}
-              <div className="flex items-end justify-between">
-                <div>
-                  <div className="font-semibold text-primary">
-                    {testimonials[currentIndex].person}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {testimonials[currentIndex].position}
-                  </div>
-                </div>
-                
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-primary font-mono">
-                    {testimonials[currentIndex].ipo_value}
-                  </div>
-                  <div className="text-sm text-success font-semibold">
-                    {testimonials[currentIndex].highlight}
+                  <h3 className="text-lg font-bold text-primary font-display mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    {item.description}
+                  </p>
+                  <div className="inline-flex items-center text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
+                    {item.highlight}
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Navigation Buttons */}
-            <div className="absolute inset-y-0 left-4 right-4 flex items-center justify-between pointer-events-none">
-              <Button 
-                variant="outline" 
-                size="icon"
-                onClick={prevTestimonial}
-                className="pointer-events-auto bg-background/80 backdrop-blur-sm"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="icon"
-                onClick={nextTestimonial}
-                className="pointer-events-auto bg-background/80 backdrop-blur-sm"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-            </div>
-          </Card>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex 
-                    ? 'w-8 bg-primary' 
-                    : 'bg-primary/30 hover:bg-primary/50'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Success Metrics */}
-        <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {[
-            { value: "127+", label: "Perusahaan IPO", icon: Building2 },
-            { value: "4.9/5", label: "Rating Kepuasan", icon: Star },
-            { value: "Rp 2.4T", label: "Total Dana Terhimpun", icon: TrendingUp },
-            { value: "98.7%", label: "Tingkat Keberhasilan", icon: Award }
-          ].map((metric, index) => (
-            <Card key={index} className="p-6 text-center bg-background/60 border-2 border-border/60 hover:border-primary/20 transition-all group">
-              <metric.icon className="w-8 h-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-              <div className="text-2xl font-bold text-primary font-mono">{metric.value}</div>
-              <p className="text-sm text-muted-foreground mt-1">{metric.label}</p>
             </Card>
           ))}
         </div>
 
-        {/* CTA */}
+        {/* Unique Value Propositions */}
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-2xl font-bold text-primary font-display text-center mb-12">
+            Nilai Unik yang Kami Tawarkan
+          </h3>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {uniqueValues.map((value, index) => (
+              <Card key={index} className="p-8 bg-background/80 border-2 border-border/60 hover:border-primary/20 hover:shadow-brand transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center flex-shrink-0">
+                    <value.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-bold text-primary font-display mb-2">
+                      {value.title}
+                    </h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                      {value.description}
+                    </p>
+                    <div className="text-sm font-semibold text-success">
+                      ✓ {value.metrics}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="bg-gradient-brand rounded-3xl p-8 lg:p-12 text-white shadow-brand max-w-5xl mx-auto">
+          <h3 className="text-2xl font-bold font-display text-center mb-8">
+            Komitmen Kami untuk Kesuksesan Anda
+          </h3>
+          
+          <div className="grid md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold font-mono mb-2">100%</div>
+              <p className="text-sm text-white/80">Komitmen Penuh</p>
+            </div>
+            <div>
+              <div className="text-3xl font-bold font-mono mb-2">24/7</div>
+              <p className="text-sm text-white/80">Dukungan Konsultasi</p>
+            </div>
+            <div>
+              <div className="text-3xl font-bold font-mono mb-2">30+</div>
+              <p className="text-sm text-white/80">Tim Profesional</p>
+            </div>
+            <div>
+              <div className="text-3xl font-bold font-mono mb-2">1</div>
+              <p className="text-sm text-white/80">Solusi Terintegrasi</p>
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <p className="text-lg mb-6 text-white/90">
+              Siap memulai perjalanan IPO Anda dengan partner yang tepat?
+            </p>
+            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              Konsultasi Gratis Sekarang
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Final CTA */}
         <div className="text-center mt-16">
-          <p className="text-lg text-muted-foreground mb-6">
-            Bergabunglah dengan perusahaan-perusahaan sukses yang telah mempercayai kami
-          </p>
-          <Button size="lg" className="btn-gradient-brand shadow-brand">
-            Mulai Perjalanan IPO Anda
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Card className="p-8 bg-gradient-subtle border-2 border-primary/20 max-w-2xl mx-auto">
+            <h4 className="text-xl font-bold text-primary font-display mb-4">
+              Bergabunglah dengan Kami
+            </h4>
+            <p className="text-muted-foreground mb-6">
+              Jadilah bagian dari perusahaan-perusahaan yang akan kami bantu mencapai kesuksesan IPO
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button className="btn-gradient-brand shadow-brand">
+                Mulai Perjalanan IPO
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button variant="outline">
+                Unduh Company Profile
+              </Button>
+            </div>
+          </Card>
         </div>
       </div>
     </section>

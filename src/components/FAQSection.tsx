@@ -19,7 +19,7 @@ const FAQSection = () => {
         },
         {
           q: "Berapa lama waktu yang dibutuhkan untuk proses IPO?",
-          a: "Proses IPO di Indonesia umumnya memakan waktu 6-12 bulan, tergantung pada kesiapan perusahaan. Timeline meliputi: (1) Persiapan internal dan restrukturisasi: 2-4 bulan, (2) Due diligence dan penyusunan prospektus: 2-3 bulan, (3) Proses persetujuan OJK: 45-90 hari kerja, (4) Bookbuilding dan penawaran umum: 1-2 bulan. Global Sinergi Kapital memiliki track record menyelesaikan proses IPO rata-rata 2 bulan lebih cepat dari timeline standar."
+          a: "Proses IPO di Indonesia umumnya memakan waktu 6-12 bulan, tergantung pada kesiapan perusahaan. Timeline meliputi: (1) Persiapan internal dan restrukturisasi: 2-4 bulan, (2) Due diligence dan penyusunan prospektus: 2-3 bulan, (3) Proses persetujuan OJK: 45-90 hari kerja, (4) Bookbuilding dan penawaran umum: 1-2 bulan. Global Sinergi Kapital menggunakan metodologi modern untuk memastikan proses yang efisien."
         },
         {
           q: "Berapa biaya yang diperlukan untuk melakukan IPO?",
@@ -40,7 +40,7 @@ const FAQSection = () => {
         },
         {
           q: "Apa peran underwriter dalam proses IPO?",
-          a: "Underwriter memiliki peran krusial: (1) Melakukan due diligence dan membantu penyusunan prospektus, (2) Menentukan struktur dan harga penawaran, (3) Memasarkan saham kepada investor institusi dan ritel, (4) Menjamin penjualan saham (full commitment atau best effort), (5) Melakukan stabilisasi harga pasca IPO. Global Sinergi Kapital memiliki hubungan baik dengan seluruh underwriter terkemuka di Indonesia untuk memastikan kesuksesan IPO Anda."
+          a: "Underwriter memiliki peran krusial: (1) Melakukan due diligence dan membantu penyusunan prospektus, (2) Menentukan struktur dan harga penawaran, (3) Memasarkan saham kepada investor institusi dan ritel, (4) Menjamin penjualan saham (full commitment atau best effort), (5) Melakukan stabilisasi harga pasca IPO. Global Sinergi Kapital akan membantu Anda memilih underwriter yang tepat untuk kesuksesan IPO Anda."
         }
       ]
     },
@@ -70,7 +70,7 @@ const FAQSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center bg-info/10 text-info px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-info/20">
             <HelpCircle className="w-4 h-4 mr-2" />
-            Frequently Asked Questions
+            Pertanyaan yang Sering Diajukan
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold text-primary font-display mb-6 leading-tight">
@@ -127,10 +127,10 @@ const FAQSection = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
                     <MessageCircle className="mr-2 h-5 w-5" />
-                    Live Chat
+                    Obrolan Langsung
                   </Button>
                   <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                    Download FAQ Lengkap
+                    Unduh FAQ Lengkap
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </div>
@@ -138,22 +138,22 @@ const FAQSection = () => {
               
               <div className="space-y-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">IPO Readiness Assessment</h4>
+                  <h4 className="font-semibold mb-2">Penilaian Kesiapan IPO</h4>
                   <p className="text-sm text-white/80 mb-3">
                     Evaluasi kesiapan perusahaan Anda untuk go public dengan tool assessment online kami.
                   </p>
                   <Button size="sm" variant="secondary" className="bg-white/20 text-white hover:bg-white/30 w-full">
-                    Mulai Assessment →
+                    Mulai Penilaian →
                   </Button>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">IPO Guidebook 2024</h4>
+                  <h4 className="font-semibold mb-2">Panduan IPO 2024</h4>
                   <p className="text-sm text-white/80 mb-3">
                     Panduan lengkap 100+ halaman tentang regulasi dan proses IPO terbaru.
                   </p>
                   <Button size="sm" variant="secondary" className="bg-white/20 text-white hover:bg-white/30 w-full">
-                    Download Gratis →
+                    Unduh Gratis →
                   </Button>
                 </div>
               </div>

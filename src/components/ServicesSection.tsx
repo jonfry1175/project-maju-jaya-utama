@@ -13,7 +13,7 @@ const ServicesSection = () => {
 
   const serviceCategories = {
     advisory: {
-      title: "IPO Advisory",
+      title: "Konsultasi IPO",
       icon: Briefcase,
       description: "Layanan konsultasi komprehensif untuk persiapan dan pelaksanaan IPO",
       services: [
@@ -22,10 +22,10 @@ const ServicesSection = () => {
           title: "Persiapan Dokumen IPO",
           description: "Penyusunan prospektus, laporan keuangan, dan dokumen regulasi lengkap sesuai standar OJK dan BEI.",
           features: [
-            "Prospektus & Company Profile",
-            "Financial Statement Preparation",
-            "Legal Documentation Review",
-            "Risk Factor Analysis"
+            "Prospektus & Profil Perusahaan",
+            "Penyusunan Laporan Keuangan",
+            "Tinjauan Dokumen Hukum",
+            "Analisis Faktor Risiko"
           ],
           price: "Paket Premium"
         },
@@ -34,10 +34,10 @@ const ServicesSection = () => {
           title: "Valuasi & Analisis Pasar",
           description: "Penentuan nilai wajar perusahaan dan strategi pricing optimal berdasarkan kondisi pasar.",
           features: [
-            "Comprehensive Business Valuation",
-            "Industry & Market Analysis",
-            "Peer Comparison Study",
-            "IPO Pricing Strategy"
+            "Valuasi Bisnis Komprehensif",
+            "Analisis Industri & Pasar",
+            "Studi Perbandingan Kompetitor",
+            "Strategi Penetapan Harga IPO"
           ],
           price: "Konsultasi Khusus"
         },
@@ -46,17 +46,17 @@ const ServicesSection = () => {
           title: "Strategi Go Public",
           description: "Perencanaan strategis timeline IPO, pemilihan underwriter, dan roadshow preparation.",
           features: [
-            "IPO Timeline Planning",
-            "Underwriter Selection",
-            "Investor Roadshow Prep",
-            "Marketing Strategy"
+            "Perencanaan Timeline IPO",
+            "Pemilihan Penjamin Emisi",
+            "Persiapan Investor Roadshow",
+            "Strategi Pemasaran"
           ],
-          price: "Full Service"
+          price: "Layanan Penuh"
         }
       ]
     },
     restructuring: {
-      title: "Corporate Restructuring",
+      title: "Restrukturisasi Perusahaan",
       icon: Building,
       description: "Restrukturisasi perusahaan untuk memenuhi syarat go public",
       services: [
@@ -65,41 +65,41 @@ const ServicesSection = () => {
           title: "Restrukturisasi Entitas",
           description: "Penataan struktur kepemilikan dan entitas hukum sesuai persyaratan perusahaan terbuka.",
           features: [
-            "Legal Entity Restructuring",
-            "Ownership Structure Design",
-            "Subsidiary Integration",
-            "Tax Optimization"
+            "Restrukturisasi Badan Hukum",
+            "Desain Struktur Kepemilikan",
+            "Integrasi Anak Perusahaan",
+            "Optimasi Pajak"
           ],
-          price: "Customized Solution"
+          price: "Solusi Khusus"
         },
         {
           icon: Users,
           title: "Tata Kelola Perusahaan",
           description: "Implementasi GCG, pembentukan organ perusahaan, dan sistem pengendalian internal.",
           features: [
-            "Board of Directors Setup",
-            "Independent Commissioner",
-            "Audit Committee Formation",
-            "Internal Control System"
+            "Pembentukan Dewan Direksi",
+            "Komisaris Independen",
+            "Pembentukan Komite Audit",
+            "Sistem Pengendalian Internal"
           ],
-          price: "Governance Package"
+          price: "Paket Tata Kelola"
         },
         {
           icon: Shield,
           title: "Manajemen Risiko",
           description: "Identifikasi, evaluasi, dan mitigasi risiko bisnis untuk perusahaan publik.",
           features: [
-            "Risk Assessment Framework",
-            "Compliance Management",
-            "Internal Audit Setup",
-            "Crisis Management Plan"
+            "Kerangka Penilaian Risiko",
+            "Manajemen Kepatuhan",
+            "Pembentukan Audit Internal",
+            "Rencana Manajemen Krisis"
           ],
-          price: "Risk Advisory"
+          price: "Konsultasi Risiko"
         }
       ]
     },
     compliance: {
-      title: "Legal & Compliance",
+      title: "Hukum & Kepatuhan",
       icon: Scale,
       description: "Pendampingan hukum dan kepatuhan regulasi pasar modal",
       services: [
@@ -108,46 +108,46 @@ const ServicesSection = () => {
           title: "Legal Due Diligence",
           description: "Pemeriksaan menyeluruh aspek hukum perusahaan untuk memastikan kesiapan IPO.",
           features: [
-            "Corporate Legal Review",
-            "Contract Assessment",
-            "Litigation Check",
-            "Regulatory Compliance"
+            "Tinjauan Hukum Perusahaan",
+            "Penilaian Kontrak",
+            "Pemeriksaan Litigasi",
+            "Kepatuhan Regulasi"
           ],
-          price: "Due Diligence Package"
+          price: "Paket Uji Tuntas"
         },
         {
           icon: BookOpen,
           title: "Kepatuhan Regulasi",
           description: "Memastikan pemenuhan seluruh persyaratan OJK, BEI, dan regulator terkait.",
           features: [
-            "OJK Filing Assistance",
-            "BEI Listing Requirements",
-            "Ongoing Compliance Support",
-            "Regulatory Updates"
+            "Bantuan Pengajuan OJK",
+            "Persyaratan Pencatatan BEI",
+            "Dukungan Kepatuhan Berkelanjutan",
+            "Pembaruan Regulasi"
           ],
-          price: "Compliance Service"
+          price: "Layanan Kepatuhan"
         },
         {
           icon: Award,
-          title: "Post-IPO Support",
+          title: "Dukungan Pasca IPO",
           description: "Pendampingan berkelanjutan pasca IPO untuk memenuhi kewajiban perusahaan terbuka.",
           features: [
-            "Quarterly Reporting",
-            "Corporate Actions Support",
-            "Investor Relations",
-            "Annual Report Preparation"
+            "Pelaporan Kuartalan",
+            "Dukungan Aksi Korporasi",
+            "Hubungan Investor",
+            "Penyusunan Laporan Tahunan"
           ],
-          price: "Annual Retainer"
+          price: "Retainer Tahunan"
         }
       ]
     }
   };
 
   const stats = [
-    { icon: TrendingUp, value: "127+", label: "IPO Sukses" },
+    { icon: TrendingUp, value: "100%", label: "Komitmen" },
     { icon: Clock, value: "6-12", label: "Bulan Proses" },
-    { icon: Award, value: "98.7%", label: "Success Rate" },
-    { icon: Users, value: "50+", label: "Tim Profesional" }
+    { icon: Award, value: "24/7", label: "Dukungan" },
+    { icon: Users, value: "30+", label: "Tim Profesional" }
   ];
 
   return (
@@ -166,7 +166,7 @@ const ServicesSection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Dari persiapan awal hingga pencatatan di bursa, kami menyediakan layanan end-to-end dengan tim ahli berpengalaman dan metodologi teruji.
+            Dari persiapan awal hingga pencatatan di bursa, kami menyediakan layanan end-to-end dengan tim profesional dan metodologi inovatif.
           </p>
         </div>
 
@@ -262,7 +262,7 @@ const ServicesSection = () => {
               Proses IPO yang Terstruktur
             </h3>
             <p className="text-lg text-white/90 max-w-2xl mx-auto">
-              Metodologi 4 tahap yang telah terbukti membawa 127+ perusahaan menuju kesuksesan IPO
+              Metodologi 4 tahap terstruktur untuk membawa perusahaan Anda menuju kesuksesan IPO
             </p>
           </div>
 
@@ -270,25 +270,25 @@ const ServicesSection = () => {
             {[
               { 
                 step: "01", 
-                title: "Feasibility Study", 
+                title: "Studi Kelayakan", 
                 desc: "Analisis kelayakan dan kesiapan perusahaan untuk go public",
                 duration: "1-2 bulan"
               },
               { 
                 step: "02", 
-                title: "Preparation", 
+                title: "Persiapan", 
                 desc: "Restrukturisasi, audit, dan persiapan dokumen IPO",
                 duration: "3-6 bulan"
               },
               { 
                 step: "03", 
-                title: "Filing & Approval", 
+                title: "Pengajuan & Persetujuan", 
                 desc: "Pengajuan ke OJK dan proses persetujuan regulasi",
                 duration: "2-3 bulan"
               },
               { 
                 step: "04", 
-                title: "Public Offering", 
+                title: "Penawaran Publik", 
                 desc: "Bookbuilding, pricing, dan pencatatan di BEI",
                 duration: "1-2 bulan"
               }
@@ -314,7 +314,7 @@ const ServicesSection = () => {
           <div className="text-center mt-12 space-y-4">
             <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
               <Download className="mr-2 h-5 w-5" />
-              Download IPO Guidebook
+              Unduh Panduan IPO
             </Button>
             <p className="text-sm text-white/80">
               Panduan lengkap 50+ halaman tentang proses IPO di Indonesia

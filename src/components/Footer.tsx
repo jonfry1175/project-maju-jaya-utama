@@ -10,20 +10,20 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Tentang Kami", href: "#about" },
-    { name: "Layanan IPO Advisory", href: "#services" },
+    { name: "Layanan Konsultasi IPO", href: "#services" },
     { name: "Proses IPO", href: "#process" },
-    { name: "Testimoni Klien", href: "#testimonials" },
+    { name: "Mengapa Memilih Kami", href: "#testimonials" },
     { name: "FAQ", href: "#faq" },
     { name: "Hubungi Kami", href: "#contact" }
   ];
 
   const services = [
-    { name: "IPO Advisory", href: "#" },
-    { name: "Corporate Restructuring", href: "#" },
-    { name: "Legal & Compliance", href: "#" },
+    { name: "Konsultasi IPO", href: "#" },
+    { name: "Restrukturisasi Perusahaan", href: "#" },
+    { name: "Hukum & Kepatuhan", href: "#" },
     { name: "Valuasi Perusahaan", href: "#" },
-    { name: "Post-IPO Support", href: "#" },
-    { name: "Investor Relations", href: "#" }
+    { name: "Dukungan Pasca IPO", href: "#" },
+    { name: "Hubungan Investor", href: "#" }
   ];
 
   const resources = [
@@ -87,8 +87,8 @@ const Footer = () => {
               </div>
               <p className="text-primary-foreground/80 leading-relaxed">
                 Mitra strategis perusahaan Indonesia dalam mengakses pasar modal. 
-                Dengan pengalaman 15+ tahun dan 127+ klien sukses IPO, kami berkomitmen 
-                menghadirkan solusi IPO yang komprehensif dan inovatif.
+                Sebagai konsultan IPO yang baru berdiri, kami berkomitmen 
+                menghadirkan solusi IPO yang komprehensif dan inovatif dengan pendekatan modern.
               </p>
             </div>
 
@@ -129,7 +129,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold font-display">Quick Links</h4>
+            <h4 className="text-lg font-semibold font-display">Tautan Cepat</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -189,7 +189,7 @@ const Footer = () => {
 
             {/* Resources */}
             <div>
-              <h4 className="text-lg font-semibold font-display mb-4">Resources</h4>
+              <h4 className="text-lg font-semibold font-display mb-4">Sumber Daya</h4>
               <div className="space-y-2">
                 {resources.map((resource) => (
                   <a 
@@ -215,11 +215,11 @@ const Footer = () => {
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-primary-foreground/60">
-              <p>© {currentYear} PT Global Sinergi Kapital. All rights reserved.</p>
+              <p>© {currentYear} PT Global Sinergi Kapital. Hak cipta dilindungi.</p>
               <div className="flex space-x-6">
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+                <a href="#" className="hover:text-white transition-colors">Kebijakan Privasi</a>
+                <a href="#" className="hover:text-white transition-colors">Syarat & Ketentuan</a>
+                <a href="#" className="hover:text-white transition-colors">Peta Situs</a>
               </div>
             </div>
             
@@ -232,7 +232,7 @@ const Footer = () => {
                 href="#" 
                 className="flex items-center space-x-1 text-primary-foreground/60 hover:text-white transition-colors"
               >
-                <span>Legal Disclaimer</span>
+                <span>Penyangkalan Hukum</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
             </div>

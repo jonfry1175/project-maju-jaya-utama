@@ -81,7 +81,7 @@ const ContactSection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Dapatkan analisis mendalam tentang kesiapan IPO perusahaan Anda. Tim konsultan senior kami siap membantu mewujudkan ambisi go public Anda.
+            Dapatkan analisis mendalam tentang kesiapan IPO perusahaan Anda. Tim profesional kami siap membantu mewujudkan ambisi go public Anda.
           </p>
         </div>
 
@@ -141,7 +141,7 @@ const ContactSection = () => {
                 Jadwalkan Konsultasi IPO
               </h3>
               <p className="text-muted-foreground">
-                Isi formulir berikut untuk mendapatkan slot konsultasi eksklusif dengan konsultan senior kami.
+                Isi formulir berikut untuk mendapatkan slot konsultasi eksklusif dengan tim ahli kami.
               </p>
             </div>
             

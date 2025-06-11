@@ -8,10 +8,10 @@ const HeroSection = () => {
   const [counters, setCounters] = useState([0, 0, 0, 0]);
   
   const stats = [
-    { icon: Building2, value: 127, suffix: "+", label: "Klien IPO Sukses", color: "primary" },
-    { icon: TrendingUp, value: 2.4, suffix: "T", label: "Total Dana Terhimpun", prefix: "Rp", color: "success" },
-    { icon: Award, value: 98.7, suffix: "%", label: "Tingkat Keberhasilan", color: "accent" },
-    { icon: Users, value: 15, suffix: "+", label: "Tahun Pengalaman", color: "secondary" }
+    { icon: Building2, value: 100, suffix: "%", label: "Komitmen Penuh", color: "primary" },
+    { icon: TrendingUp, value: 24, suffix: "/7", label: "Dukungan Konsultasi", color: "success" },
+    { icon: Award, value: 1, suffix: "", label: "Solusi Terintegrasi", color: "accent" },
+    { icon: Users, value: 30, suffix: "+", label: "Tim Profesional", color: "secondary" }
   ];
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const HeroSection = () => {
             <div className="space-y-6">
               <div className="inline-flex items-center bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold border border-accent/20 animate-pulse">
                 <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
-                Partner Resmi BEI & OJK
+                Mitra Resmi BEI & OJK
               </div>
               
               <div className="space-y-4">
@@ -82,7 +82,7 @@ const HeroSection = () => {
                 </h1>
                 
                 <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                  Sebagai konsultan IPO terkemuka dengan rekam jejak 127+ klien sukses go public, kami memandu perjalanan transformasi perusahaan Anda menuju pasar modal Indonesia.
+                  Sebagai konsultan IPO inovatif yang baru berdiri, kami menghadirkan perspektif segar dan pendekatan modern untuk memandu transformasi perusahaan Anda menuju pasar modal Indonesia.
                 </p>
               </div>
             </div>
@@ -106,7 +106,7 @@ const HeroSection = () => {
                   alt="Global Sinergi Kapital" 
                   className="w-8 h-8 object-contain"
                 />
-                <p className="text-sm text-muted-foreground font-medium">Partner terpercaya:</p>
+                <p className="text-sm text-muted-foreground font-medium">Mitra terpercaya:</p>
               </div>
               <div className="flex items-center gap-8">
                 <div className="text-primary/80 font-bold text-lg">BEI</div>

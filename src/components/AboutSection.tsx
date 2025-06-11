@@ -1,51 +1,50 @@
-
 import { Card } from "@/components/ui/card";
-import { Lightbulb, Target, Users, Award, Calendar, CheckCircle, ArrowRight, Building, Briefcase, Trophy } from "lucide-react";
+import { Lightbulb, Target, Users, Award, Calendar, CheckCircle, ArrowRight, Building, Briefcase, Trophy, Rocket, Brain, Heart } from "lucide-react";
 import { useState } from "react";
 
 const AboutSection = () => {
   const [activeTab, setActiveTab] = useState(0);
   
-  const timeline = [
-    { year: "2010", title: "Pendirian Perusahaan", description: "Global Sinergi Kapital didirikan dengan visi menjadi konsultan IPO terkemuka di Indonesia" },
-    { year: "2013", title: "Klien IPO Pertama", description: "Sukses mendampingi PT XYZ Tbk melakukan IPO dengan nilai Rp 500 miliar" },
-    { year: "2015", title: "Ekspansi Layanan", description: "Menambah layanan restrukturisasi keuangan dan manajemen risiko" },
-    { year: "2018", title: "Sertifikasi ISO", description: "Meraih sertifikasi ISO 9001:2015 untuk sistem manajemen mutu" },
-    { year: "2020", title: "100+ Klien IPO", description: "Mencapai milestone 100 perusahaan klien sukses melakukan IPO" },
-    { year: "2024", title: "Era Digital", description: "Meluncurkan platform digital untuk mempercepat proses IPO" }
+  const roadmap = [
+    { year: "2025", title: "Fondasi Kuat", description: "Membangun tim profesional dan infrastruktur teknologi modern untuk layanan konsultasi IPO" },
+    { year: "2026", title: "Ekspansi Layanan", description: "Meluncurkan platform digital dan memperluas jangkauan ke seluruh Indonesia" },
+    { year: "2027", title: "Mitra Regional", description: "Menjalin kemitraan strategis dengan bursa efek dan regulator di Asia Tenggara" },
+    { year: "2028", title: "Pusat Edukasi", description: "Mendirikan akademi IPO untuk meningkatkan literasi pasar modal Indonesia" },
+    { year: "2029", title: "Inovasi Digital", description: "Mengintegrasikan AI dan blockchain untuk mempercepat proses IPO" },
+    { year: "2030", title: "Pemimpin Pasar", description: "Menjadi konsultan IPO terkemuka dengan 100+ klien sukses go public" }
   ];
   
   const team = [
     {
       name: "Dr. Budi Santoso, CFA",
-      position: "Chief Executive Officer",
-      experience: "25+ tahun di industri pasar modal",
-      credentials: ["PhD Finance - UI", "CFA Charterholder", "Ex-Direktur BEI"]
+      position: "Direktur Utama",
+      experience: "Praktisi pasar modal berpengalaman",
+      credentials: ["Doktor Keuangan - UI", "CFA Charterholder", "Mantan Direktur BEI"]
     },
     {
       name: "Siti Rahayu, MBA",
-      position: "Chief Operating Officer",
-      experience: "20+ tahun konsultan manajemen",
-      credentials: ["MBA - INSEAD", "Certified IPO Specialist", "Ex-Partner Big 4"]
+      position: "Direktur Operasional",
+      experience: "Ahli strategi bisnis dan manajemen",
+      credentials: ["MBA - INSEAD", "Spesialis IPO Tersertifikasi", "Mantan Mitra Big 4"]
     },
     {
       name: "Agus Wijaya, CA",
-      position: "Chief Financial Officer",
-      experience: "18+ tahun audit & advisory",
-      credentials: ["Chartered Accountant", "Ex-Senior Manager PwC", "IPO Expert"]
+      position: "Direktur Keuangan",
+      experience: "Profesional audit dan advisory",
+      credentials: ["Chartered Accountant", "Mantan Senior Manager PwC", "Ahli IPO"]
     }
   ];
 
   const values = [
     {
-      icon: Lightbulb,
-      title: "Integritas",
-      description: "Komitmen pada transparansi dan etika bisnis tertinggi dalam setiap proses IPO."
+      icon: Brain,
+      title: "Inovasi",
+      description: "Pendekatan segar dan solusi kreatif untuk setiap tantangan IPO yang unik."
     },
     {
-      icon: Target,
-      title: "Profesionalisme",
-      description: "Tim ahli berpengalaman dengan track record sukses di industri pasar modal."
+      icon: Heart,
+      title: "Integritas",
+      description: "Komitmen pada transparansi dan etika bisnis tertinggi dalam setiap proses."
     },
     {
       icon: Users,
@@ -53,9 +52,32 @@ const AboutSection = () => {
       description: "Bekerja sama erat dengan klien sebagai mitra strategis jangka panjang."
     },
     {
-      icon: Award,
+      icon: Rocket,
       title: "Keunggulan",
-      description: "Layanan berkualitas tinggi dengan standar internasional dan inovasi terdepan."
+      description: "Layanan berkualitas tinggi dengan standar internasional terkini."
+    }
+  ];
+
+  const whyChooseUs = [
+    {
+      icon: Award,
+      title: "Tim Profesional Berpengalaman",
+      description: "Didukung oleh para ahli dengan pengalaman ekstensif di pasar modal Indonesia dan internasional."
+    },
+    {
+      icon: Target,
+      title: "Pendekatan Inovatif",
+      description: "Menggunakan metodologi modern dan teknologi terkini untuk proses IPO yang lebih efisien."
+    },
+    {
+      icon: Building,
+      title: "Jaringan Luas",
+      description: "Koneksi kuat dengan regulator, underwriter, dan pelaku pasar modal untuk kelancaran proses."
+    },
+    {
+      icon: Trophy,
+      title: "Komitmen Kesuksesan",
+      description: "Dedikasi penuh untuk memastikan setiap klien mencapai tujuan go public dengan optimal."
     }
   ];
 
@@ -70,12 +92,12 @@ const AboutSection = () => {
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold text-primary font-display mb-6 leading-tight">
-            Pionir Konsultan IPO dengan
-            <span className="text-gradient block">Keahlian Mendalam</span>
+            Konsultan IPO Baru dengan
+            <span className="text-gradient block">Perspektif Segar</span>
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Sejak 2010, Global Sinergi Kapital telah menjadi mitra strategis perusahaan-perusahaan Indonesia dalam mengakses pasar modal. Dengan tim profesional berpengalaman dan metodologi teruji, kami memastikan setiap klien mencapai kesuksesan IPO yang berkelanjutan.
+            Global Sinergi Kapital hadir sebagai konsultan IPO yang baru berdiri dengan tim profesional berpengalaman. Kami menghadirkan pendekatan inovatif dan solusi modern untuk membantu perusahaan Indonesia mengakses pasar modal dengan lebih efisien dan efektif.
           </p>
         </div>
 
@@ -100,9 +122,9 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* Timeline Section */}
+        {/* Roadmap Section */}
         <div className="mb-20">
-          <h3 className="text-2xl font-bold text-primary font-display text-center mb-12">Perjalanan Kami</h3>
+          <h3 className="text-2xl font-bold text-primary font-display text-center mb-12">Roadmap Kami</h3>
           <div className="max-w-5xl mx-auto">
             <div className="relative">
               {/* Timeline Line */}
@@ -110,7 +132,7 @@ const AboutSection = () => {
               
               {/* Timeline Items */}
               <div className="space-y-12">
-                {timeline.map((item, index) => (
+                {roadmap.map((item, index) => (
                   <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                     <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8 order-2'}`}>
                       <Card className="p-6 hover:shadow-brand transition-all duration-300 animate-fade-up" style={{animationDelay: `${index * 0.1}s`}}>
@@ -174,30 +196,17 @@ const AboutSection = () => {
           </Card>
         </div>
 
-        {/* Awards & Recognition */}
+        {/* Why Choose Us */}
         <div className="bg-gradient-brand rounded-3xl p-8 lg:p-12 text-white shadow-brand">
-          <h3 className="text-2xl font-bold font-display text-center mb-8">Penghargaan & Pengakuan</h3>
-          <div className="grid md:grid-cols-4 gap-6 text-center">
-            <div className="space-y-3">
-              <Trophy className="w-12 h-12 mx-auto mb-2" />
-              <div className="font-bold">Best IPO Consultant</div>
-              <p className="text-sm text-white/80">Indonesia Capital Market Awards 2023</p>
-            </div>
-            <div className="space-y-3">
-              <Award className="w-12 h-12 mx-auto mb-2" />
-              <div className="font-bold">Excellence in Advisory</div>
-              <p className="text-sm text-white/80">Asia Pacific Finance Awards 2022</p>
-            </div>
-            <div className="space-y-3">
-              <CheckCircle className="w-12 h-12 mx-auto mb-2" />
-              <div className="font-bold">ISO 9001:2015</div>
-              <p className="text-sm text-white/80">Quality Management System</p>
-            </div>
-            <div className="space-y-3">
-              <Building className="w-12 h-12 mx-auto mb-2" />
-              <div className="font-bold">Top 10 Consultant</div>
-              <p className="text-sm text-white/80">BEI Partner Recognition 2024</p>
-            </div>
+          <h3 className="text-2xl font-bold font-display text-center mb-8">Mengapa Memilih Kami</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {whyChooseUs.map((item, index) => (
+              <div key={index} className="text-center space-y-3">
+                <item.icon className="w-12 h-12 mx-auto mb-2" />
+                <div className="font-bold">{item.title}</div>
+                <p className="text-sm text-white/80">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

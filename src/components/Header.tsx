@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, MessageCircle, Globe, User } from "lucide-react";
+import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Header = () => {
@@ -16,13 +16,15 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: "Beranda", href: "#hero" },
     { name: "Tentang Kami", href: "#about" },
     { name: "Layanan", href: "#services" },
     { name: "Proses IPO", href: "#process" },
-    { name: "Klien & Testimoni", href: "#testimonials" },
     { name: "Kontak", href: "#contact" }
   ];
+
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 blur-backdrop border-b border-border/60 shadow-soft' : 'bg-background/80 blur-backdrop border-b border-border/40'}`}>
@@ -39,16 +41,6 @@ const Header = () => {
               <span>WhatsApp</span>
             </a>
           </div>
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="h-7 text-xs text-primary-foreground hover:text-primary-foreground hover:bg-white/10">
-              <User size={14} className="mr-1" />
-              Portal Klien
-            </Button>
-            <button className="flex items-center space-x-1 hover:opacity-80 transition-opacity">
-              <Globe size={14} />
-              <span>EN</span>
-            </button>
-          </div>
         </div>
       </div>
 
@@ -56,7 +48,7 @@ const Header = () => {
       <div className={`container mx-auto px-6 ${isScrolled ? 'py-3' : 'py-4'} transition-all duration-300`}>
         <div className="flex items-center justify-between">
           {/* Logo - More Compact */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 cursor-pointer" onClick={handleLogoClick}>
             <img 
               src="/logo.png" 
               alt="Global Sinergi Kapital Logo" 
