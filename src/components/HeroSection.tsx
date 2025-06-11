@@ -9,9 +9,9 @@ const HeroSection = () => {
   
   const stats = [
     { icon: Building2, value: 100, suffix: "%", label: "Komitmen Penuh", color: "primary" },
-    { icon: TrendingUp, value: 24, suffix: "/7", label: "Dukungan Konsultasi", color: "success" },
-    { icon: Award, value: 1, suffix: "", label: "Solusi Terintegrasi", color: "accent" },
-    { icon: Users, value: 30, suffix: "+", label: "Tim Profesional", color: "secondary" }
+    { icon: TrendingUp, value: 24, suffix: "/7", label: "Dukungan Konsultasi", color: "accent" },
+    { icon: Award, value: 1, suffix: "", label: "Solusi Terintegrasi", color: "primary" },
+    { icon: Users, value: 30, suffix: "+", label: "Tim Profesional", color: "accent" }
   ];
 
   useEffect(() => {
@@ -59,9 +59,11 @@ const HeroSection = () => {
         <img 
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop"
           alt="Jakarta Skyline"
-          className="w-full h-full object-cover blur-sm"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80"></div>
+        {/* Dark overlay for text areas */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent"></div>
       </div>
       
       {/* Enhanced Background Elements */}
@@ -70,22 +72,22 @@ const HeroSection = () => {
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 60 0 L 0 0 0 60' fill='none' stroke='rgba(0,0,0,0.02)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E")`
       }}></div>
       
-      {/* Floating Elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{animationDelay: '3s'}}></div>
+      {/* Subtle gradient accents */}
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-accent/5 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-primary/5 to-transparent"></div>
       
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Enhanced Content */}
           <div className="space-y-8 animate-slide-in-left">
             <div className="space-y-6">
-              <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20">
+              <div className="inline-flex items-center bg-background/90 backdrop-blur-sm text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20 shadow-lg">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                 Mitra Resmi BEI & OJK
               </div>
               
               <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold text-primary font-display leading-[1.1]">
+                <h1 className="text-4xl lg:text-6xl font-bold text-primary font-display leading-[1.1]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
                   Wujudkan Ambisi IPO
                   <span className="text-gradient block mt-2">Dengan Kepastian</span>
                 </h1>
@@ -108,7 +110,7 @@ const HeroSection = () => {
             </div>
 
             {/* Partner Logos */}
-            <div className="space-y-4">
+            <div className="space-y-4 bg-background/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg inline-block">
               <div className="flex items-center gap-2">
                 <img 
                   src="/logo.png" 
@@ -135,19 +137,16 @@ const HeroSection = () => {
               return (
                 <Card 
                   key={index} 
-                  className="group relative overflow-hidden bg-background/80 backdrop-blur-md border border-border/30 hover:border-accent/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                  className="group relative overflow-hidden bg-background/90 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-200"
                 >
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <div className="relative p-6 lg:p-8 space-y-4">
-                    {/* Icon with glassmorphism effect */}
+                  <div className="p-6 lg:p-8 space-y-4">
+                    {/* Icon with subtle styling */}
                     <div className={`w-14 h-14 lg:w-16 lg:h-16 ${
-                      stat.color === 'primary' ? 'bg-gradient-to-br from-primary/20 to-primary/10' : 
-                      stat.color === 'success' ? 'bg-gradient-to-br from-success/20 to-success/10' :
-                      stat.color === 'accent' ? 'bg-gradient-to-br from-accent/20 to-accent/10' :
-                      'bg-gradient-to-br from-secondary/20 to-secondary/10'
-                    } rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      stat.color === 'primary' ? 'bg-primary/10' : 
+                      stat.color === 'success' ? 'bg-success/10' :
+                      stat.color === 'accent' ? 'bg-accent/10' :
+                      'bg-secondary/10'
+                    } rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200`}>
                       <Icon className={`w-7 h-7 lg:w-8 lg:h-8 ${
                         stat.color === 'primary' ? 'text-primary' : 
                         stat.color === 'success' ? 'text-success' :
@@ -156,28 +155,20 @@ const HeroSection = () => {
                       }`} strokeWidth={1.5} />
                     </div>
                     
-                    {/* Enhanced Typography */}
+                    {/* Clean Typography */}
                     <div className="space-y-2">
                       <div className="flex items-baseline gap-1">
-                        <span className="text-4xl lg:text-5xl font-bold text-foreground font-display tracking-tight">
+                        <span className="text-3xl lg:text-4xl font-bold text-foreground font-display">
                           {displayValue}
                         </span>
-                        <span className="text-2xl lg:text-3xl font-medium text-foreground/60">
+                        <span className="text-xl lg:text-2xl font-medium text-foreground/70">
                           {stat.suffix}
                         </span>
                       </div>
-                      <p className="text-base lg:text-lg text-muted-foreground font-medium">
+                      <p className="text-sm lg:text-base text-muted-foreground font-medium">
                         {stat.label}
                       </p>
                     </div>
-                    
-                    {/* Decorative line */}
-                    <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${
-                      stat.color === 'primary' ? 'from-primary/50 to-primary/20' : 
-                      stat.color === 'success' ? 'from-success/50 to-success/20' :
-                      stat.color === 'accent' ? 'from-accent/50 to-accent/20' :
-                      'from-secondary/50 to-secondary/20'
-                    } transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}></div>
                   </div>
                 </Card>
               );
