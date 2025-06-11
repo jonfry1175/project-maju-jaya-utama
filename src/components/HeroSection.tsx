@@ -117,25 +117,44 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Refined Stats Grid */}
-          <div id="hero-stats" className="grid grid-cols-2 gap-4 animate-fade-up">
+          {/* Right Column - Professional Stats Grid */}
+          <div id="hero-stats" className="grid grid-cols-2 gap-5 animate-fade-up">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               const displayValue = stat.value % 1 !== 0 ? counters[index].toFixed(1) : Math.floor(counters[index]);
               
               return (
-                <Card key={index} className="group p-6 bg-background/60 blur-backdrop border-2 border-border/60 hover:border-primary/20 hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
+                <Card 
+                  key={index} 
+                  className="group p-6 lg:p-8 bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300"
+                >
                   <div className="space-y-4">
-                    <div className={`w-12 h-12 bg-gradient-${stat.color === 'primary' ? 'brand' : 'accent'} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className="w-6 h-6 text-white" />
+                    {/* Icon with better styling */}
+                    <div className={`w-12 h-12 lg:w-14 lg:h-14 ${
+                      stat.color === 'primary' ? 'bg-primary/10' : 
+                      stat.color === 'success' ? 'bg-green-500/10' :
+                      stat.color === 'accent' ? 'bg-accent/10' :
+                      'bg-secondary/10'
+                    } rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
+                      <Icon className={`w-6 h-6 lg:w-7 lg:h-7 ${
+                        stat.color === 'primary' ? 'text-primary' : 
+                        stat.color === 'success' ? 'text-green-500' :
+                        stat.color === 'accent' ? 'text-accent' :
+                        'text-secondary'
+                      }`} strokeWidth={2} />
                     </div>
-                    <div>
-                      <div className="text-3xl lg:text-4xl font-bold text-primary font-mono animate-counter">
-                        {stat.prefix && <span className="text-xl">{stat.prefix}</span>}
-                        {displayValue}
-                        <span className="text-xl">{stat.suffix}</span>
+                    
+                    {/* Improved Typography */}
+                    <div className="space-y-1">
+                      <div className="flex items-baseline gap-0.5">
+                        <span className="text-3xl lg:text-4xl font-bold text-foreground font-display tracking-tight">
+                          {displayValue}
+                        </span>
+                        <span className="text-xl lg:text-2xl font-medium text-foreground/70">
+                          {stat.suffix}
+                        </span>
                       </div>
-                      <p className="text-sm text-muted-foreground font-medium leading-tight mt-1">
+                      <p className="text-sm lg:text-base text-muted-foreground font-medium">
                         {stat.label}
                       </p>
                     </div>
