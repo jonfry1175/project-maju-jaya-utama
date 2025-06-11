@@ -28,22 +28,6 @@ const Header = () => {
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 blur-backdrop border-b border-border/60 shadow-soft' : 'bg-background/80 blur-backdrop border-b border-border/40'}`}>
-      {/* Top Bar */}
-      <div className="hidden lg:block bg-primary text-primary-foreground py-2">
-        <div className="container mx-auto px-6 flex items-center justify-between text-sm">
-          <div className="flex items-center space-x-6">
-            <a href="tel:+622112345678" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-              <Phone size={14} />
-              <span>(021) 1234-5678</span>
-            </a>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-              <MessageCircle size={14} />
-              <span>WhatsApp</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Header */}
       <div className={`container mx-auto px-6 ${isScrolled ? 'py-3' : 'py-4'} transition-all duration-300`}>
         <div className="flex items-center justify-between">

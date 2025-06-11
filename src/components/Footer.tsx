@@ -35,37 +35,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      {/* Newsletter Section */}
-      <div className="border-b border-white/10">
-        <div className="container mx-auto px-6 py-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold font-display mb-3">
-              Dapatkan Insight Pasar Modal Terkini
-            </h3>
-            <p className="text-primary-foreground/80 mb-6">
-              Subscribe newsletter kami untuk mendapatkan update regulasi, analisis pasar, dan tips IPO langsung dari para ahli.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <Input 
-                type="email" 
-                placeholder="email@perusahaan.com" 
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60 h-12"
-              />
-              <Button 
-                type="submit" 
-                className="bg-white text-primary hover:bg-white/90 h-12 px-6 font-semibold"
-              >
-                Subscribe
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
-            <p className="text-xs text-primary-foreground/60 mt-3">
-              Dengan subscribe, Anda menyetujui Privacy Policy kami. Unsubscribe kapan saja.
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">

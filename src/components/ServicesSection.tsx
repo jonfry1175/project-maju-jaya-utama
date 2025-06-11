@@ -16,6 +16,7 @@ const ServicesSection = () => {
       title: "Konsultasi IPO",
       icon: Briefcase,
       description: "Layanan konsultasi komprehensif untuk persiapan dan pelaksanaan IPO",
+      image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&h=600&fit=crop", // Business consulting
       services: [
         {
           icon: FileText,
@@ -59,6 +60,7 @@ const ServicesSection = () => {
       title: "Restrukturisasi Perusahaan",
       icon: Building,
       description: "Restrukturisasi perusahaan untuk memenuhi syarat go public",
+      image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=800&h=600&fit=crop", // Corporate structure
       services: [
         {
           icon: Building,
@@ -102,6 +104,7 @@ const ServicesSection = () => {
       title: "Hukum & Kepatuhan",
       icon: Scale,
       description: "Pendampingan hukum dan kepatuhan regulasi pasar modal",
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop", // Legal/compliance
       services: [
         {
           icon: Scale,
@@ -151,11 +154,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-subtle">
+    <section id="services" className="py-32 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-accent/20">
+          <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
             <Lightbulb className="w-4 h-4 mr-2" />
             Layanan Profesional
           </div>
@@ -179,7 +182,7 @@ const ServicesSection = () => {
                 <TabsTrigger 
                   key={key} 
                   value={key}
-                  className="flex items-center space-x-2 data-[state=active]:bg-gradient-brand data-[state=active]:text-white"
+                  className="flex items-center space-x-2 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary data-[state=active]:to-primary/80 data-[state=active]:text-white"
                 >
                   <Icon className="w-4 h-4" />
                   <span className="hidden sm:inline">{category.title}</span>
@@ -191,21 +194,31 @@ const ServicesSection = () => {
           {Object.entries(serviceCategories).map(([key, category]) => (
             <TabsContent key={key} value={key} className="space-y-8">
               <div className="text-center mb-10">
-                <h3 className="text-2xl font-bold text-primary font-display mb-3">{category.title}</h3>
-                <p className="text-muted-foreground max-w-2xl mx-auto">{category.description}</p>
+                <div className="relative max-w-4xl mx-auto mb-8 rounded-2xl overflow-hidden h-64">
+                  <img 
+                    src={category.image} 
+                    alt={category.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-8">
+                    <h3 className="text-3xl font-bold text-foreground font-display mb-3">{category.title}</h3>
+                    <p className="text-muted-foreground max-w-2xl mx-auto">{category.description}</p>
+                  </div>
+                </div>
               </div>
 
               <div className="grid lg:grid-cols-3 gap-6">
                 {category.services.map((service, index) => {
                   const ServiceIcon = service.icon;
                   return (
-                    <Card key={index} className="group p-8 bg-background/80 blur-backdrop border-2 border-border/60 hover:border-primary/20 hover:shadow-brand transition-all duration-300 hover:-translate-y-1">
+                    <Card key={index} className="group p-8 bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
                       <div className="space-y-6">
                         <div className="flex items-start justify-between">
-                          <div className="w-14 h-14 bg-gradient-brand rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                             <ServiceIcon className="w-7 h-7 text-white" />
                           </div>
-                          <span className="text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
+                          <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
                             {service.price}
                           </span>
                         </div>
@@ -222,7 +235,7 @@ const ServicesSection = () => {
                         <div className="space-y-3">
                           {service.features.map((feature, idx) => (
                             <div key={idx} className="flex items-start space-x-2">
-                              <CheckCircle className="w-4 h-4 text-success flex-shrink-0 mt-0.5" />
+                              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                               <span className="text-sm text-foreground">{feature}</span>
                             </div>
                           ))}
@@ -256,7 +269,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Process Section */}
-        <div id="process" className="bg-gradient-brand text-white rounded-3xl p-8 lg:p-12 shadow-brand">
+        <div id="process" className="bg-gradient-to-br from-primary to-primary/80 text-white rounded-3xl p-8 lg:p-12 shadow-xl">
           <div className="text-center mb-12">
             <h3 className="text-2xl lg:text-3xl font-bold font-display mb-4">
               Proses IPO yang Terstruktur
@@ -332,7 +345,7 @@ const ServicesSection = () => {
               Konsultasi gratis dengan tim ahli kami untuk mengetahui kesiapan perusahaan Anda dan langkah selanjutnya menuju go public.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="btn-gradient-brand shadow-brand">
+              <Button size="lg" className="bg-gradient-to-br from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white shadow-xl">
                 Jadwalkan Konsultasi
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

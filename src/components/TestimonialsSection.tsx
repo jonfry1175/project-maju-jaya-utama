@@ -8,25 +8,29 @@ const TestimonialsSection = () => {
       icon: Brain,
       title: "Pendekatan Inovatif",
       description: "Metodologi modern dan teknologi terkini untuk proses IPO yang lebih efisien",
-      highlight: "Teknologi Terkini"
+      highlight: "Teknologi Terkini",
+      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop" // Innovation workspace
     },
     {
       icon: Users,
       title: "Tim Profesional",
       description: "Para ahli dengan pengalaman ekstensif di pasar modal Indonesia dan internasional",
-      highlight: "30+ Profesional"
+      highlight: "30+ Profesional",
+      image: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&h=400&fit=crop" // Professional team
     },
     {
       icon: Shield,
       title: "Integritas Tinggi",
       description: "Komitmen pada transparansi dan etika bisnis tertinggi dalam setiap proses",
-      highlight: "100% Transparan"
+      highlight: "100% Transparan",
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop" // Business integrity
     },
     {
       icon: Target,
       title: "Fokus Hasil",
       description: "Dedikasi penuh untuk memastikan kesuksesan IPO setiap klien",
-      highlight: "Berorientasi Hasil"
+      highlight: "Berorientasi Hasil",
+      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop" // Success/achievement
     }
   ];
 
@@ -58,11 +62,11 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-background">
+    <section id="testimonials" className="py-32 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center bg-success/10 text-success px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-success/20">
+          <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
             <Star className="w-4 h-4 mr-2" />
             Mengapa Memilih Kami
           </div>
@@ -80,21 +84,27 @@ const TestimonialsSection = () => {
         {/* Why Choose Us Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {whyChooseUs.map((item, index) => (
-            <Card key={index} className="p-6 bg-gradient-subtle border-2 border-border/60 hover:border-primary/20 hover:shadow-brand transition-all duration-300 group">
-              <div className="space-y-4">
-                <div className="w-14 h-14 bg-gradient-brand rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-primary font-display mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    {item.description}
-                  </p>
-                  <div className="inline-flex items-center text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
-                    {item.highlight}
-                  </div>
+            <Card key={index} className="group overflow-hidden bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+              {/* Image Section */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+              </div>
+              
+              {/* Content Section */}
+              <div className="p-6 space-y-3">
+                <h3 className="text-lg font-bold text-foreground">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+                <div className="inline-flex items-center text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
+                  {item.highlight}
                 </div>
               </div>
             </Card>
@@ -109,9 +119,9 @@ const TestimonialsSection = () => {
           
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {uniqueValues.map((value, index) => (
-              <Card key={index} className="p-8 bg-background/80 border-2 border-border/60 hover:border-primary/20 hover:shadow-brand transition-all duration-300">
+              <Card key={index} className="p-8 bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0">
                     <value.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -121,7 +131,7 @@ const TestimonialsSection = () => {
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                       {value.description}
                     </p>
-                    <div className="text-sm font-semibold text-success">
+                    <div className="text-sm font-semibold text-primary">
                       ✓ {value.metrics}
                     </div>
                   </div>
@@ -132,7 +142,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="bg-gradient-brand rounded-3xl p-8 lg:p-12 text-white shadow-brand max-w-5xl mx-auto">
+        <div className="bg-gradient-to-br from-primary to-primary/80 rounded-3xl p-8 lg:p-12 text-white shadow-xl max-w-5xl mx-auto">
           <h3 className="text-2xl font-bold font-display text-center mb-8">
             Komitmen Kami untuk Kesuksesan Anda
           </h3>
@@ -169,7 +179,7 @@ const TestimonialsSection = () => {
 
         {/* Final CTA */}
         <div className="text-center mt-16">
-          <Card className="p-8 bg-gradient-subtle border-2 border-primary/20 max-w-2xl mx-auto">
+          <Card className="p-8 bg-primary/5 border border-primary/20 max-w-2xl mx-auto">
             <h4 className="text-xl font-bold text-primary font-display mb-4">
               Bergabunglah dengan Kami
             </h4>
@@ -177,7 +187,7 @@ const TestimonialsSection = () => {
               Jadilah bagian dari perusahaan-perusahaan yang akan kami bantu mencapai kesuksesan IPO
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-gradient-brand shadow-brand">
+              <Button className="bg-gradient-to-br from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white shadow-xl">
                 Mulai Perjalanan IPO
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

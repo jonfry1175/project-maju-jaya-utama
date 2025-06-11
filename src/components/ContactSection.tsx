@@ -66,7 +66,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-gradient-subtle">
+    <section id="contact" className="py-32 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -91,9 +91,9 @@ const ContactSection = () => {
             <h3 className="text-xl font-bold text-primary font-display mb-6">Informasi Kontak</h3>
             
             {contactInfo.map((info, index) => (
-              <Card key={index} className="p-6 bg-background/60 blur-backdrop border-2 border-border/60 hover:border-primary/20 hover:shadow-soft transition-all duration-300 group">
+              <Card key={index} className="p-6 bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
                     <info.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -108,7 +108,7 @@ const ContactSection = () => {
                         href={info.action.link} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm text-accent hover:text-accent/80 mt-3 font-semibold"
+                        className="inline-flex items-center text-sm text-primary hover:text-primary/80 mt-3 font-semibold"
                       >
                         {info.action.label}
                         <ArrowRight className="ml-1 h-3 w-3" />
@@ -119,23 +119,30 @@ const ContactSection = () => {
               </Card>
             ))}
 
-            {/* Map Placeholder */}
-            <Card className="p-6 bg-gradient-brand text-white shadow-brand">
-              <h4 className="font-semibold mb-3 flex items-center">
-                <Globe className="w-5 h-5 mr-2" />
-                Lokasi Strategis
-              </h4>
-              <p className="text-sm text-white/90 mb-4">
-                Berlokasi di jantung bisnis Jakarta dengan akses mudah ke berbagai institusi keuangan dan regulator.
-              </p>
-              <div className="bg-white/20 rounded-lg h-32 flex items-center justify-center">
-                <MapPin className="w-8 h-8 text-white/60" />
+            {/* Office Location */}
+            <Card className="overflow-hidden bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+              <div className="relative h-48">
+                <img 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
+                  alt="Jakarta Business District"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h4 className="font-semibold mb-2 text-foreground flex items-center">
+                    <Globe className="w-5 h-5 mr-2" />
+                    Lokasi Strategis
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Jantung bisnis Jakarta dengan akses mudah ke institusi keuangan.
+                  </p>
+                </div>
               </div>
             </Card>
           </div>
 
           {/* Middle & Right Column - Enhanced Contact Form */}
-          <Card className="lg:col-span-2 p-8 lg:p-10 bg-background/80 blur-backdrop border-2 border-border/60 shadow-brand">
+          <Card className="lg:col-span-2 p-8 lg:p-10 bg-background border border-border/50 shadow-xl">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-primary font-display mb-3">
                 Jadwalkan Konsultasi IPO
@@ -243,7 +250,7 @@ const ContactSection = () => {
               </div>
 
               {/* Meeting Schedule */}
-              <div className="space-y-5 p-6 bg-accent/5 rounded-xl border border-accent/20" id="booking">
+              <div className="space-y-5 p-6 bg-primary/5 rounded-xl border border-primary/20" id="booking">
                 <h4 className="font-semibold text-primary flex items-center">
                   <CalendarIcon className="w-5 h-5 mr-2" />
                   Jadwalkan Meeting (Opsional)
@@ -298,7 +305,7 @@ const ContactSection = () => {
                 </div>
 
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <CheckCircle className="w-4 h-4 text-success" />
+                  <CheckCircle className="w-4 h-4 text-primary" />
                   <span>Meeting dapat dilakukan secara offline atau online (Zoom/Google Meet)</span>
                 </div>
               </div>
@@ -325,22 +332,22 @@ const ContactSection = () => {
 
               {/* Submit Button */}
               <div className="space-y-4">
-                <Button size="lg" className="w-full btn-gradient-brand shadow-brand text-base font-semibold py-6 h-auto group">
+                <Button size="lg" className="w-full bg-gradient-to-br from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white shadow-xl text-base font-semibold py-6 h-auto group">
                   Kirim Permintaan Konsultasi
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 
                 <div className="flex items-center justify-center space-x-6 text-sm text-muted-foreground">
                   <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-1 text-success" />
+                    <CheckCircle className="w-4 h-4 mr-1 text-primary" />
                     Respon &lt; 24 Jam
                   </div>
                   <div className="flex items-center">
-                    <Shield className="w-4 h-4 mr-1 text-success" />
+                    <Shield className="w-4 h-4 mr-1 text-primary" />
                     Data Terjamin Aman
                   </div>
                   <div className="flex items-center">
-                    <Briefcase className="w-4 h-4 mr-1 text-success" />
+                    <Briefcase className="w-4 h-4 mr-1 text-primary" />
                     Konsultasi Gratis
                   </div>
                 </div>
@@ -351,7 +358,7 @@ const ContactSection = () => {
 
         {/* Quick Contact Options */}
         <div className="mt-16 max-w-4xl mx-auto">
-          <Card className="p-8 bg-gradient-brand text-white shadow-brand">
+          <Card className="p-8 bg-gradient-to-br from-primary to-primary/80 text-white shadow-xl">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold font-display mb-3">Butuh Respon Cepat?</h3>
               <p className="text-white/90">Pilih channel komunikasi yang paling sesuai untuk Anda</p>

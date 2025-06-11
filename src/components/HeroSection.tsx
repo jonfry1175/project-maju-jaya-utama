@@ -54,15 +54,24 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop"
+          alt="Jakarta Skyline"
+          className="w-full h-full object-cover blur-sm"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95"></div>
+      </div>
+      
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--primary)/0.05),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,hsl(var(--accent)/0.03),transparent_50%)]"></div>
       <div className="absolute inset-0 opacity-30" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 60 0 L 0 0 0 60' fill='none' stroke='rgba(0,0,0,0.02)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E")`
       }}></div>
       
       {/* Floating Elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" style={{animationDelay: '3s'}}></div>
       
       <div className="container mx-auto px-6 py-16">
@@ -70,8 +79,8 @@ const HeroSection = () => {
           {/* Left Column - Enhanced Content */}
           <div className="space-y-8 animate-slide-in-left">
             <div className="space-y-6">
-              <div className="inline-flex items-center bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold border border-accent/20 animate-pulse">
-                <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
+              <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20">
+                <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                 Mitra Resmi BEI & OJK
               </div>
               
@@ -126,38 +135,49 @@ const HeroSection = () => {
               return (
                 <Card 
                   key={index} 
-                  className="group p-6 lg:p-8 bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300"
+                  className="group relative overflow-hidden bg-background/80 backdrop-blur-md border border-border/30 hover:border-accent/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="space-y-4">
-                    {/* Icon with better styling */}
-                    <div className={`w-12 h-12 lg:w-14 lg:h-14 ${
-                      stat.color === 'primary' ? 'bg-primary/10' : 
-                      stat.color === 'success' ? 'bg-green-500/10' :
-                      stat.color === 'accent' ? 'bg-accent/10' :
-                      'bg-secondary/10'
-                    } rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
-                      <Icon className={`w-6 h-6 lg:w-7 lg:h-7 ${
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <div className="relative p-6 lg:p-8 space-y-4">
+                    {/* Icon with glassmorphism effect */}
+                    <div className={`w-14 h-14 lg:w-16 lg:h-16 ${
+                      stat.color === 'primary' ? 'bg-gradient-to-br from-primary/20 to-primary/10' : 
+                      stat.color === 'success' ? 'bg-gradient-to-br from-success/20 to-success/10' :
+                      stat.color === 'accent' ? 'bg-gradient-to-br from-accent/20 to-accent/10' :
+                      'bg-gradient-to-br from-secondary/20 to-secondary/10'
+                    } rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <Icon className={`w-7 h-7 lg:w-8 lg:h-8 ${
                         stat.color === 'primary' ? 'text-primary' : 
-                        stat.color === 'success' ? 'text-green-500' :
+                        stat.color === 'success' ? 'text-success' :
                         stat.color === 'accent' ? 'text-accent' :
                         'text-secondary'
-                      }`} strokeWidth={2} />
+                      }`} strokeWidth={1.5} />
                     </div>
                     
-                    {/* Improved Typography */}
-                    <div className="space-y-1">
-                      <div className="flex items-baseline gap-0.5">
-                        <span className="text-3xl lg:text-4xl font-bold text-foreground font-display tracking-tight">
+                    {/* Enhanced Typography */}
+                    <div className="space-y-2">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-4xl lg:text-5xl font-bold text-foreground font-display tracking-tight">
                           {displayValue}
                         </span>
-                        <span className="text-xl lg:text-2xl font-medium text-foreground/70">
+                        <span className="text-2xl lg:text-3xl font-medium text-foreground/60">
                           {stat.suffix}
                         </span>
                       </div>
-                      <p className="text-sm lg:text-base text-muted-foreground font-medium">
+                      <p className="text-base lg:text-lg text-muted-foreground font-medium">
                         {stat.label}
                       </p>
                     </div>
+                    
+                    {/* Decorative line */}
+                    <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${
+                      stat.color === 'primary' ? 'from-primary/50 to-primary/20' : 
+                      stat.color === 'success' ? 'from-success/50 to-success/20' :
+                      stat.color === 'accent' ? 'from-accent/50 to-accent/20' :
+                      'from-secondary/50 to-secondary/20'
+                    } transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}></div>
                   </div>
                 </Card>
               );

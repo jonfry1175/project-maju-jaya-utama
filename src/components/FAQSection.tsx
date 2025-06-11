@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { HelpCircle, MessageCircle, ArrowRight } from "lucide-react";
+import { HelpCircle, MessageCircle, ArrowRight, Shield, FileText } from "lucide-react";
 
 const FAQSection = () => {
   const faqCategories = [
@@ -64,11 +64,11 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-subtle">
+    <section id="faq" className="py-32 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center bg-info/10 text-info px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-info/20">
+          <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
             <HelpCircle className="w-4 h-4 mr-2" />
             Pertanyaan yang Sering Diajukan
           </div>
@@ -86,7 +86,7 @@ const FAQSection = () => {
         {/* FAQ Accordions */}
         <div className="max-w-4xl mx-auto space-y-8">
           {faqCategories.map((category, categoryIndex) => (
-            <Card key={categoryIndex} className="p-6 lg:p-8 bg-background/80 blur-backdrop border-2 border-border/60">
+            <Card key={categoryIndex} className="p-6 lg:p-8 bg-background border border-border/50 hover:border-primary/30 transition-all duration-300">
               <h3 className="text-xl font-bold text-primary font-display mb-6">
                 {category.category}
               </h3>
@@ -114,48 +114,63 @@ const FAQSection = () => {
         </div>
 
         {/* Additional Resources */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <Card className="p-8 bg-gradient-brand text-white shadow-brand">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold font-display mb-4">
+        <div className="mt-16 max-w-5xl mx-auto">
+          <Card className="relative overflow-hidden bg-gradient-to-br from-primary to-primary/80 text-white shadow-2xl">
+            <div className="absolute inset-0 opacity-30" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 60 0 L 0 0 0 60' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E")`
+            }}></div>
+            
+            <div className="relative p-8 lg:p-12">
+              <div className="max-w-2xl mx-auto text-center mb-8">
+                <h3 className="text-3xl font-bold font-display mb-4">
                   Masih Punya Pertanyaan?
                 </h3>
-                <p className="text-white/90 mb-6">
+                <p className="text-white/90 text-lg">
                   Tim ahli kami siap menjawab pertanyaan spesifik tentang situasi perusahaan Anda dan memberikan konsultasi mendalam tentang kesiapan IPO.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    Obrolan Langsung
-                  </Button>
-                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                    Unduh FAQ Lengkap
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </div>
               </div>
               
-              <div className="space-y-4">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Penilaian Kesiapan IPO</h4>
-                  <p className="text-sm text-white/80 mb-3">
-                    Evaluasi kesiapan perusahaan Anda untuk go public dengan tool assessment online kami.
-                  </p>
-                  <Button size="sm" variant="secondary" className="bg-white/20 text-white hover:bg-white/30 w-full">
-                    Mulai Penilaian →
-                  </Button>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Obrolan Langsung
+                </Button>
+                <Button variant="outline" size="lg" className="border-white/50 text-white hover:bg-white/10 backdrop-blur-sm">
+                  Unduh FAQ Lengkap
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <Card className="bg-white/10 backdrop-blur-md border-white/20 p-6 hover:bg-white/15 transition-colors">
+                  <div className="space-y-3">
+                    <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
+                      <Shield className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-lg">Penilaian Kesiapan IPO</h4>
+                    <p className="text-sm text-white/80">
+                      Evaluasi kesiapan perusahaan Anda untuk go public dengan tool assessment online kami.
+                    </p>
+                    <Button size="sm" className="w-full bg-accent text-primary hover:bg-accent/90">
+                      Mulai Penilaian →
+                    </Button>
+                  </div>
+                </Card>
                 
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Panduan IPO 2024</h4>
-                  <p className="text-sm text-white/80 mb-3">
-                    Panduan lengkap 100+ halaman tentang regulasi dan proses IPO terbaru.
-                  </p>
-                  <Button size="sm" variant="secondary" className="bg-white/20 text-white hover:bg-white/30 w-full">
-                    Unduh Gratis →
-                  </Button>
-                </div>
+                <Card className="bg-white/10 backdrop-blur-md border-white/20 p-6 hover:bg-white/15 transition-colors">
+                  <div className="space-y-3">
+                    <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
+                      <FileText className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-lg">Panduan IPO 2024</h4>
+                    <p className="text-sm text-white/80">
+                      Panduan lengkap 100+ halaman tentang regulasi dan proses IPO terbaru.
+                    </p>
+                    <Button size="sm" className="w-full bg-accent text-primary hover:bg-accent/90">
+                      Unduh Gratis →
+                    </Button>
+                  </div>
+                </Card>
               </div>
             </div>
           </Card>
