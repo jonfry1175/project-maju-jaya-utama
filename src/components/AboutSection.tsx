@@ -37,24 +37,24 @@ const AboutSection = () => {
 
   const values = [
     {
-      icon: Brain,
       title: "Inovasi",
-      description: "Pendekatan segar dan solusi kreatif untuk setiap tantangan IPO yang unik."
+      description: "Pendekatan segar dan solusi kreatif untuk setiap tantangan IPO yang unik.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" // Creative team brainstorming
     },
     {
-      icon: Heart,
       title: "Integritas",
-      description: "Komitmen pada transparansi dan etika bisnis tertinggi dalam setiap proses."
+      description: "Komitmen pada transparansi dan etika bisnis tertinggi dalam setiap proses.",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop" // Professional handshake
     },
     {
-      icon: Users,
       title: "Kolaborasi",
-      description: "Bekerja sama erat dengan klien sebagai mitra strategis jangka panjang."
+      description: "Bekerja sama erat dengan klien sebagai mitra strategis jangka panjang.",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" // Team collaboration
     },
     {
-      icon: Rocket,
       title: "Keunggulan",
-      description: "Layanan berkualitas tinggi dengan standar internasional terkini."
+      description: "Layanan berkualitas tinggi dengan standar internasional terkini.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" // Business analytics
     }
   ];
 
@@ -101,22 +101,29 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Values Grid - More Compact */}
+        {/* Values Grid - Clean Image Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {values.map((value, index) => (
-            <Card key={index} className="group p-6 bg-background border-2 border-border/60 hover:border-primary/20 hover:shadow-brand transition-all duration-300">
-              <div className="space-y-4">
-                <div className="w-14 h-14 bg-gradient-brand rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <value.icon className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-primary font-poppins mb-2">
-                    {value.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
+            <Card key={index} className="group overflow-hidden bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+              {/* Image Section */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={value.image} 
+                  alt={value.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+              </div>
+              
+              {/* Content Section */}
+              <div className="p-6 space-y-3">
+                <h3 className="text-lg font-bold text-foreground">
+                  {value.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {value.description}
+                </p>
               </div>
             </Card>
           ))}
