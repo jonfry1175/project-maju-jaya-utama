@@ -1,0 +1,23 @@
+{
+  "404": "404",
+  "pageNotFound": "Oops! Page not found",
+  "backToHome": "Back to Home",
+  "loading": "Loading...",
+  "error": "An error occurred",
+  "tryAgain": "Try again",
+  "learnMore": "Learn more",
+  "readMore": "Read more",
+  "viewAll": "View all",
+  "close": "Close",
+  "submit": "Submit",
+  "cancel": "Cancel",
+  "save": "Save",
+  "delete": "Delete",
+  "edit": "Edit",
+  "add": "Add",
+  "search": "Search",
+  "filter": "Filter",
+  "sort": "Sort",
+  "yes": "Yes",
+  "no": "No"
+}

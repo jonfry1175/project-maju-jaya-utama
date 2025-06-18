@@ -1,0 +1,119 @@
+{
+  "section": {
+    "badge": "About Global Sinergi Kapital",
+    "title": "New IPO Consultant with",
+    "titleHighlight": "Fresh Perspective",
+    "description": "Global Sinergi Kapital emerges as a newly established IPO consultant with an experienced professional team. We bring innovative approaches and modern solutions to help Indonesian companies access the capital market more efficiently and effectively."
+  },
+  "values": {
+    "innovation": {
+      "title": "Innovation",
+      "description": "Fresh approaches and creative solutions for every unique IPO challenge."
+    },
+    "integrity": {
+      "title": "Integrity",
+      "description": "Commitment to transparency and highest business ethics in every process."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "description": "Working closely with clients as long-term strategic partners."
+    },
+    "excellence": {
+      "title": "Excellence",
+      "description": "High-quality services with the latest international standards."
+    }
+  },
+  "roadmap": {
+    "title": "Our Roadmap",
+    "items": {
+      "2025": {
+        "title": "Strong Foundation",
+        "description": "Building professional team and modern technology infrastructure for IPO consulting services"
+      },
+      "2026": {
+        "title": "Service Expansion",
+        "description": "Launching digital platform and expanding reach throughout Indonesia"
+      },
+      "2027": {
+        "title": "Regional Partner",
+        "description": "Establishing strategic partnerships with stock exchanges and regulators in Southeast Asia"
+      },
+      "2028": {
+        "title": "Education Center",
+        "description": "Establishing IPO academy to improve Indonesian capital market literacy"
+      },
+      "2029": {
+        "title": "Digital Innovation",
+        "description": "Integrating AI and blockchain to accelerate IPO process"
+      },
+      "2030": {
+        "title": "Market Leader",
+        "description": "Becoming leading IPO consultant with 100+ successful public companies"
+      }
+    }
+  },
+  "team": {
+    "title": "Leadership Team",
+    "members": {
+      "ceo": {
+        "name": "Dr. Budi Santoso, CFA",
+        "position": "Chief Executive Officer",
+        "experience": "Experienced capital market practitioner",
+        "credentials": [
+          "Finance Doctorate - UI",
+          "CFA Charterholder",
+          "Former IDX Director"
+        ]
+      },
+      "coo": {
+        "name": "Siti Rahayu, MBA",
+        "position": "Chief Operating Officer",
+        "experience": "Business strategy and management expert",
+        "credentials": [
+          "MBA - INSEAD",
+          "Certified IPO Specialist",
+          "Former Big 4 Partner"
+        ]
+      },
+      "cfo": {
+        "name": "Agus Wijaya, CA",
+        "position": "Chief Financial Officer",
+        "experience": "Audit and advisory professional",
+        "credentials": [
+          "Chartered Accountant",
+          "Former PwC Senior Manager",
+          "IPO Expert"
+        ]
+      }
+    }
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "Providing comprehensive and innovative IPO consulting solutions, building trust through transparency, and creating sustainable value for clients."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "To become the leading IPO consultant in Southeast Asia helping companies access capital markets with integrity, innovation, and service excellence."
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us",
+    "reasons": {
+      "professional": {
+        "title": "Experienced Professional Team",
+        "description": "Supported by experts with extensive experience in Indonesian and international capital markets."
+      },
+      "innovative": {
+        "title": "Innovative Approach",
+        "description": "Using modern methodology and latest technology for more efficient IPO process."
+      },
+      "network": {
+        "title": "Extensive Network",
+        "description": "Strong connections with regulators, underwriters, and capital market players for smooth process."
+      },
+      "commitment": {
+        "title": "Success Commitment",
+        "description": "Full dedication to ensure every client achieves their public listing goals optimally."
+      }
+    }
+  }
+}

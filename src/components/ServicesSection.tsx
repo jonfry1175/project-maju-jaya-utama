@@ -7,8 +7,10 @@ import {
   Download, ArrowRight, Briefcase, Target, Lightbulb, Phone
 } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ServicesSection = () => {
+  const { t, i18n } = useTranslation('services');
   const [activeCategory, setActiveCategory] = useState("advisory");
 
   const serviceCategories = {
@@ -160,16 +162,16 @@ const ServicesSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
             <Lightbulb className="w-4 h-4 mr-2" />
-            Layanan Profesional
+            {i18n.language === 'id' ? 'Layanan Profesional' : 'Professional Services'}
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold text-primary font-display mb-6 leading-tight">
-            Solusi Terintegrasi untuk
-            <span className="text-gradient block">Kesuksesan IPO Anda</span>
+            {t('section.title')}
+            <span className="text-gradient block">{t('section.titleHighlight')}</span>
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Dari persiapan awal hingga pencatatan di bursa, kami menyediakan layanan end-to-end dengan tim profesional dan metodologi inovatif.
+            {t('section.description')}
           </p>
         </div>
 

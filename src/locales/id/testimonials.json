@@ -1,0 +1,80 @@
+{
+  "section": {
+    "badge": "Testimoni Klien",
+    "title": "Suara Kesuksesan dari",
+    "titleHighlight": "Mitra Kami",
+    "description": "Dengarkan pengalaman langsung dari perusahaan yang telah kami bantu dalam perjalanan IPO mereka."
+  },
+  "testimonials": [
+    {
+      "name": "Ahmad Wijaya",
+      "position": "CEO, PT Teknologi Nusantara Tbk",
+      "company": "Perusahaan Teknologi",
+      "content": "Global Sinergi Kapital memberikan panduan yang sangat profesional dalam proses IPO kami. Tim mereka sangat responsif dan memahami kebutuhan spesifik industri teknologi.",
+      "rating": 5,
+      "date": "IPO Berhasil - Desember 2024"
+    },
+    {
+      "name": "Siti Nurhaliza",
+      "position": "Direktur Keuangan, PT Retail Sejahtera Tbk",
+      "company": "Perusahaan Retail",
+      "content": "Proses IPO yang awalnya terlihat rumit menjadi lebih terstruktur berkat pendampingan GSK. Mereka membantu kami di setiap tahapan dengan sangat detail.",
+      "rating": 5,
+      "date": "IPO Berhasil - November 2024"
+    },
+    {
+      "name": "Budi Santoso",
+      "position": "Komisaris Utama, PT Energi Hijau Indonesia Tbk",
+      "company": "Perusahaan Energi",
+      "content": "Keahlian tim GSK dalam valuasi dan strategi penentuan harga IPO sangat membantu kami mendapatkan hasil yang optimal di pasar modal.",
+      "rating": 5,
+      "date": "IPO Berhasil - Oktober 2024"
+    },
+    {
+      "name": "Maya Anggraini",
+      "position": "CEO, PT Farmasi Sehat Tbk",
+      "company": "Perusahaan Farmasi",
+      "content": "GSK tidak hanya membantu dalam proses IPO, tetapi juga mempersiapkan kami untuk menjadi perusahaan publik yang baik dengan tata kelola yang kuat.",
+      "rating": 5,
+      "date": "IPO Berhasil - September 2024"
+    },
+    {
+      "name": "Rudi Hermawan",
+      "position": "Direktur Utama, PT Logistik Global Tbk",
+      "company": "Perusahaan Logistik",
+      "content": "Tim GSK sangat berpengalaman dan memiliki jaringan yang luas. Mereka membantu kami mendapatkan underwriter terbaik untuk IPO kami.",
+      "rating": 5,
+      "date": "IPO Berhasil - Agustus 2024"
+    },
+    {
+      "name": "Dewi Lestari",
+      "position": "CFO, PT Properti Mandiri Tbk",
+      "company": "Perusahaan Properti",
+      "content": "Pendekatan inovatif GSK dalam menggunakan teknologi untuk mempercepat proses dokumentasi IPO sangat efisien dan menghemat waktu kami.",
+      "rating": 5,
+      "date": "IPO Berhasil - Juli 2024"
+    }
+  ],
+  "stats": {
+    "successRate": {
+      "value": "100%",
+      "label": "Tingkat Keberhasilan"
+    },
+    "totalFunding": {
+      "value": "5.2T",
+      "label": "Total Dana Terhimpun"
+    },
+    "clients": {
+      "value": "24+",
+      "label": "Klien Berhasil IPO"
+    },
+    "satisfaction": {
+      "value": "4.9/5",
+      "label": "Rating Kepuasan"
+    }
+  },
+  "cta": {
+    "joinSuccess": "Bergabunglah dengan Kisah Sukses Kami",
+    "startJourney": "Mulai Perjalanan IPO Anda"
+  }
+}

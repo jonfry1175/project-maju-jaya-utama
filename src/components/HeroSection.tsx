@@ -3,15 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TrendingUp, Shield, Award, Users, ArrowRight, Play, Building2 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
+  const { t } = useTranslation('hero');
   const [counters, setCounters] = useState([0, 0, 0, 0]);
   
   const stats = [
-    { icon: Building2, value: 100, suffix: "%", label: "Komitmen Penuh", color: "primary" },
-    { icon: TrendingUp, value: 24, suffix: "/7", label: "Dukungan Konsultasi", color: "accent" },
-    { icon: Award, value: 1, suffix: "", label: "Solusi Terintegrasi", color: "primary" },
-    { icon: Users, value: 30, suffix: "+", label: "Tim Profesional", color: "accent" }
+    { icon: Building2, value: 100, suffix: "%", label: t('stats.commitment.label'), color: "primary" },
+    { icon: TrendingUp, value: 24, suffix: "/7", label: t('stats.support.label'), color: "accent" },
+    { icon: Award, value: 1, suffix: "", label: t('stats.solution.label'), color: "primary" },
+    { icon: Users, value: 30, suffix: "+", label: t('stats.team.label'), color: "accent" }
   ];
 
   useEffect(() => {
@@ -83,29 +85,29 @@ const HeroSection = () => {
             <div className="space-y-6">
               <div className="inline-flex items-center bg-background/90 backdrop-blur-sm text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20 shadow-lg">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                Mitra Resmi BEI & OJK
+                {t('badge')}
               </div>
               
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-primary font-display leading-[1.1]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-                  Wujudkan Ambisi IPO
-                  <span className="text-gradient block mt-2">Dengan Kepastian</span>
+                  {t('title')}
+                  <span className="text-gradient block mt-2">{t('titleHighlight')}</span>
                 </h1>
                 
                 <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                  Sebagai konsultan IPO inovatif yang baru berdiri, kami menghadirkan perspektif segar dan pendekatan modern untuk memandu transformasi perusahaan Anda menuju pasar modal Indonesia.
+                  {t('description')}
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="btn-gradient-brand shadow-brand text-base font-semibold px-8 py-6 h-auto group">
-                Mulai Perjalanan IPO
+                {t('cta.startJourney')}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg" className="text-base font-semibold px-8 py-6 h-auto border-2 group">
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Tonton Video Pengantar
+                {t('cta.watchVideo')}
               </Button>
             </div>
 
@@ -117,7 +119,7 @@ const HeroSection = () => {
                   alt="Global Sinergi Kapital" 
                   className="w-8 h-8 object-contain"
                 />
-                <p className="text-sm text-muted-foreground font-medium">Mitra terpercaya:</p>
+                <p className="text-sm text-muted-foreground font-medium">{t('partners.label')}</p>
               </div>
               <div className="flex items-center gap-8">
                 <div className="text-primary/80 font-bold text-lg">BEI</div>

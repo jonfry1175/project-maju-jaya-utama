@@ -1,0 +1,112 @@
+{
+  "section": {
+    "badge": "Hubungi Kami",
+    "title": "Mari Diskusikan",
+    "titleHighlight": "Rencana IPO Anda",
+    "description": "Tim konsultan kami siap membantu mewujudkan ambisi go public perusahaan Anda."
+  },
+  "info": {
+    "office": {
+      "title": "Kantor Pusat",
+      "address": [
+        "Menara Sudirman Lt. 25",
+        "Jl. Jend. Sudirman Kav. 25",
+        "Jakarta Pusat 10210"
+      ],
+      "action": "Lihat di Maps"
+    },
+    "phone": {
+      "title": "Hubungi Kami",
+      "numbers": ["+62 21 1234-5678", "+62 812-9000-1234"],
+      "action": "Telepon Sekarang"
+    },
+    "whatsapp": {
+      "title": "WhatsApp Business",
+      "number": "+62 812-9000-1234",
+      "action": "Chat WhatsApp"
+    },
+    "hours": {
+      "title": "Jam Operasional",
+      "schedule": [
+        "Senin - Jumat: 09:00 - 18:00",
+        "Sabtu: 09:00 - 13:00"
+      ],
+      "action": "Jadwalkan Meeting"
+    }
+  },
+  "form": {
+    "title": "Jadwalkan Konsultasi Gratis",
+    "description": "Isi formulir di bawah dan tim kami akan menghubungi Anda dalam 24 jam.",
+    "fields": {
+      "name": {
+        "label": "Nama Lengkap",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Email Perusahaan",
+        "placeholder": "john@perusahaan.com"
+      },
+      "company": {
+        "label": "Nama Perusahaan",
+        "placeholder": "PT Perusahaan Tbk"
+      },
+      "phone": {
+        "label": "Nomor Telepon",
+        "placeholder": "+62 812-3456-7890"
+      },
+      "revenue": {
+        "label": "Pendapatan Tahunan",
+        "placeholder": "Pilih rentang pendapatan",
+        "options": {
+          "below50": "< Rp 50 Miliar",
+          "50to100": "Rp 50-100 Miliar",
+          "100to500": "Rp 100-500 Miliar",
+          "above500": "> Rp 500 Miliar"
+        }
+      },
+      "service": {
+        "label": "Layanan yang Dibutuhkan",
+        "placeholder": "Pilih layanan",
+        "options": {
+          "readiness": "IPO Readiness Assessment",
+          "fullAdvisory": "Full IPO Advisory",
+          "valuation": "Valuasi Perusahaan",
+          "other": "Lainnya"
+        }
+      },
+      "date": {
+        "label": "Pilih Tanggal Konsultasi",
+        "placeholder": "Pilih tanggal"
+      },
+      "time": {
+        "label": "Pilih Waktu",
+        "placeholder": "Pilih slot waktu"
+      },
+      "message": {
+        "label": "Pesan Tambahan",
+        "placeholder": "Ceritakan tentang rencana IPO Anda..."
+      }
+    },
+    "consent": "Saya setuju untuk dihubungi oleh tim Global Sinergi Kapital",
+    "submit": "Kirim Permintaan Konsultasi",
+    "submitting": "Mengirim...",
+    "success": {
+      "title": "Terima kasih!",
+      "message": "Permintaan konsultasi Anda telah kami terima. Tim kami akan menghubungi Anda dalam 24 jam."
+    }
+  },
+  "benefits": {
+    "title": "Mengapa Konsultasi dengan Kami?",
+    "items": [
+      "Konsultasi awal gratis tanpa komitmen",
+      "Analisis mendalam kondisi perusahaan",
+      "Rekomendasi strategi IPO yang tepat",
+      "Estimasi timeline dan biaya"
+    ]
+  },
+  "quickContact": {
+    "title": "Butuh Respon Cepat?",
+    "whatsapp": "Chat via WhatsApp",
+    "call": "Telepon Langsung"
+  }
+}

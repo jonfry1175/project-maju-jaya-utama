@@ -1,0 +1,35 @@
+{
+  "badge": "Official Partner of IDX & OJK",
+  "title": "Realize Your IPO Ambition",
+  "titleHighlight": "With Certainty",
+  "description": "As a newly established innovative IPO consultant, we bring fresh perspectives and modern approaches to guide your company's transformation towards the Indonesian capital market.",
+  "cta": {
+    "startJourney": "Start Your IPO Journey",
+    "watchVideo": "Watch Introduction Video"
+  },
+  "partners": {
+    "label": "Trusted partners:"
+  },
+  "stats": {
+    "commitment": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Full Commitment"
+    },
+    "support": {
+      "value": "24",
+      "suffix": "/7",
+      "label": "Consultation Support"
+    },
+    "solution": {
+      "value": "1",
+      "suffix": "",
+      "label": "Integrated Solution"
+    },
+    "team": {
+      "value": "30",
+      "suffix": "+",
+      "label": "Professional Team"
+    }
+  }
+}

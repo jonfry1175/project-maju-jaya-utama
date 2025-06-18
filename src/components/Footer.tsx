@@ -4,33 +4,35 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t, i18n } = useTranslation('footer');
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "Tentang Kami", href: "#about" },
-    { name: "Layanan Konsultasi IPO", href: "#services" },
-    { name: "Proses IPO", href: "#process" },
-    { name: "Mengapa Memilih Kami", href: "#testimonials" },
+    { name: i18n.language === 'id' ? "Tentang Kami" : "About Us", href: "#about" },
+    { name: i18n.language === 'id' ? "Layanan Konsultasi IPO" : "IPO Consulting Services", href: "#services" },
+    { name: i18n.language === 'id' ? "Proses IPO" : "IPO Process", href: "#process" },
+    { name: i18n.language === 'id' ? "Mengapa Memilih Kami" : "Why Choose Us", href: "#testimonials" },
     { name: "FAQ", href: "#faq" },
-    { name: "Hubungi Kami", href: "#contact" }
+    { name: i18n.language === 'id' ? "Hubungi Kami" : "Contact Us", href: "#contact" }
   ];
 
   const services = [
-    { name: "Konsultasi IPO", href: "#" },
-    { name: "Restrukturisasi Perusahaan", href: "#" },
-    { name: "Hukum & Kepatuhan", href: "#" },
-    { name: "Valuasi Perusahaan", href: "#" },
-    { name: "Dukungan Pasca IPO", href: "#" },
-    { name: "Hubungan Investor", href: "#" }
+    { name: i18n.language === 'id' ? "Konsultasi IPO" : "IPO Consulting", href: "#" },
+    { name: i18n.language === 'id' ? "Restrukturisasi Perusahaan" : "Corporate Restructuring", href: "#" },
+    { name: i18n.language === 'id' ? "Hukum & Kepatuhan" : "Legal & Compliance", href: "#" },
+    { name: i18n.language === 'id' ? "Valuasi Perusahaan" : "Company Valuation", href: "#" },
+    { name: i18n.language === 'id' ? "Dukungan Pasca IPO" : "Post-IPO Support", href: "#" },
+    { name: i18n.language === 'id' ? "Hubungan Investor" : "Investor Relations", href: "#" }
   ];
 
   const resources = [
     { name: "IPO Guidebook 2024", icon: FileText, badge: "PDF" },
-    { name: "Regulasi OJK Terbaru", icon: Shield, badge: "Update" },
-    { name: "Market Report Q4 2024", icon: Award, badge: "New" },
-    { name: "IPO Readiness Checklist", icon: FileText, badge: "Free" }
+    { name: i18n.language === 'id' ? "Regulasi OJK Terbaru" : "Latest OJK Regulations", icon: Shield, badge: i18n.language === 'id' ? "Update" : "Update" },
+    { name: "Market Report Q4 2024", icon: Award, badge: i18n.language === 'id' ? "New" : "New" },
+    { name: "IPO Readiness Checklist", icon: FileText, badge: i18n.language === 'id' ? "Free" : "Free" }
   ];
 
   return (
@@ -51,13 +53,14 @@ const Footer = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold font-display">Global Sinergi Kapital</h3>
-                  <p className="text-primary-foreground/80 text-sm">Konsultan IPO Terpercaya</p>
+                  <p className="text-primary-foreground/80 text-sm">{t('company.tagline')}</p>
                 </div>
               </div>
               <p className="text-primary-foreground/80 leading-relaxed">
-                Mitra strategis perusahaan Indonesia dalam mengakses pasar modal. 
-                Sebagai konsultan IPO yang baru berdiri, kami berkomitmen 
-                menghadirkan solusi IPO yang komprehensif dan inovatif dengan pendekatan modern.
+                {i18n.language === 'id' ? 
+                  'Mitra strategis perusahaan Indonesia dalam mengakses pasar modal. Sebagai konsultan IPO yang baru berdiri, kami berkomitmen menghadirkan solusi IPO yang komprehensif dan inovatif dengan pendekatan modern.' :
+                  'Strategic partner for Indonesian companies in accessing capital markets. As a newly established IPO consultant, we are committed to providing comprehensive and innovative IPO solutions with modern approach.'
+                }
               </p>
             </div>
 
@@ -65,7 +68,7 @@ const Footer = () => {
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center space-x-2 text-sm">
                 <Shield className="w-4 h-4" />
-                <span>Terdaftar OJK</span>
+                <span>{i18n.language === 'id' ? 'Terdaftar OJK' : 'OJK Registered'}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Award className="w-4 h-4" />
@@ -73,7 +76,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <FileText className="w-4 h-4" />
-                <span>Member BEI</span>
+                <span>{i18n.language === 'id' ? 'Member BEI' : 'IDX Member'}</span>
               </div>
             </div>
 
@@ -98,7 +101,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold font-display">Tautan Cepat</h4>
+            <h4 className="text-lg font-semibold font-display">{i18n.language === 'id' ? 'Tautan Cepat' : 'Quick Links'}</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -116,7 +119,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold font-display">Layanan</h4>
+            <h4 className="text-lg font-semibold font-display">{t('sections.services.title')}</h4>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
@@ -135,7 +138,7 @@ const Footer = () => {
           {/* Contact & Resources */}
           <div className="space-y-6">
             <div>
-              <h4 className="text-lg font-semibold font-display mb-4">Kontak</h4>
+              <h4 className="text-lg font-semibold font-display mb-4">{t('contact.title')}</h4>
               <div className="space-y-3 text-primary-foreground/80 text-sm">
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-2 hover:text-white transition-colors">
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
@@ -151,14 +154,14 @@ const Footer = () => {
                 </a>
                 <div className="flex items-center space-x-2">
                   <Clock className="w-4 h-4" />
-                  <span>Senin - Jumat: 09:00 - 18:00</span>
+                  <span>{i18n.language === 'id' ? 'Senin - Jumat: 09:00 - 18:00' : 'Monday - Friday: 09:00 - 18:00'}</span>
                 </div>
               </div>
             </div>
 
             {/* Resources */}
             <div>
-              <h4 className="text-lg font-semibold font-display mb-4">Sumber Daya</h4>
+              <h4 className="text-lg font-semibold font-display mb-4">{t('sections.resources.title')}</h4>
               <div className="space-y-2">
                 {resources.map((resource) => (
                   <a 
@@ -184,24 +187,24 @@ const Footer = () => {
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-primary-foreground/60">
-              <p>© {currentYear} PT Global Sinergi Kapital. Hak cipta dilindungi.</p>
+              <p>© {currentYear} PT Global Sinergi Kapital. {i18n.language === 'id' ? 'Hak cipta dilindungi.' : 'All rights reserved.'}</p>
               <div className="flex space-x-6">
-                <a href="#" className="hover:text-white transition-colors">Kebijakan Privasi</a>
-                <a href="#" className="hover:text-white transition-colors">Syarat & Ketentuan</a>
-                <a href="#" className="hover:text-white transition-colors">Peta Situs</a>
+                <a href="#" className="hover:text-white transition-colors">{i18n.language === 'id' ? 'Kebijakan Privasi' : 'Privacy Policy'}</a>
+                <a href="#" className="hover:text-white transition-colors">{i18n.language === 'id' ? 'Syarat & Ketentuan' : 'Terms & Conditions'}</a>
+                <a href="#" className="hover:text-white transition-colors">{i18n.language === 'id' ? 'Peta Situs' : 'Sitemap'}</a>
               </div>
             </div>
             
             <div className="flex items-center space-x-4 text-sm">
               <div className="flex items-center space-x-2 text-primary-foreground/60">
                 <Shield className="w-4 h-4" />
-                <span>Terdaftar & Diawasi OJK</span>
+                <span>{i18n.language === 'id' ? 'Terdaftar & Diawasi OJK' : 'Registered & Supervised by OJK'}</span>
               </div>
               <a 
                 href="#" 
                 className="flex items-center space-x-1 text-primary-foreground/60 hover:text-white transition-colors"
               >
-                <span>Penyangkalan Hukum</span>
+                <span>{i18n.language === 'id' ? 'Penyangkalan Hukum' : 'Legal Disclaimer'}</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
             </div>

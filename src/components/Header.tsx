@@ -2,8 +2,11 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = () => {
+  const { t } = useTranslation('header');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -16,10 +19,10 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: "Tentang Kami", href: "#about" },
-    { name: "Layanan", href: "#services" },
-    { name: "Proses IPO", href: "#process" },
-    { name: "Kontak", href: "#contact" }
+    { name: t('nav.about'), href: "#about" },
+    { name: t('nav.services'), href: "#services" },
+    { name: t('nav.process'), href: "#process" },
+    { name: t('nav.contact'), href: "#contact" }
   ];
 
   const handleLogoClick = () => {
@@ -40,9 +43,9 @@ const Header = () => {
             />
             <div>
               <h1 className="text-xl font-bold text-primary font-display leading-tight">
-                Global Sinergi Kapital
+                {t('companyName')}
               </h1>
-              <p className="text-xs text-muted-foreground font-medium">Konsultan IPO Terpercaya</p>
+              <p className="text-xs text-muted-foreground font-medium">{t('tagline')}</p>
             </div>
           </div>
 
@@ -61,12 +64,13 @@ const Header = () => {
 
           {/* CTA Buttons - More Professional */}
           <div className="hidden lg:flex items-center space-x-3">
+            <LanguageSwitcher />
             <Button variant="outline" size="sm" className="text-sm font-medium border-primary/20 hover:border-primary/40">
               <Phone size={16} className="mr-2" />
-              Konsultasi Gratis
+              {t('cta.freeConsultation')}
             </Button>
             <Button className="btn-gradient-brand shadow-brand text-sm font-medium px-6">
-              Mulai Perjalanan IPO
+              {t('cta.startIPOJourney')}
             </Button>
           </div>
 
@@ -94,21 +98,22 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-2 pt-4 px-4">
+                <LanguageSwitcher />
                 <Button variant="outline" size="sm" className="justify-start border-primary/20">
                   <Phone size={16} className="mr-2" />
-                  Konsultasi Gratis
+                  {t('cta.freeConsultation')}
                 </Button>
                 <Button className="btn-gradient-brand justify-start">
-                  Mulai Perjalanan IPO
+                  {t('cta.startIPOJourney')}
                 </Button>
                 <div className="flex items-center justify-between pt-4 mt-4 border-t border-border/40">
                   <a href="tel:+622112345678" className="flex items-center text-sm text-muted-foreground">
                     <Phone size={14} className="mr-2" />
-                    (021) 1234-5678
+                    {t('phone')}
                   </a>
                   <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground">
                     <MessageCircle size={14} className="mr-2" />
-                    WhatsApp
+                    {t('whatsapp')}
                   </a>
                 </div>
               </div>

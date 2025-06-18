@@ -1,0 +1,119 @@
+{
+  "section": {
+    "badge": "Tentang Global Sinergi Kapital",
+    "title": "Konsultan IPO Baru dengan",
+    "titleHighlight": "Perspektif Segar",
+    "description": "Global Sinergi Kapital hadir sebagai konsultan IPO yang baru berdiri dengan tim profesional berpengalaman. Kami menghadirkan pendekatan inovatif dan solusi modern untuk membantu perusahaan Indonesia mengakses pasar modal dengan lebih efisien dan efektif."
+  },
+  "values": {
+    "innovation": {
+      "title": "Inovasi",
+      "description": "Pendekatan segar dan solusi kreatif untuk setiap tantangan IPO yang unik."
+    },
+    "integrity": {
+      "title": "Integritas",
+      "description": "Komitmen pada transparansi dan etika bisnis tertinggi dalam setiap proses."
+    },
+    "collaboration": {
+      "title": "Kolaborasi",
+      "description": "Bekerja sama erat dengan klien sebagai mitra strategis jangka panjang."
+    },
+    "excellence": {
+      "title": "Keunggulan",
+      "description": "Layanan berkualitas tinggi dengan standar internasional terkini."
+    }
+  },
+  "roadmap": {
+    "title": "Roadmap Kami",
+    "items": {
+      "2025": {
+        "title": "Fondasi Kuat",
+        "description": "Membangun tim profesional dan infrastruktur teknologi modern untuk layanan konsultasi IPO"
+      },
+      "2026": {
+        "title": "Ekspansi Layanan",
+        "description": "Meluncurkan platform digital dan memperluas jangkauan ke seluruh Indonesia"
+      },
+      "2027": {
+        "title": "Mitra Regional",
+        "description": "Menjalin kemitraan strategis dengan bursa efek dan regulator di Asia Tenggara"
+      },
+      "2028": {
+        "title": "Pusat Edukasi",
+        "description": "Mendirikan akademi IPO untuk meningkatkan literasi pasar modal Indonesia"
+      },
+      "2029": {
+        "title": "Inovasi Digital",
+        "description": "Mengintegrasikan AI dan blockchain untuk mempercepat proses IPO"
+      },
+      "2030": {
+        "title": "Pemimpin Pasar",
+        "description": "Menjadi konsultan IPO terkemuka dengan 100+ klien sukses go public"
+      }
+    }
+  },
+  "team": {
+    "title": "Tim Kepemimpinan",
+    "members": {
+      "ceo": {
+        "name": "Dr. Budi Santoso, CFA",
+        "position": "Direktur Utama",
+        "experience": "Praktisi pasar modal berpengalaman",
+        "credentials": [
+          "Doktor Keuangan - UI",
+          "CFA Charterholder",
+          "Mantan Direktur BEI"
+        ]
+      },
+      "coo": {
+        "name": "Siti Rahayu, MBA",
+        "position": "Direktur Operasional",
+        "experience": "Ahli strategi bisnis dan manajemen",
+        "credentials": [
+          "MBA - INSEAD",
+          "Spesialis IPO Tersertifikasi",
+          "Mantan Mitra Big 4"
+        ]
+      },
+      "cfo": {
+        "name": "Agus Wijaya, CA",
+        "position": "Direktur Keuangan",
+        "experience": "Profesional audit dan advisory",
+        "credentials": [
+          "Chartered Accountant",
+          "Mantan Senior Manager PwC",
+          "Ahli IPO"
+        ]
+      }
+    }
+  },
+  "mission": {
+    "title": "Misi Kami",
+    "description": "Memberikan solusi konsultasi IPO yang komprehensif dan inovatif, membangun kepercayaan melalui transparansi, dan menciptakan nilai berkelanjutan bagi klien."
+  },
+  "vision": {
+    "title": "Visi Kami",
+    "description": "Menjadi konsultan IPO terkemuka di Asia Tenggara yang membantu perusahaan mengakses pasar modal dengan integritas, inovasi, dan keunggulan layanan."
+  },
+  "whyChooseUs": {
+    "title": "Mengapa Memilih Kami",
+    "reasons": {
+      "professional": {
+        "title": "Tim Profesional Berpengalaman",
+        "description": "Didukung oleh para ahli dengan pengalaman ekstensif di pasar modal Indonesia dan internasional."
+      },
+      "innovative": {
+        "title": "Pendekatan Inovatif",
+        "description": "Menggunakan metodologi modern dan teknologi terkini untuk proses IPO yang lebih efisien."
+      },
+      "network": {
+        "title": "Jaringan Luas",
+        "description": "Koneksi kuat dengan regulator, underwriter, dan pelaku pasar modal untuk kelancaran proses."
+      },
+      "commitment": {
+        "title": "Komitmen Kesuksesan",
+        "description": "Dedikasi penuh untuk memastikan setiap klien mencapai tujuan go public dengan optimal."
+      }
+    }
+  }
+}

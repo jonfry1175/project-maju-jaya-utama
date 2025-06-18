@@ -1,0 +1,128 @@
+{
+  "section": {
+    "badge": "Frequently Asked Questions",
+    "title": "Everything You Need to Know About",
+    "titleHighlight": "IPO Process",
+    "description": "Find answers to frequently asked questions about IPO and our services."
+  },
+  "categories": {
+    "requirements": {
+      "title": "IPO Requirements",
+      "questions": [
+        {
+          "question": "What are the main requirements for IPO in Indonesia?",
+          "answer": {
+            "intro": "Main IPO requirements in Indonesia include:",
+            "points": [
+              "Limited Liability Company (PT) form",
+              "Minimum paid-up capital of IDR 3 billion",
+              "Audited financial statements for the last 3 years",
+              "Minimum 300 shareholders",
+              "Minimum 150 million shares offered"
+            ]
+          }
+        },
+        {
+          "question": "How long does the IPO process take?",
+          "answer": "The IPO process in Indonesia generally takes 6-12 months, depending on company readiness and market conditions. Stages include internal preparation (3-6 months), OJK regulatory process (2-3 months), and offering period until listing (1-2 months)."
+        },
+        {
+          "question": "Does a company need to be profitable for IPO?",
+          "answer": "Not necessarily. While profitability increases investor appeal, OJK doesn't require companies to be profitable. What's important is clear business prospects, good governance, and transparency in financial reporting."
+        }
+      ]
+    },
+    "process": {
+      "title": "Process & Stages",
+      "questions": [
+        {
+          "question": "What are the main stages in the IPO process?",
+          "answer": {
+            "intro": "Main IPO stages include:",
+            "timeline": [
+              {
+                "phase": "Internal Preparation",
+                "duration": "3-6 months",
+                "activities": "Restructuring, audit, document preparation"
+              },
+              {
+                "phase": "Due Diligence",
+                "duration": "1-2 months",
+                "activities": "Comprehensive examination by consultants"
+              },
+              {
+                "phase": "OJK Submission",
+                "duration": "2-3 months",
+                "activities": "Document submission and expose"
+              },
+              {
+                "phase": "Public Offering",
+                "duration": "2-4 weeks",
+                "activities": "Bookbuilding and share allocation"
+              },
+              {
+                "phase": "Listing",
+                "duration": "1 week",
+                "activities": "Stock exchange listing"
+              }
+            ]
+          }
+        },
+        {
+          "question": "How is the IPO share price determined?",
+          "answer": "IPO share price is determined through bookbuilding process considering company valuation, market conditions, investor interest, and comparison with similar companies. Underwriters will help determine optimal price range."
+        }
+      ]
+    },
+    "services": {
+      "title": "GSK Services",
+      "questions": [
+        {
+          "question": "What services does Global Sinergi Kapital provide?",
+          "answer": {
+            "intro": "GSK provides end-to-end IPO services:",
+            "services": [
+              "IPO readiness assessment",
+              "Prospectus and regulatory document preparation",
+              "Valuation and offering structure determination",
+              "Coordination with regulators and underwriters",
+              "Management training and GCG implementation",
+              "Roadshow assistance and investor relations"
+            ]
+          }
+        },
+        {
+          "question": "How much does IPO consultant service cost?",
+          "answer": "IPO consultation fees vary depending on company complexity and size. GSK offers various packages from initial evaluation to full assistance. We can provide a custom proposal after initial assessment."
+        }
+      ]
+    },
+    "postIPO": {
+      "title": "Post IPO",
+      "questions": [
+        {
+          "question": "What are company obligations after IPO?",
+          "answer": {
+            "intro": "Main public company obligations:",
+            "obligations": [
+              "Quarterly and annual financial reports",
+              "Annual GMS and dividend announcements",
+              "Material information disclosure",
+              "Maintain minimum 7.5% public ownership",
+              "Compliance with OJK and IDX regulations"
+            ]
+          }
+        },
+        {
+          "question": "Does GSK provide post-IPO services?",
+          "answer": "Yes, GSK provides post-IPO support services including corporate action advisory, periodic report preparation assistance, investor relations, and ongoing regulatory compliance consultation."
+        }
+      ]
+    }
+  },
+  "stillHaveQuestions": {
+    "title": "Still have questions?",
+    "description": "Our expert team is ready to help answer your specific questions about the IPO process.",
+    "cta": "Contact Expert Team"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "badge": "Mitra Resmi BEI & OJK",
+  "title": "Wujudkan Ambisi IPO",
+  "titleHighlight": "Dengan Kepastian",
+  "description": "Sebagai konsultan IPO inovatif yang baru berdiri, kami menghadirkan perspektif segar dan pendekatan modern untuk memandu transformasi perusahaan Anda menuju pasar modal Indonesia.",
+  "cta": {
+    "startJourney": "Mulai Perjalanan IPO",
+    "watchVideo": "Tonton Video Pengantar"
+  },
+  "partners": {
+    "label": "Mitra terpercaya:"
+  },
+  "stats": {
+    "commitment": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Komitmen Penuh"
+    },
+    "support": {
+      "value": "24",
+      "suffix": "/7",
+      "label": "Dukungan Konsultasi"
+    },
+    "solution": {
+      "value": "1",
+      "suffix": "",
+      "label": "Solusi Terintegrasi"
+    },
+    "team": {
+      "value": "30",
+      "suffix": "+",
+      "label": "Tim Profesional"
+    }
+  }
+}

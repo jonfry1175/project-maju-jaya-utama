@@ -1,0 +1,198 @@
+{
+  "section": {
+    "badge": "Our Services",
+    "title": "Complete Solutions for",
+    "titleHighlight": "Your IPO Journey",
+    "description": "We provide comprehensive IPO consulting services, from initial preparation to stock exchange listing."
+  },
+  "categories": {
+    "advisory": {
+      "title": "IPO Advisory",
+      "description": "Comprehensive consulting services for IPO preparation and execution",
+      "services": {
+        "documentation": {
+          "title": "IPO Documentation Preparation",
+          "description": "Preparation of prospectus, financial statements, and complete regulatory documents according to OJK and IDX standards.",
+          "features": [
+            "Prospectus & Company Profile",
+            "Financial Statement Preparation",
+            "Legal Document Review",
+            "Risk Factor Analysis"
+          ],
+          "price": "Premium Package"
+        },
+        "valuation": {
+          "title": "Valuation & Market Analysis",
+          "description": "Determining company fair value and optimal pricing strategy based on market conditions.",
+          "features": [
+            "Comprehensive Business Valuation",
+            "Industry & Market Analysis",
+            "Competitor Comparison Study",
+            "IPO Pricing Strategy"
+          ],
+          "price": "Special Consultation"
+        },
+        "strategy": {
+          "title": "Go Public Strategy",
+          "description": "Strategic planning of IPO timeline, underwriter selection, and roadshow preparation.",
+          "features": [
+            "IPO Timeline Planning",
+            "Underwriter Selection",
+            "Roadshow Preparation",
+            "Investor Communication Strategy"
+          ],
+          "price": "Strategic Services"
+        }
+      }
+    },
+    "compliance": {
+      "title": "Regulatory Compliance",
+      "description": "Ensuring compliance with all OJK and IDX regulatory requirements",
+      "services": {
+        "regulatory": {
+          "title": "OJK Regulatory Compliance",
+          "description": "Complete assistance to meet all OJK requirements and regulations.",
+          "features": [
+            "Regulatory Compliance Review",
+            "Periodic Report Preparation",
+            "Regulator Coordination",
+            "Latest Regulation Updates"
+          ],
+          "price": "Monthly Retainer"
+        },
+        "corporate": {
+          "title": "Corporate Governance",
+          "description": "GCG implementation and governance structure according to public company standards.",
+          "features": [
+            "GCG Implementation",
+            "Committee Formation",
+            "Charter & Policy Preparation",
+            "Board of Directors Training"
+          ],
+          "price": "GCG Package"
+        },
+        "reporting": {
+          "title": "Reporting System",
+          "description": "Development of financial and management reporting systems according to public standards.",
+          "features": [
+            "Financial Reporting System",
+            "Management Dashboard",
+            "Automated Compliance",
+            "Real-time Monitoring"
+          ],
+          "price": "Digital Solution"
+        }
+      }
+    },
+    "education": {
+      "title": "Education & Training",
+      "description": "Comprehensive education programs for management and employees",
+      "services": {
+        "management": {
+          "title": "Management Training",
+          "description": "Special training for directors and senior management on public company responsibilities.",
+          "features": [
+            "Directors' Duties & Liabilities",
+            "Capital Market Regulations",
+            "Investor Relations",
+            "Crisis Management"
+          ],
+          "price": "Executive Program"
+        },
+        "employee": {
+          "title": "Employee Workshop",
+          "description": "Education program for all employees about transformation to public company.",
+          "features": [
+            "Capital Market Introduction",
+            "Code of Conduct",
+            "Insider Trading Rules",
+            "Company Culture"
+          ],
+          "price": "In-House Training"
+        },
+        "certification": {
+          "title": "Professional Certification",
+          "description": "Certification program to enhance internal team competency.",
+          "features": [
+            "Corporate Secretary",
+            "Investor Relations",
+            "Risk Management",
+            "Internal Audit"
+          ],
+          "price": "Certified Course"
+        }
+      }
+    }
+  },
+  "process": {
+    "title": "Our Work Process",
+    "badge": "Structured Methodology",
+    "steps": [
+      {
+        "title": "Initial Analysis",
+        "description": "Company readiness evaluation for going public",
+        "duration": "2-4 weeks"
+      },
+      {
+        "title": "Planning",
+        "description": "IPO roadmap and timeline preparation",
+        "duration": "4-6 weeks"
+      },
+      {
+        "title": "Preparation",
+        "description": "Document preparation and requirement fulfillment",
+        "duration": "3-6 months"
+      },
+      {
+        "title": "Execution",
+        "description": "IPO implementation until stock exchange listing",
+        "duration": "2-3 months"
+      }
+    ]
+  },
+  "packages": {
+    "title": "Service Packages",
+    "starter": {
+      "name": "IPO Readiness",
+      "description": "Readiness evaluation and basic roadmap",
+      "price": "Starting from",
+      "features": [
+        "Gap Analysis",
+        "IPO Roadmap",
+        "Quick Assessment",
+        "Basic Advisory"
+      ]
+    },
+    "professional": {
+      "name": "IPO Advisory",
+      "description": "Complete IPO preparation consultation",
+      "price": "Comprehensive",
+      "popular": true,
+      "features": [
+        "Full Documentation",
+        "Valuation Services",
+        "Regulatory Support",
+        "Training Programs",
+        "Project Management"
+      ]
+    },
+    "enterprise": {
+      "name": "IPO Excellence",
+      "description": "End-to-end IPO and post-IPO support",
+      "price": "Premium",
+      "features": [
+        "Complete IPO Services",
+        "Post-IPO Support",
+        "Digital Platform",
+        "24/7 Assistance",
+        "Success Guarantee"
+      ]
+    }
+  },
+  "cta": {
+    "getProposal": "Get Proposal",
+    "bookConsultation": "Schedule Consultation",
+    "downloadBrochure": "Download Brochure",
+    "contactUs": "Contact Us"
+  }
+}

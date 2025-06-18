@@ -7,11 +7,13 @@ import {
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { HelpCircle, MessageCircle, ArrowRight, Shield, FileText } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const FAQSection = () => {
+  const { t, i18n } = useTranslation('faq');
   const faqCategories = [
     {
-      category: "Persyaratan IPO",
+      category: i18n.language === 'id' ? "Persyaratan IPO" : "IPO Requirements",
       questions: [
         {
           q: "Apa saja persyaratan utama untuk melakukan IPO di Indonesia?",
@@ -118,7 +120,7 @@ const FAQSection = () => {
       ]
     },
     {
-      category: "Proses & Tahapan",
+      category: i18n.language === 'id' ? "Proses & Tahapan" : "Process & Stages",
       questions: [
         {
           q: "Apa saja tahapan utama dalam proses IPO?",
@@ -227,7 +229,7 @@ const FAQSection = () => {
       ]
     },
     {
-      category: "Pasca IPO",
+      category: i18n.language === 'id' ? "Pasca IPO" : "Post IPO",
       questions: [
         {
           q: "Apa saja kewajiban perusahaan setelah menjadi perusahaan terbuka?",
@@ -352,16 +354,16 @@ const FAQSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
             <HelpCircle className="w-4 h-4 mr-2" />
-            Pertanyaan yang Sering Diajukan
+            {t('section.badge')}
           </div>
           
           <h2 className="text-3xl lg:text-5xl font-bold text-primary font-display mb-6 leading-tight">
-            Pertanyaan Seputar
-            <span className="text-gradient block">Proses IPO</span>
+            {t('section.title')}
+            <span className="text-gradient block">{t('section.titleHighlight')}</span>
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Temukan jawaban atas pertanyaan-pertanyaan umum tentang Initial Public Offering (IPO) di Indonesia.
+            {t('section.description')}
           </p>
         </div>
 
@@ -405,20 +407,20 @@ const FAQSection = () => {
             <div className="relative p-8 lg:p-12">
               <div className="max-w-2xl mx-auto text-center mb-8">
                 <h3 className="text-3xl font-bold font-display mb-4">
-                  Masih Punya Pertanyaan?
+                  {t('stillHaveQuestions.title')}
                 </h3>
                 <p className="text-white/90 text-lg">
-                  Tim ahli kami siap menjawab pertanyaan spesifik tentang situasi perusahaan Anda dan memberikan konsultasi mendalam tentang kesiapan IPO.
+                  {t('stillHaveQuestions.description')}
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Obrolan Langsung
+                  {i18n.language === 'id' ? 'Obrolan Langsung' : 'Live Chat'}
                 </Button>
                 <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all">
-                  Unduh FAQ Lengkap
+                  {i18n.language === 'id' ? 'Unduh FAQ Lengkap' : 'Download Complete FAQ'}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -429,12 +431,12 @@ const FAQSection = () => {
                     <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
                       <Shield className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-lg">Penilaian Kesiapan IPO</h4>
+                    <h4 className="font-semibold text-lg">{i18n.language === 'id' ? 'Penilaian Kesiapan IPO' : 'IPO Readiness Assessment'}</h4>
                     <p className="text-sm text-white/80">
-                      Evaluasi kesiapan perusahaan Anda untuk go public dengan tool assessment online kami.
+                      {i18n.language === 'id' ? 'Evaluasi kesiapan perusahaan Anda untuk go public dengan tool assessment online kami.' : 'Evaluate your company\'s readiness to go public with our online assessment tool.'}
                     </p>
                     <Button size="sm" className="w-full bg-accent text-primary hover:bg-accent/90">
-                      Mulai Penilaian →
+                      {i18n.language === 'id' ? 'Mulai Penilaian' : 'Start Assessment'} →
                     </Button>
                   </div>
                 </Card>
@@ -444,12 +446,12 @@ const FAQSection = () => {
                     <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
                       <FileText className="w-6 h-6 text-accent" />
                     </div>
-                    <h4 className="font-semibold text-lg">Panduan IPO 2024</h4>
+                    <h4 className="font-semibold text-lg">{i18n.language === 'id' ? 'Panduan IPO 2024' : 'IPO Guide 2024'}</h4>
                     <p className="text-sm text-white/80">
-                      Panduan lengkap 100+ halaman tentang regulasi dan proses IPO terbaru.
+                      {i18n.language === 'id' ? 'Panduan lengkap 100+ halaman tentang regulasi dan proses IPO terbaru.' : 'Complete 100+ page guide on the latest IPO regulations and processes.'}
                     </p>
                     <Button size="sm" className="w-full bg-accent text-primary hover:bg-accent/90">
-                      Unduh Gratis →
+                      {i18n.language === 'id' ? 'Unduh Gratis' : 'Free Download'} →
                     </Button>
                   </div>
                 </Card>

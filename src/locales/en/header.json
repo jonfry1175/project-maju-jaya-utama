@@ -1,0 +1,16 @@
+{
+  "companyName": "Global Sinergi Kapital",
+  "tagline": "Trusted IPO Consultant",
+  "nav": {
+    "about": "About Us",
+    "services": "Services",
+    "process": "IPO Process",
+    "contact": "Contact"
+  },
+  "cta": {
+    "freeConsultation": "Free Consultation",
+    "startIPOJourney": "Start Your IPO Journey"
+  },
+  "phone": "(021) 1234-5678",
+  "whatsapp": "WhatsApp"
+}

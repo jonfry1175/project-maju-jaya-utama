@@ -1,0 +1,128 @@
+{
+  "section": {
+    "badge": "Pertanyaan Umum",
+    "title": "Semua yang Perlu Anda Ketahui tentang",
+    "titleHighlight": "Proses IPO",
+    "description": "Temukan jawaban atas pertanyaan yang sering diajukan tentang IPO dan layanan kami."
+  },
+  "categories": {
+    "requirements": {
+      "title": "Persyaratan IPO",
+      "questions": [
+        {
+          "question": "Apa saja persyaratan utama untuk melakukan IPO di Indonesia?",
+          "answer": {
+            "intro": "Persyaratan utama IPO di Indonesia meliputi:",
+            "points": [
+              "Berbentuk Perseroan Terbatas (PT)",
+              "Modal disetor minimal Rp 3 miliar",
+              "Laporan keuangan audit 3 tahun terakhir",
+              "Memiliki minimal 300 pemegang saham",
+              "Saham yang ditawarkan minimal 150 juta lembar"
+            ]
+          }
+        },
+        {
+          "question": "Berapa lama waktu yang dibutuhkan untuk proses IPO?",
+          "answer": "Proses IPO di Indonesia umumnya memakan waktu 6-12 bulan, tergantung pada kesiapan perusahaan dan kondisi pasar. Tahapan meliputi persiapan internal (3-6 bulan), proses regulasi OJK (2-3 bulan), dan masa penawaran hingga listing (1-2 bulan)."
+        },
+        {
+          "question": "Apakah perusahaan harus sudah profit untuk IPO?",
+          "answer": "Tidak selalu. Meskipun profitabilitas meningkatkan daya tarik investor, OJK tidak mewajibkan perusahaan harus profit. Yang penting adalah prospek bisnis yang jelas, tata kelola yang baik, dan transparansi dalam pelaporan keuangan."
+        }
+      ]
+    },
+    "process": {
+      "title": "Proses & Tahapan",
+      "questions": [
+        {
+          "question": "Apa saja tahapan utama dalam proses IPO?",
+          "answer": {
+            "intro": "Tahapan utama IPO meliputi:",
+            "timeline": [
+              {
+                "phase": "Persiapan Internal",
+                "duration": "3-6 bulan",
+                "activities": "Restrukturisasi, audit, penyusunan dokumen"
+              },
+              {
+                "phase": "Due Diligence",
+                "duration": "1-2 bulan",
+                "activities": "Pemeriksaan menyeluruh oleh konsultan"
+              },
+              {
+                "phase": "Pengajuan ke OJK",
+                "duration": "2-3 bulan",
+                "activities": "Submit dokumen dan ekspose"
+              },
+              {
+                "phase": "Penawaran Umum",
+                "duration": "2-4 minggu",
+                "activities": "Bookbuilding dan alokasi saham"
+              },
+              {
+                "phase": "Listing",
+                "duration": "1 minggu",
+                "activities": "Pencatatan di bursa efek"
+              }
+            ]
+          }
+        },
+        {
+          "question": "Bagaimana cara menentukan harga saham IPO?",
+          "answer": "Harga saham IPO ditentukan melalui proses bookbuilding dengan mempertimbangkan valuasi perusahaan, kondisi pasar, minat investor, dan perbandingan dengan perusahaan sejenis. Underwriter akan membantu menentukan rentang harga yang optimal."
+        }
+      ]
+    },
+    "services": {
+      "title": "Layanan GSK",
+      "questions": [
+        {
+          "question": "Apa saja layanan yang disediakan Global Sinergi Kapital?",
+          "answer": {
+            "intro": "GSK menyediakan layanan end-to-end IPO:",
+            "services": [
+              "Evaluasi kesiapan IPO (IPO readiness assessment)",
+              "Penyusunan dokumen prospektus dan regulasi",
+              "Valuasi dan penentuan struktur penawaran",
+              "Koordinasi dengan regulator dan underwriter",
+              "Training manajemen dan implementasi GCG",
+              "Pendampingan roadshow dan investor relations"
+            ]
+          }
+        },
+        {
+          "question": "Berapa biaya jasa konsultan IPO?",
+          "answer": "Biaya konsultasi IPO bervariasi tergantung kompleksitas dan ukuran perusahaan. GSK menawarkan berbagai paket mulai dari evaluasi awal hingga pendampingan penuh. Kami dapat memberikan proposal khusus setelah initial assessment."
+        }
+      ]
+    },
+    "postIPO": {
+      "title": "Pasca IPO",
+      "questions": [
+        {
+          "question": "Apa saja kewajiban perusahaan setelah IPO?",
+          "answer": {
+            "intro": "Kewajiban utama perusahaan publik:",
+            "obligations": [
+              "Laporan keuangan triwulan dan tahunan",
+              "RUPS tahunan dan pengumuman dividen",
+              "Keterbukaan informasi material",
+              "Menjaga public ownership minimal 7.5%",
+              "Compliance dengan peraturan OJK dan BEI"
+            ]
+          }
+        },
+        {
+          "question": "Apakah GSK memberikan layanan pasca IPO?",
+          "answer": "Ya, GSK menyediakan layanan post-IPO support meliputi advisory untuk corporate action, bantuan penyusunan laporan berkala, investor relations, dan konsultasi kepatuhan regulasi berkelanjutan."
+        }
+      ]
+    }
+  },
+  "stillHaveQuestions": {
+    "title": "Masih ada pertanyaan?",
+    "description": "Tim ahli kami siap membantu menjawab pertanyaan spesifik Anda tentang proses IPO.",
+    "cta": "Hubungi Tim Ahli"
+  }
+}

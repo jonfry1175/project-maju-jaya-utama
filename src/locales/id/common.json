@@ -1,0 +1,23 @@
+{
+  "404": "404",
+  "pageNotFound": "Ups! Halaman tidak ditemukan",
+  "backToHome": "Kembali ke Beranda",
+  "loading": "Memuat...",
+  "error": "Terjadi kesalahan",
+  "tryAgain": "Coba lagi",
+  "learnMore": "Pelajari lebih lanjut",
+  "readMore": "Baca selengkapnya",
+  "viewAll": "Lihat semua",
+  "close": "Tutup",
+  "submit": "Kirim",
+  "cancel": "Batal",
+  "save": "Simpan",
+  "delete": "Hapus",
+  "edit": "Edit",
+  "add": "Tambah",
+  "search": "Cari",
+  "filter": "Filter",
+  "sort": "Urutkan",
+  "yes": "Ya",
+  "no": "Tidak"
+}

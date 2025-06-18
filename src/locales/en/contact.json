@@ -1,0 +1,112 @@
+{
+  "section": {
+    "badge": "Contact Us",
+    "title": "Let's Discuss",
+    "titleHighlight": "Your IPO Plan",
+    "description": "Our consultant team is ready to help realize your company's public listing ambition."
+  },
+  "info": {
+    "office": {
+      "title": "Head Office",
+      "address": [
+        "Menara Sudirman 25th Floor",
+        "Jl. Jend. Sudirman Kav. 25",
+        "Central Jakarta 10210"
+      ],
+      "action": "View on Maps"
+    },
+    "phone": {
+      "title": "Call Us",
+      "numbers": ["+62 21 1234-5678", "+62 812-9000-1234"],
+      "action": "Call Now"
+    },
+    "whatsapp": {
+      "title": "WhatsApp Business",
+      "number": "+62 812-9000-1234",
+      "action": "Chat WhatsApp"
+    },
+    "hours": {
+      "title": "Business Hours",
+      "schedule": [
+        "Monday - Friday: 09:00 - 18:00",
+        "Saturday: 09:00 - 13:00"
+      ],
+      "action": "Schedule Meeting"
+    }
+  },
+  "form": {
+    "title": "Schedule Free Consultation",
+    "description": "Fill out the form below and our team will contact you within 24 hours.",
+    "fields": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Company Email",
+        "placeholder": "john@company.com"
+      },
+      "company": {
+        "label": "Company Name",
+        "placeholder": "PT Company Tbk"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "+62 812-3456-7890"
+      },
+      "revenue": {
+        "label": "Annual Revenue",
+        "placeholder": "Select revenue range",
+        "options": {
+          "below50": "< IDR 50 Billion",
+          "50to100": "IDR 50-100 Billion",
+          "100to500": "IDR 100-500 Billion",
+          "above500": "> IDR 500 Billion"
+        }
+      },
+      "service": {
+        "label": "Service Needed",
+        "placeholder": "Select service",
+        "options": {
+          "readiness": "IPO Readiness Assessment",
+          "fullAdvisory": "Full IPO Advisory",
+          "valuation": "Company Valuation",
+          "other": "Other"
+        }
+      },
+      "date": {
+        "label": "Select Consultation Date",
+        "placeholder": "Pick a date"
+      },
+      "time": {
+        "label": "Select Time",
+        "placeholder": "Select time slot"
+      },
+      "message": {
+        "label": "Additional Message",
+        "placeholder": "Tell us about your IPO plan..."
+      }
+    },
+    "consent": "I agree to be contacted by Global Sinergi Kapital team",
+    "submit": "Send Consultation Request",
+    "submitting": "Sending...",
+    "success": {
+      "title": "Thank you!",
+      "message": "We have received your consultation request. Our team will contact you within 24 hours."
+    }
+  },
+  "benefits": {
+    "title": "Why Consult with Us?",
+    "items": [
+      "Free initial consultation without commitment",
+      "In-depth analysis of company condition",
+      "Appropriate IPO strategy recommendations",
+      "Timeline and cost estimation"
+    ]
+  },
+  "quickContact": {
+    "title": "Need Quick Response?",
+    "whatsapp": "Chat via WhatsApp",
+    "call": "Direct Call"
+  }
+}
