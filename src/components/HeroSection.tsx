@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, Shield, Award, Users, ArrowRight, Play, Building2 } from "lucide-react";
+import { ArrowRight, Award, Building2, Play, TrendingUp, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -112,20 +112,44 @@ const HeroSection = () => {
             </div>
 
             {/* Partner Logos */}
-            <div className="space-y-4 bg-background/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg inline-block">
+            <div className="space-y-4 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg inline-block border border-gray-100">
               <div className="flex items-center gap-2">
                 <img 
                   src="/logo.png" 
                   alt="Global Sinergi Kapital" 
                   className="w-8 h-8 object-contain"
                 />
-                <p className="text-sm text-muted-foreground font-medium">{t('partners.label')}</p>
+                <p className="text-sm text-gray-600 font-medium">{t('partners.label')}</p>
               </div>
-              <div className="flex items-center gap-8">
-                <div className="text-primary/80 font-bold text-lg">BEI</div>
-                <div className="text-primary/80 font-bold text-lg">OJK</div>
-                <div className="text-primary/80 font-bold text-lg">KSEI</div>
-                <div className="text-primary/80 font-bold text-lg">KPEI</div>
+              <div className="flex items-center justify-center gap-8 px-4">
+                <div className="flex items-center h-12">
+                  <img 
+                    src="/logo/logo-bei.webp" 
+                    alt="BEI - Indonesia Stock Exchange" 
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+                <div className="flex items-center h-12">
+                  <img 
+                    src="/logo/logo-ojk.png" 
+                    alt="OJK - Indonesia Financial Services Authority" 
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+                <div className="flex items-center h-12">
+                  <img 
+                    src="/logo/logo-ksei.png" 
+                    alt="KSEI - Indonesia Central Securities Depository" 
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+                <div className="flex items-center h-12 bg-gray-100 rounded px-3">
+                  <img 
+                    src="/logo/logo-kpei.png" 
+                    alt="KPEI - Indonesia Clearing Guarantee Corporation" 
+                    className="h-10 w-auto object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
