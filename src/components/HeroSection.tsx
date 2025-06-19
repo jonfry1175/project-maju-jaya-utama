@@ -82,19 +82,19 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Enhanced Content */}
           <div className="space-y-8 animate-slide-in-left">
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="inline-flex items-center bg-background/90 backdrop-blur-sm text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20 shadow-lg">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                 {t('badge')}
               </div>
               
-              <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold text-primary font-display leading-[1.1]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+              <div className="space-y-6">
+                <h1 className="text-4xl lg:text-6xl font-bold text-primary font-display leading-tight lg:leading-[1.2]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
                   {t('title')}
-                  <span className="text-gradient block mt-2">{t('titleHighlight')}</span>
+                  <span className="text-gradient block mt-3 lg:mt-4">{t('titleHighlight')}</span>
                 </h1>
                 
-                <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed lg:leading-relaxed max-w-xl pt-2">
                   {t('description')}
                 </p>
               </div>

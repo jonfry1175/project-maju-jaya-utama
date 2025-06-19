@@ -93,7 +93,7 @@ const ContactSection = () => {
           
           <h2 className="text-3xl lg:text-5xl font-bold text-primary font-display mb-6 leading-tight">
             {t('section.title')}
-            <span className="text-gradient block">{t('section.titleHighlight')}</span>
+            
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed">

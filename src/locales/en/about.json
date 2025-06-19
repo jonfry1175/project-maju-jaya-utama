@@ -5,6 +5,55 @@
     "titleHighlight": "Fresh Perspective",
     "description": "Global Sinergi Kapital emerges as a newly established IPO consultant with an experienced professional team. We bring innovative approaches and modern solutions to help Indonesian companies access the capital market more efficiently and effectively."
   },
+  "ritzProfile": {
+    "badge": "About RITZ Corp",
+    "title": "About RITZ Corp",
+    "description": {
+      "main": "RITZ Corp is an integrated business that has two main business lines, namely Financial and Business Consulting. PT RITZ Corpora Indonesia (\"PT RCI\") is managed by RITZ Corp, which offers Corporate Law Services through RITZ & Partners Law Firm (\"R&P\") and Commercial Litigation Services through RITZ Law Firm (\"RLF\")."
+    },
+    "businessLines": {
+      "financial": {
+        "title": "Financial Services",
+        "description": "Comprehensive financial consulting and advisory services for business growth and development"
+      },
+      "consulting": {
+        "title": "Business Consulting",
+        "description": "Strategic business consulting with extensive experience and credentials in various sectors"
+      }
+    },
+    "stats": {
+      "partners": "40+",
+      "partnersLabel": "Professional Partners",
+      "experience": "15+",
+      "experienceLabel": "Years Experience"
+    }
+  },
+  "approach": {
+    "badge": "Our Methodology",
+    "title": "Our Approach",
+    "steps": {
+      "step1": {
+        "title": "Client-Focused Solutions",
+        "description": "In addressing the needs of our clients, we assemble specialized teams that are tailored to meet the specific business requirements of our clients. This ensures that our services effectively assist our clients in overcoming all challenges."
+      },
+      "step2": {
+        "title": "Customized Advisory Services",
+        "description": "As your business expands, our advisory services are designed to aid you in developing customized solutions that align with your unique requirements and goals within your organization. Successful growth often involves navigating a complex landscape."
+      },
+      "step3": {
+        "title": "Strategic Guidance",
+        "description": "We will guide you through various scenarios, recommending measures and actions to ensure offering and position your business for a better future. Our plans will support your current business needs but also consider where you aspire to be in the future."
+      },
+      "step4": {
+        "title": "Comprehensive Support",
+        "description": "Regardless of the scale of your major transaction, we will work with and receive support from our dedicated professionals who generate value about your business and its long-term success."
+      }
+    },
+    "cta": {
+      "description": "Ready to transform your business with our proven approach?",
+      "text": "Start Your Journey with Us"
+    }
+  },
   "values": {
     "innovation": {
       "title": "Innovation",
@@ -113,6 +162,187 @@
       "commitment": {
         "title": "Success Commitment",
         "description": "Full dedication to ensure every client achieves their public listing goals optimally."
+      }
+    }
+  },
+  "mainClients": {
+    "badge": "Our Partnership",
+    "title": "Our Main Client",
+    "subtitle": "Trusted by Leading Companies",
+    "description": {
+      "main": "Each day, we dedicate our hearts and minds to serving our clients, striving not only for individual success but also to cultivate enduring relationships.",
+      "secondary": "Our clients span a diverse array of sectors, affording us the opportunity to continually expand our knowledge and gain broader insights and experiences from each unique client engagement."
+    }
+  },
+  "businessServices": {
+    "badge": "Our Expertise",
+    "title": "Business Advisory & Investment Services",
+    "subtitle": "Comprehensive Solutions Across Industries",
+    "description": "We provide strategic advisory services across diverse sectors, delivering tailored solutions that drive business transformation and sustainable growth.",
+    "projects": {
+      "pelindo1": {
+        "sector": "Port Logistics, Management and Development",
+        "company": "PELINDO",
+        "service": "Business Transformation & M&A",
+        "year": "RITZ Deal Advisory 2021"
+      },
+      "pelindo2": {
+        "sector": "Maritim and Logistics",
+        "company": "PELINDO",
+        "service": "Business Transformation",
+        "year": "RITZ Deal Advisory 2020"
+      },
+      "pelindo3": {
+        "sector": "Port Infrastructure Facilities",
+        "company": "PELINDO",
+        "service": "Business Transformation & M&A",
+        "year": "RITZ Deal Advisory 2021"
+      },
+      "pelindo4": {
+        "sector": "Port Investment Services",
+        "company": "PELINDO",
+        "service": "Debt Restructuring & M&A",
+        "year": "RITZ Deal Advisory 2021"
+      },
+      "wskt": {
+        "sector": "Precast & Ready Mix Manufacture",
+        "company": "WSKT",
+        "service": "Asset Divestment",
+        "year": "RITZ Deal Advisory 2021-2022"
+      },
+      "wrRealty": {
+        "sector": "Property and Developer",
+        "company": "WR Realty",
+        "service": "Asset Divestment program and Fundraising",
+        "year": "RITZ Deal Advisory 2022"
+      },
+      "angkasa1": {
+        "sector": "Airport and Aviation",
+        "company": "ANGKASA PURA II",
+        "service": "Deposit Account Execution Resistance",
+        "year": "RITZ Deal Advisory 2014"
+      },
+      "angkasa2": {
+        "sector": "Airport and Aviation",
+        "company": "ANGKASA PURA II",
+        "service": "Advisory for legal and development",
+        "year": "RITZ Deal Advisory 2014"
+      },
+      "finance": {
+        "sector": "Finance",
+        "company": "SBI & BAJAJ FINSERV",
+        "service": "Project Financing",
+        "year": "RITZ Deal Advisory 2015"
+      },
+      "twentyOne": {
+        "sector": "Property and Developer",
+        "company": "PT Twenty One Development",
+        "service": "Debt Restructuring & PKU",
+        "year": "RITZ Deal Advisory 2020"
+      },
+      "falakwati": {
+        "sector": "Property and Developer",
+        "company": "Falakwati Group",
+        "service": "Debt Restructuring and Settlement",
+        "year": "RITZ Deal Advisory 2017"
+      },
+      "hotel": {
+        "sector": "Indonesian Hotel",
+        "company": "Hotel Panghegar (Pt. Royale)",
+        "service": "Bankruptcy and Suspension of Debt Payment Obligations",
+        "year": "RITZ Deal Advisory 2016"
+      }
+    },
+    "additionalProjects": {
+      "citraMustika": {
+        "sector": "Real Estate Developer",
+        "company": "PT Citra Mustika Besten",
+        "service": "Debt Restructuring and Settlement",
+        "year": "RITZ Deal Advisory 2017"
+      },
+      "lsw": {
+        "sector": "Spinning and Textile",
+        "company": "LSW",
+        "service": "Debt Restructuring & Turn Around",
+        "year": "RITZ Deal Advisory 2021"
+      },
+      "jjsm": {
+        "sector": "Spinning and Textile",
+        "company": "JJSM",
+        "service": "Debt Restructuring & Turn Around",
+        "year": "RITZ Deal Advisory 2021"
+      },
+      "bemaestex": {
+        "sector": "Textile",
+        "company": "BEMAESTEX",
+        "service": "Debt Restructuring & Settlement",
+        "year": "RITZ Deal Advisory 2017"
+      },
+      "megacorp": {
+        "sector": "Banking",
+        "company": "MEGACORP altobank",
+        "service": "M&A Banking",
+        "year": "RITZ Deal Advisory 2020"
+      },
+      "brava": {
+        "sector": "Private Equity",
+        "company": "BRAVA",
+        "service": "M&A of \"The\" Shares",
+        "year": "RITZ Deal Advisory 2021"
+      },
+      "wimcycle": {
+        "sector": "Manufacturing",
+        "company": "WIMCYCLE",
+        "service": "Debt Restructuring & PKPU",
+        "year": "RITZ Deal Advisory 2020"
+      },
+      "maybank": {
+        "sector": "Banking",
+        "company": "Maybank",
+        "service": "Spin-Off Sharia Unit",
+        "year": "RITZ Deal Advisory 2022"
+      },
+      "asetku": {
+        "sector": "Financial Technology",
+        "company": "Aset&u",
+        "service": "Tax Advisory and Settlement",
+        "year": "RITZ Deal Advisory 2022"
+      },
+      "trans": {
+        "sector": "A subsidiary of Trans Corp",
+        "company": "TRANS",
+        "service": "Advisory and Restructuring",
+        "year": "RITZ Deal Advisory 2020"
+      },
+      "automotive": {
+        "sector": "Indonesian Economic Outlook Automotive Industry",
+        "company": "Toyota Suppliers Network",
+        "service": "Vendor and Suppliers of Toyota Astra Motor",
+        "year": "RITZ Deal Advisory 2019"
+      },
+      "sip": {
+        "sector": "Property and Developer",
+        "company": "SIP",
+        "service": "Advisory for financial, legal and others",
+        "year": "RITZ Deal Advisory 2019"
+      },
+      "dcp": {
+        "sector": "Steel Industry",
+        "company": "DCP",
+        "service": "Debt Restructuring & PKPU",
+        "year": "RITZ Deal Advisory 2021"
+      },
+      "selectHotels": {
+        "sector": "Japan Hotel Network",
+        "company": "Select Hotels Group",
+        "service": "M&A Transaction Hotel in Indonesia",
+        "year": "RITZ Deal Advisory 2019"
+      },
+      "realEstate": {
+        "sector": "Real Estate Developer",
+        "company": "PT Regency Utama Indonesia dan PT Putriko Nusantara Indonesia",
+        "service": "Debt Restructuring and Settlement",
+        "year": "RITZ Deal Advisory 2020"
       }
     }
   }

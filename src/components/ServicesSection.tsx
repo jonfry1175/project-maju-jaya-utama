@@ -165,7 +165,7 @@ const ServicesSection = () => {
             {i18n.language === 'id' ? 'Layanan Profesional' : 'Professional Services'}
           </div>
           
-          <h2 className="text-3xl lg:text-5xl font-bold text-primary font-display mb-6 leading-tight">
+          <h2 className="text-5xl lg:text-5x2 font-bold text-primary font-display mb-6 leading-tight">
             {t('section.title')}
             <span className="text-gradient block">{t('section.titleHighlight')}</span>
           </h2>
@@ -176,7 +176,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Service Categories Tabs */}
-        <Tabs defaultValue="advisory" className="w-full mb-16">
+        <Tabs defaultValue="advisory" className="w-full mb-18">
           <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-3 mb-12">
             {Object.entries(serviceCategories).map(([key, category]) => {
               const Icon = category.icon;
@@ -338,12 +338,12 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
+        <div className="mt-14 text-center">
           <Card className="p-8 lg:p-12 bg-background/80 border-2 border-primary/20 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-primary font-display mb-4">
               Siap Memulai Perjalanan IPO Anda?
             </h3>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               Konsultasi gratis dengan tim ahli kami untuk mengetahui kesiapan perusahaan Anda dan langkah selanjutnya menuju go public.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
