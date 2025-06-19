@@ -128,39 +128,83 @@ const AboutSection = () => {
           ))}
         </div>
 
-                        {/* Our Approach Section */}
+        {/* RITZ Corp Partnership Section */}
         <div className="mb-6 sm:mb-8">
           <div className="max-w-7xl mx-auto">
-            <Card className="overflow-hidden bg-slate-50 dark:bg-slate-800 border border-border/50 shadow-lg">
-              <div className="p-4 sm:p-6 lg:p-8 xl:p-12">
+            <div className="grid lg:grid-cols-2 gap-0 bg-white rounded-lg overflow-hidden shadow-lg">
+              {/* Left Side - Image */}
+              <div className="relative">
+                <img 
+                  src="/Section/tinywow_tinywow_RITZ Corpora Indonesia Company Profile - 2024_compressed_81741712_81741767_1.jpg"
+                  alt="RITZ Corp Team"
+                  className="w-full h-full object-cover min-h-[400px] lg:min-h-[500px]"
+                />
+              </div>
+
+              {/* Right Side - Content */}
+              <div className="bg-gray-50 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
                 {/* Header */}
-                <div className="text-center mb-6 sm:mb-8">
-                  <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
-                    <Target className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
+                <div className="mb-6">
+                  <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 border border-primary/20">
+                    <Building className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
                     {t('approach.badge')}
                   </div>
                   
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary font-display leading-tight mb-3 sm:mb-4">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black leading-tight mb-4 text-center">
+                    About<br />
                     {t('approach.title')}
                   </h3>
+                </div>
+
+                {/* Description - Exact content from image */}
+                <div className="space-y-4 text-gray-800 leading-relaxed text-justify">
+                  <p className="text-sm">
+                    RITZ Corp is an integrated business that has two main business lines, namely Financial and Business 
+                    Consulting through PT RITZ Konsultan Indonesia ("RKI") and PT RITZ Investment Indonesia ("RII"). In addition, RITZ 
+                    Corp offers Corporate Law Services through RITZ & Partners Law Firm ("R&P") and Commercial Litigation 
+                    Services through Rivai & Co. Law Firm ("RCO").
+                  </p>
                   
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                    {t('approach.description')}
+                  <p className="text-sm">
+                    RKI has experience and credentials, as well as an extensive network in banking, commercial, investment 
+                    banking, private equity, and capital markets. Especially in assisting companies with corporate restructuring, 
+                    debt restructuring, turn-around management/management changes, divestments/investments, and Mergers 
+                    & Acquisitions (M&A), among others, acquisitions, spin-offs, mergers, divestitures, and investments.
+                  </p>
+                  
+                  <p className="text-sm">
+                    RII, a sub-holding under the RITZ Corp, has experienced partners from various professional backgrounds. 
+                    Together with its partners, RII establishes subsidiary companies in various industrial sectors, managed by the 
+                    partners. It is also utilized to support the formation of consortium members in project financing managed by 
+                    RKI.
+                  </p>
+                  
+                  <p className="text-sm">
+                    R&P is a corporate law firm with experience and credentials in Merger and Acquisition (M&A) transactions, 
+                    Banking & Finance and Pre-IPO Programs and other required corporate transactions for companies and 
+                    business groups in Indonesia. RCO is a law firm focused on Commercial Litigation, such as Alternative Dispute 
+                    Resolutions, Suspension of Debt Payment Obligations (PKPU) & Bankruptcy.
+                  </p>
+                  
+                  <p className="text-sm">
+                    RITZ Corp has a team consisting of more than 40 partners with diverse executive backgrounds in banking, 
+                    investment banking & private equity, capital markets, the real sector, legal, and arbitration. They also have 
+                    regional desks in Japan, South Korea, and Singapore. They possess broad qualifications, including debt 
+                    restructuring, debt settlement through asset divestment, refinancing, investments, and debt resolution through 
+                    legal/PKPU processes. RITZ Corp also has experience working with several major state-owned enterprises 
+                    (BUMN) across various types of transactions, including business development, restructuring, asset divestment, 
+                    fundraising, and M&A activities.
                   </p>
                 </div>
                 
-                {/* Bottom CTA */}
-                <div className="text-center">
-                  <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
-                    {t('approach.cta.description')}
+                {/* Footer */}
+                <div className="mt-6 text-center">
+                  <p className="text-xs text-gray-500">
+                    Strictly Confidential
                   </p>
-                  <div className="inline-flex items-center text-sm sm:text-base text-primary font-semibold">
-                    <Briefcase className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
-                    {t('approach.cta.text')}
-                  </div>
                 </div>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
 
