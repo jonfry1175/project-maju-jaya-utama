@@ -85,7 +85,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         {/* Header - Enhanced */}
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
+          <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-6 border border-primary/20">
             <Building className="w-4 h-4 mr-2" />
             {t('section.badge')}
           </div>
@@ -144,9 +144,9 @@ const AboutSection = () => {
                 </div>
                 
                 {/* Content Section */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center space-y-6">
+                <div className="p-4 sm:p-6 lg:p-8 xl:p-12 flex flex-col justify-center space-y-6">
                   <div className="space-y-4">
-                    <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20">
+                    <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-primary/20">
                       <Building className="w-4 h-4 mr-2" />
                       {t('ritzProfile.badge')}
                     </div>
@@ -209,10 +209,10 @@ const AboutSection = () => {
                 </div>
                 
                 {/* Content */}
-                <div className="relative z-10 p-8 lg:p-12">
+                <div className="relative z-10 p-4 sm:p-6 lg:p-8 xl:p-12">
                   {/* Header */}
                   <div className="text-center mb-12">
-                    <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
+                    <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-6 border border-primary/20">
                       <Target className="w-4 h-4 mr-2" />
                       {t('approach.badge')}
                     </div>
@@ -276,22 +276,22 @@ const AboutSection = () => {
           </div>
         </div>
                 {/* Our Main Client Section */}
-                <div className="mb-20">
+                <div className="mb-8 sm:mb-12 lg:mb-16">
           <div className="max-w-7xl mx-auto">
             <Card className="overflow-hidden bg-gradient-to-br from-slate-50 to-gray-100 dark:from-slate-800 dark:to-slate-900 border border-border/50 shadow-xl">
-              <div className="p-8 lg:p-12">
+              <div className="p-4 sm:p-6 lg:p-8 xl:p-12">
                 {/* Header */}
-                <div className="text-center mb-12">
-                  <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
+                <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+                  <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-6 border border-primary/20">
                     <Users className="w-4 h-4 mr-2" />
                     {t('mainClients.badge')}
                   </div>
                   
-                  <h3 className="text-3xl lg:text-4xl font-bold text-primary font-display leading-tight mb-4">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary font-display leading-tight mb-3 sm:mb-4">
                     {t('mainClients.title')}
                   </h3>
                   
-                  <p className="text-lg text-primary/80 font-semibold mb-6">
+                  <p className="text-base sm:text-lg text-primary/80 font-semibold mb-4 sm:mb-6">
                     {t('mainClients.subtitle')}
                   </p>
                   
@@ -306,109 +306,109 @@ const AboutSection = () => {
                 </div>
                 
                 {/* Client Logos Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 items-center justify-items-center">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 items-center justify-items-center">
                   {/* Row 1 */}
-                  <div className="flex items-center justify-center h-20 w-full">
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-sponsor-gsk-mandiri.jpg" 
                       alt="Mandiri"
-                      className="h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   
-                  <div className="flex items-center justify-center h-20 w-full">
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-sponsor-gsk-bni.jpg" 
                       alt="BNI"
-                      className="h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   
-                  <div className="flex items-center justify-center h-20 w-full">
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-sponsor-gsk-maybank.jpg" 
                       alt="Maybank"
-                      className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-10 sm:h-12 lg:h-14 xl:h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   
-                  <div className="flex items-center justify-center h-20 w-full">
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-sponsor-gsk-angkasa.jpg" 
                       alt="Angkasa Pura II"
-                      className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-10 sm:h-12 lg:h-14 xl:h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   
-                  <div className="flex items-center justify-center h-20 w-full">
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-sponsor-gsk-bri.png" 
                       alt="BRI Agro"
-                      className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-10 sm:h-12 lg:h-14 xl:h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   
                   {/* Row 2 */}
-                  <div className="flex items-center justify-center h-20 w-full">
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-sponsor-gsk-telkom.jpg" 
                       alt="Telkomsel"
-                      className="h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   
-                  <div className="flex items-center justify-center h-20 w-full">
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-ski-sponsor-pelindo.png" 
                       alt="Pelindo"
-                      className="h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   
-                  <div className="flex items-center justify-center h-20 w-full">
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-sponsor-gsk-tempo.png" 
                       alt="Tempo Media Group"
-                      className="h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   
-                  <div className="flex items-center justify-center h-20 w-full">
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-sponsor-gsk-alif.png" 
                       alt="Alif"
-                      className="h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                   
-                  {/* Logo Pertamina in the last row */}
-                  <div className="flex items-center justify-center h-20 w-full">
+                  {/* Logo Pertamina */}
+                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img 
                       src="/public/Sponsor/logo-sponsor-gsk-pertamina.jpg" 
                       alt="Pertamina"
-                      className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                      className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                     />
                   </div>
                 </div>
                 
                 {/* Bottom Stats */}
-                <div className="mt-12 pt-8 border-t border-border/30">
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-                    <div className="space-y-2">
-                      <div className="text-3xl font-bold text-primary">10+</div>
-                      <div className="text-sm text-muted-foreground">Major Clients</div>
+                <div className="mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 border-t border-border/30">
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center">
+                    <div className="space-y-1 sm:space-y-1 sm:space-y-2">
+                      <div className="text-2xl sm:text-3xl font-bold text-primary">10+</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground">Major Clients</div>
                     </div>
-                    <div className="space-y-2">
-                      <div className="text-3xl font-bold text-primary">15+</div>
-                      <div className="text-sm text-muted-foreground">Industries Served</div>
+                    <div className="space-y-1 sm:space-y-1 sm:space-y-2">
+                      <div className="text-2xl sm:text-3xl font-bold text-primary">15+</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground">Industries Served</div>
                     </div>
-                    <div className="space-y-2">
-                      <div className="text-3xl font-bold text-primary">98%</div>
-                      <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                    <div className="space-y-1 sm:space-y-1 sm:space-y-2">
+                      <div className="text-2xl sm:text-3xl font-bold text-primary">98%</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground">Client Satisfaction</div>
                     </div>
-                    <div className="space-y-2">
-                      <div className="text-3xl font-bold text-primary">24/7</div>
-                      <div className="text-sm text-muted-foreground">Support Available</div>
+                    <div className="space-y-1 sm:space-y-1 sm:space-y-2">
+                      <div className="text-2xl sm:text-3xl font-bold text-primary">24/7</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground">Support Available</div>
                     </div>
                   </div>
                 </div>
@@ -418,13 +418,13 @@ const AboutSection = () => {
         </div>
 
         {/* Business Advisory & Investment Services Section */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <div className="max-w-7xl mx-auto">
             <Card className="overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 shadow-xl">
-              <div className="p-8 lg:p-12">
+              <div className="p-4 sm:p-6 lg:p-8 xl:p-12">
                 {/* Header */}
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-primary/20">
+                <div className="text-center mb-6 sm:mb-8">
+                  <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 border border-primary/20">
                     <FileText className="w-4 h-4 mr-2" />
                     {t('businessServices.badge')}
                   </div>
@@ -445,24 +445,24 @@ const AboutSection = () => {
                 </div>
                 
                 {/* Projects Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {/* Pelindo 1 */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.pelindo1.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-ski-sponsor-pelindo.png" 
                           alt="Pelindo"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.pelindo1.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -473,22 +473,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Pelindo 2 */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.pelindo2.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-ski-sponsor-pelindo.png" 
                           alt="Pelindo"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.pelindo2.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -499,22 +499,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Pelindo 3 */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.pelindo3.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-ski-sponsor-pelindo.png" 
                           alt="Pelindo"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.pelindo3.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -525,22 +525,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Pelindo 4 */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.pelindo4.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-ski-sponsor-pelindo.png" 
                           alt="Pelindo"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.pelindo4.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -551,22 +551,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* WSKT */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.wskt.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-sgk-wskt.jpg" 
                           alt="WSKT"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.wskt.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -577,22 +577,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* WR Realty */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.wrRealty.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-sgk-wrealty.jpg" 
                           alt="Wrealty"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.wrRealty.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -603,22 +603,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Angkasa Pura II 1 */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.angkasa1.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-sponsor-gsk-angkasa.jpg" 
                           alt="Angkasa Pura II"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.angkasa1.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -629,22 +629,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Angkasa Pura II 2 */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.angkasa2.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-sponsor-gsk-angkasa.jpg" 
                           alt="Angkasa Pura II"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.angkasa2.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -655,13 +655,13 @@ const AboutSection = () => {
                   </Card>
 
                                     {/* Finance - SBI & Bajaj Finserv */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase">
                         {t('businessServices.projects.finance.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="flex items-center justify-center space-x-3">
                           <img 
                             src="/public/Sponsor/logo-sponsor-sgk-sbi.jpg" 
@@ -676,8 +676,8 @@ const AboutSection = () => {
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground">
                           {t('businessServices.projects.finance.service')}
                         </div>
                         <div className="text-xs text-muted-foreground">
@@ -688,20 +688,20 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Twenty One Development */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.twentyOne.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="text-center">
                           <div className="text-red-600 font-bold text-lg">PT Twenty One Development</div>
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.twentyOne.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -712,20 +712,20 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Falakwati Group */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.falakwati.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="text-center">
                           <div className="text-orange-600 font-bold text-lg">Falakwati Group</div>
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.falakwati.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -736,20 +736,20 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Hotel Panghegar */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.projects.hotel.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="text-center">
                           <div className="text-orange-600 font-bold text-sm">Hotel Panghegar (Pt. Royale)</div>
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.projects.hotel.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -770,20 +770,20 @@ const AboutSection = () => {
                 {/* Additional Projects Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-8">
                   {/* PT Citra Mustika Besten */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.citraMustika.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="text-center flex items-center justify-center">
                           <div className="text-orange-600 font-bold text-base text-center">PT Citra Mustika Besten</div>
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.citraMustika.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -794,22 +794,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* LSW */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.lsw.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-jjsw.jpg" 
                           alt="JJSW"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.lsw.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -820,22 +820,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* JJSM */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.jjsm.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-jjsm.png" 
                           alt="JJSM"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.jjsm.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -846,22 +846,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* BEMAESTEX */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.bemaestex.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-bemaestex.jpg" 
                           alt="Bemaestex"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.bemaestex.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -872,30 +872,30 @@ const AboutSection = () => {
                   </Card>
 
                   {/* MEGACORP altobank */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.megacorp.sector')}
                       </div>
                       
-                                            <div className="flex items-center justify-center h-20 w-full">
+                                            <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="flex items-center justify-center space-x-2">
                           <img 
                             src="/public/Sponsor/logo-gsk-sponsor-megacorp.png" 
                             alt="Mega CORP"
-                            className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                            className="h-8 sm:h-10 lg:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                           />
                           <img 
                             src="/public/Sponsor/logo-gsk-sponsor-alllobank.png" 
                             alt="Allo Bank"
-                            className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                            className="h-8 sm:h-10 lg:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                           />
                         </div>
                       </div>
                       
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.megacorp.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -906,22 +906,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* BRAVA */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.brava.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-brava.png" 
                           alt="Brava"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.brava.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -932,22 +932,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* WIMCYCLE */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.wimcycle.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-wimcycle.webp" 
                           alt="Wimcycle"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.wimcycle.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -958,22 +958,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Maybank */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.maybank.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-sponsor-gsk-maybank.jpg" 
                           alt="Maybank"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.maybank.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -984,22 +984,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Aset&u */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.asetku.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-asetkuu.png" 
                           alt="Asetku"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.asetku.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -1010,22 +1010,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* TRANS */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.trans.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-trans.png" 
                           alt="Trans"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.trans.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -1036,22 +1036,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Toyota Automotive */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.automotive.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-bank-resona.png" 
                           alt="Bank Resona"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.automotive.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -1062,22 +1062,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* SIP */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.sip.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-sip.png" 
                           alt="SIP"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.sip.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -1088,13 +1088,13 @@ const AboutSection = () => {
                   </Card>
 
                   {/* DCP */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.dcp.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-dcp.png" 
                           alt="DCP"
@@ -1102,8 +1102,8 @@ const AboutSection = () => {
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.dcp.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -1114,22 +1114,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Select Hotels Group */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.selectHotels.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-select-hotels.png" 
                           alt="Select Hotels"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.selectHotels.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -1140,20 +1140,20 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Real Estate Developer */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t('businessServices.additionalProjects.realEstate.sector')}
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="text-center flex items-center justify-center">
                           <div className="text-orange-600 font-bold text-sm text-center">PT Regency Utama Indonesia dan PT Putriko Nusantara Indonesia</div>
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           {t('businessServices.additionalProjects.realEstate.service')}
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -1164,29 +1164,29 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Mega Corp Bank Sumsel */}
-                   <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                   <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         Financial Services
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="flex items-center justify-center space-x-2">
                           <img 
                             src="/public/Sponsor/logo-gsk-sponsor-megacorp.png" 
                             alt="Mega Corp"
-                            className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                            className="h-8 sm:h-10 lg:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                           />
                           <img 
                             src="/public/Sponsor/logo-gsk-sponsor-bank-sumsel.jpg" 
                             alt="Bank Sumsel"
-                            className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                            className="h-8 sm:h-10 lg:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                           />
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           Business Advisory & IPO Consulting
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -1197,22 +1197,22 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Bank BSG */}
-                  <Card className="p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
-                    <div className="space-y-4 text-center">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 group">
+                    <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         Financial Services
                       </div>
                       
-                      <div className="flex items-center justify-center h-20 w-full">
+                      <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img 
                           src="/public/Sponsor/logo-gsk-sponsor-bank-bsg.jpg" 
                           alt="Bank BSG"
-                          className="h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <div className="text-sm font-semibold text-foreground text-center">
+                      <div className="space-y-1 sm:space-y-2">
+                        <div className="text-xs sm:text-sm font-semibold text-foreground text-center">
                           Business Advisory & IPO Consulting
                         </div>
                         <div className="text-xs text-muted-foreground text-center">
@@ -1258,7 +1258,7 @@ const AboutSection = () => {
                   </div>
                   
                   {/* Content Section */}
-                  <div className="p-4 space-y-2">
+                  <div className="p-4 space-y-1 sm:space-y-2">
                     <h4 className="text-base font-bold text-foreground">{t(`roadmap.items.${item.titleKey}.title`)}</h4>
                     <p className="text-xs text-muted-foreground leading-relaxed">{t(`roadmap.items.${item.titleKey}.description`)}</p>
                     
@@ -1330,7 +1330,7 @@ const AboutSection = () => {
           <h3 className="text-2xl font-bold font-display text-center mb-4">{t('whyChooseUs.title')}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {whyChooseUs.map((item, index) => (
-              <div key={index} className="text-center space-y-2">
+              <div key={index} className="text-center space-y-1 sm:space-y-2">
                 <item.icon className="w-10 h-10 mx-auto mb-2" />
                 <div className="font-bold text-sm">{t(`whyChooseUs.reasons.${item.key}.title`)}</div>
                 <p className="text-xs text-white/80">{t(`whyChooseUs.reasons.${item.key}.description`)}</p>

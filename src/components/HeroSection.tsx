@@ -55,7 +55,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
+    <section id="hero" className="relative min-h-screen lg:min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -63,9 +63,9 @@ const HeroSection = () => {
           alt="Jakarta Skyline"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80"></div>
-        {/* Dark overlay for text areas */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/85 lg:from-background/80 lg:via-background/60 lg:to-background/80"></div>
+        {/* Dark overlay for text areas - responsive */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background/70 lg:bg-gradient-to-r lg:from-background/90 lg:via-background/50 lg:to-transparent"></div>
       </div>
       
       {/* Enhanced Background Elements */}
@@ -78,76 +78,76 @@ const HeroSection = () => {
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-accent/5 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-primary/5 to-transparent"></div>
       
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
           {/* Left Column - Enhanced Content */}
-          <div className="space-y-8 animate-slide-in-left">
+          <div className="space-y-6 sm:space-y-8 animate-slide-in-left order-1 lg:order-1">
             <div className="space-y-8">
               <div className="inline-flex items-center bg-background/90 backdrop-blur-sm text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20 shadow-lg">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                 {t('badge')}
               </div>
               
-              <div className="space-y-6">
-                <h1 className="text-4xl lg:text-6xl font-bold text-primary font-display leading-tight lg:leading-[1.2]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+              <div className="space-y-4 sm:space-y-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-primary font-display leading-tight sm:leading-tight lg:leading-[1.2]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
                   {t('title')}
-                  <span className="text-gradient block mt-3 lg:mt-4">{t('titleHighlight')}</span>
+                  <span className="text-gradient block mt-2 sm:mt-3 lg:mt-4">{t('titleHighlight')}</span>
                 </h1>
                 
-                <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed lg:leading-relaxed max-w-xl pt-2">
+                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed sm:leading-relaxed lg:leading-relaxed max-w-xl pt-1 sm:pt-2">
                   {t('description')}
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="btn-gradient-brand shadow-brand text-base font-semibold px-8 py-6 h-auto group">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button size="lg" className="btn-gradient-brand shadow-brand text-sm sm:text-base font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto group w-full sm:w-auto">
                 {t('cta.startJourney')}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" className="text-base font-semibold px-8 py-6 h-auto border-2 group">
-                <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              <Button variant="outline" size="lg" className="text-sm sm:text-base font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto border-2 group w-full sm:w-auto">
+                <Play className="mr-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:scale-110 transition-transform" />
                 {t('cta.watchVideo')}
               </Button>
             </div>
 
             {/* Partner Logos */}
-            <div className="space-y-4 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg inline-block border border-gray-100">
-              <div className="flex items-center gap-2">
+            <div className="space-y-3 sm:space-y-4 bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-lg inline-block border border-gray-100 w-full sm:w-auto">
+              <div className="flex items-center gap-2 justify-center sm:justify-start">
                 <img 
                   src="/logo.png" 
                   alt="Global Sinergi Kapital" 
-                  className="w-8 h-8 object-contain"
+                  className="w-5 sm:w-6 lg:w-8 h-5 sm:h-6 lg:h-8 object-contain"
                 />
-                <p className="text-sm text-gray-600 font-medium">{t('partners.label')}</p>
+                <p className="text-xs sm:text-sm text-gray-600 font-medium">{t('partners.label')}</p>
               </div>
-              <div className="flex items-center justify-center gap-8 px-4">
-                <div className="flex items-center h-12">
+              <div className="grid grid-cols-2 sm:flex sm:items-center sm:justify-center gap-3 sm:gap-4 lg:gap-6 xl:gap-8 px-1 sm:px-2 lg:px-4">
+                <div className="flex items-center justify-center h-10 sm:h-12 lg:h-14 xl:h-16">
                   <img 
                     src="/logo/logo-bei.webp" 
                     alt="BEI - Indonesia Stock Exchange" 
-                    className="h-full w-auto object-contain"
+                    className="h-8 sm:h-10 lg:h-12 xl:h-full w-auto object-contain max-w-full"
                   />
                 </div>
-                <div className="flex items-center h-12">
+                <div className="flex items-center justify-center h-10 sm:h-12 lg:h-14 xl:h-16">
                   <img 
                     src="/logo/logo-ojk.png" 
                     alt="OJK - Indonesia Financial Services Authority" 
-                    className="h-full w-auto object-contain"
+                    className="h-8 sm:h-10 lg:h-12 xl:h-full w-auto object-contain max-w-full"
                   />
                 </div>
-                <div className="flex items-center h-12">
+                <div className="flex items-center justify-center h-10 sm:h-12 lg:h-14 xl:h-16">
                   <img 
                     src="/logo/logo-ksei.png" 
                     alt="KSEI - Indonesia Central Securities Depository" 
-                    className="h-full w-auto object-contain"
+                    className="h-8 sm:h-10 lg:h-12 xl:h-full w-auto object-contain max-w-full"
                   />
                 </div>
-                <div className="flex items-center h-12 bg-gray-100 rounded px-3">
+                <div className="flex items-center justify-center h-10 sm:h-12 lg:h-14 xl:h-16 bg-gray-100 rounded px-2 sm:px-3 col-span-2 sm:col-span-1">
                   <img 
                     src="/logo/logo-kpei.png" 
                     alt="KPEI - Indonesia Clearing Guarantee Corporation" 
-                    className="h-10 w-auto object-contain"
+                    className="h-6 sm:h-8 lg:h-10 xl:h-12 w-auto object-contain max-w-full"
                   />
                 </div>
               </div>
@@ -155,7 +155,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Column - Professional Stats Grid */}
-          <div id="hero-stats" className="grid grid-cols-2 gap-5 animate-fade-up">
+          <div id="hero-stats" className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5 animate-fade-up order-2 lg:order-2 mt-8 lg:mt-0">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               const displayValue = stat.value % 1 !== 0 ? counters[index].toFixed(1) : Math.floor(counters[index]);
@@ -165,15 +165,15 @@ const HeroSection = () => {
                   key={index} 
                   className="group relative overflow-hidden bg-background/90 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-200"
                 >
-                  <div className="p-6 lg:p-8 space-y-4">
+                  <div className="p-3 sm:p-4 lg:p-6 xl:p-8 space-y-2 sm:space-y-3 lg:space-y-4">
                     {/* Icon with subtle styling */}
-                    <div className={`w-14 h-14 lg:w-16 lg:h-16 ${
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 ${
                       stat.color === 'primary' ? 'bg-primary/10' : 
                       stat.color === 'success' ? 'bg-success/10' :
                       stat.color === 'accent' ? 'bg-accent/10' :
                       'bg-secondary/10'
-                    } rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200`}>
-                      <Icon className={`w-7 h-7 lg:w-8 lg:h-8 ${
+                    } rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200`}>
+                      <Icon className={`w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 ${
                         stat.color === 'primary' ? 'text-primary' : 
                         stat.color === 'success' ? 'text-success' :
                         stat.color === 'accent' ? 'text-accent' :
@@ -182,16 +182,16 @@ const HeroSection = () => {
                     </div>
                     
                     {/* Clean Typography */}
-                    <div className="space-y-2">
+                    <div className="space-y-1 sm:space-y-2">
                       <div className="flex items-baseline gap-1">
-                        <span className="text-3xl lg:text-4xl font-bold text-foreground font-display">
+                        <span className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground font-display">
                           {displayValue}
                         </span>
-                        <span className="text-xl lg:text-2xl font-medium text-foreground/70">
+                        <span className="text-sm sm:text-base lg:text-xl xl:text-2xl font-medium text-foreground/70">
                           {stat.suffix}
                         </span>
                       </div>
-                      <p className="text-sm lg:text-base text-muted-foreground font-medium">
+                      <p className="text-xs sm:text-sm lg:text-sm xl:text-base text-muted-foreground font-medium leading-tight">
                         {stat.label}
                       </p>
                     </div>
