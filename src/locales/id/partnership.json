@@ -1,0 +1,27 @@
+{
+  "section": {
+    "badge": "Kemitraan RITZ Corp",
+    "title": "RITZ Corp"
+  },
+  "description": {
+    "main": "RITZ Corp adalah bisnis terintegrasi yang memiliki dua lini bisnis utama, yaitu Konsultan Keuangan dan Bisnis. PT RITZ Corpora Indonesia (\"PT RCI\") dikelola oleh RITZ Corp, yang menawarkan Layanan Hukum Korporat melalui RITZ & Partners Law Firm (\"R&P\") dan Layanan Litigasi Komersial melalui RITZ Law Firm (\"RLF\").",
+    "credentials": "RCI memiliki pengalaman dan kredensial, serta jaringan yang luas di bidang perbankan, komersial, investment banking, private equity, dan pasar modal. Terutama dalam membantu perusahaan dengan restrukturisasi korporat, restrukturisasi utang, manajemen perubahan/manajemen perubahan, divestasi/investasi, dan Merger & Akuisisi (M&A), antara lain.",
+    "team": "RITZ Corp memiliki tim yang terdiri dari lebih dari 40 mitra dengan latar belakang eksekutif yang beragam di bidang perbankan, investment banking & private equity, pasar modal, sektor riil, hukum, dan arbitrase."
+  },
+  "services": {
+    "financial": {
+      "title": "Layanan Keuangan",
+      "description": "Layanan konsultasi dan penasihat keuangan komprehensif untuk pertumbuhan dan pengembangan bisnis"
+    },
+    "consulting": {
+      "title": "Konsultan Bisnis",
+      "description": "Konsultasi bisnis strategis dengan pengalaman dan kredensial yang luas di berbagai sektor"
+    }
+  },
+  "stats": {
+    "partners": "40+",
+    "partnersLabel": "Mitra Profesional",
+    "experience": "15+",
+    "experienceLabel": "Tahun Pengalaman"
+  }
+}

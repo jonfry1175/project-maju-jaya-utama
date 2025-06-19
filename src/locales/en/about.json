@@ -5,50 +5,10 @@
     "titleHighlight": "Fresh Perspective",
     "description": "Global Sinergi Kapital emerges as a newly established IPO consultant with an experienced professional team. We bring innovative approaches and modern solutions to help Indonesian companies access the capital market more efficiently and effectively."
   },
-  "ritzProfile": {
-    "badge": "About RITZ Corp",
-    "title": "About RITZ Corp",
-    "description": {
-      "main": "RITZ Corp is an integrated business that has two main business lines, namely Financial and Business Consulting. PT RITZ Corpora Indonesia (\"PT RCI\") is managed by RITZ Corp, which offers Corporate Law Services through RITZ & Partners Law Firm (\"R&P\") and Commercial Litigation Services through RITZ Law Firm (\"RLF\")."
-    },
-    "businessLines": {
-      "financial": {
-        "title": "Financial Services",
-        "description": "Comprehensive financial consulting and advisory services for business growth and development"
-      },
-      "consulting": {
-        "title": "Business Consulting",
-        "description": "Strategic business consulting with extensive experience and credentials in various sectors"
-      }
-    },
-    "stats": {
-      "partners": "40+",
-      "partnersLabel": "Professional Partners",
-      "experience": "15+",
-      "experienceLabel": "Years Experience"
-    }
-  },
   "approach": {
-    "badge": "Our Methodology",
-    "title": "Our Approach",
-    "steps": {
-      "step1": {
-        "title": "Client-Focused Solutions",
-        "description": "In addressing the needs of our clients, we assemble specialized teams that are tailored to meet the specific business requirements of our clients. This ensures that our services effectively assist our clients in overcoming all challenges."
-      },
-      "step2": {
-        "title": "Customized Advisory Services",
-        "description": "As your business expands, our advisory services are designed to aid you in developing customized solutions that align with your unique requirements and goals within your organization. Successful growth often involves navigating a complex landscape."
-      },
-      "step3": {
-        "title": "Strategic Guidance",
-        "description": "We will guide you through various scenarios, recommending measures and actions to ensure offering and position your business for a better future. Our plans will support your current business needs but also consider where you aspire to be in the future."
-      },
-      "step4": {
-        "title": "Comprehensive Support",
-        "description": "Regardless of the scale of your major transaction, we will work with and receive support from our dedicated professionals who generate value about your business and its long-term success."
-      }
-    },
+    "badge": "partership of RITZ Corp",
+    "title": "Ritz Corp",
+    "description": "We provide comprehensive solutions tailored to meet your business needs through our proven methodology and experienced team.",
     "cta": {
       "description": "Ready to transform your business with our proven approach?",
       "text": "Start Your Journey with Us"

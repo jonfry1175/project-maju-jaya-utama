@@ -28,9 +28,9 @@
       "experienceLabel": "Tahun Pengalaman"
     }
   },
-  "approach": {
-    "badge": "Metodologi Kami",
-    "title": "Pendekatan Kami",
+  "ritzProfile": {
+    "badge": "Kemitraan RITZ Corp",
+    "title": "RITZ Corp",
     "steps": {
       "step1": {
         "title": "Solusi Berfokus Klien",
