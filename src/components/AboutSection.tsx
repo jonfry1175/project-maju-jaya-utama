@@ -161,10 +161,10 @@ const AboutSection = () => {
         <div className="flex flex-col justify-center items-center text-center mb-8 sm:mb-12">
           <div className="inline-flex justify-center items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 border border-primary/20">
             <Building className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
-            {t("approach.badge")}
+            Partership of RITZ Corp
           </div>
           <h3 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6 text-center">
-            About &nbsp;{t("approach.title")}
+            About Ritz Corp
           </h3>
         </div>
         {/* RITZ Corp Partnership Section */}
