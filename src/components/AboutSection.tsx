@@ -137,7 +137,7 @@ const AboutSection = () => {
                 <img 
                   src="/Section/tinywow_tinywow_RITZ Corpora Indonesia Company Profile - 2024_compressed_81741712_81741767_1.jpg"
                   alt="RITZ Corp Team"
-                  className="w-full h-full object-cover min-h-[400px] lg:min-h-[500px]"
+                  className="w-50% h-50% object-cover min-h-[400px] lg:min-h-[500px]"
                 />
               </div>
 
