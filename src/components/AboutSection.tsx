@@ -158,39 +158,37 @@ const AboutSection = () => {
             </Card>
           ))}
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center text-center mb-8 sm:mb-12">
           <div className="inline-flex justify-center items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 border border-primary/20">
             <Building className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
             {t("approach.badge")}
           </div>
-          <div className="flex flex-col justify-center items-center">
-            <h3 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6 ">
-              About &nbsp;{t("approach.title")}
-            </h3>
-          </div>
+          <h3 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6 text-center">
+            About &nbsp;{t("approach.title")}
+          </h3>
         </div>
         {/* RITZ Corp Partnership Section */}
         <div className="mb-6 sm:mb-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-0 bg-white rounded-lg overflow-hidden shadow-lg">
-              {/* Left Side - Image */}
-              <div className="relative">
-                <img
-                  src="/Section/tinywow_tinywow_RITZ Corpora Indonesia Company Profile - 2024_compressed_81741712_81741767_1.jpg"
-                  alt="RITZ Corp Team"
-                  className="w-50% h-50% object-cover min-h-[400px] lg:min-h-[500px]"
-                />
-              </div>
-
-              {/* Right Side - Content */}
-
-              <div className="bg-gray-50 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+              {/* Content Section - Now Single Column and Centered */}
+              <div className="p-6 sm:p-8 lg:p-12 flex flex-col items-center justify-center text-center">
                 {/* Header */}
                 <div className="mb-6"></div>
 
-                {/* Description - Exact content from image */}
-                <div className="space-y-4 text-gray-800 leading-relaxed text-justify">
-                  <p className="text-sm">
+                {/* Image - Centered */}
+                <div className="mb-8 flex justify-center">
+                  <img
+                    src="/orangorang.png"
+                    alt="RITZ Corp Team"
+                    className="max-w-4xl h-auto object-cover rounded-lg shadow-md"
+                    style={{ maxHeight: "400px", width: "auto" }}
+                  />
+                </div>
+
+                {/* Description - Centered and justified for better readability */}
+                <div className="space-y-4 text-gray-800 max-w-4xl mx-auto">
+                  <p className="text-sm sm:text-base leading-relaxed text-justify">
                     RITZ Corp is an integrated business that has two main
                     business lines, namely Financial and Business Consulting
                     through PT RITZ Konsultan Indonesia ("RKI") and PT RITZ
@@ -200,7 +198,7 @@ const AboutSection = () => {
                     Co. Law Firm ("RCO").
                   </p>
 
-                  <p className="text-sm">
+                  <p className="text-sm sm:text-base leading-relaxed text-justify">
                     RKI has experience and credentials, as well as an extensive
                     network in banking, commercial, investment banking, private
                     equity, and capital markets. Especially in assisting
@@ -211,7 +209,7 @@ const AboutSection = () => {
                     divestitures, and investments.
                   </p>
 
-                  <p className="text-sm">
+                  <p className="text-sm sm:text-base leading-relaxed text-justify">
                     RII, a sub-holding under the RITZ Corp, has experienced
                     partners from various professional backgrounds. Together
                     with its partners, RII establishes subsidiary companies in
@@ -220,7 +218,7 @@ const AboutSection = () => {
                     in project financing managed by RKI.
                   </p>
 
-                  <p className="text-sm">
+                  <p className="text-sm sm:text-base leading-relaxed text-justify">
                     R&P is a corporate law firm with experience and credentials
                     in Merger and Acquisition (M&A) transactions, Banking &
                     Finance and Pre-IPO Programs and other required corporate
@@ -230,7 +228,7 @@ const AboutSection = () => {
                     Obligations (PKPU) & Bankruptcy.
                   </p>
 
-                  <p className="text-sm">
+                  <p className="text-sm sm:text-base leading-relaxed text-justify">
                     RITZ Corp has a team consisting of more than 40 partners
                     with diverse executive backgrounds in banking, investment
                     banking & private equity, capital markets, the real sector,
@@ -248,7 +246,7 @@ const AboutSection = () => {
                 </div>
 
                 {/* Footer */}
-                <div className="mt-6 text-center">
+                <div className="mt-8 text-center">
                   <p className="text-xs text-gray-500">Strictly Confidential</p>
                 </div>
               </div>
