@@ -291,7 +291,7 @@ const AboutSection = () => {
                   {/* Row 1 */}
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/logologo/mandiri.png"
+                      src="/logologo/mandiri.png"
                       alt="Mandiri"
                       className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
                     />
@@ -299,7 +299,7 @@ const AboutSection = () => {
 
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/logologo/bni.png"
+                      src="/logologo/bni.png"
                       alt="BNI"
                       className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
                     />
@@ -307,7 +307,7 @@ const AboutSection = () => {
 
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/Sponsor/logo-sponsor-gsk-maybank.jpg"
+                      src="/Sponsor/logo-sponsor-gsk-maybank.jpg"
                       alt="Maybank"
                       className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto max-w-full object-contain opacity-100"
                     />
@@ -315,7 +315,7 @@ const AboutSection = () => {
 
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/logologo/angkasa.png"
+                      src="/logologo/angkasa.png"
                       alt="Angkasa Pura II"
                       className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto max-w-full object-contain opacity-100"
                     />
@@ -323,7 +323,7 @@ const AboutSection = () => {
 
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/logologo/bri.png"
+                      src="/logologo/bri.png"
                       alt="BRI Agro"
                       className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto max-w-full object-contain opacity-100"
                     />
@@ -332,7 +332,7 @@ const AboutSection = () => {
                   {/* Row 2 */}
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/logologo/telkomsel.png"
+                      src="/logologo/telkomsel.png"
                       alt="Telkomsel"
                       className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
                     />
@@ -340,7 +340,7 @@ const AboutSection = () => {
 
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/Sponsor/logo-ski-sponsor-pelindo.png"
+                      src="/Sponsor/logo-ski-sponsor-pelindo.png"
                       alt="Pelindo"
                       className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
                     />
@@ -348,7 +348,7 @@ const AboutSection = () => {
 
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/Sponsor/logo-sponsor-gsk-tempo.png"
+                      src="/Sponsor/logo-sponsor-gsk-tempo.png"
                       alt="Tempo Media Group"
                       className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
                     />
@@ -356,7 +356,7 @@ const AboutSection = () => {
 
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/Sponsor/logo-sponsor-gsk-alif.png"
+                      src="/Sponsor/logo-sponsor-gsk-alif.png"
                       alt="Alif"
                       className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
                     />
@@ -365,7 +365,7 @@ const AboutSection = () => {
                   {/* Logo Pertamina */}
                   <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                     <img
-                      src="/public/logologo/pertamina.png"
+                      src="/logologo/pertamina.png"
                       alt="Pertamina"
                       className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto max-w-full object-contain opacity-100"
                     />
@@ -452,7 +452,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-12 sm:h-16 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-ski-sponsor-pelindo.png"
+                          src="/Sponsor/logo-ski-sponsor-pelindo.png"
                           alt="Pelindo"
                           className="h-8 sm:h-12 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -478,7 +478,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-ski-sponsor-pelindo.png"
+                          src="/Sponsor/logo-ski-sponsor-pelindo.png"
                           alt="Pelindo"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -504,7 +504,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-ski-sponsor-pelindo.png"
+                          src="/Sponsor/logo-ski-sponsor-pelindo.png"
                           alt="Pelindo"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -530,7 +530,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-ski-sponsor-pelindo.png"
+                          src="/Sponsor/logo-ski-sponsor-pelindo.png"
                           alt="Pelindo"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -556,7 +556,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-sgk-wskt.jpg"
+                          src="/Sponsor/logo-sgk-wskt.jpg"
                           alt="WSKT"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -582,7 +582,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-sgk-wrealty.jpg"
+                          src="/Sponsor/logo-sgk-wrealty.jpg"
                           alt="Wrealty"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -608,7 +608,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/logologo/angkasa.png"
+                          src="/logologo/angkasa.png"
                           alt="Angkasa Pura II"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -634,7 +634,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/logologo/angkasa.png"
+                          src="/logologo/angkasa.png"
                           alt="Angkasa Pura II"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -661,12 +661,12 @@ const AboutSection = () => {
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="flex items-center justify-center space-x-3">
                           <img
-                            src="/public/Sponsor/logo-sponsor-sgk-sbi.jpg"
+                            src="/Sponsor/logo-sponsor-sgk-sbi.jpg"
                             alt="SBI"
                             className="h-10 w-auto object-contain opacity-100"
                           />
                           <img
-                            src="/public/Sponsor/logo-sgk-bajaj2.png"
+                            src="/Sponsor/logo-sgk-bajaj2.png"
                             alt="Bajaj Finserv"
                             className="h-10 w-auto object-contain opacity-100"
                           />
@@ -813,7 +813,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-jjsw.jpg"
+                          src="/Sponsor/logo-gsk-sponsor-jjsw.jpg"
                           alt="JJSW"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -839,7 +839,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-jjsm.png"
+                          src="/Sponsor/logo-gsk-sponsor-jjsm.png"
                           alt="JJSM"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -869,7 +869,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-bemaestex.jpg"
+                          src="/Sponsor/logo-gsk-sponsor-bemaestex.jpg"
                           alt="Bemaestex"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -902,12 +902,12 @@ const AboutSection = () => {
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="flex items-center justify-center space-x-2">
                           <img
-                            src="/public/Sponsor/logo-gsk-sponsor-megacorp.png"
+                            src="/Sponsor/logo-gsk-sponsor-megacorp.png"
                             alt="Mega CORP"
                             className="h-8 sm:h-10 lg:h-12 w-auto object-contain opacity-100"
                           />
                           <img
-                            src="/public/Sponsor/logo-gsk-sponsor-alllobank.png"
+                            src="/Sponsor/logo-gsk-sponsor-alllobank.png"
                             alt="Allo Bank"
                             className="h-8 sm:h-10 lg:h-12 w-auto object-contain opacity-100"
                           />
@@ -938,7 +938,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-brava.png"
+                          src="/Sponsor/logo-gsk-sponsor-brava.png"
                           alt="Brava"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -968,7 +968,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-wimcycle.webp"
+                          src="/Sponsor/logo-gsk-sponsor-wimcycle.webp"
                           alt="Wimcycle"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -1000,7 +1000,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-sponsor-gsk-maybank.jpg"
+                          src="/Sponsor/logo-sponsor-gsk-maybank.jpg"
                           alt="Maybank"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -1030,7 +1030,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-asetkuu.png"
+                          src="/Sponsor/logo-gsk-sponsor-asetkuu.png"
                           alt="Asetku"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -1058,7 +1058,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-trans.png"
+                          src="/Sponsor/logo-gsk-sponsor-trans.png"
                           alt="Trans"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -1088,7 +1088,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-bank-resona.png"
+                          src="/Sponsor/logo-gsk-sponsor-bank-resona.png"
                           alt="Bank Resona"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -1118,7 +1118,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-sip.png"
+                          src="/Sponsor/logo-gsk-sponsor-sip.png"
                           alt="SIP"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -1144,7 +1144,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-dcp.png"
+                          src="/Sponsor/logo-gsk-sponsor-dcp.png"
                           alt="DCP"
                           className="h-18 w-auto max-w-full object-contain opacity-100"
                         />
@@ -1172,7 +1172,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-select-hotels.png"
+                          src="/Sponsor/logo-gsk-sponsor-select-hotels.png"
                           alt="Select Hotels"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
@@ -1236,12 +1236,12 @@ const AboutSection = () => {
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <div className="flex items-center justify-center space-x-2">
                           <img
-                            src="/public/Sponsor/logo-gsk-sponsor-megacorp.png"
+                            src="/Sponsor/logo-gsk-sponsor-megacorp.png"
                             alt="Mega Corp"
                             className="h-8 sm:h-10 lg:h-12 w-auto object-contain opacity-100"
                           />
                           <img
-                            src="/public/Sponsor/logo-gsk-sponsor-bank-sumsel.jpg"
+                            src="/Sponsor/logo-gsk-sponsor-bank-sumsel.jpg"
                             alt="Bank Sumsel"
                             className="h-8 sm:h-10 lg:h-12 w-auto object-contain opacity-100"
                           />
@@ -1268,7 +1268,7 @@ const AboutSection = () => {
 
                       <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
                         <img
-                          src="/public/Sponsor/logo-gsk-sponsor-bank-bsg.jpg"
+                          src="/Sponsor/logo-gsk-sponsor-bank-bsg.jpg"
                           alt="Bank BSG"
                           className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
