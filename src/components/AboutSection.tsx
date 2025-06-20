@@ -442,9 +442,9 @@ const AboutSection = () => {
                 {/* Projects Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {/* Pelindo 1 */}
-                  <Card className="p-3 sm:p-4 lg:p-6 bg-white dark:bg-slate-800 border border-border/50">
-                    <div className="space-y-2 sm:space-y-3 lg:space-y-4 text-center">
-                      <div className="text-xs text-primary/60 font-medium uppercase text-center leading-tight">
+                  <Card className="p-4 sm:p-6 bg-white dark:bg-slate-800 border border-border/50">
+                    <div className="space-y-3 sm:space-y-4 text-center">
+                      <div className="text-xs text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.pelindo1.sector")}
                       </div>
 
@@ -452,7 +452,7 @@ const AboutSection = () => {
                         <img
                           src="/Sponsor/logo-ski-sponsor-pelindo.png"
                           alt="Pelindo"
-                          className="h-8 sm:h-12 lg:h-16 w-auto max-w-full object-contain opacity-100"
+                          className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-100"
                         />
                       </div>
 
@@ -1351,7 +1351,7 @@ const AboutSection = () => {
         </div>
 
         {/* Team Section */}
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <h3 className="text-xl font-bold text-primary font-display text-center mb-6">
             {t("team.title")}
           </h3>
@@ -1389,10 +1389,10 @@ const AboutSection = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div className="grid md:grid-cols-2 gap-4 mb-4 max-w-7xl mx-auto">
           <Card className="p-4 bg-primary/5 border border-primary/20">
             <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
               <Target className="w-5 h-5 text-white" />
@@ -1418,7 +1418,7 @@ const AboutSection = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="bg-gradient-to-br from-primary to-primary/80 rounded-3xl p-6 lg:p-8 text-white shadow-xl">
+        <div className="bg-gradient-to-br from-primary to-primary/80 rounded-3xl p-6 lg:p-8 text-white shadow-xl max-w-7xl mx-auto">
           <h3 className="text-2xl font-bold font-display text-center mb-4">
             {t("whyChooseUs.title")}
           </h3>

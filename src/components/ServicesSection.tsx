@@ -186,7 +186,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-subtle">
+      className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-subtle max-w-7xl mx-auto">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
