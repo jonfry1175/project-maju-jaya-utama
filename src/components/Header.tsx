@@ -21,7 +21,9 @@ const Header = () => {
   const navItems = [
     { name: t('nav.about'), href: "#about" },
     { name: t('nav.services'), href: "#services" },
-    { name: t('nav.process'), href: "#process" },
+    { name: t('nav.partners'), href: "#partnership" },
+    { name: t('nav.testimonials'), href: "#testimonials" },
+    { name: t('nav.faq'), href: "#faq" },
     { name: t('nav.contact'), href: "#contact" }
   ];
 
@@ -65,10 +67,6 @@ const Header = () => {
           {/* CTA Buttons - More Professional */}
           <div className="hidden lg:flex items-center space-x-3">
             <LanguageSwitcher />
-            <Button variant="outline" size="sm" className="text-sm font-medium border-primary/20 hover:border-primary/40">
-              <Phone size={16} className="mr-2" />
-              {t('cta.freeConsultation')}
-            </Button>
             <Button className="btn-gradient-brand shadow-brand text-sm font-medium px-6">
               {t('cta.startIPOJourney')}
             </Button>
@@ -98,14 +96,12 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-2 pt-4 px-4">
-                <LanguageSwitcher />
-                <Button variant="outline" size="sm" className="justify-start border-primary/20">
-                  <Phone size={16} className="mr-2" />
-                  {t('cta.freeConsultation')}
-                </Button>
-                <Button className="btn-gradient-brand justify-start">
-                  {t('cta.startIPOJourney')}
-                </Button>
+                <div className="flex items-center justify-between mb-2">
+                  <LanguageSwitcher />
+                  <Button className="btn-gradient-brand">
+                    {t('cta.startIPOJourney')}
+                  </Button>
+                </div>
                 <div className="flex items-center justify-between pt-4 mt-4 border-t border-border/40">
                   <a href="tel:+622112345678" className="flex items-center text-sm text-muted-foreground">
                     <Phone size={14} className="mr-2" />

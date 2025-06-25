@@ -1,6 +1,6 @@
 const PartnershipSection = () => {
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-white">
+    <section id="partnership" className="py-8 sm:py-12 lg:py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-0 bg-white rounded-lg lg:rounded-none overflow-hidden shadow-lg lg:shadow-none">

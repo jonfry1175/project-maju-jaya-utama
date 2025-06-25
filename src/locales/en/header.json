@@ -4,7 +4,9 @@
   "nav": {
     "about": "About Us",
     "services": "Services",
-    "process": "IPO Process",
+    "partners": "Partners",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
     "contact": "Contact"
   },
   "cta": {

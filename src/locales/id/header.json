@@ -4,7 +4,9 @@
   "nav": {
     "about": "Tentang Kami",
     "services": "Layanan",
-    "process": "Proses IPO",
+    "partners": "Mitra",
+    "testimonials": "Testimoni",
+    "faq": "FAQ",
     "contact": "Kontak"
   },
   "cta": {
