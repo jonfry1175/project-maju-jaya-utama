@@ -4,24 +4,14 @@
     "title": "RITZ Corp"
   },
   "description": {
-    "main": "RITZ Corp is an integrated business that has two main business lines, namely Financial and Business Consulting. PT RITZ Corpora Indonesia (\"PT RCI\") is managed by RITZ Corp, which offers Corporate Law Services through RITZ & Partners Law Firm (\"R&P\") and Commercial Litigation Services through RITZ Law Firm (\"RLF\").",
-    "credentials": "RCI has experience and credentials, as well as an extensive network in banking, commercial, investment banking, private equity, and capital markets. Especially in assisting companies with corporate restructuring, debt restructuring, turn-around management/management changes, divestments/investments, and Mergers & Acquisitions (M&A), among others.",
-    "team": "RITZ Corp has a team consisting of more than 40 partners with diverse executive backgrounds in banking, investment banking & private equity, capital markets, the real sector, legal, and arbitration."
+    "paragraph1": "RITZ Corp is an integrated business that has two main business lines, namely Financial and Business Consulting through PT RITZ Konsultan Indonesia (\"RKI\") and PT RITZ Investment Indonesia (\"RII\"). In addition, RITZ Corp offers Corporate Law Services through RITZ & Partners Law Firm (\"R&P\") and Commercial Litigation Services through Rivai & Co. Law Firm (\"RCO\").",
+    "paragraph2": "RKI has experience and credentials, as well as an extensive network in banking, commercial, investment banking, private equity, and capital markets. Especially in assisting companies with corporate restructuring, debt restructuring, turn-around management/management changes, divestments/investments, and Mergers & Acquisitions (M&A), among others, acquisitions, spin-offs, mergers, divestitures, and investments.",
+    "paragraph3": "RII, a sub-holding under the RITZ Corp, has experienced partners from various professional backgrounds. Together with its partners, RII establishes subsidiary companies in various industrial sectors, managed by the partners. It is also utilized to support the formation of consortium members in project financing managed by RKI.",
+    "paragraph4": "R&P is a corporate law firm with experience and credentials in Merger and Acquisition (M&A) transactions, Banking & Finance and Pre-IPO Programs and other required corporate transactions for companies and business groups in Indonesia. RCO is a law firm focused on Commercial Litigation, such as Alternative Dispute Resolutions, Suspension of Debt Payment Obligations (PKPU) & Bankruptcy.",
+    "paragraph5": "RITZ Corp has a team consisting of more than 40 partners with diverse executive backgrounds in banking, investment banking & private equity, capital markets, the real sector, legal, and arbitration. They also have regional desks in Japan, South Korea, and Singapore. They possess broad qualifications, including debt restructuring, debt settlement through asset divestment, refinancing, investments, and debt resolution through legal/PKPU processes. RITZ Corp also has experience working with several major state-owned enterprises (BUMN) across various types of transactions, including business development, restructuring, asset divestment, fundraising, and M&A activities."
   },
-  "services": {
-    "financial": {
-      "title": "Financial Services",
-      "description": "Comprehensive financial consulting and advisory services for business growth and development"
-    },
-    "consulting": {
-      "title": "Business Consulting",
-      "description": "Strategic business consulting with extensive experience and credentials in various sectors"
-    }
-  },
-  "stats": {
-    "partners": "40+",
-    "partnersLabel": "Professional Partners",
-    "experience": "15+",
-    "experienceLabel": "Years Experience"
+  "footer": {
+    "confidential": "Strictly Confidential",
+    "pageNumber": "2"
   }
 }

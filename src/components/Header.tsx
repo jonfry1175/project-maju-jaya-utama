@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = () => {
   const { t } = useTranslation('header');
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -21,14 +23,16 @@ const Header = () => {
   const navItems = [
     { name: t('nav.about'), href: "#about" },
     { name: t('nav.services'), href: "#services" },
-    { name: t('nav.partners'), href: "#partnership" },
+    { name: t('nav.partners'), href: "/partners" },
     { name: t('nav.testimonials'), href: "#testimonials" },
     { name: t('nav.faq'), href: "#faq" },
     { name: t('nav.contact'), href: "#contact" }
   ];
 
   const handleLogoClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -37,31 +41,61 @@ const Header = () => {
       <div className={`container mx-auto px-6 ${isScrolled ? 'py-3' : 'py-4'} transition-all duration-300`}>
         <div className="flex items-center justify-between">
           {/* Logo - More Compact */}
-          <div className="flex items-center space-x-3 cursor-pointer" onClick={handleLogoClick}>
-            <img 
-              src="/logo.png" 
-              alt="Global Sinergi Kapital Logo" 
-              className="w-10 h-10 object-contain"
-            />
-            <div>
-              <h1 className="text-xl font-bold text-primary font-display leading-tight">
-                {t('companyName')}
-              </h1>
-              <p className="text-xs text-muted-foreground font-medium">{t('tagline')}</p>
+          {location.pathname === '/' ? (
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={handleLogoClick}>
+              <img 
+                src="/logo.png" 
+                alt="Global Sinergi Kapital Logo" 
+                className="w-10 h-10 object-contain"
+              />
+              <div>
+                <h1 className="text-xl font-bold text-primary font-display leading-tight">
+                  {t('companyName')}
+                </h1>
+                <p className="text-xs text-muted-foreground font-medium">{t('tagline')}</p>
+              </div>
             </div>
-          </div>
+          ) : (
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src="/logo.png" 
+                alt="Global Sinergi Kapital Logo" 
+                className="w-10 h-10 object-contain"
+              />
+              <div>
+                <h1 className="text-xl font-bold text-primary font-display leading-tight">
+                  {t('companyName')}
+                </h1>
+                <p className="text-xs text-muted-foreground font-medium">{t('tagline')}</p>
+              </div>
+            </Link>
+          )}
 
           {/* Desktop Navigation - Refined */}
           <nav className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
-              >
-                {item.name}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isExternal = item.href.startsWith('/');
+              if (isExternal) {
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                );
+              }
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                >
+                  {item.name}
+                </a>
+              );
+            })}
           </nav>
 
           {/* CTA Buttons - More Professional */}
@@ -85,16 +119,31 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-border/60 animate-fade-up">
             <nav className="flex flex-col space-y-1 mt-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="px-4 py-3 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const isExternal = item.href.startsWith('/');
+                if (isExternal) {
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="px-4 py-3 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                }
+                return (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="px-4 py-3 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                );
+              })}
               <div className="flex flex-col space-y-2 pt-4 px-4">
                 <div className="flex items-center justify-between mb-2">
                   <LanguageSwitcher />

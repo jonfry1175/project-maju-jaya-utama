@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "badge": "Jaringan Kami",
+    "title": "Mitra Strategis",
+    "titleHighlight": "& Keahlian Global",
+    "description": "Membangun kemitraan yang kuat dan memanfaatkan keahlian kami untuk memberikan layanan konsultasi IPO yang luar biasa di seluruh Indonesia dan sekitarnya."
+  },
+  "ourPartnership": {
+    "badge": "Kemitraan Kami",
+    "title": "Kemitraan Strategis",
+    "description": "Kami berkolaborasi dengan institusi dan organisasi terkemuka untuk menyediakan solusi IPO yang komprehensif.",
+    "items": {
+      "institutional": {
+        "title": "Mitra Institusional",
+        "description": "Kolaborasi dengan institusi keuangan dan bank besar",
+        "partners": [
+          "Bank Indonesia",
+          "Bursa Efek Indonesia (BEI)",
+          "Otoritas Jasa Keuangan (OJK)",
+          "Bank-bank Besar Indonesia"
+        ]
+      },
+      "international": {
+        "title": "Jaringan Internasional",
+        "description": "Kemitraan global untuk transaksi lintas batas",
+        "partners": [
+          "Bank Investasi Regional",
+          "Firma Hukum Internasional",
+          "Firma Audit Global",
+          "Institusi Investasi Asing"
+        ]
+      },
+      "strategic": {
+        "title": "Aliansi Strategis",
+        "description": "Kemitraan kunci untuk layanan khusus",
+        "partners": [
+          "Firma Penasihat Hukum",
+          "Perusahaan Teknologi Keuangan",
+          "Organisasi Riset Pasar",
+          "Asosiasi Industri"
+        ]
+      }
+    }
+  },
+  "ourExpertise": {
+    "badge": "Keahlian Kami",
+    "title": "Bidang Keunggulan",
+    "description": "Keahlian komprehensif di seluruh aspek pasar modal dan keuangan korporasi.",
+    "areas": {
+      "ipo": {
+        "title": "Konsultasi IPO",
+        "description": "Layanan konsultasi IPO end-to-end dari persiapan hingga listing",
+        "features": [
+          "Penilaian kesiapan IPO",
+          "Kepatuhan regulasi",
+          "Strategi valuasi dan pricing",
+          "Manajemen hubungan investor"
+        ]
+      },
+      "restructuring": {
+        "title": "Restrukturisasi Perusahaan",
+        "description": "Restrukturisasi strategis untuk struktur perusahaan yang optimal",
+        "features": [
+          "Restrukturisasi utang",
+          "Reorganisasi unit bisnis",
+          "Struktur efisien pajak",
+          "Peningkatan tata kelola perusahaan"
+        ]
+      },
+      "ma": {
+        "title": "Merger & Akuisisi",
+        "description": "Layanan konsultasi dan eksekusi M&A yang komprehensif",
+        "features": [
+          "Konsultasi buy-side dan sell-side",
+          "Koordinasi due diligence",
+          "Strukturisasi transaksi",
+          "Integrasi pasca-merger"
+        ]
+      },
+      "capitalMarkets": {
+        "title": "Pasar Modal",
+        "description": "Akses ke berbagai sumber dan instrumen pendanaan",
+        "features": [
+          "Pasar modal ekuitas",
+          "Pasar modal utang",
+          "Penempatan privat",
+          "Penawaran sekunder"
+        ]
+      }
+    },
+    "cta": "Bermitra dengan kami untuk memanfaatkan keahlian kami dalam perjalanan pasar modal Anda"
+  }
+}

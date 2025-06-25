@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "badge": "Our Network",
+    "title": "Strategic Partners",
+    "titleHighlight": "& Global Expertise",
+    "description": "Building strong partnerships and leveraging our expertise to deliver exceptional IPO consulting services across Indonesia and beyond."
+  },
+  "ourPartnership": {
+    "badge": "Our Partnership",
+    "title": "Strategic Partnerships",
+    "description": "We collaborate with leading institutions and organizations to provide comprehensive IPO solutions.",
+    "items": {
+      "institutional": {
+        "title": "Institutional Partners",
+        "description": "Collaboration with major financial institutions and banks",
+        "partners": [
+          "Bank Indonesia (Central Bank)",
+          "Indonesia Stock Exchange (IDX)",
+          "Financial Services Authority (OJK)",
+          "Major Indonesian Banks"
+        ]
+      },
+      "international": {
+        "title": "International Network",
+        "description": "Global partnerships for cross-border transactions",
+        "partners": [
+          "Regional Investment Banks",
+          "International Law Firms",
+          "Global Audit Firms",
+          "Foreign Investment Institutions"
+        ]
+      },
+      "strategic": {
+        "title": "Strategic Alliances",
+        "description": "Key partnerships for specialized services",
+        "partners": [
+          "Legal Advisory Firms",
+          "Financial Technology Companies",
+          "Market Research Organizations",
+          "Industry Associations"
+        ]
+      }
+    }
+  },
+  "ourExpertise": {
+    "badge": "Our Expertise",
+    "title": "Areas of Excellence",
+    "description": "Comprehensive expertise across all aspects of capital markets and corporate finance.",
+    "areas": {
+      "ipo": {
+        "title": "IPO Consulting",
+        "description": "End-to-end IPO advisory services from preparation to listing",
+        "features": [
+          "IPO readiness assessment",
+          "Regulatory compliance",
+          "Valuation and pricing strategy",
+          "Investor relations management"
+        ]
+      },
+      "restructuring": {
+        "title": "Corporate Restructuring",
+        "description": "Strategic restructuring for optimal corporate structure",
+        "features": [
+          "Debt restructuring",
+          "Business unit reorganization",
+          "Tax-efficient structures",
+          "Corporate governance enhancement"
+        ]
+      },
+      "ma": {
+        "title": "Mergers & Acquisitions",
+        "description": "Comprehensive M&A advisory and execution services",
+        "features": [
+          "Buy-side and sell-side advisory",
+          "Due diligence coordination",
+          "Transaction structuring",
+          "Post-merger integration"
+        ]
+      },
+      "capitalMarkets": {
+        "title": "Capital Markets",
+        "description": "Access to diverse funding sources and instruments",
+        "features": [
+          "Equity capital markets",
+          "Debt capital markets",
+          "Private placement",
+          "Secondary offerings"
+        ]
+      }
+    },
+    "cta": "Partner with us to leverage our expertise for your capital market journey"
+  }
+}
