@@ -16,7 +16,7 @@ const OurExpertiseSection = () => {
       title: t("ourExpertise.areas.restructuring.title"),
       description: t("ourExpertise.areas.restructuring.description"),
       features: t("ourExpertise.areas.restructuring.features", { returnObjects: true }) as string[],
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop",
     },
     {
       title: t("ourExpertise.areas.ma.title"),
