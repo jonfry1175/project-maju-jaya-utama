@@ -129,6 +129,52 @@ const AboutSection = () => {
           </p>
         </div>
 
+        {/* Why Choose Us */}
+        <div className="bg-gradient-to-br from-primary to-primary/80 rounded-3xl p-6 lg:p-8 text-white shadow-xl max-w-7xl mx-auto mb-6 sm:mb-8">
+          <h3 className="text-2xl font-bold font-display text-center mb-4">
+            {t("whyChooseUs.title")}
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {whyChooseUs.map((item, index) => (
+              <div key={index} className="text-center space-y-1 sm:space-y-2">
+                <item.icon className="w-10 h-10 mx-auto mb-2" />
+                <div className="font-bold text-sm">
+                  {t(`whyChooseUs.reasons.${item.key}.title`)}
+                </div>
+                <p className="text-xs text-white/80">
+                  {t(`whyChooseUs.reasons.${item.key}.description`)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mission & Vision */}
+        <div className="grid md:grid-cols-2 gap-4 mb-6 sm:mb-8 max-w-7xl mx-auto">
+          <Card className="p-4 bg-primary/5 border border-primary/20">
+            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
+              <Target className="w-5 h-5 text-white" />
+            </div>
+            <h3 className="text-lg font-bold text-primary font-display mb-3">
+              {t("vision.title")}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {t("vision.description")}
+            </p>
+          </Card>
+          <Card className="p-4 bg-primary/5 border border-primary/20">
+            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
+              <Briefcase className="w-5 h-5 text-white" />
+            </div>
+            <h3 className="text-lg font-bold text-primary font-display mb-3">
+              {t("mission.title")}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {t("mission.description")}
+            </p>
+          </Card>
+        </div>
+
         {/* Values Grid - Clean Image Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
           {values.map((value, index) => (
@@ -1390,52 +1436,6 @@ const AboutSection = () => {
             ))}
           </div>
         </div> */}
-
-        {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-4 mb-4 max-w-7xl mx-auto">
-          <Card className="p-4 bg-primary/5 border border-primary/20">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
-              <Target className="w-5 h-5 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-primary font-display mb-3">
-              {t("vision.title")}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {t("vision.description")}
-            </p>
-          </Card>
-          <Card className="p-4 bg-primary/5 border border-primary/20">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
-              <Briefcase className="w-5 h-5 text-white" />
-            </div>
-            <h3 className="text-lg font-bold text-primary font-display mb-3">
-              {t("mission.title")}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {t("mission.description")}
-            </p>
-          </Card>
-        </div>
-
-        {/* Why Choose Us */}
-        <div className="bg-gradient-to-br from-primary to-primary/80 rounded-3xl p-6 lg:p-8 text-white shadow-xl max-w-7xl mx-auto">
-          <h3 className="text-2xl font-bold font-display text-center mb-4">
-            {t("whyChooseUs.title")}
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {whyChooseUs.map((item, index) => (
-              <div key={index} className="text-center space-y-1 sm:space-y-2">
-                <item.icon className="w-10 h-10 mx-auto mb-2" />
-                <div className="font-bold text-sm">
-                  {t(`whyChooseUs.reasons.${item.key}.title`)}
-                </div>
-                <p className="text-xs text-white/80">
-                  {t(`whyChooseUs.reasons.${item.key}.description`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
