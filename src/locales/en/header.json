@@ -5,6 +5,13 @@
     "about": "About Us",
     "services": "Services",
     "partners": "Partners",
+    "ipoProcess": "IPO Process",
+    "ipoProcess.mapping": "Mapping",
+    "ipoProcess.scenarioPlans": "Scenario Plans",
+    "ipoProcess.proformaFinancialReport": "Proforma Financial Report",
+    "ipoProcess.managementImprovementPlans": "Management Improvement Plans",
+    "ipoProcess.bridgingFinancing": "Bridging Financing",
+    "ipoProcess.ipoCompliancePlans": "IPO Compliance Plans",
     "testimonials": "Testimonials",
     "faq": "FAQ",
     "contact": "Contact"

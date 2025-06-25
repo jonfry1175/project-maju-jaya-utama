@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import PartnershipSection from "@/components/PartnershipSection";
-import OurPartnershipSection from "@/components/OurPartnershipSection";
 import OurExpertiseSection from "@/components/OurExpertiseSection";
+import PartnershipBenefitsSection from "@/components/PartnershipBenefitsSection";
+import PartnershipProcessSection from "@/components/PartnershipProcessSection";
+import PartnershipFAQSection from "@/components/PartnershipFAQSection";
 import Footer from "@/components/Footer";
 import { Building } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -37,8 +39,10 @@ const Partners = () => {
       </section>
 
       <PartnershipSection />
-      <OurPartnershipSection />
+      <PartnershipBenefitsSection />
       <OurExpertiseSection />
+      <PartnershipProcessSection />
+      <PartnershipFAQSection />
       
       <Footer />
     </div>

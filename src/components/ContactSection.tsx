@@ -127,20 +127,20 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4 sm:px-6">
+      className="section-padding bg-gradient-subtle animate-section">
+      <div className="container mx-auto container-padding">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
-            <Users className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
+          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
+            <Users className="icon-small mr-2" />
             {t("section.badge")}
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
+          <h2 className="heading-2 text-primary mb-4 sm:mb-6">
             {t("section.title")}
           </h2>
 
-          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-body-large text-muted-foreground">
             {t("section.description")}
           </p>
         </div>
@@ -148,26 +148,26 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
           {/* Left Column - Contact Info */}
           <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
-            <h3 className="text-lg sm:text-xl font-bold text-primary font-display mb-4 sm:mb-6">
+            <h3 className="heading-4 text-primary mb-4 sm:mb-6">
               {t("contact.title")}
             </h3>
 
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
-                className="p-4 sm:p-5 lg:p-6 bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group">
+                className="card-padding bg-background border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 group animate-card">
                 <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
-                    <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  <div className="icon-large sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <info.icon className="icon-medium text-white" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-primary mb-1 sm:mb-2 text-sm sm:text-base">
+                    <h4 className="font-semibold text-primary mb-1 sm:mb-2 text-body">
                       {info.title}
                     </h4>
                     {info.details.map((detail, idx) => (
                       <p
                         key={idx}
-                        className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+                        className="text-muted-foreground text-body-small">
                         {detail}
                       </p>
                     ))}
@@ -176,9 +176,9 @@ const ContactSection = () => {
                         href={info.action.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-xs sm:text-sm text-primary hover:text-primary/80 mt-2 sm:mt-3 font-semibold">
+                        className="inline-flex items-center text-body-small text-primary hover:text-primary/80 mt-2 sm:mt-3 font-semibold">
                         {info.action.label}
-                        <ArrowRight className="ml-1 h-3 w-3" />
+                        <ArrowRight className="ml-1 icon-small" />
                       </a>
                     )}
                   </div>
@@ -187,7 +187,7 @@ const ContactSection = () => {
             ))}
 
             {/* Office Location */}
-            <Card className="overflow-hidden bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+            <Card className="overflow-hidden bg-background border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 animate-card">
               <div className="relative h-32 sm:h-40 lg:h-48">
                 <img
                   src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
@@ -195,14 +195,14 @@ const ContactSection = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 lg:p-6">
-                  <h4 className="font-semibold mb-1 sm:mb-2 text-foreground flex items-center text-sm sm:text-base">
-                    <Globe className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                <div className="absolute bottom-0 left-0 right-0 card-padding">
+                  <h4 className="font-semibold mb-1 sm:mb-2 text-foreground flex items-center text-body">
+                    <Globe className="icon-small mr-2" />
                     {i18n.language === "id"
                       ? "Lokasi Strategis"
                       : "Strategic Location"}
                   </h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
+                  <p className="text-body-small text-muted-foreground">
                     {i18n.language === "id"
                       ? "Jantung bisnis Jakarta dengan akses mudah ke institusi keuangan."
                       : "Heart of Jakarta business district with easy access to financial institutions."}
@@ -213,12 +213,12 @@ const ContactSection = () => {
           </div>
 
           {/* Middle & Right Column - Enhanced Contact Form */}
-          <Card className="lg:col-span-2 p-4 sm:p-6 lg:p-8 xl:p-10 bg-background border border-border/50 shadow-xl order-1 lg:order-2">
+          <Card className="lg:col-span-2 card-padding lg:card-padding-large bg-background border border-subtle shadow-xl order-1 lg:order-2 animate-card">
             <div className="mb-6 sm:mb-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-primary font-display mb-2 sm:mb-3">
+              <h3 className="heading-3 text-primary mb-2 sm:mb-3">
                 {t("form.title")}
               </h3>
-              <p className="text-muted-foreground text-sm sm:text-base">
+              <p className="text-muted-foreground text-body">
                 {t("form.description")}
               </p>
             </div>
@@ -227,16 +227,16 @@ const ContactSection = () => {
               {/* Personal Information */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {t("form.fields.name.label")} *
                   </label>
                   <Input
                     placeholder={t("form.fields.name.placeholder")}
-                    className="h-10 sm:h-12 text-sm sm:text-base"
+                    className="h-10 sm:h-12 text-body"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {i18n.language === "id" ? "Jabatan" : "Position"} *
                   </label>
                   <Input
@@ -245,7 +245,7 @@ const ContactSection = () => {
                         ? "CEO / CFO / Direktur"
                         : "CEO / CFO / Director"
                     }
-                    className="h-10 sm:h-12 text-sm sm:text-base"
+                    className="h-10 sm:h-12 text-body"
                   />
                 </div>
               </div>
@@ -253,23 +253,23 @@ const ContactSection = () => {
               {/* Company Information */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {t("form.fields.company.label")} *
                   </label>
                   <Input
                     placeholder={t("form.fields.company.placeholder")}
-                    className="h-10 sm:h-12 text-sm sm:text-base"
+                    className="h-10 sm:h-12 text-body"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {i18n.language === "id"
                       ? "Industri/Sektor"
                       : "Industry/Sector"}{" "}
                     *
                   </label>
                   <Select>
-                    <SelectTrigger className="h-10 sm:h-12 text-sm sm:text-base">
+                    <SelectTrigger className="h-10 sm:h-12 text-body">
                       <SelectValue
                         placeholder={
                           i18n.language === "id"
@@ -294,23 +294,23 @@ const ContactSection = () => {
               {/* Contact Information */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {t("form.fields.email.label")} *
                   </label>
                   <Input
                     type="email"
                     placeholder={t("form.fields.email.placeholder")}
-                    className="h-10 sm:h-12 text-sm sm:text-base"
+                    className="h-10 sm:h-12 text-body"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {t("form.fields.phone.label")} *
                   </label>
                   <Input
                     type="tel"
                     placeholder={t("form.fields.phone.placeholder")}
-                    className="h-10 sm:h-12 text-sm sm:text-base"
+                    className="h-10 sm:h-12 text-body"
                   />
                 </div>
               </div>
@@ -318,7 +318,7 @@ const ContactSection = () => {
               {/* Company Details */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {i18n.language === "id"
                       ? "Tahun Pendirian"
                       : "Founded Year"}
@@ -328,17 +328,17 @@ const ContactSection = () => {
                     placeholder={
                       i18n.language === "id" ? "Contoh: 2020" : "e.g.: 2020"
                     }
-                    className="h-10 sm:h-12 text-sm sm:text-base"
+                    className="h-10 sm:h-12 text-body"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {i18n.language === "id"
                       ? "Jumlah Karyawan"
                       : "Number of Employees"}
                   </label>
                   <Select>
-                    <SelectTrigger className="h-10 sm:h-12 text-sm sm:text-base">
+                    <SelectTrigger className="h-10 sm:h-12 text-body">
                       <SelectValue
                         placeholder={
                           i18n.language === "id"
@@ -372,14 +372,14 @@ const ContactSection = () => {
                       ? "Jelaskan secara singkat tentang bisnis, visi, dan mengapa ingin go public..."
                       : "Briefly describe your business, vision, and why you want to go public..."
                   }
-                  className="min-h-[80px] sm:min-h-[100px] lg:min-h-[120px] text-sm sm:text-base"
+                  className="min-h-[80px] sm:min-h-[100px] lg:min-h-[120px] text-body"
                 />
               </div>
 
               {/* Preferred Meeting */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {i18n.language === "id"
                       ? "Tanggal Konsultasi"
                       : "Consultation Date"}
@@ -389,10 +389,10 @@ const ContactSection = () => {
                       <Button
                         variant="outline"
                         className={cn(
-                          "w-full h-10 sm:h-12 text-sm sm:text-base justify-start text-left font-normal",
+                          "w-full h-10 sm:h-12 text-body justify-start text-left font-normal",
                           !date && "text-muted-foreground"
                         )}>
-                        <CalendarIcon className="mr-2 h-4 w-4" />
+                        <CalendarIcon className="mr-2 icon-small" />
                         {date ? (
                           format(date, "PPP", { locale: dateLocale })
                         ) : (
@@ -416,13 +416,13 @@ const ContactSection = () => {
                   </Popover>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-body-small font-semibold text-foreground mb-2">
                     {i18n.language === "id"
                       ? "Waktu Konsultasi"
                       : "Consultation Time"}
                   </label>
                   <Select value={selectedTime} onValueChange={setSelectedTime}>
-                    <SelectTrigger className="h-10 sm:h-12 text-sm sm:text-base">
+                    <SelectTrigger className="h-10 sm:h-12 text-body">
                       <SelectValue
                         placeholder={
                           i18n.language === "id" ? "Pilih waktu" : "Select time"
@@ -444,26 +444,26 @@ const ContactSection = () => {
               <div className="pt-4 sm:pt-6">
                 <Button
                   type="submit"
-                  className="w-full btn-gradient-brand shadow-brand text-sm sm:text-base font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto group">
-                  <CheckCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  className="w-full btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto group">
+                  <CheckCircle className="mr-2 icon-small" />
                   {i18n.language === "id"
                     ? "Jadwalkan Konsultasi Gratis"
                     : "Schedule Free Consultation"}
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
 
               {/* Additional Info */}
-              <div className="bg-primary/5 rounded-xl p-3 sm:p-4 border border-primary/10">
+              <div className="bg-primary/5 rounded-xl card-padding-small border border-primary/10">
                 <div className="flex items-start space-x-2 sm:space-x-3">
-                  <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <Shield className="icon-small text-primary flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs sm:text-sm text-primary font-semibold mb-1">
+                    <p className="text-body-small text-primary font-semibold mb-1">
                       {i18n.language === "id"
                         ? "Informasi Anda Aman"
                         : "Your Information is Safe"}
                     </p>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-body-small text-muted-foreground">
                       {i18n.language === "id"
                         ? "Semua data yang Anda berikan akan dijaga kerahasiaannya sesuai kebijakan privasi kami."
                         : "All data you provide will be kept confidential according to our privacy policy."}

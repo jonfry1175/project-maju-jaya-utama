@@ -186,25 +186,25 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-subtle max-w-7xl mx-auto">
-      <div className="container mx-auto px-4 sm:px-6">
+      className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
+      <div className="container mx-auto container-padding">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
-            <Lightbulb className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
+          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
+            <Lightbulb className="icon-small mr-2" />
             {i18n.language === "id"
               ? "Layanan Profesional"
               : "Professional Services"}
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
+          <h2 className="heading-2 text-primary mb-4 sm:mb-6">
             {t("section.title")}
             <span className="text-gradient block mt-1 sm:mt-2 leading-normal pb-1 sm:pb-2">
               {t("section.titleHighlight")}
             </span>
           </h2>
 
-          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-body-large text-muted-foreground">
             {t("section.description")}
           </p>
         </div>
@@ -218,8 +218,8 @@ const ServicesSection = () => {
                 <TabsTrigger
                   key={key}
                   value={key}
-                  className="flex items-center justify-center space-x-2 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary data-[state=active]:to-primary/80 data-[state=active]:text-white h-12 sm:h-auto text-xs sm:text-sm">
-                  <Icon className="w-4 h-4" />
+                  className="flex items-center justify-center space-x-2 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary data-[state=active]:to-primary/80 data-[state=active]:text-white h-12 sm:h-auto text-body-small">
+                  <Icon className="icon-small" />
                   <span>{category.title}</span>
                 </TabsTrigger>
               );
@@ -241,10 +241,10 @@ const ServicesSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60"></div>
                   <div className="absolute inset-0 p-4 sm:p-6 lg:p-8 flex items-center justify-center text-center">
                     <div className="text-white">
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 sm:mb-3">
+                      <h3 className="heading-3 xl:heading-2 mb-2 sm:mb-3">
                         {category.title}
                       </h3>
-                      <p className="text-sm sm:text-base lg:text-lg opacity-90 max-w-2xl">
+                      <p className="text-body lg:text-body-large opacity-90 max-w-2xl">
                         {category.description}
                       </p>
                     </div>
@@ -259,21 +259,21 @@ const ServicesSection = () => {
                   return (
                     <Card
                       key={serviceIndex}
-                      className="group relative bg-background border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300 p-4 sm:p-6 lg:p-8">
+                      className="group relative bg-background border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 card-padding animate-card">
                       {/* Icon */}
                       <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-105 transition-transform">
                         <ServiceIcon
-                          className="w-6 h-6 sm:w-8 sm:h-8 text-white"
+                          className="icon-medium lg:icon-large text-white"
                           strokeWidth={1.5}
                         />
                       </div>
 
                       {/* Content */}
                       <div className="space-y-3 sm:space-y-4">
-                        <h4 className="text-lg sm:text-xl font-bold text-foreground font-display leading-tight">
+                        <h4 className="heading-5 text-foreground">
                           {service.title}
                         </h4>
-                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-body-small text-muted-foreground">
                           {service.description}
                         </p>
 
@@ -282,8 +282,8 @@ const ServicesSection = () => {
                           {service.features.map((feature, featureIndex) => (
                             <li
                               key={featureIndex}
-                              className="flex items-start text-xs sm:text-sm">
-                              <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0 mt-0.5 mr-2" />
+                              className="flex items-start text-body-small">
+                              <CheckCircle className="icon-small text-primary flex-shrink-0 mt-0.5 mr-2" />
                               <span className="text-muted-foreground">
                                 {feature}
                               </span>
@@ -293,19 +293,19 @@ const ServicesSection = () => {
 
                         {/* Price Badge */}
                         <div className="pt-2 sm:pt-3">
-                          <span className="inline-flex items-center bg-primary/10 text-primary px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
+                          <span className="inline-flex items-center bg-primary/10 text-primary px-2 sm:px-3 py-1 rounded-full text-body-small font-semibold">
                             {service.price}
                           </span>
                         </div>
 
                         {/* CTA Button */}
                         <Button
-                          className="w-full btn-gradient-brand group-hover:shadow-lg transition-all text-xs sm:text-sm"
+                          className="w-full btn-gradient-brand group-hover:shadow-lg transition-all text-body-small"
                           size="sm">
                           {i18n.language === "id"
                             ? "Konsultasi Sekarang"
                             : "Consult Now"}
-                          <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight className="ml-1 sm:ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                         </Button>
                       </div>
                     </Card>
@@ -319,7 +319,7 @@ const ServicesSection = () => {
         {/* Stats Section */}
         <div className="mt-12 sm:mt-16 lg:mt-20">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary font-display text-center mb-6 sm:mb-8 lg:mb-12">
+            <h3 className="heading-3 text-primary text-center mb-6 sm:mb-8 lg:mb-12">
               {i18n.language === "id" ? "Komitmen Kami" : "Our Commitment"}
             </h3>
 
@@ -329,14 +329,14 @@ const ServicesSection = () => {
                 return (
                   <Card
                     key={index}
-                    className="text-center p-4 sm:p-6 lg:p-8 bg-background border border-border/50">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-primary/10 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-primary" />
+                    className="text-center card-padding bg-background border border-subtle animate-card">
+                    <div className="icon-large sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-primary/10 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                      <Icon className="icon-medium lg:icon-large text-primary" />
                     </div>
-                    <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground font-display mb-1 sm:mb-2">
+                    <div className="heading-4 xl:heading-2 text-foreground mb-1 sm:mb-2">
                       {stat.value}
                     </div>
-                    <div className="text-xs sm:text-sm lg:text-base text-muted-foreground font-medium">
+                    <div className="text-body-small lg:text-body text-muted-foreground font-medium">
                       {stat.label}
                     </div>
                   </Card>
@@ -348,13 +348,13 @@ const ServicesSection = () => {
 
         {/* CTA Section */}
         <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
-          <Card className="max-w-4xl mx-auto p-6 sm:p-8 lg:p-12 bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary font-display mb-3 sm:mb-4">
+          <Card className="max-w-4xl mx-auto card-padding lg:card-padding-large bg-gradient-to-br from-primary/5 to-primary/10 border border-primary-subtle animate-card">
+            <h3 className="heading-3 text-primary mb-3 sm:mb-4">
               {i18n.language === "id"
                 ? "Siap Memulai Perjalanan IPO Anda?"
                 : "Ready to Start Your IPO Journey?"}
             </h3>
-            <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
+            <p className="text-body text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
               {i18n.language === "id"
                 ? "Dapatkan konsultasi gratis dengan para ahli kami dan temukan solusi terbaik untuk perusahaan Anda."
                 : "Get a free consultation with our experts and discover the best solutions for your company."}
@@ -362,18 +362,18 @@ const ServicesSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="btn-gradient-brand shadow-brand text-sm sm:text-base font-semibold px-6 sm:px-8 group w-full sm:w-auto">
-                <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                className="btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 group w-full sm:w-auto">
+                <Phone className="mr-2 icon-small" />
                 {i18n.language === "id"
                   ? "Konsultasi Gratis"
                   : "Free Consultation"}
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="text-sm sm:text-base font-semibold px-6 sm:px-8 border-2 w-full sm:w-auto">
-                <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                className="text-body font-semibold px-6 sm:px-8 border-2 w-full sm:w-auto">
+                <Download className="mr-2 icon-small" />
                 {i18n.language === "id"
                   ? "Download Brosur"
                   : "Download Brochure"}

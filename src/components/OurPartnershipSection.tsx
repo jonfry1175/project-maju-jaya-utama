@@ -27,21 +27,21 @@ const OurPartnershipSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section className="section-padding bg-gray-50">
+      <div className="container mx-auto container-padding">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
-              <Users className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
+            <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary/20">
+              <Users className="icon-small mr-2" />
               {t("ourPartnership.badge")}
             </div>
             
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary font-display mb-4 leading-tight">
+            <h2 className="heading-2 font-bold text-primary font-display mb-4 leading-tight">
               {t("ourPartnership.title")}
             </h2>
             
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-body-large text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               {t("ourPartnership.description")}
             </p>
           </div>
@@ -49,22 +49,22 @@ const OurPartnershipSection = () => {
           {/* Partnership Cards */}
           <div className="grid md:grid-cols-3 gap-6">
             {partnerships.map((partnership, index) => (
-              <Card key={index} className="p-6 hover:shadow-xl transition-all duration-300">
+              <Card key={index} className="card-padding hover:shadow-xl transition-all duration-300">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <partnership.icon className="w-6 h-6 text-primary" />
+                  <partnership.icon className="icon-medium text-primary" />
                 </div>
                 
-                <h3 className="text-lg font-bold text-foreground mb-3">
+                <h3 className="heading-6 font-bold text-foreground mb-3">
                   {partnership.title}
                 </h3>
                 
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-body-small text-muted-foreground mb-4 leading-relaxed">
                   {partnership.description}
                 </p>
                 
                 <div className="space-y-2">
                   {partnership.partners.map((partner, idx) => (
-                    <div key={idx} className="flex items-start text-sm">
+                    <div key={idx} className="flex items-start text-body-small">
                       <span className="text-primary mr-2">•</span>
                       <span className="text-muted-foreground">{partner}</span>
                     </div>

@@ -21,7 +21,8 @@ export default {
 		extend: {
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
-				poppins: ['Poppins', 'sans-serif'],
+				display: ['Playfair Display', 'serif'],
+				mono: ['IBM Plex Mono', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

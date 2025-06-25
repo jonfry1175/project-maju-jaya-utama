@@ -87,7 +87,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen lg:min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
+      className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -112,19 +112,19 @@ const HeroSection = () => {
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-accent/5 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-primary/5 to-transparent"></div>
 
-      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
+      <div className="container mx-auto container-padding section-padding">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
           {/* Left Column - Enhanced Content */}
-          <div className="space-y-6 sm:space-y-8 animate-slide-in-left order-1 lg:order-1">
+          <div className="space-y-6 sm:space-y-8 animate-hero-content order-1 lg:order-1">
             <div className="space-y-8">
-              <div className="inline-flex items-center bg-background/90 backdrop-blur-sm text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20 shadow-lg">
+              <div className="inline-flex items-center bg-background/90 backdrop-blur-sm text-primary px-4 py-2 rounded-full text-body-small font-semibold border border-primary-subtle shadow-lg">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                 {t("badge")}
               </div>
 
               <div className="space-y-4 sm:space-y-6">
                 <h1
-                  className="text-3xl sm:text-4xl lg:text-6xl font-bold text-primary font-display leading-tight sm:leading-tight lg:leading-[1.2]"
+                  className="heading-1 text-primary"
                   style={{ textShadow: "0 2px 4px rgba(0,0,0,0.1)" }}>
                   {t("title")}
                   <span className="text-gradient block mt-2 sm:mt-3 lg:mt-4 leading-normal pb-1 sm:pb-2">
@@ -132,7 +132,7 @@ const HeroSection = () => {
                   </span>
                 </h1>
 
-                <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed sm:leading-relaxed lg:leading-relaxed max-w-xl pt-1 sm:pt-2">
+                <p className="text-body-large text-muted-foreground max-w-xl pt-1 sm:pt-2">
                   {t("description")}
                 </p>
               </div>
@@ -141,15 +141,15 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button
                 size="lg"
-                className="btn-gradient-brand shadow-brand text-sm sm:text-base font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto group w-full sm:w-auto">
+                className="btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto group w-full sm:w-auto">
                 {t("cta.startJourney")}
-                <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="text-sm sm:text-base font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto border-2 group w-full sm:w-auto">
-                <Play className="mr-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:scale-110 transition-transform" />
+                className="text-body font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto border-2 group w-full sm:w-auto">
+                <Play className="mr-2 icon-small group-hover:scale-110 transition-transform" />
                 {t("cta.watchVideo")}
               </Button>
             </div>
@@ -160,9 +160,9 @@ const HeroSection = () => {
                 <img
                   src="/logo.png"
                   alt="Global Sinergi Kapital"
-                  className="w-5 sm:w-6 lg:w-8 h-5 sm:h-6 lg:h-8 object-contain"
+                  className="icon-medium lg:icon-large object-contain"
                 />
-                <p className="text-xs sm:text-sm text-gray-600 font-medium">
+                <p className="text-body-small text-gray-600 font-medium">
                   {t("partners.label")}
                 </p>
               </div>
@@ -202,7 +202,7 @@ const HeroSection = () => {
           {/* Right Column - Professional Stats Grid */}
           <div
             id="hero-stats"
-            className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5 animate-fade-up order-2 lg:order-2 mt-8 lg:mt-0">
+            className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5 animate-hero-stats order-2 lg:order-2 mt-8 lg:mt-0">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               const displayValue =
@@ -213,11 +213,11 @@ const HeroSection = () => {
               return (
                 <Card
                   key={index}
-                  className="group relative overflow-hidden bg-background/90 backdrop-blur-sm border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-200">
-                  <div className="p-3 sm:p-4 lg:p-6 xl:p-8 space-y-2 sm:space-y-3 lg:space-y-4">
+                  className="group relative overflow-hidden bg-background/90 backdrop-blur-sm border border-subtle hover:border-primary-medium hover:shadow-lg transition-all duration-200 animate-card">
+                  <div className="card-padding space-y-2 sm:space-y-3 lg:space-y-4">
                     {/* Icon with subtle styling */}
                     <div
-                      className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 ${
+                      className={`icon-large sm:w-12 sm:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 ${
                         stat.color === "primary"
                           ? "bg-primary/10"
                           : stat.color === "success"
@@ -227,7 +227,7 @@ const HeroSection = () => {
                           : "bg-secondary/10"
                       } rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200`}>
                       <Icon
-                        className={`w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 ${
+                        className={`icon-medium lg:icon-large ${
                           stat.color === "primary"
                             ? "text-primary"
                             : stat.color === "success"
@@ -243,14 +243,14 @@ const HeroSection = () => {
                     {/* Clean Typography */}
                     <div className="space-y-1 sm:space-y-2">
                       <div className="flex items-baseline gap-1">
-                        <span className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground font-display">
+                        <span className="heading-3 xl:heading-2 text-foreground">
                           {displayValue}
                         </span>
-                        <span className="text-sm sm:text-base lg:text-xl xl:text-2xl font-medium text-foreground/70">
+                        <span className="text-body lg:heading-5 xl:heading-4 font-medium text-foreground/70">
                           {stat.suffix}
                         </span>
                       </div>
-                      <p className="text-xs sm:text-sm lg:text-sm xl:text-base text-muted-foreground font-medium leading-tight">
+                      <p className="text-body-small text-muted-foreground font-medium leading-tight">
                         {stat.label}
                       </p>
                     </div>

@@ -463,18 +463,18 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="faq" className="section-padding bg-background animate-section">
+      <div className="container mx-auto container-padding">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
-            <HelpCircle className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
+          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
+            <HelpCircle className="icon-small mr-2" />
             {i18n.language === "id"
               ? "Pertanyaan yang Sering Ditanyakan"
               : "Frequently Asked Questions"}
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
+          <h2 className="heading-2 text-primary mb-4 sm:mb-6">
             {i18n.language === "id" ? "Punya Pertanyaan?" : "Have Questions?"}
             <span className="text-gradient block mt-1 sm:mt-2 leading-normal pb-1 sm:pb-2">
               {i18n.language === "id"
@@ -483,7 +483,7 @@ const FAQSection = () => {
             </span>
           </h2>
 
-          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-body-large text-muted-foreground">
             {i18n.language === "id"
               ? "Temukan jawaban untuk pertanyaan umum seputar proses IPO dan layanan konsultasi kami."
               : "Find answers to common questions about the IPO process and our consulting services."}
@@ -494,8 +494,8 @@ const FAQSection = () => {
           {/* FAQ Categories */}
           {faqCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-8 sm:mb-10 lg:mb-12">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary font-display text-center mb-6 sm:mb-8 flex items-center justify-center">
-                <FileText className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
+              <h3 className="heading-4 lg:heading-3 text-primary text-center mb-6 sm:mb-8 flex items-center justify-center">
+                <FileText className="icon-medium mr-2 sm:mr-3" />
                 {category.category}
               </h3>
 
@@ -507,14 +507,14 @@ const FAQSection = () => {
                   <AccordionItem
                     key={index}
                     value={`item-${categoryIndex}-${index}`}
-                    className="border border-border/50 rounded-xl bg-background hover:shadow-md transition-all duration-200">
+                    className="border border-subtle rounded-xl bg-background hover:shadow-md transition-all duration-200 animate-card">
                     <AccordionTrigger className="px-4 sm:px-6 py-4 sm:py-5 text-left hover:no-underline hover:bg-muted/30 rounded-t-xl data-[state=open]:rounded-b-none transition-colors">
-                      <span className="text-sm sm:text-base lg:text-lg font-semibold text-foreground pr-4 leading-tight">
+                      <span className="text-body lg:text-body-large font-semibold text-foreground pr-4">
                         {faq.q}
                       </span>
                     </AccordionTrigger>
                     <AccordionContent className="px-4 sm:px-6 pb-4 sm:pb-5 pt-0">
-                      <div className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed">
+                      <div className="text-body-small lg:text-body text-muted-foreground">
                         {faq.a}
                       </div>
                     </AccordionContent>
@@ -526,13 +526,13 @@ const FAQSection = () => {
 
           {/* CTA Section */}
           <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
-            <Card className="p-6 sm:p-8 lg:p-10 bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary font-display mb-3 sm:mb-4">
+            <Card className="card-padding lg:card-padding-large bg-gradient-to-br from-primary/5 to-primary/10 border border-primary-subtle animate-card">
+              <h3 className="heading-4 lg:heading-3 text-primary mb-3 sm:mb-4">
                 {i18n.language === "id"
                   ? "Masih Ada Pertanyaan Lain?"
                   : "Still Have Other Questions?"}
               </h3>
-              <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
+              <p className="text-body text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
                 {i18n.language === "id"
                   ? "Tim ahli kami siap membantu menjawab pertanyaan spesifik tentang situasi perusahaan Anda."
                   : "Our expert team is ready to help answer specific questions about your company's situation."}
@@ -541,56 +541,56 @@ const FAQSection = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                 <Button
                   size="lg"
-                  className="btn-gradient-brand shadow-brand text-sm sm:text-base font-semibold px-6 sm:px-8 group w-full sm:w-auto">
-                  <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  className="btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 group w-full sm:w-auto">
+                  <MessageCircle className="mr-2 icon-small" />
                   {i18n.language === "id"
                     ? "Konsultasi Gratis"
                     : "Free Consultation"}
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="text-sm sm:text-base font-semibold px-6 sm:px-8 border-2 w-full sm:w-auto">
-                  <Shield className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  className="text-body font-semibold px-6 sm:px-8 border-2 w-full sm:w-auto">
+                  <Shield className="mr-2 icon-small" />
                   {i18n.language === "id" ? "Hubungi Kami" : "Contact Us"}
                 </Button>
               </div>
 
               {/* Quick Contact Options */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-10">
-                <div className="text-center p-3 sm:p-4 bg-background/50 rounded-lg border border-border/30">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                <div className="text-center card-padding-small bg-background/50 rounded-lg border border-medium">
+                  <div className="icon-large sm:icon-large bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                    <MessageCircle className="icon-small text-primary" />
                   </div>
-                  <p className="text-xs sm:text-sm font-semibold text-foreground mb-1">
+                  <p className="text-body-small font-semibold text-foreground mb-1">
                     WhatsApp
                   </p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-body-small text-muted-foreground">
                     {i18n.language === "id" ? "Respon Cepat" : "Quick Response"}
                   </p>
                 </div>
 
-                <div className="text-center p-3 sm:p-4 bg-background/50 rounded-lg border border-border/30">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                    <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                <div className="text-center card-padding-small bg-background/50 rounded-lg border border-medium">
+                  <div className="icon-large sm:icon-large bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                    <HelpCircle className="icon-small text-primary" />
                   </div>
-                  <p className="text-xs sm:text-sm font-semibold text-foreground mb-1">
+                  <p className="text-body-small font-semibold text-foreground mb-1">
                     {i18n.language === "id" ? "Email" : "Email"}
                   </p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-body-small text-muted-foreground">
                     {i18n.language === "id" ? "Detail Lengkap" : "Full Details"}
                   </p>
                 </div>
 
-                <div className="text-center p-3 sm:p-4 bg-background/50 rounded-lg border border-border/30">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                    <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                <div className="text-center card-padding-small bg-background/50 rounded-lg border border-medium">
+                  <div className="icon-large sm:icon-large bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                    <Shield className="icon-small text-primary" />
                   </div>
-                  <p className="text-xs sm:text-sm font-semibold text-foreground mb-1">
+                  <p className="text-body-small font-semibold text-foreground mb-1">
                     {i18n.language === "id" ? "Telepon" : "Phone"}
                   </p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-body-small text-muted-foreground">
                     {i18n.language === "id" ? "Langsung Bicara" : "Direct Talk"}
                   </p>
                 </div>

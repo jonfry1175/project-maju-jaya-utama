@@ -33,21 +33,21 @@ const OurExpertiseSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="section-padding bg-background">
+      <div className="container mx-auto container-padding">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
-              <Brain className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
+            <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary/20">
+              <Brain className="icon-small mr-2" />
               {t("ourExpertise.badge")}
             </div>
             
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary font-display mb-4 leading-tight">
+            <h2 className="heading-2 font-bold text-primary font-display mb-4 leading-tight">
               {t("ourExpertise.title")}
             </h2>
             
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-body-large text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               {t("ourExpertise.description")}
             </p>
           </div>
@@ -67,19 +67,19 @@ const OurExpertiseSection = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="lg:col-span-3 p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-3">
+                  <div className="lg:col-span-3 card-padding">
+                    <h3 className="heading-5 font-bold text-foreground mb-3">
                       {area.title}
                     </h3>
                     
-                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                    <p className="text-body-small text-muted-foreground mb-4 leading-relaxed">
                       {area.description}
                     </p>
                     
                     <ul className="space-y-2">
                       {area.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start text-sm">
-                          <CheckCircle className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                        <li key={idx} className="flex items-start text-body-small">
+                          <CheckCircle className="icon-small text-primary mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-muted-foreground">{feature}</span>
                         </li>
                       ))}
@@ -92,7 +92,7 @@ const OurExpertiseSection = () => {
 
           {/* Bottom CTA */}
           <div className="text-center mt-12">
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground text-body-small">
               {t("ourExpertise.cta")}
             </p>
           </div>
