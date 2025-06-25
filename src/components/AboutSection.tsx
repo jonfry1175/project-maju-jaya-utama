@@ -26,40 +26,40 @@ const AboutSection = () => {
 
   const roadmap = [
     {
-      year: "2025",
-      titleKey: "2025",
+      step: "1",
+      titleKey: "mapping",
       image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop", // Business analysis and mapping
     },
     {
-      year: "2026",
-      titleKey: "2026",
+      step: "2",
+      titleKey: "scenario",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop", // Strategic planning and scenarios
     },
     {
-      year: "2027",
-      titleKey: "2027",
+      step: "3",
+      titleKey: "proforma",
       image:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop", // Financial reports and analysis
     },
     {
-      year: "2028",
-      titleKey: "2028",
+      step: "4",
+      titleKey: "management",
       image:
-        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop", // Team management and improvement
     },
     {
-      year: "2029",
-      titleKey: "2029",
+      step: "5",
+      titleKey: "bridging",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&h=600&fit=crop", // People connecting/celebrating representing bridging partnerships
     },
     {
-      year: "2030",
-      titleKey: "2030",
+      step: "6",
+      titleKey: "compliance",
       image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop", // Compliance and documentation
     },
   ];
 
@@ -1314,10 +1314,10 @@ const AboutSection = () => {
                       alt={t(`roadmap.items.${item.titleKey}.title`)}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    {/* Year Badge */}
+                    {/* Step Badge */}
                     <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-full border border-primary/20">
                       <span className="text-white font-bold text-lg">
-                        {item.year}
+                        {item.step}
                       </span>
                     </div>
                     {/* Gradient Overlay */}

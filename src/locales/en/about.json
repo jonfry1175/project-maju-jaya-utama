@@ -33,31 +33,31 @@
     }
   },
   "roadmap": {
-    "title": "Our Roadmap",
+    "title": "Business Model Pre IPO",
     "items": {
-      "2025": {
-        "title": "Strong Foundation",
-        "description": "Building professional team and modern technology infrastructure for IPO consulting services"
+      "mapping": {
+        "title": "Mapping",
+        "description": "Comprehensive assessment and mapping of company readiness for IPO process"
       },
-      "2026": {
-        "title": "Service Expansion",
-        "description": "Launching digital platform and expanding reach throughout Indonesia"
+      "scenario": {
+        "title": "Scenario Plans",
+        "description": "Development of strategic scenarios and roadmaps for successful public listing"
       },
-      "2027": {
-        "title": "Regional Partner",
-        "description": "Establishing strategic partnerships with stock exchanges and regulators in Southeast Asia"
+      "proforma": {
+        "title": "Proforma Financial Report",
+        "description": "Preparation of projected financial statements meeting capital market standards"
       },
-      "2028": {
-        "title": "Education Center",
-        "description": "Establishing IPO academy to improve Indonesian capital market literacy"
+      "management": {
+        "title": "Management Improvement Plans",
+        "description": "Enhancement strategies for organizational structure and corporate governance"
       },
-      "2029": {
-        "title": "Digital Innovation",
-        "description": "Integrating AI and blockchain to accelerate IPO process"
+      "bridging": {
+        "title": "Bridging Financing",
+        "description": "Arrangement of interim funding solutions to support pre-IPO preparations"
       },
-      "2030": {
-        "title": "Market Leader",
-        "description": "Becoming leading IPO consultant with 100+ successful public companies"
+      "compliance": {
+        "title": "IPO Compliance Plans",
+        "description": "Ensuring full regulatory compliance with OJK and IDX requirements"
       }
     }
   },

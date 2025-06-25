@@ -73,31 +73,31 @@
     }
   },
   "roadmap": {
-    "title": "Roadmap Kami",
+    "title": "Model Bisnis Pra IPO",
     "items": {
-      "2025": {
-        "title": "Fondasi Kuat",
-        "description": "Membangun tim profesional dan infrastruktur teknologi modern untuk layanan konsultasi IPO"
+      "mapping": {
+        "title": "Pemetaan",
+        "description": "Penilaian komprehensif dan pemetaan kesiapan perusahaan untuk proses IPO"
       },
-      "2026": {
-        "title": "Ekspansi Layanan",
-        "description": "Meluncurkan platform digital dan memperluas jangkauan ke seluruh Indonesia"
+      "scenario": {
+        "title": "Rencana Skenario",
+        "description": "Pengembangan skenario strategis dan roadmap untuk listing publik yang sukses"
       },
-      "2027": {
-        "title": "Mitra Regional",
-        "description": "Menjalin kemitraan strategis dengan bursa efek dan regulator di Asia Tenggara"
+      "proforma": {
+        "title": "Laporan Keuangan Proforma",
+        "description": "Penyusunan laporan keuangan proyeksi sesuai standar pasar modal"
       },
-      "2028": {
-        "title": "Pusat Edukasi",
-        "description": "Mendirikan akademi IPO untuk meningkatkan literasi pasar modal Indonesia"
+      "management": {
+        "title": "Rencana Perbaikan Manajemen",
+        "description": "Strategi peningkatan struktur organisasi dan tata kelola perusahaan"
       },
-      "2029": {
-        "title": "Inovasi Digital",
-        "description": "Mengintegrasikan AI dan blockchain untuk mempercepat proses IPO"
+      "bridging": {
+        "title": "Pembiayaan Jembatan",
+        "description": "Pengaturan solusi pendanaan sementara untuk mendukung persiapan pra-IPO"
       },
-      "2030": {
-        "title": "Pemimpin Pasar",
-        "description": "Menjadi konsultan IPO terkemuka dengan 100+ klien sukses go public"
+      "compliance": {
+        "title": "Rencana Kepatuhan IPO",
+        "description": "Memastikan kepatuhan penuh terhadap persyaratan OJK dan BEI"
       }
     }
   },
