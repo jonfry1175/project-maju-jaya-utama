@@ -205,161 +205,91 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* Our Main Client Section */}
-        <div className="mb-8 sm:mb-12 lg:mb-16">
+
+
+        {/* Our Leadership Section */}
+        <div className="mb-6 sm:mb-8">
           <div className="max-w-7xl mx-auto">
-            <Card className="overflow-hidden bg-gradient-to-br from-slate-50 to-gray-100 dark:from-slate-800 dark:to-slate-900 border border-subtle shadow-xl animate-card">
-              <div className="card-padding lg:card-padding-large">
-                {/* Header */}
-                <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-                  <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
-                    <Users className="icon-small mr-2" />
-                    {t("mainClients.badge")}
-                  </div>
-
-                  <h3 className="heading-3 lg:heading-2 text-primary mb-3 sm:mb-4">
-                    {t("mainClients.title")}
-                  </h3>
-
-                  <p className="text-body lg:text-body-large text-primary/80 font-semibold mb-4 sm:mb-6">
-                    {t("mainClients.subtitle")}
-                  </p>
-
-                  <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4">
-                    <p className="text-body text-muted-foreground">
-                      {t("mainClients.description.main")}
-                    </p>
-                    <p className="text-body text-muted-foreground">
-                      {t("mainClients.description.secondary")}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Client Logos Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 items-center justify-items-center">
-                  {/* Row 1 */}
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/logologo/mandiri.png"
-                      alt="Mandiri"
-                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/logologo/bni.png"
-                      alt="BNI"
-                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/Sponsor/logo-sponsor-gsk-maybank.jpg"
-                      alt="Maybank"
-                      className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/logologo/angkasa.png"
-                      alt="Angkasa Pura II"
-                      className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/logologo/bri.png"
-                      alt="BRI Agro"
-                      className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-
-                  {/* Row 2 */}
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/logologo/telkomsel.png"
-                      alt="Telkomsel"
-                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/Sponsor/logo-ski-sponsor-pelindo.png"
-                      alt="Pelindo"
-                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/Sponsor/logo-sponsor-gsk-tempo.png"
-                      alt="Tempo Media Group"
-                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/Sponsor/logo-sponsor-gsk-alif.png"
-                      alt="Alif"
-                      className="h-12 sm:h-14 lg:h-16 xl:h-18 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-
-                  {/* Logo Pertamina */}
-                  <div className="flex items-center justify-center h-16 sm:h-18 lg:h-20 w-full">
-                    <img
-                      src="/logologo/pertamina.png"
-                      alt="Pertamina"
-                      className="h-10 sm:h-12 lg:h-14 xl:h-16 w-auto max-w-full object-contain opacity-100"
-                    />
-                  </div>
-                </div>
-
-                {/* Bottom Stats */}
-                <div className="mt-6 sm:mt-8 lg:mt-12 pt-4 sm:pt-6 lg:pt-8 border-t border-border/30">
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 text-center">
-                    <div className="space-y-1 sm:space-y-2">
-                      <div className="heading-4 lg:heading-3 text-primary">
-                        10+
-                      </div>
-                      <div className="text-body-small text-muted-foreground">
-                        Major Clients
-                      </div>
-                    </div>
-                    <div className="space-y-1 sm:space-y-2">
-                      <div className="heading-4 lg:heading-3 text-primary">
-                        15+
-                      </div>
-                      <div className="text-body-small text-muted-foreground">
-                        Industries Served
-                      </div>
-                    </div>
-                    <div className="space-y-1 sm:space-y-2">
-                      <div className="heading-4 lg:heading-3 text-primary">
-                        98%
-                      </div>
-                      <div className="text-body-small text-muted-foreground">
-                        Client Satisfaction
-                      </div>
-                    </div>
-                    <div className="space-y-1 sm:space-y-2">
-                      <div className="heading-4 lg:heading-3 text-primary">
-                        24/7
-                      </div>
-                      <div className="text-body-small text-muted-foreground">
-                        Support Available
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            {/* Header */}
+            <div className="text-center mb-6 sm:mb-8">
+              <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-3 sm:mb-4 border border-primary-subtle">
+                <Users className="icon-small mr-2" />
+                {t("team.title")}
               </div>
-            </Card>
+
+              <h3 className="heading-3 lg:heading-2 text-primary mb-2 sm:mb-3">
+                Our Leadership
+              </h3>
+
+              <p className="text-body text-muted-foreground max-w-3xl mx-auto">
+                Meet our experienced leadership team committed to driving innovation and excellence in IPO consulting services.
+              </p>
+            </div>
+
+            {/* Leadership Grid */}
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+              {team.map((memberKey, index) => (
+                <Card
+                  key={index}
+                  className="group overflow-hidden bg-background border border-subtle animate-card hover:shadow-xl transition-all duration-300">
+                  {/* Photo Section */}
+                  <div className="relative h-64 sm:h-72 overflow-hidden">
+                    <img
+                      src={`https://images.unsplash.com/photo-${
+                        index === 0 
+                          ? '1560250097-0b93528c311a' // Professional businessman
+                          : index === 1 
+                          ? '1573496359142-b8d87734a5a2' // Professional businesswoman
+                          : '1472099645785-5658abf4ff4e' // Professional businessman 2
+                      }?w=400&h=500&fit=crop&crop=face`}
+                      alt={t(`team.members.${memberKey}.name`)}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="card-padding space-y-3 sm:space-y-4">
+                    <div className="text-center">
+                      <h4 className="heading-5 text-foreground mb-1">
+                        {t(`team.members.${memberKey}.name`)}
+                      </h4>
+                      <p className="text-primary font-semibold text-body-small mb-2">
+                        {t(`team.members.${memberKey}.position`)}
+                      </p>
+                      <p className="text-body-small text-muted-foreground mb-3">
+                        {t(`team.members.${memberKey}.experience`)}
+                      </p>
+                    </div>
+
+                    {/* Credentials */}
+                    <div className="space-y-2">
+                      {(
+                        t(`team.members.${memberKey}.credentials`, {
+                          returnObjects: true,
+                        }) as string[]
+                      ).map((cred, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center text-body-small text-muted-foreground">
+                          <Check className="icon-small mr-2 text-primary flex-shrink-0" />
+                          <span>{cred}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Professional Badge */}
+                    <div className="pt-3 border-t border-border/30">
+                      <div className="inline-flex items-center bg-primary/10 text-primary px-2 py-1 rounded-full text-xs font-medium">
+                        <Award className="icon-small mr-1" />
+                        Professional Leader
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
 

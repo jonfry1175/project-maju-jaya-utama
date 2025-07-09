@@ -31,7 +31,7 @@ const Header = () => {
   const navItems = [
     { name: t('nav.about'), href: "#about" },
     { name: t('nav.services'), href: "#services" },
-    { name: t('nav.partners'), href: "/partners" },
+    { name: t('nav.partners'), href: "/our-partnership" },
     { 
       name: t('nav.ipoProcess'), 
       href: "#",

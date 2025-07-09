@@ -20,6 +20,10 @@ import {
   Target,
   Lightbulb,
   Phone,
+  DollarSign,
+  PiggyBank,
+  CreditCard,
+  Banknote,
 } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -126,6 +130,54 @@ const ServicesSection = () => {
         },
       ],
     },
+    fundraising: {
+      title: "Fund Raising",
+      icon: DollarSign,
+      description: "Solusi pendanaan strategis untuk pertumbuhan dan ekspansi perusahaan",
+      image:
+        "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop", // Investment/funding
+      services: [
+        {
+          icon: TrendingUp,
+          title: "Equity Fundraising",
+          description:
+            "Penggalangan dana melalui penerbitan saham dengan strategi yang optimal untuk memaksimalkan valuasi.",
+          features: [
+            "Private Placement Strategy",
+            "Investor Matching & Outreach",
+            "Term Sheet Negotiation",
+            "Due Diligence Support",
+          ],
+          price: "Success Fee Based",
+        },
+        {
+          icon: CreditCard,
+          title: "Debt Financing",
+          description:
+            "Solusi pembiayaan hutang yang terstruktur untuk kebutuhan modal kerja dan ekspansi bisnis.",
+          features: [
+            "Bank Loan Structuring",
+            "Bond Issuance Advisory",
+            "Credit Rating Enhancement",
+            "Loan Documentation Review",
+          ],
+          price: "Advisory Fee",
+        },
+        {
+          icon: PiggyBank,
+          title: "Bridge Financing",
+          description:
+            "Pembiayaan jembatan untuk mendukung transisi dan memenuhi kebutuhan dana jangka pendek.",
+          features: [
+            "Short-term Capital Solutions",
+            "Convertible Note Structuring",
+            "Mezzanine Financing",
+            "Working Capital Facilities",
+          ],
+          price: "Arrangement Fee",
+        },
+      ],
+    },
     compliance: {
       title: "Hukum & Kepatuhan",
       icon: Scale,
@@ -211,7 +263,7 @@ const ServicesSection = () => {
 
         {/* Service Categories Tabs */}
         <Tabs defaultValue="advisory" className="w-full mb-8 sm:mb-12 lg:mb-18">
-          <TabsList className="grid w-full max-w-full sm:max-w-3xl mx-auto grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-0 mb-8 sm:mb-12 h-auto sm:h-10 p-1">
+          <TabsList className="grid w-full max-w-full sm:max-w-4xl mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-0 mb-8 sm:mb-12 h-auto sm:h-10 p-1">
             {Object.entries(serviceCategories).map(([key, category]) => {
               const Icon = category.icon;
               return (
