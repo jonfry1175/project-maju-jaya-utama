@@ -2,7 +2,6 @@ import { Card } from "@/components/ui/card";
 import {
   Lightbulb,
   Target,
-  Users,
   Award,
   Calendar,
   CheckCircle,
@@ -15,7 +14,6 @@ import {
   Heart,
   FileText,
   TrendingUp,
-  Check,
 } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -62,8 +60,6 @@ const AboutSection = () => {
         "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop", // Compliance and documentation
     },
   ];
-
-  const team = ["ceo", "coo", "cfo"];
 
   const values = [
     {
@@ -206,92 +202,6 @@ const AboutSection = () => {
         </div>
 
 
-
-        {/* Our Leadership Section */}
-        <div className="mb-6 sm:mb-8">
-          <div className="max-w-7xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-6 sm:mb-8">
-              <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-3 sm:mb-4 border border-primary-subtle">
-                <Users className="icon-small mr-2" />
-                {t("team.title")}
-              </div>
-
-              <h3 className="heading-3 lg:heading-2 text-primary mb-2 sm:mb-3">
-                Our Leadership
-              </h3>
-
-              <p className="text-body text-muted-foreground max-w-3xl mx-auto">
-                Meet our experienced leadership team committed to driving innovation and excellence in IPO consulting services.
-              </p>
-            </div>
-
-            {/* Leadership Grid */}
-            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-              {team.map((memberKey, index) => (
-                <Card
-                  key={index}
-                  className="group overflow-hidden bg-background border border-subtle animate-card hover:shadow-xl transition-all duration-300">
-                  {/* Photo Section */}
-                  <div className="relative h-64 sm:h-72 overflow-hidden">
-                    <img
-                      src={`https://images.unsplash.com/photo-${
-                        index === 0 
-                          ? '1560250097-0b93528c311a' // Professional businessman
-                          : index === 1 
-                          ? '1573496359142-b8d87734a5a2' // Professional businesswoman
-                          : '1472099645785-5658abf4ff4e' // Professional businessman 2
-                      }?w=400&h=500&fit=crop&crop=face`}
-                      alt={t(`team.members.${memberKey}.name`)}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
-                  </div>
-
-                  {/* Content Section */}
-                  <div className="card-padding space-y-3 sm:space-y-4">
-                    <div className="text-center">
-                      <h4 className="heading-5 text-foreground mb-1">
-                        {t(`team.members.${memberKey}.name`)}
-                      </h4>
-                      <p className="text-primary font-semibold text-body-small mb-2">
-                        {t(`team.members.${memberKey}.position`)}
-                      </p>
-                      <p className="text-body-small text-muted-foreground mb-3">
-                        {t(`team.members.${memberKey}.experience`)}
-                      </p>
-                    </div>
-
-                    {/* Credentials */}
-                    <div className="space-y-2">
-                      {(
-                        t(`team.members.${memberKey}.credentials`, {
-                          returnObjects: true,
-                        }) as string[]
-                      ).map((cred, i) => (
-                        <div
-                          key={i}
-                          className="flex items-center text-body-small text-muted-foreground">
-                          <Check className="icon-small mr-2 text-primary flex-shrink-0" />
-                          <span>{cred}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Professional Badge */}
-                    <div className="pt-3 border-t border-border/30">
-                      <div className="inline-flex items-center bg-primary/10 text-primary px-2 py-1 rounded-full text-xs font-medium">
-                        <Award className="icon-small mr-1" />
-                        Professional Leader
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Business Advisory & Investment Services Section */}
         <div className="mb-6 sm:mb-8">

@@ -1,16 +1,20 @@
 {
   "companyName": "Global Sinergi Kapital",
-  "tagline": "Konsultan Pre IPO dan IPO yang terintegrasi",
+  "tagline": "",
   "nav": {
     "about": "Tentang Kami",
+    "about.overview": "Profil Perusahaan",
+    "about.leadership": "Kepemimpinan Kami",
     "services": "Layanan",
+    "services.fundRaising": "Penggalangan Dana",
+    "services.professional": "Layanan Profesional",
     "partners": "Kemitraan Kami",
     "ipoProcess": "Proses IPO",
     "ipoProcess.mapping": "Pemetaan",
     "ipoProcess.scenarioPlans": "Rencana Skenario",
     "ipoProcess.proformaFinancialReport": "Laporan Keuangan Proforma",
     "ipoProcess.managementImprovementPlans": "Rencana Perbaikan Manajemen",
-    "ipoProcess.bridgingFinancing": "Pembiayaan Jembatan",
+    "ipoProcess.bridgingFinancing": "Pembiayaan Bridging",
     "ipoProcess.ipoCompliancePlans": "Rencana Kepatuhan IPO",
     "testimonials": "Testimoni",
     "faq": "FAQ",
@@ -18,7 +22,7 @@
   },
   "cta": {
     "freeConsultation": "Konsultasi Gratis",
-    "startIPOJourney": "Mulai Perjalanan IPO"
+    "startIPOJourney": "Mulai Perjalanan IPO Anda"
   },
   "phone": "(021) 1234-5678",
   "whatsapp": "WhatsApp"

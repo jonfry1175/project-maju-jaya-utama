@@ -1,9 +1,13 @@
 {
   "companyName": "Global Sinergi Kapital",
-  "tagline": "Integrated Pre-IPO and IPO Consultant",
+  "tagline": "",
   "nav": {
     "about": "About Us",
+    "about.overview": "Our Company",
+    "about.leadership": "Our Leadership",
     "services": "Services",
+    "services.fundRaising": "Fund Raising",
+    "services.professional": "Professional Services",
     "partners": "Our Partnership",
     "ipoProcess": "IPO Process",
     "ipoProcess.mapping": "Mapping",

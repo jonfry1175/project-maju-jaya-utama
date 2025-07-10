@@ -18,7 +18,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<{ [key: string]: boolean }>({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,8 +29,22 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: t('nav.about'), href: "#about" },
-    { name: t('nav.services'), href: "#services" },
+    { 
+      name: t('nav.about'), 
+      href: "#about",
+      subItems: [
+        { name: t('nav.about.overview'), href: "#about" },
+        { name: t('nav.about.leadership'), href: "/our-leadership" }
+      ]
+    },
+    { 
+      name: t('nav.services'), 
+      href: "#services",
+      subItems: [
+        { name: t('nav.services.professional'), href: "#services" },
+        { name: t('nav.services.fundRaising'), href: "/fund-raising" }
+      ]
+    },
     { name: t('nav.partners'), href: "/our-partnership" },
     { 
       name: t('nav.ipoProcess'), 
@@ -83,6 +97,45 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleDropdownItemClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    
+    // If it's a route link (starts with /)
+    if (href.startsWith('/')) {
+      navigate(href);
+      // Scroll to top after navigation completes
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    } else if (href.startsWith('#')) {
+      // Handle hash links same as handleNavClick
+      if (location.pathname === '/') {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    }
+    
+    // Close mobile menu if open
+    setIsMenuOpen(false);
+  };
+
+  const toggleMobileDropdown = (itemName: string) => {
+    setMobileDropdownOpen(prev => ({
+      ...prev,
+      [itemName]: !prev[itemName]
+    }));
+  };
+
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 blur-backdrop border-b border-medium shadow-soft' : 'bg-background/80 blur-backdrop border-b border-subtle'}`}>
       {/* Main Header */}
@@ -97,10 +150,10 @@ const Header = () => {
                 className="w-10 h-10 object-contain"
               />
               <div>
-                <h1 className="heading-4 text-primary">
+                <h1 className="text-xl lg:text-2xl font-bold font-display text-primary tracking-tight">
                   {t('companyName')}
                 </h1>
-                <p className="text-body-small text-muted-foreground font-medium">{t('tagline')}</p>
+                <p className="text-xs lg:text-sm text-muted-foreground font-medium tracking-wide">{t('tagline')}</p>
               </div>
             </div>
           ) : (
@@ -111,10 +164,10 @@ const Header = () => {
                 className="w-10 h-10 object-contain"
               />
               <div>
-                <h1 className="heading-4 text-primary">
+                <h1 className="text-xl lg:text-2xl font-bold font-display text-primary tracking-tight">
                   {t('companyName')}
                 </h1>
-                <p className="text-body-small text-muted-foreground font-medium">{t('tagline')}</p>
+                <p className="text-xs lg:text-sm text-muted-foreground font-medium tracking-wide">{t('tagline')}</p>
               </div>
             </Link>
           )}
@@ -126,7 +179,7 @@ const Header = () => {
               if (item.subItems) {
                 return (
                   <DropdownMenu key={item.name}>
-                    <DropdownMenuTrigger className="px-4 py-2 text-body-small font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 flex items-center">
+                    <DropdownMenuTrigger className="px-4 py-2 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 flex items-center tracking-wide">
                       {item.name}
                       <ChevronDown className="ml-1 icon-small" />
                     </DropdownMenuTrigger>
@@ -136,10 +189,7 @@ const Header = () => {
                           <a
                             href={subItem.href}
                             className="cursor-pointer"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              // Handle navigation when implemented
-                            }}
+                            onClick={(e) => handleDropdownItemClick(e, subItem.href)}
                           >
                             {subItem.name}
                           </a>
@@ -156,7 +206,7 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="px-4 py-2 text-body-small font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                    className="px-4 py-2 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 tracking-wide"
                   >
                     {item.name}
                   </Link>
@@ -167,7 +217,7 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                  className="px-4 py-2 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 tracking-wide"
                 >
                   {item.name}
                 </a>
@@ -178,7 +228,7 @@ const Header = () => {
           {/* CTA Buttons - More Professional */}
           <div className="hidden lg:flex items-center space-x-3">
             <LanguageSwitcher />
-            <Button className="btn-gradient-brand shadow-brand text-body-small font-medium px-6">
+            <Button className="btn-gradient-brand shadow-brand text-sm font-semibold px-6 tracking-wide">
               {t('cta.startIPOJourney')}
             </Button>
           </div>
@@ -202,23 +252,20 @@ const Header = () => {
                   return (
                     <div key={item.name}>
                       <button
-                        className="w-full px-4 py-3 text-body-small font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 flex items-center justify-between"
-                        onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+                        className="w-full px-4 py-3 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 flex items-center justify-between tracking-wide"
+                        onClick={() => toggleMobileDropdown(item.name)}
                       >
                         {item.name}
-                        <ChevronDown className={`icon-small transition-transform ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
+                        <ChevronDown className={`icon-small transition-transform ${mobileDropdownOpen[item.name] ? 'rotate-180' : ''}`} />
                       </button>
-                      {mobileDropdownOpen && (
+                      {mobileDropdownOpen[item.name] && (
                         <div className="ml-4 mt-1 space-y-1">
                           {item.subItems.map((subItem) => (
                             <a
                               key={subItem.name}
                               href={subItem.href}
-                              className="block px-4 py-2 text-body-small text-foreground/70 hover:text-primary hover:bg-muted/30 rounded-lg transition-all duration-200"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                setIsMenuOpen(false);
-                              }}
+                              className="block px-4 py-2 text-sm text-foreground/75 hover:text-primary hover:bg-muted/30 rounded-lg transition-all duration-200 tracking-wide font-medium"
+                              onClick={(e) => handleDropdownItemClick(e, subItem.href)}
                             >
                               {subItem.name}
                             </a>
@@ -235,7 +282,7 @@ const Header = () => {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="px-4 py-3 text-body-small font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                      className="px-4 py-3 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 tracking-wide"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -246,7 +293,7 @@ const Header = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="px-4 py-3 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200"
+                    className="px-4 py-3 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 tracking-wide"
                     onClick={(e) => handleNavClick(e, item.href)}
                   >
                     {item.name}
@@ -256,16 +303,16 @@ const Header = () => {
               <div className="flex flex-col space-y-2 pt-4 px-4">
                 <div className="flex items-center justify-between mb-2">
                   <LanguageSwitcher />
-                  <Button className="btn-gradient-brand">
+                  <Button className="btn-gradient-brand text-sm font-semibold tracking-wide">
                     {t('cta.startIPOJourney')}
                   </Button>
                 </div>
                 <div className="flex items-center justify-between pt-4 mt-4 border-t border-subtle">
-                  <a href="tel:+622112345678" className="flex items-center text-body-small text-muted-foreground">
+                  <a href="tel:+622112345678" className="flex items-center text-sm text-muted-foreground font-medium tracking-wide">
                     <Phone className="icon-small mr-2" />
                     {t('phone')}
                   </a>
-                  <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex items-center text-body-small text-muted-foreground">
+                  <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground font-medium tracking-wide">
                     <MessageCircle className="icon-small mr-2" />
                     {t('whatsapp')}
                   </a>
