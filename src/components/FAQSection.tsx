@@ -101,7 +101,7 @@ const FAQSection = () => {
                 <li className="flex items-start">
                   <span className="font-semibold text-primary mr-2">•</span>
                   <span>
-                    <strong>Bookbuilding dan penawaran umum:</strong> 1-2 bulan
+                    <strong>Bookbuilding dan Penawaran Umum:</strong> 1-2 bulan
                   </span>
                 </li>
               </ul>
