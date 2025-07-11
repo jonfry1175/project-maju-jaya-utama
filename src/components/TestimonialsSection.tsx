@@ -226,7 +226,7 @@ const TestimonialsSection = () => {
 
           {/* CTA Section */}
           <div className="text-center">
-            <Card className="max-w-3xl mx-auto card-padding bg-gradient-to-br from-primary/5 to-primary/10 border border-primary-subtle animate-card">
+                          <Card className="max-w-3xl mx-auto card-padding bg-gradient-to-br from-card to-card/80 border border-primary-subtle animate-card">
               <h4 className="heading-4 text-primary mb-2 sm:mb-3">
                 {i18n.language === "id"
                   ? "Mulai Perjalanan IPO Anda Hari Ini"

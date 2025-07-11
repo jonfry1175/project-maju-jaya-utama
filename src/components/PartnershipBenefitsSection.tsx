@@ -92,7 +92,7 @@ const PartnershipBenefitsSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="card-padding h-full hover:shadow-xl transition-all duration-300 group hover:scale-105 border-medium hover:border-primary/20">
+                <Card className="card-padding h-full hover:shadow-xl transition-all duration-300 group hover:scale-105 border-medium hover:border-primary/20 bg-card">
                   <div className={`w-14 h-14 ${benefit.bgColor} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <benefit.icon className={`icon-medium ${benefit.color}`} />
                   </div>

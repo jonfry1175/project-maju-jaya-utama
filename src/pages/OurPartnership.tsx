@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PartnershipSection from "@/components/PartnershipSection";
-import OurExpertiseSection from "@/components/OurExpertiseSection";
+// import OurExpertiseSection from "@/components/OurExpertiseSection";
 import PartnershipBenefitsSection from "@/components/PartnershipBenefitsSection";
 import PartnershipProcessSection from "@/components/PartnershipProcessSection";
 import PartnershipFAQSection from "@/components/PartnershipFAQSection";
@@ -46,7 +46,7 @@ const OurPartnership = () => {
       <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <Card className="overflow-hidden bg-gradient-to-br from-slate-50 to-gray-100 dark:from-slate-800 dark:to-slate-900 border border-subtle shadow-xl animate-card">
+                          <Card className="overflow-hidden bg-gradient-to-br from-card to-muted border border-subtle shadow-xl animate-card">
               <div className="card-padding lg:card-padding-large">
                 {/* Header */}
                 <div className="text-center mb-6 sm:mb-8 lg:mb-12">
@@ -206,7 +206,7 @@ const OurPartnership = () => {
       <PartnershipBenefitsSection />
 
       {/* Our Expertise Section */}
-      <OurExpertiseSection />
+      {/* <OurExpertiseSection /> */}
 
       {/* Partnership Process Section */}
       <PartnershipProcessSection />

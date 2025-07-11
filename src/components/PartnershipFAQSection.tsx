@@ -63,7 +63,7 @@ const PartnershipFAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-white rounded-xl shadow-sm border-medium hover:border-primary/20 transition-colors overflow-hidden"
+                className="bg-card rounded-xl shadow-sm border-medium hover:border-primary/20 transition-colors overflow-hidden"
               >
                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
                   <span className="text-left font-semibold text-foreground text-body">

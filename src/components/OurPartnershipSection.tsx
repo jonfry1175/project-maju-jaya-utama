@@ -27,7 +27,7 @@ const OurPartnershipSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-muted">
       <div className="container mx-auto container-padding">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

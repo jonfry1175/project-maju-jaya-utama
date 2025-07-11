@@ -155,7 +155,7 @@ const HeroSection = () => {
             </div>
 
             {/* Partner Logos */}
-            <div className="space-y-3 sm:space-y-4 bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-lg inline-block border border-gray-100 w-full sm:w-auto">
+            <div className="space-y-3 sm:space-y-4 bg-card/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-lg inline-block border border-border w-full sm:w-auto">
               <div className="flex items-center gap-2 justify-center sm:justify-start">
                 <img
                   src="/logo.png"
@@ -188,7 +188,7 @@ const HeroSection = () => {
                     className="h-8 sm:h-10 lg:h-12 xl:h-full w-auto object-contain max-w-full"
                   />
                 </div>
-                <div className="flex items-center justify-center h-10 sm:h-12 lg:h-14 xl:h-16 bg-gray-100 rounded px-2 sm:px-3 col-span-2 sm:col-span-1">
+                                  <div className="flex items-center justify-center h-10 sm:h-12 lg:h-14 xl:h-16 bg-muted rounded px-2 sm:px-3 col-span-2 sm:col-span-1">
                   <img
                     src="/logo/logo-kpei.png"
                     alt="KPEI - Indonesia Clearing Guarantee Corporation"

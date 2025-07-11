@@ -147,7 +147,7 @@ const AboutSection = () => {
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-4 mb-6 sm:mb-8 max-w-7xl mx-auto">
-          <Card className="card-padding-small bg-primary/5 border border-primary-subtle animate-card">
+          <Card className="card-padding-small bg-card border border-primary-subtle animate-card">
             <div className="icon-large bg-primary rounded-xl flex items-center justify-center mb-4">
               <Target className="icon-medium text-white" />
             </div>
@@ -158,7 +158,7 @@ const AboutSection = () => {
               {t("vision.description")}
             </p>
           </Card>
-          <Card className="card-padding-small bg-primary/5 border border-primary-subtle animate-card">
+          <Card className="card-padding-small bg-card border border-primary-subtle animate-card">
             <div className="icon-large bg-primary rounded-xl flex items-center justify-center mb-4">
               <Briefcase className="icon-medium text-white" />
             </div>
@@ -203,10 +203,10 @@ const AboutSection = () => {
 
 
 
-        {/* Business Advisory & Investment Services Section */}
-        <div className="mb-6 sm:mb-8">
+        {/* Business Advisory & Investment Services Section - HIDDEN */}
+        <div className="mb-6 sm:mb-8 hidden">
           <div className="max-w-7xl mx-auto">
-            <Card className="overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10 border border-primary-subtle shadow-xl">
+            <Card className="overflow-hidden bg-gradient-to-br from-card to-card/80 border border-primary-subtle shadow-xl">
               <div className="card-padding lg:card-padding-large">
                 {/* Header */}
                 <div className="text-center mb-6 sm:mb-8">
@@ -233,7 +233,7 @@ const AboutSection = () => {
                 {/* Projects Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {/* Pelindo 1 */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.pelindo1.sector")}
@@ -259,7 +259,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Pelindo 2 */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.pelindo2.sector")}
@@ -285,7 +285,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Pelindo 3 */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.pelindo3.sector")}
@@ -311,7 +311,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Pelindo 4 */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.pelindo4.sector")}
@@ -337,7 +337,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* WSKT */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.wskt.sector")}
@@ -363,7 +363,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* WR Realty */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.wrRealty.sector")}
@@ -389,7 +389,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Angkasa Pura II 1 */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.angkasa1.sector")}
@@ -415,7 +415,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Angkasa Pura II 2 */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.angkasa2.sector")}
@@ -441,7 +441,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Finance - SBI & Bajaj Finserv */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-xs text-primary/60 font-medium uppercase">
                         {t("businessServices.projects.finance.sector")}
@@ -474,7 +474,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Twenty One Development */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.twentyOne.sector")}
@@ -500,7 +500,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Falakwati Group */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.falakwati.sector")}
@@ -526,7 +526,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Hotel Panghegar */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.projects.hotel.sector")}
@@ -562,7 +562,7 @@ const AboutSection = () => {
                 {/* Additional Projects Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-8">
                   {/* PT Citra Mustika Besten */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t(
@@ -594,7 +594,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* LSW */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.additionalProjects.lsw.sector")}
@@ -620,7 +620,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* JJSM */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.additionalProjects.jjsm.sector")}
@@ -648,7 +648,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* BEMAESTEX */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t(
@@ -680,7 +680,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* MEGACORP altobank */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t(
@@ -719,7 +719,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* BRAVA */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.additionalProjects.brava.sector")}
@@ -747,7 +747,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* WIMCYCLE */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t(
@@ -779,7 +779,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Maybank */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t(
@@ -811,7 +811,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Aset&u */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.additionalProjects.asetku.sector")}
@@ -839,7 +839,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* TRANS */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.additionalProjects.trans.sector")}
@@ -867,7 +867,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Toyota Automotive */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t(
@@ -899,7 +899,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* SIP */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.additionalProjects.sip.sector")}
@@ -925,7 +925,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* DCP */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t("businessServices.additionalProjects.dcp.sector")}
@@ -951,7 +951,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Select Hotels Group */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t(
@@ -983,7 +983,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Real Estate Developer */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         {t(
@@ -1016,7 +1016,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Mega Corp Bank Sumsel */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         Financial Services
@@ -1049,7 +1049,7 @@ const AboutSection = () => {
                   </Card>
 
                   {/* Bank BSG */}
-                  <Card className="card-padding bg-white dark:bg-slate-800 border border-subtle animate-card">
+                  <Card className="card-padding bg-card border border-subtle animate-card">
                     <div className="space-y-3 sm:space-y-4 text-center">
                       <div className="text-body-small text-primary/60 font-medium uppercase text-center">
                         Financial Services

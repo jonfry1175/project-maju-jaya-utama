@@ -38,7 +38,7 @@ const PartnerSuccessStoriesSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-card">
       <div className="container mx-auto container-padding">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -66,7 +66,7 @@ const PartnerSuccessStoriesSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="card-padding h-full hover:shadow-xl transition-all duration-300 group border-medium hover:border-primary/20">
+                <Card className="card-padding h-full hover:shadow-xl transition-all duration-300 group border-medium hover:border-primary/20 bg-card">
                   {/* Quote Icon */}
                   <div className="mb-4">
                     <Quote className="icon-large text-primary/20" />

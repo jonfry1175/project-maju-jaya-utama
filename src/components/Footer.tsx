@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-6">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-soft p-2">
+                <div className="w-12 h-12 bg-card rounded-xl flex items-center justify-center shadow-soft p-2">
                   <img 
                     src="/logo.png" 
                     alt="Global Sinergi Kapital Logo" 
@@ -86,13 +86,13 @@ const Footer = () => {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 p-3 rounded-xl transition-all duration-200 group"
+                className="bg-card/10 hover:bg-card/20 p-3 rounded-xl transition-all duration-200 group"
               >
                 <Linkedin className="icon-medium group-hover:scale-110 transition-transform" />
               </a>
               <a 
                 href="mailto:info@globalsinergikapital.com"
-                className="bg-white/10 hover:bg-white/20 p-3 rounded-xl transition-all duration-200 group"
+                className="bg-card/10 hover:bg-card/20 p-3 rounded-xl transition-all duration-200 group"
               >
                 <Mail className="icon-medium group-hover:scale-110 transition-transform" />
               </a>
@@ -167,13 +167,13 @@ const Footer = () => {
                   <a 
                     key={resource.name}
                     href="#" 
-                    className="flex items-center justify-between p-2 rounded-lg hover:bg-white/10 transition-colors group"
+                    className="flex items-center justify-between p-2 rounded-lg hover:bg-card/10 transition-colors group"
                   >
                     <div className="flex items-center space-x-2">
                       <resource.icon className="icon-small text-primary-foreground/60" />
                       <span className="text-body-small">{resource.name}</span>
                     </div>
-                    <span className="text-body-small bg-white/20 px-2 py-1 rounded-full">
+                    <span className="text-body-small bg-card/20 px-2 py-1 rounded-full">
                       {resource.badge}
                     </span>
                   </a>

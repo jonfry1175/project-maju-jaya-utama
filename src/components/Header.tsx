@@ -30,6 +30,10 @@ const Header = () => {
 
   const navItems = [
     { 
+      name: t('nav.home'), 
+      href: "#hero"
+    },
+    { 
       name: t('nav.about'), 
       href: "#about",
       subItems: [
@@ -139,49 +143,53 @@ const Header = () => {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 blur-backdrop border-b border-medium shadow-soft' : 'bg-background/80 blur-backdrop border-b border-subtle'}`}>
       {/* Main Header */}
-      <div className={`container mx-auto container-padding ${isScrolled ? 'py-3' : 'py-4'} transition-all duration-300`}>
-        <div className="flex items-center justify-between">
-          {/* Logo - More Compact */}
+      <div className={`container mx-auto container-padding ${isScrolled ? 'py-1.5' : 'py-2'} transition-all duration-300`}>
+        <div className="flex items-center justify-between gap-2 min-h-[50px]">
+          {/* Logo - Keep Full Name */}
           {location.pathname === '/' ? (
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={handleLogoClick}>
+            <div className="flex items-center space-x-2 cursor-pointer flex-shrink-0" onClick={handleLogoClick}>
               <img 
                 src="/logo.png" 
                 alt="Global Sinergi Kapital Logo" 
-                className="w-10 h-10 object-contain"
+                className="w-7 h-7 lg:w-9 lg:h-9 object-contain"
               />
-              <div>
-                <h1 className="text-xl lg:text-2xl font-bold font-display text-primary tracking-tight">
+              <div className="min-w-0">
+                <h1 className="text-sm lg:text-lg xl:text-xl font-bold font-display text-primary tracking-tight leading-tight">
                   {t('companyName')}
                 </h1>
-                <p className="text-xs lg:text-sm text-muted-foreground font-medium tracking-wide">{t('tagline')}</p>
+                <p className="text-xs text-muted-foreground font-medium tracking-wide leading-tight hidden lg:block">{t('tagline')}</p>
               </div>
             </div>
           ) : (
-            <Link to="/" className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
               <img 
                 src="/logo.png" 
                 alt="Global Sinergi Kapital Logo" 
-                className="w-10 h-10 object-contain"
+                className="w-7 h-7 lg:w-9 lg:h-9 object-contain"
               />
-              <div>
-                <h1 className="text-xl lg:text-2xl font-bold font-display text-primary tracking-tight">
+              <div className="min-w-0">
+                <h1 className="text-sm lg:text-lg xl:text-xl font-bold font-display text-primary tracking-tight leading-tight">
                   {t('companyName')}
                 </h1>
-                <p className="text-xs lg:text-sm text-muted-foreground font-medium tracking-wide">{t('tagline')}</p>
+                <p className="text-xs text-muted-foreground font-medium tracking-wide leading-tight hidden lg:block">{t('tagline')}</p>
               </div>
             </Link>
           )}
 
-          {/* Desktop Navigation - Refined */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item) => {
+          {/* Desktop Navigation - Ultra Compact */}
+          <nav className="hidden lg:flex items-center space-x-0 xl:space-x-0.5 flex-1 justify-center">
+            {navItems.map((item, index) => {
+              // Hide less important items on smaller screens
+              const isImportant = ['home', 'about', 'services', 'partners', 'contact'].includes(item.href.replace('#', '').replace('/', ''));
+              const hideOnLG = !isImportant && index > 4;
+              
               // Handle dropdown menu
               if (item.subItems) {
                 return (
                   <DropdownMenu key={item.name}>
-                    <DropdownMenuTrigger className="px-4 py-2 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 flex items-center tracking-wide">
+                    <DropdownMenuTrigger className={`px-1.5 xl:px-2 py-1.5 text-xs xl:text-sm font-medium text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-md transition-all duration-200 flex items-center tracking-normal whitespace-nowrap ${hideOnLG ? 'hidden xl:flex' : ''}`}>
                       {item.name}
-                      <ChevronDown className="ml-1 icon-small" />
+                      <ChevronDown className="ml-0.5 w-3 h-3" />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="start" className="w-64">
                       {item.subItems.map((subItem) => (
@@ -206,7 +214,7 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="px-4 py-2 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 tracking-wide"
+                    className={`px-1.5 xl:px-2 py-1.5 text-xs xl:text-sm font-medium text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-md transition-all duration-200 tracking-normal whitespace-nowrap ${hideOnLG ? 'hidden xl:flex' : ''}`}
                   >
                     {item.name}
                   </Link>
@@ -217,7 +225,7 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="px-4 py-2 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 tracking-wide"
+                  className={`px-1.5 xl:px-2 py-1.5 text-xs xl:text-sm font-medium text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-md transition-all duration-200 tracking-normal whitespace-nowrap ${hideOnLG ? 'hidden xl:flex' : ''}`}
                 >
                   {item.name}
                 </a>
@@ -225,20 +233,21 @@ const Header = () => {
             })}
           </nav>
 
-          {/* CTA Buttons - More Professional */}
-          <div className="hidden lg:flex items-center space-x-3">
+          {/* CTA Buttons - Ultra Compact */}
+          <div className="hidden lg:flex items-center space-x-1 flex-shrink-0">
             <LanguageSwitcher />
-            <Button className="btn-gradient-brand shadow-brand text-sm font-semibold px-6 tracking-wide">
-              {t('cta.startIPOJourney')}
+            <Button className="btn-gradient-brand shadow-brand text-xs font-medium px-2 xl:px-3 py-1.5 tracking-normal whitespace-nowrap">
+              <span className="hidden xl:inline">{t('cta.startIPOJourney')}</span>
+              <span className="xl:hidden">IPO</span>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 hover:bg-muted/50 rounded-lg transition-colors"
+            className="lg:hidden p-1.5 hover:bg-muted/50 rounded-lg transition-colors flex-shrink-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="icon-medium" /> : <Menu className="icon-medium" />}
+            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 

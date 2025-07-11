@@ -348,7 +348,7 @@ const ServicesSection = () => {
 
         {/* CTA Section */}
         <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
-          <Card className="max-w-4xl mx-auto card-padding lg:card-padding-large bg-gradient-to-br from-primary/5 to-primary/10 border border-primary-subtle animate-card">
+                        <Card className="max-w-4xl mx-auto card-padding lg:card-padding-large bg-gradient-to-br from-card to-card/80 border border-primary-subtle animate-card">
             <h3 className="heading-3 text-primary mb-3 sm:mb-4">
               {i18n.language === "id"
                 ? "Siap Memulai Perjalanan IPO Anda?"

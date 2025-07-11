@@ -122,8 +122,8 @@ const FundRaising = () => {
       description: "Comprehensive advisory services to optimize your fundraising strategy",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop",
       services: [
-        {
-          icon: Users,
+    {
+      icon: Users,
           title: "Fundraising Strategy",
           description: "Comprehensive strategic planning to determine optimal funding mix and timing.",
           features: [
@@ -136,7 +136,7 @@ const FundRaising = () => {
         },
         {
           icon: Handshake,
-          title: "Investor Relations",
+      title: "Investor Relations",
           description: "Building and maintaining strong relationships with existing and potential investors.",
           features: [
             "Investor Communication",
@@ -173,7 +173,7 @@ const FundRaising = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
+      <section id="hero" className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
         <div className="container mx-auto container-padding">
           {/* Header */}
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
@@ -181,7 +181,7 @@ const FundRaising = () => {
               <TrendingUp className="icon-small mr-2" />
               Fund Raising Services
             </div>
-
+            
             <h2 className="heading-2 text-primary mb-4 sm:mb-6">
               Professional Fund Raising
               <span className="text-gradient block mt-1 sm:mt-2 leading-normal pb-1 sm:pb-2">
@@ -231,18 +231,18 @@ const FundRaising = () => {
                         </h3>
                         <p className="text-body lg:text-body-large opacity-90 max-w-2xl">
                           {category.description}
-                        </p>
-                      </div>
+              </p>
+            </div>
                     </div>
                   </div>
-                </div>
+            </div>
 
-                {/* Services Grid */}
+            {/* Services Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                   {category.services.map((service, serviceIndex) => {
                     const ServiceIcon = service.icon;
                     return (
-                      <Card
+                <Card
                         key={serviceIndex}
                         className="group relative bg-background border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 card-padding animate-card">
                         {/* Icon */}
@@ -251,16 +251,16 @@ const FundRaising = () => {
                             className="icon-medium lg:icon-large text-white"
                             strokeWidth={1.5}
                           />
-                        </div>
-
+                    </div>
+                    
                         {/* Content */}
                         <div className="space-y-3 sm:space-y-4">
                           <h4 className="heading-5 text-foreground">
-                            {service.title}
-                          </h4>
-                          <p className="text-body-small text-muted-foreground">
-                            {service.description}
-                          </p>
+                        {service.title}
+                      </h4>
+                      <p className="text-body-small text-muted-foreground">
+                        {service.description}
+                      </p>
 
                           {/* Features */}
                           <ul className="space-y-1 sm:space-y-2">
@@ -281,7 +281,7 @@ const FundRaising = () => {
                             <span className="inline-flex items-center bg-primary/10 text-primary px-2 sm:px-3 py-1 rounded-full text-body-small font-semibold">
                               {service.price}
                             </span>
-                          </div>
+                    </div>
 
                           {/* CTA Button */}
                           <Button
@@ -290,8 +290,8 @@ const FundRaising = () => {
                             Get Started
                             <ArrowRight className="ml-1 sm:ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                           </Button>
-                        </div>
-                      </Card>
+                  </div>
+                </Card>
                     );
                   })}
                 </div>
@@ -304,14 +304,14 @@ const FundRaising = () => {
             <div className="max-w-4xl mx-auto">
               <h3 className="heading-3 text-primary text-center mb-6 sm:mb-8 lg:mb-12">
                 Our Track Record
-              </h3>
+                </h3>
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 {stats.map((stat, index) => {
                   const Icon = stat.icon;
                   return (
                     <Card
-                      key={index}
+                    key={index}
                       className="text-center card-padding bg-background border border-subtle animate-card">
                       <div className="icon-large sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-primary/10 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
                         <Icon className="icon-medium lg:icon-large text-primary" />
@@ -321,7 +321,7 @@ const FundRaising = () => {
                       </div>
                       <div className="text-body-small lg:text-body text-muted-foreground font-medium">
                         {stat.label}
-                      </div>
+                  </div>
                     </Card>
                   );
                 })}
@@ -331,7 +331,7 @@ const FundRaising = () => {
 
           {/* CTA Section */}
           <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
-            <Card className="max-w-4xl mx-auto card-padding lg:card-padding-large bg-gradient-to-br from-primary/5 to-primary/10 border border-primary-subtle animate-card">
+                          <Card className="max-w-4xl mx-auto card-padding lg:card-padding-large bg-gradient-to-br from-card to-card/80 border border-primary-subtle animate-card">
               <h3 className="heading-3 text-primary mb-3 sm:mb-4">
                 Ready to Secure Your Next Round of Funding?
               </h3>
