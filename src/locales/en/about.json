@@ -65,26 +65,38 @@
     "title": "Leadership Team",
     "members": {
       "ceo": {
-        "name": "Dr. Budi Santoso, CFA",
-        "position": "Chief Executive Officer",
-        "experience": "Experienced capital market practitioner",
+        "name": "Zulfikar Lukman",
+        "position": "Founder & Managing Partner",
+        "experience": "Highly accomplished finance professional with Bachelor's Degree in Economics from Universitas Trisakti and MBA from Monash University's Mt. Eliza Business School",
         "credentials": [
-          "Finance Doctorate - UI",
-          "CFA Charterholder",
-          "Former IDX Director"
+          "Over 32 years of experience in banking and non-banking sectors",
+          "Former corporate executive in Banking, Listed Companies, Foreign Companies",
+          "President Director at PT RITZ Konsultan Indonesia",
+          "President Commissioner at PT RITZ Manatha Kapital"
         ]
       },
       "coo": {
-        "name": "Siti Rahayu, MBA",
-        "position": "Chief Operating Officer",
-        "experience": "Business strategy and management expert",
+        "name": "Indra Yurana Sugiarto",
+        "position": "Co-Founder & Managing Partner",
+        "experience": "Possesses a wealth of experience spanning 33 years in both banking and non-banking sectors. Holds Master of Science in Computer Information System (1995) and Master of Business Administration (1993) from Southern New Hampshire University, along with Bachelor's degree in Economics from Universitas Trisakti (1990)",
         "credentials": [
-          "MBA - INSEAD",
-          "Certified IPO Specialist",
-          "Former Big 4 Partner"
+          "33 years experience in banking and non-banking sectors",
+          "Former Corporate Banking Director at Bank Muamalat Indonesia",
+          "Former Executive at Bank CIMB Niaga",
+          "Expert in Corporate Banking, Risk Management, Islamic Banking, Compliance, Business Development"
         ]
       },
       "cfo": {
+        "name": "Agus Wijaya, CA",
+        "position": "Chief Financial Officer",
+        "experience": "Audit and advisory professional",
+        "credentials": [
+          "Chartered Accountant",
+          "Former PwC Senior Manager",
+          "IPO Expert"
+        ]
+      },
+      "cfo2": {
         "name": "Agus Wijaya, CA",
         "position": "Chief Financial Officer",
         "experience": "Audit and advisory professional",

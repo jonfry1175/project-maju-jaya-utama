@@ -105,26 +105,38 @@
     "title": "Tim Kepemimpinan",
     "members": {
       "ceo": {
-        "name": "Dr. Budi Santoso, CFA",
-        "position": "Direktur Utama",
-        "experience": "Praktisi pasar modal berpengalaman",
+        "name": "Zulfikar Lukman",
+        "position": "Founder & Managing Partner",
+        "experience": "Profesional keuangan berprestasi dengan gelar Sarjana Ekonomi dari Universitas Trisakti dan MBA dari Mt. Eliza Business School, Monash University",
         "credentials": [
-          "Doktor Keuangan - UI",
-          "CFA Charterholder",
-          "Mantan Direktur BEI"
+          "Lebih dari 32 tahun pengalaman di sektor perbankan dan non-perbankan",
+          "Mantan eksekutif korporat di Perbankan, Perusahaan Terbuka, Perusahaan Asing",
+          "Direktur Utama di PT RITZ Konsultan Indonesia",
+          "Komisaris Utama di PT RITZ Manatha Kapital"
         ]
       },
       "coo": {
-        "name": "Siti Rahayu, MBA",
-        "position": "Direktur Operasional",
-        "experience": "Ahli strategi bisnis dan manajemen",
+        "name": "Indra Yurana Sugiarto",
+        "position": "Co-Founder & Managing Partner",
+        "experience": "Memiliki kekayaan pengalaman selama 33 tahun di sektor perbankan dan non-perbankan. Meraih gelar Master of Science in Computer Information System (1995) dan Master of Business Administration (1993) dari Southern New Hampshire University, serta gelar Sarjana Ekonomi dari Universitas Trisakti (1990)",
         "credentials": [
-          "MBA - INSEAD",
-          "Spesialis IPO Tersertifikasi",
-          "Mantan Mitra Big 4"
+          "33 tahun pengalaman di sektor perbankan dan non-perbankan",
+          "Mantan Direktur Corporate Banking di Bank Muamalat Indonesia",
+          "Mantan Eksekutif di Bank CIMB Niaga",
+          "Ahli dalam Corporate Banking, Risk Management, Islamic Banking, Compliance, Business Development"
         ]
       },
       "cfo": {
+        "name": "Agus Wijaya, CA",
+        "position": "Direktur Keuangan",
+        "experience": "Profesional audit dan advisory",
+        "credentials": [
+          "Chartered Accountant",
+          "Mantan Senior Manager PwC",
+          "Ahli IPO"
+        ]
+      },
+      "cfo2": {
         "name": "Agus Wijaya, CA",
         "position": "Direktur Keuangan",
         "experience": "Profesional audit dan advisory",

@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const OurLeadership = () => {
   const { t } = useTranslation("about");
 
-  const team = ["ceo", "coo", "cfo"];
+  const team = ["ceo", "coo", "cfo", "cfo2"];
 
   return (
     <div className="min-h-screen bg-background">
@@ -38,7 +38,7 @@ const OurLeadership = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             {/* Leadership Grid */}
-            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               {team.map((memberKey, index) => (
                 <Card
                   key={index}
@@ -46,15 +46,17 @@ const OurLeadership = () => {
                   {/* Photo Section */}
                   <div className="relative h-64 sm:h-72 overflow-hidden">
                     <img
-                      src={`https://images.unsplash.com/photo-${
+                      src={
                         index === 0 
-                          ? '1560250097-0b93528c311a' // Professional businessman
-                          : index === 1 
-                          ? '1573496359142-b8d87734a5a2' // Professional businesswoman
-                          : '1472099645785-5658abf4ff4e' // Professional businessman 2
-                      }?w=400&h=500&fit=crop&crop=face`}
+                          ? '/zulfikar-lukman.jpg' // Zulfikar Lukman photo
+                          : index === 1
+                          ? '/indra-yurana-sugiarto.jpg' // Indra Yurana Sugiarto photo
+                          : `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face` // Professional businessman 2
+                      }
                       alt={t(`team.members.${memberKey}.name`)}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${
+                        index === 0 || index === 1 ? 'object-[50%_20%]' : 'object-center'
+                      }`}
                     />
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>

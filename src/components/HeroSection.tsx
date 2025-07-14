@@ -88,13 +88,23 @@ const HeroSection = () => {
     <section
       id="hero"
       className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop"
-          alt="Jakarta Skyline"
-          className="w-full h-full object-cover"
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop"
+          className="w-full h-full object-cover transform scale-x-[-1]">
+          <source src="/background-video.mp4" type="video/mp4" />
+          {/* Fallback image if video fails to load */}
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop"
+            alt="Jakarta Skyline"
+            className="w-full h-full object-cover"
+          />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/85 lg:from-background/80 lg:via-background/60 lg:to-background/80"></div>
         {/* Dark overlay for text areas - responsive */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background/70 lg:bg-gradient-to-r lg:from-background/90 lg:via-background/50 lg:to-transparent"></div>
