@@ -45,7 +45,7 @@ const PartnershipProcessSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-info/20 text-info px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-info/30">
+            <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary/20">
               <CheckCircle className="icon-small mr-2" />
               {t("process.badge")}
             </div>
@@ -93,7 +93,7 @@ const PartnershipProcessSection = () => {
 
                   {/* Icon */}
                   <div className="relative">
-                    <div className="w-20 h-20 bg-card rounded-full shadow-lg flex items-center justify-center relative z-10 border-strong border-primary/10">
+                    <div className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center relative z-10 border-strong border-primary/10">
                       <step.icon className="icon-large text-primary" />
                     </div>
                     {/* Step Number */}
@@ -113,7 +113,7 @@ const PartnershipProcessSection = () => {
 
           {/* CTA */}
           <div className="mt-16 text-center">
-            <div className="inline-block card-padding bg-primary/5 rounded-2xl">
+            <div className="inline-block card-padding bg-white rounded-2xl">
               <h3 className="heading-6 font-bold text-foreground mb-2">
                 {t("process.cta.title")}
               </h3>

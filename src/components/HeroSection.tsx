@@ -117,7 +117,7 @@ const HeroSection = () => {
           {/* Left Column - Enhanced Content */}
           <div className="space-y-6 sm:space-y-8 animate-hero-content order-1 lg:order-1">
             <div className="space-y-8">
-              <div className="inline-flex items-center bg-background/90 backdrop-blur-sm text-primary px-4 py-2 rounded-full text-body-small font-semibold border border-primary-subtle shadow-lg">
+              <div className="inline-flex items-center bg-white/90 backdrop-blur-sm text-primary px-4 py-2 rounded-full text-body-small font-semibold border border-primary-subtle shadow-lg">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                 {t("badge")}
               </div>
@@ -148,14 +148,14 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-body font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto border-2 group w-full sm:w-auto">
+                className="text-body font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto border-2 group w-full sm:w-auto bg-white/90">
                 <Play className="mr-2 icon-small group-hover:scale-110 transition-transform" />
                 {t("cta.watchVideo")}
               </Button>
             </div>
 
             {/* Partner Logos */}
-            <div className="space-y-3 sm:space-y-4 bg-card/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-lg inline-block border border-border w-full sm:w-auto">
+            <div className="space-y-3 sm:space-y-4 bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-lg inline-block border border-border w-full sm:w-auto">
               <div className="flex items-center gap-2 justify-center sm:justify-start">
                 <img
                   src="/logo.png"
@@ -213,7 +213,7 @@ const HeroSection = () => {
               return (
                 <Card
                   key={index}
-                  className="group relative overflow-hidden bg-background/90 backdrop-blur-sm border border-subtle hover:border-primary-medium hover:shadow-lg transition-all duration-200 animate-card">
+                  className="group relative overflow-hidden bg-white/90 backdrop-blur-sm border border-subtle hover:border-primary-medium hover:shadow-lg transition-all duration-200 animate-card">
                   <div className="card-padding space-y-2 sm:space-y-3 lg:space-y-4">
                     {/* Icon with subtle styling */}
                     <div

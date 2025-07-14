@@ -145,34 +145,24 @@ const Header = () => {
       {/* Main Header */}
       <div className={`container mx-auto container-padding ${isScrolled ? 'py-1.5' : 'py-2'} transition-all duration-300`}>
         <div className="flex items-center justify-between gap-2 min-h-[50px]">
-          {/* Logo - Keep Full Name */}
+          {/* Logo - Wording Only */}
           {location.pathname === '/' ? (
-            <div className="flex items-center space-x-2 cursor-pointer flex-shrink-0" onClick={handleLogoClick}>
+            <div className="cursor-pointer flex-shrink-0" onClick={handleLogoClick}>
               <img 
-                src="/logo.png" 
+                src="/logo-wording.png" 
                 alt="Global Sinergi Kapital Logo" 
-                className="w-7 h-7 lg:w-9 lg:h-9 object-contain"
+                className="h-8 lg:h-10 xl:h-12 w-auto object-contain max-w-none"
+                style={{width: 'auto', maxWidth: 'calc(50vw - 2rem)'}}
               />
-              <div className="min-w-0">
-                <h1 className="text-sm lg:text-lg xl:text-xl font-bold font-display text-primary tracking-tight leading-tight">
-                  {t('companyName')}
-                </h1>
-                <p className="text-xs text-muted-foreground font-medium tracking-wide leading-tight hidden lg:block">{t('tagline')}</p>
-              </div>
             </div>
           ) : (
-            <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
+            <Link to="/" className="flex-shrink-0">
               <img 
-                src="/logo.png" 
+                src="/logo-wording.png" 
                 alt="Global Sinergi Kapital Logo" 
-                className="w-7 h-7 lg:w-9 lg:h-9 object-contain"
+                className="h-8 lg:h-10 xl:h-12 w-auto object-contain max-w-none"
+                style={{width: 'auto', maxWidth: 'calc(50vw - 2rem)'}}
               />
-              <div className="min-w-0">
-                <h1 className="text-sm lg:text-lg xl:text-xl font-bold font-display text-primary tracking-tight leading-tight">
-                  {t('companyName')}
-                </h1>
-                <p className="text-xs text-muted-foreground font-medium tracking-wide leading-tight hidden lg:block">{t('tagline')}</p>
-              </div>
             </Link>
           )}
 

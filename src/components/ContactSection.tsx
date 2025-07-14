@@ -131,7 +131,7 @@ const ContactSection = () => {
       <div className="container mx-auto container-padding">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
+          <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
             <Users className="icon-small mr-2" />
             {t("section.badge")}
           </div>
@@ -155,7 +155,7 @@ const ContactSection = () => {
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
-                className="card-padding bg-background border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 group animate-card">
+                className="card-padding bg-white border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 group animate-card">
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="icon-large sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
                     <info.icon className="icon-medium text-white" />
@@ -187,7 +187,7 @@ const ContactSection = () => {
             ))}
 
             {/* Office Location */}
-            <Card className="overflow-hidden bg-background border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 animate-card">
+            <Card className="overflow-hidden bg-white border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 animate-card">
               <div className="relative h-32 sm:h-40 lg:h-48">
                 <img
                   src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
@@ -213,7 +213,7 @@ const ContactSection = () => {
           </div>
 
           {/* Middle & Right Column - Enhanced Contact Form */}
-          <Card className="lg:col-span-2 card-padding lg:card-padding-large bg-background border border-subtle shadow-xl order-1 lg:order-2 animate-card">
+          <Card className="lg:col-span-2 card-padding lg:card-padding-large bg-white border border-subtle shadow-xl order-1 lg:order-2 animate-card">
             <div className="mb-6 sm:mb-8">
               <h3 className="heading-3 text-primary mb-2 sm:mb-3">
                 {t("form.title")}
@@ -232,7 +232,7 @@ const ContactSection = () => {
                   </label>
                   <Input
                     placeholder={t("form.fields.name.placeholder")}
-                    className="h-10 sm:h-12 text-body"
+                    className="h-10 sm:h-12 text-body bg-white"
                   />
                 </div>
                 <div>
@@ -245,7 +245,7 @@ const ContactSection = () => {
                         ? "CEO / CFO / Direktur"
                         : "CEO / CFO / Director"
                     }
-                    className="h-10 sm:h-12 text-body"
+                    className="h-10 sm:h-12 text-body bg-white"
                   />
                 </div>
               </div>
@@ -258,7 +258,7 @@ const ContactSection = () => {
                   </label>
                   <Input
                     placeholder={t("form.fields.company.placeholder")}
-                    className="h-10 sm:h-12 text-body"
+                    className="h-10 sm:h-12 text-body bg-white"
                   />
                 </div>
                 <div>
@@ -269,7 +269,7 @@ const ContactSection = () => {
                     *
                   </label>
                   <Select>
-                    <SelectTrigger className="h-10 sm:h-12 text-body">
+                    <SelectTrigger className="h-10 sm:h-12 text-body bg-white">
                       <SelectValue
                         placeholder={
                           i18n.language === "id"
@@ -300,7 +300,7 @@ const ContactSection = () => {
                   <Input
                     type="email"
                     placeholder={t("form.fields.email.placeholder")}
-                    className="h-10 sm:h-12 text-body"
+                    className="h-10 sm:h-12 text-body bg-white"
                   />
                 </div>
                 <div>
@@ -310,7 +310,7 @@ const ContactSection = () => {
                   <Input
                     type="tel"
                     placeholder={t("form.fields.phone.placeholder")}
-                    className="h-10 sm:h-12 text-body"
+                    className="h-10 sm:h-12 text-body bg-white"
                   />
                 </div>
               </div>
@@ -328,7 +328,7 @@ const ContactSection = () => {
                     placeholder={
                       i18n.language === "id" ? "Contoh: 2020" : "e.g.: 2020"
                     }
-                    className="h-10 sm:h-12 text-body"
+                    className="h-10 sm:h-12 text-body bg-white"
                   />
                 </div>
                 <div>
@@ -338,7 +338,7 @@ const ContactSection = () => {
                       : "Number of Employees"}
                   </label>
                   <Select>
-                    <SelectTrigger className="h-10 sm:h-12 text-body">
+                    <SelectTrigger className="h-10 sm:h-12 text-body bg-white">
                       <SelectValue
                         placeholder={
                           i18n.language === "id"
@@ -372,7 +372,7 @@ const ContactSection = () => {
                       ? "Jelaskan secara singkat tentang bisnis, visi, dan mengapa ingin go public..."
                       : "Briefly describe your business, vision, and why you want to go public..."
                   }
-                  className="min-h-[80px] sm:min-h-[100px] lg:min-h-[120px] text-body"
+                  className="min-h-[80px] sm:min-h-[100px] lg:min-h-[120px] text-body bg-white"
                 />
               </div>
 
@@ -389,7 +389,7 @@ const ContactSection = () => {
                       <Button
                         variant="outline"
                         className={cn(
-                          "w-full h-10 sm:h-12 text-body justify-start text-left font-normal",
+                          "w-full h-10 sm:h-12 text-body justify-start text-left font-normal bg-white",
                           !date && "text-muted-foreground"
                         )}>
                         <CalendarIcon className="mr-2 icon-small" />
@@ -422,7 +422,7 @@ const ContactSection = () => {
                       : "Consultation Time"}
                   </label>
                   <Select value={selectedTime} onValueChange={setSelectedTime}>
-                    <SelectTrigger className="h-10 sm:h-12 text-body">
+                    <SelectTrigger className="h-10 sm:h-12 text-body bg-white">
                       <SelectValue
                         placeholder={
                           i18n.language === "id" ? "Pilih waktu" : "Select time"

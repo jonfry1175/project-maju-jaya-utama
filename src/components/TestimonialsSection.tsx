@@ -133,7 +133,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto container-padding max-w-7xl">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
+          <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
             <Star className="icon-small mr-2" />
             {i18n.language === "id" ? "Mengapa Memilih Kami" : "Why Choose Us"}
           </div>
@@ -161,7 +161,7 @@ const TestimonialsSection = () => {
           {whyChooseUs.map((item, index) => (
             <Card
               key={index}
-              className="group overflow-hidden bg-background border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 animate-card">
+              className="group overflow-hidden bg-white border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 animate-card">
               {/* Image Section */}
               <div className="relative h-32 sm:h-40 lg:h-48 overflow-hidden">
                 <img
@@ -180,7 +180,7 @@ const TestimonialsSection = () => {
                 <p className="text-body-small text-muted-foreground">
                   {item.description}
                 </p>
-                <div className="inline-flex items-center text-body-small font-semibold text-primary bg-primary/10 px-2 sm:px-3 py-1 rounded-full">
+                <div className="inline-flex items-center text-body-small font-semibold text-primary bg-white px-2 sm:px-3 py-1 rounded-full">
                   {item.highlight}
                 </div>
               </div>
@@ -200,7 +200,7 @@ const TestimonialsSection = () => {
             {uniqueValues.map((value, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden bg-background border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 card-padding animate-card">
+                className="group relative overflow-hidden bg-white border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 card-padding animate-card">
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="icon-large sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
                     <value.icon
@@ -215,7 +215,7 @@ const TestimonialsSection = () => {
                     <p className="text-body-small text-muted-foreground">
                       {value.description}
                     </p>
-                    <div className="inline-flex items-center bg-primary/10 text-primary px-2 sm:px-3 py-1 rounded-full text-body-small font-semibold">
+                    <div className="inline-flex items-center bg-white text-primary px-2 sm:px-3 py-1 rounded-full text-body-small font-semibold">
                       {value.metrics}
                     </div>
                   </div>
@@ -226,7 +226,7 @@ const TestimonialsSection = () => {
 
           {/* CTA Section */}
           <div className="text-center">
-                          <Card className="max-w-3xl mx-auto card-padding bg-gradient-to-br from-card to-card/80 border border-primary-subtle animate-card">
+                          <Card className="max-w-3xl mx-auto card-padding bg-gradient-to-br from-card to-white/80 border border-primary-subtle animate-card">
               <h4 className="heading-4 text-primary mb-2 sm:mb-3">
                 {i18n.language === "id"
                   ? "Mulai Perjalanan IPO Anda Hari Ini"

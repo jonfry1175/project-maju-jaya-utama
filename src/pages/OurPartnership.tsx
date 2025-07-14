@@ -20,7 +20,7 @@ const OurPartnership = () => {
       <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
+            <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
               <Building2 className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
               Our Partnership
             </div>
@@ -46,11 +46,11 @@ const OurPartnership = () => {
       <section className="py-16 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-                          <Card className="overflow-hidden bg-gradient-to-br from-card to-muted border border-subtle shadow-xl animate-card">
+                          <Card className="overflow-hidden bg-white border border-subtle shadow-xl animate-card">
               <div className="card-padding lg:card-padding-large">
                 {/* Header */}
                 <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-                  <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
+                  <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
                     <Users className="icon-small mr-2" />
                     {t("mainClients.badge", { ns: "about" })}
                   </div>

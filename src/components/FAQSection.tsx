@@ -467,7 +467,7 @@ const FAQSection = () => {
       <div className="container mx-auto container-padding">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
+          <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
             <HelpCircle className="icon-small mr-2" />
             {i18n.language === "id"
               ? "Pertanyaan yang Sering Ditanyakan"
@@ -478,8 +478,8 @@ const FAQSection = () => {
             {i18n.language === "id" ? "Punya Pertanyaan?" : "Have Questions?"}
             <span className="text-gradient block mt-1 sm:mt-2 leading-normal pb-1 sm:pb-2">
               {i18n.language === "id"
-                ? "Kami Punya Jawabannya"
-                : "We Have Answers"}
+                ? "Kami Punya Jawabannya."
+                : "We Have Answers."}
             </span>
           </h2>
 
@@ -507,7 +507,7 @@ const FAQSection = () => {
                   <AccordionItem
                     key={index}
                     value={`item-${categoryIndex}-${index}`}
-                    className="border border-subtle rounded-xl bg-background hover:shadow-md transition-all duration-200 animate-card">
+                    className="border border-subtle rounded-xl bg-white hover:shadow-md transition-all duration-200 animate-card">
                     <AccordionTrigger className="px-4 sm:px-6 py-4 sm:py-5 text-left hover:no-underline hover:bg-muted/30 rounded-t-xl data-[state=open]:rounded-b-none transition-colors">
                       <span className="text-body lg:text-body-large font-semibold text-foreground pr-4">
                         {faq.q}
@@ -526,7 +526,7 @@ const FAQSection = () => {
 
           {/* CTA Section */}
           <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
-                          <Card className="card-padding lg:card-padding-large bg-gradient-to-br from-card to-card/80 border border-primary-subtle animate-card">
+                          <Card className="card-padding lg:card-padding-large bg-gradient-to-br from-card to-white/80 border border-primary-subtle animate-card">
               <h3 className="heading-4 lg:heading-3 text-primary mb-3 sm:mb-4">
                 {i18n.language === "id"
                   ? "Masih Ada Pertanyaan Lain?"
@@ -559,7 +559,7 @@ const FAQSection = () => {
 
               {/* Quick Contact Options */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-10">
-                <div className="text-center card-padding-small bg-background/50 rounded-lg border border-medium">
+                <div className="text-center card-padding-small bg-white/50 rounded-lg border border-medium">
                   <div className="icon-large sm:icon-large bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <MessageCircle className="icon-small text-primary" />
                   </div>
@@ -571,7 +571,7 @@ const FAQSection = () => {
                   </p>
                 </div>
 
-                <div className="text-center card-padding-small bg-background/50 rounded-lg border border-medium">
+                <div className="text-center card-padding-small bg-white/50 rounded-lg border border-medium">
                   <div className="icon-large sm:icon-large bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <HelpCircle className="icon-small text-primary" />
                   </div>
@@ -583,7 +583,7 @@ const FAQSection = () => {
                   </p>
                 </div>
 
-                <div className="text-center card-padding-small bg-background/50 rounded-lg border border-medium">
+                <div className="text-center card-padding-small bg-white/50 rounded-lg border border-medium">
                   <div className="icon-large sm:icon-large bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <Shield className="icon-small text-primary" />
                   </div>

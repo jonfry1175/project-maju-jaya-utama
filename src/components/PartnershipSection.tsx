@@ -7,7 +7,7 @@ const PartnershipSection = () => {
     <section id="partnership" className="section-padding bg-muted/30">
       <div className="container mx-auto container-padding">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-card rounded-lg overflow-hidden shadow-lg card-padding border border-subtle">
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg card-padding border border-subtle">
             {/* Logo */}
             <div className="flex justify-center mb-8">
               <img
@@ -19,7 +19,7 @@ const PartnershipSection = () => {
 
             {/* Header */}
             <div className="mb-6 sm:mb-8 text-center">
-              <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary/20">
+              <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary/20">
                 <Building className="icon-small mr-2" />
                 {t("section.badge")}
               </div>

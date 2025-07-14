@@ -66,7 +66,7 @@ const PartnershipBenefitsSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-accent/20 text-accent px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-accent/30">
+            <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary/20">
               <HeartHandshake className="icon-small mr-2" />
               {t("benefits.badge")}
             </div>
@@ -92,7 +92,7 @@ const PartnershipBenefitsSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="card-padding h-full hover:shadow-xl transition-all duration-300 group hover:scale-105 border-medium hover:border-primary/20 bg-card">
+                <Card className="card-padding h-full hover:shadow-xl transition-all duration-300 group hover:scale-105 border-medium hover:border-primary/20 bg-white">
                   <div className={`w-14 h-14 ${benefit.bgColor} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <benefit.icon className={`icon-medium ${benefit.color}`} />
                   </div>
@@ -111,7 +111,7 @@ const PartnershipBenefitsSection = () => {
 
           {/* CTA Section */}
           <div className="mt-12 text-center">
-            <div className="inline-flex items-center justify-center card-padding bg-card rounded-2xl shadow-lg border border-subtle">
+            <div className="inline-flex items-center justify-center card-padding bg-white rounded-2xl shadow-lg border border-subtle">
               <Briefcase className="icon-large text-primary mr-4" />
               <div className="text-left">
                 <h3 className="heading-6 font-bold text-foreground mb-1">

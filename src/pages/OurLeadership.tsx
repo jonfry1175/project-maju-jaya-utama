@@ -17,7 +17,7 @@ const OurLeadership = () => {
       <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
+            <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
               <Users className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
               {t("team.title")}
             </div>
@@ -42,7 +42,7 @@ const OurLeadership = () => {
               {team.map((memberKey, index) => (
                 <Card
                   key={index}
-                  className="group overflow-hidden bg-background border border-subtle animate-card hover:shadow-xl transition-all duration-300">
+                  className="group overflow-hidden bg-white border border-subtle animate-card hover:shadow-xl transition-all duration-300">
                   {/* Photo Section */}
                   <div className="relative h-64 sm:h-72 overflow-hidden">
                     <img
@@ -92,7 +92,7 @@ const OurLeadership = () => {
 
                     {/* Professional Badge */}
                     <div className="pt-3 border-t border-border/30">
-                      <div className="inline-flex items-center bg-primary/10 text-primary px-2 py-1 rounded-full text-xs font-medium">
+                      <div className="inline-flex items-center bg-white text-primary px-2 py-1 rounded-full text-xs font-medium">
                         <Award className="icon-small mr-1" />
                         Professional Leader
                       </div>

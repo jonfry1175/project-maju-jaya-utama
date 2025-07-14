@@ -43,7 +43,7 @@ const PartnershipFAQSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary/20">
+            <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary/20">
               <HelpCircle className="icon-small mr-2" />
               {t("faq.badge")}
             </div>
@@ -63,7 +63,7 @@ const PartnershipFAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card rounded-xl shadow-sm border-medium hover:border-primary/20 transition-colors overflow-hidden"
+                className="bg-white rounded-xl shadow-sm border-medium hover:border-primary/20 transition-colors overflow-hidden"
               >
                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
                   <span className="text-left font-semibold text-foreground text-body">
@@ -80,7 +80,7 @@ const PartnershipFAQSection = () => {
           </Accordion>
 
           {/* Additional Help */}
-          <div className="mt-12 text-center card-padding bg-primary/5 rounded-2xl">
+          <div className="mt-12 text-center card-padding bg-white rounded-2xl">
             <h3 className="heading-6 font-bold text-foreground mb-2">
               {t("faq.stillHaveQuestions.title")}
             </h3>

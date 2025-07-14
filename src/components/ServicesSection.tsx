@@ -189,8 +189,8 @@ const ServicesSection = () => {
       className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
       <div className="container mx-auto container-padding">
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center bg-primary/10 text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
+        <div className="max-w-5xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
+          <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
             <Lightbulb className="icon-small mr-2" />
             {i18n.language === "id"
               ? "Layanan Profesional"
@@ -198,13 +198,10 @@ const ServicesSection = () => {
           </div>
 
           <h2 className="heading-2 text-primary mb-4 sm:mb-6">
-            {t("section.title")}
-            <span className="text-gradient block mt-1 sm:mt-2 leading-normal pb-1 sm:pb-2">
-              {t("section.titleHighlight")}
-            </span>
+            {t("section.title")} <span className="text-gradient">{t("section.titleHighlight")}</span>
           </h2>
 
-          <p className="text-body-large text-muted-foreground">
+          <p className="text-body-large text-muted-foreground whitespace-nowrap">
             {t("section.description")}
           </p>
         </div>
@@ -259,7 +256,7 @@ const ServicesSection = () => {
                   return (
                     <Card
                       key={serviceIndex}
-                      className="group relative bg-background border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 card-padding animate-card">
+                      className="group relative bg-white border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 card-padding animate-card">
                       {/* Icon */}
                       <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-105 transition-transform">
                         <ServiceIcon
@@ -293,7 +290,7 @@ const ServicesSection = () => {
 
                         {/* Price Badge */}
                         <div className="pt-2 sm:pt-3">
-                          <span className="inline-flex items-center bg-primary/10 text-primary px-2 sm:px-3 py-1 rounded-full text-body-small font-semibold">
+                          <span className="inline-flex items-center bg-white text-primary px-2 sm:px-3 py-1 rounded-full text-body-small font-semibold">
                             {service.price}
                           </span>
                         </div>
@@ -329,7 +326,7 @@ const ServicesSection = () => {
                 return (
                   <Card
                     key={index}
-                    className="text-center card-padding bg-background border border-subtle animate-card">
+                    className="text-center card-padding bg-white border border-subtle animate-card">
                     <div className="icon-large sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-primary/10 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
                       <Icon className="icon-medium lg:icon-large text-primary" />
                     </div>
@@ -348,7 +345,7 @@ const ServicesSection = () => {
 
         {/* CTA Section */}
         <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
-                        <Card className="max-w-4xl mx-auto card-padding lg:card-padding-large bg-gradient-to-br from-card to-card/80 border border-primary-subtle animate-card">
+                        <Card className="max-w-4xl mx-auto card-padding lg:card-padding-large bg-gradient-to-br from-card to-white/80 border border-primary-subtle animate-card">
             <h3 className="heading-3 text-primary mb-3 sm:mb-4">
               {i18n.language === "id"
                 ? "Siap Memulai Perjalanan IPO Anda?"
