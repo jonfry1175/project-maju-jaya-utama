@@ -3,9 +3,11 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const OurLeadership = () => {
   const { t } = useTranslation("about");
+  const navigate = useNavigate();
 
   const team = [
     {
@@ -35,10 +37,8 @@ const OurLeadership = () => {
   ];
 
   const handleCardClick = (memberKey: string) => {
-    // Handle card click - you can navigate to a detailed profile page or open a modal
-    console.log(`Clicked on ${memberKey} profile`);
-    // Example: navigate to detailed profile
-    // navigate(`/leadership/${memberKey}`);
+    // Navigate to detailed profile page
+    navigate(`/our-leadership/${memberKey}`);
   };
 
   return (
