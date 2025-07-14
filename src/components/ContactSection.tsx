@@ -149,7 +149,7 @@ const ContactSection = () => {
           {/* Left Column - Contact Info */}
           <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
             <h3 className="heading-4 text-primary mb-4 sm:mb-6">
-              {t("contact.title")}
+              {t("title")}
             </h3>
 
             {contactInfo.map((info, index) => (

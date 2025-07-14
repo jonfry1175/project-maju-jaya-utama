@@ -1,13 +1,45 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import { Users, Check, Award } from "lucide-react";
+import { Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const OurLeadership = () => {
   const { t } = useTranslation("about");
 
-  const team = ["ceo", "coo", "cfo", "cfo2"];
+  const team = [
+    {
+      key: "ceo",
+      role: "President Director",
+      image: "/zulfikar-lukman.jpg",
+      roleColor: "bg-orange-400"
+    },
+    {
+      key: "coo", 
+      role: "Commissioner",
+      image: "/indra-yurana-sugiarto.jpg",
+      roleColor: "bg-orange-400"
+    },
+    {
+      key: "cfo",
+      role: "Chief Financial Officer", 
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
+      roleColor: "bg-orange-400"
+    },
+    {
+      key: "cfo2",
+      role: "Chief Operating Officer",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face", 
+      roleColor: "bg-orange-400"
+    }
+  ];
+
+  const handleCardClick = (memberKey: string) => {
+    // Handle card click - you can navigate to a detailed profile page or open a modal
+    console.log(`Clicked on ${memberKey} profile`);
+    // Example: navigate to detailed profile
+    // navigate(`/leadership/${memberKey}`);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -38,66 +70,47 @@ const OurLeadership = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             {/* Leadership Grid */}
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-              {team.map((memberKey, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+              {team.map((member, index) => (
                 <Card
                   key={index}
-                  className="group overflow-hidden bg-white border border-subtle animate-card hover:shadow-xl transition-all duration-300">
-                  {/* Photo Section */}
-                  <div className="relative h-64 sm:h-72 overflow-hidden">
-                    <img
-                      src={
-                        index === 0 
-                          ? '/zulfikar-lukman.jpg' // Zulfikar Lukman photo
-                          : index === 1
-                          ? '/indra-yurana-sugiarto.jpg' // Indra Yurana Sugiarto photo
-                          : `https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face` // Professional businessman 2
-                      }
-                      alt={t(`team.members.${memberKey}.name`)}
-                      className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${
-                        index === 0 || index === 1 ? 'object-[50%_20%]' : 'object-center'
-                      }`}
-                    />
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+                  onClick={() => handleCardClick(member.key)}
+                  className="group overflow-hidden bg-gray-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1 rounded-2xl">
+                  
+                  {/* Role Badge */}
+                  <div className="relative">
+                    <div className={`absolute top-4 left-4 z-10 ${member.roleColor} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
+                      {member.role}
+                    </div>
+                    
+                    {/* Photo Section */}
+                    <div className="relative h-64 sm:h-72 overflow-hidden rounded-t-2xl">
+                      <img
+                        src={member.image}
+                        alt={t(`team.members.${member.key}.name`)}
+                        className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${
+                          index === 0 || index === 1 ? 'object-[50%_20%]' : 'object-center'
+                        }`}
+                      />
+                      {/* Subtle overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    </div>
                   </div>
 
                   {/* Content Section */}
-                  <div className="card-padding space-y-3 sm:space-y-4">
-                    <div className="text-center">
-                      <h4 className="heading-5 text-foreground mb-1">
-                        {t(`team.members.${memberKey}.name`)}
+                  <div className="p-6 bg-white">
+                    <div className="text-left">
+                      <h4 className="text-xl font-bold text-gray-800 mb-1">
+                        {t(`team.members.${member.key}.name`)}
                       </h4>
-                      <p className="text-primary font-semibold text-body-small mb-2">
-                        {t(`team.members.${memberKey}.position`)}
+                      <p className="text-gray-600 font-medium text-sm mb-3">
+                        {t(`team.members.${member.key}.position`)}
                       </p>
-                      <p className="text-body-small text-muted-foreground mb-3">
-                        {t(`team.members.${memberKey}.experience`)}
+                      
+                      {/* Click to view text */}
+                      <p className="text-blue-600 text-sm hover:text-blue-800 transition-colors duration-200">
+                        Click to view detailed profile and experience
                       </p>
-                    </div>
-
-                    {/* Credentials */}
-                    <div className="space-y-2">
-                      {(
-                        t(`team.members.${memberKey}.credentials`, {
-                          returnObjects: true,
-                        }) as string[]
-                      ).map((cred, i) => (
-                        <div
-                          key={i}
-                          className="flex items-center text-body-small text-muted-foreground">
-                          <Check className="icon-small mr-2 text-primary flex-shrink-0" />
-                          <span>{cred}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Professional Badge */}
-                    <div className="pt-3 border-t border-border/30">
-                      <div className="inline-flex items-center bg-white text-primary px-2 py-1 rounded-full text-xs font-medium">
-                        <Award className="icon-small mr-1" />
-                        Professional Leader
-                      </div>
                     </div>
                   </div>
                 </Card>
