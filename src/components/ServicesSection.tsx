@@ -256,7 +256,7 @@ const ServicesSection = () => {
                   return (
                     <Card
                       key={serviceIndex}
-                      className="group relative bg-white border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 card-padding animate-card">
+                      className="group relative bg-white border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 card-padding animate-card h-full flex flex-col">
                       {/* Icon */}
                       <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-105 transition-transform">
                         <ServiceIcon
@@ -266,7 +266,7 @@ const ServicesSection = () => {
                       </div>
 
                       {/* Content */}
-                      <div className="space-y-3 sm:space-y-4">
+                      <div className="space-y-3 sm:space-y-4 flex-grow">
                         <h4 className="heading-5 text-foreground">
                           {service.title}
                         </h4>
@@ -294,17 +294,17 @@ const ServicesSection = () => {
                             {service.price}
                           </span>
                         </div>
-
-                        {/* CTA Button */}
-                        <Button
-                          className="w-full btn-gradient-brand group-hover:shadow-lg transition-all text-body-small"
-                          size="sm">
-                          {i18n.language === "id"
-                            ? "Konsultasi Sekarang"
-                            : "Consult Now"}
-                          <ArrowRight className="ml-1 sm:ml-2 icon-small group-hover:translate-x-1 transition-transform" />
-                        </Button>
                       </div>
+
+                      {/* CTA Button */}
+                      <Button
+                        className="w-full btn-gradient-brand group-hover:shadow-lg transition-all text-body-small mt-4"
+                        size="sm">
+                        {i18n.language === "id"
+                          ? "Konsultasi Sekarang"
+                          : "Consult Now"}
+                        <ArrowRight className="ml-1 sm:ml-2 icon-small group-hover:translate-x-1 transition-transform" />
+                      </Button>
                     </Card>
                   );
                 })}

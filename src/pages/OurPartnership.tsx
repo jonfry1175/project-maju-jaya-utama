@@ -27,7 +27,7 @@ const OurPartnership = () => {
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
               Strategic Partners
-              <span className="text-gradient block mt-2">
+              <span className="text-gradient">
                 & Global Expertise
               </span>
             </h1>
