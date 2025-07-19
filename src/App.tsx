@@ -8,6 +8,7 @@ import OurPartnership from "./pages/OurPartnership";
 import OurLeadership from "./pages/OurLeadership";
 import LeadershipDetail from "./pages/LeadershipDetail";
 import FundRaising from "./pages/FundRaising";
+import IpoMapping from "./pages/IpoMapping";
 import NotFound from "./pages/NotFound";
 import { Navigate } from "react-router-dom";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/our-leadership" element={<OurLeadership />} />
           <Route path="/our-leadership/:memberKey" element={<LeadershipDetail />} />
           <Route path="/fund-raising" element={<FundRaising />} />
+          <Route path="/ipo-process/mapping" element={<IpoMapping />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
