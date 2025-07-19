@@ -1,16 +1,16 @@
 
-import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, MessageCircle, ChevronDown } from "lucide-react";
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { Link, useLocation, useNavigate } from "react-router-dom";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ChevronDown, Menu, MessageCircle, Phone, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { t } = useTranslation('header');
@@ -73,7 +73,7 @@ const Header = () => {
     }
   };
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
     e.preventDefault();
     
     // If it's a hash link
@@ -226,9 +226,12 @@ const Header = () => {
           {/* CTA Buttons - Ultra Compact */}
           <div className="hidden lg:flex items-center space-x-1 flex-shrink-0">
             <LanguageSwitcher />
-            <Button className="btn-gradient-brand shadow-brand text-xs font-medium px-2 xl:px-3 py-1.5 tracking-normal whitespace-nowrap">
-              <span className="hidden xl:inline">{t('cta.startIPOJourney')}</span>
-              <span className="xl:hidden">IPO</span>
+            <Button 
+              className="btn-gradient-brand shadow-brand text-xs font-medium px-2 xl:px-3 py-1.5 tracking-normal whitespace-nowrap"
+              onClick={(e) => handleNavClick(e, '#contact')}
+            >
+              <span className="hidden xl:inline">{t('nav.contact')}</span>
+              <span className="xl:hidden">{t('nav.contact')}</span>
             </Button>
           </div>
 
@@ -302,8 +305,11 @@ const Header = () => {
               <div className="flex flex-col space-y-2 pt-4 px-4">
                 <div className="flex items-center justify-between mb-2">
                   <LanguageSwitcher />
-                  <Button className="btn-gradient-brand text-sm font-semibold tracking-wide">
-                    {t('cta.startIPOJourney')}
+                  <Button 
+                    className="btn-gradient-brand text-sm font-semibold tracking-wide"
+                    onClick={(e) => handleNavClick(e, '#contact')}
+                  >
+                    {t('nav.contact')}
                   </Button>
                 </div>
                 <div className="flex items-center justify-between pt-4 mt-4 border-t border-subtle">

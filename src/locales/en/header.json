@@ -9,7 +9,7 @@
     "services": "Services",
     "services.fundRaising": "Fund Raising",
     "services.professional": "Professional Services",
-    "partners": "Our Partnership",
+    "partners": "Our Clients",
     "ipoProcess": "IPO Process",
     "ipoProcess.mapping": "Mapping",
     "ipoProcess.scenarioPlans": "Scenario Plans",
@@ -19,7 +19,7 @@
     "ipoProcess.ipoCompliancePlans": "IPO Compliance Plans",
     "testimonials": "Testimonials",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact Us"
   },
   "cta": {
     "freeConsultation": "Free Consultation",

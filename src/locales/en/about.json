@@ -110,7 +110,7 @@
     "members": {
       "ceo": {
         "name": "Zulfikar Lukman",
-        "position": "Founder & Managing Partner",
+        "position": "President Commissioner",
         "experience": "Highly accomplished finance professional with Bachelor's Degree in Economics from Universitas Trisakti and MBA from Monash University's Mt. Eliza Business School",
         "professionalSummary": "Zulfikar Lukman is a highly accomplished finance professional with a Bachelor's Degree in Economics from Universitas Trisakti and an MBA from Monash University's Mt. Eliza Business School. Former corporate executive in Banking, Private Companies, Listed Companies and Foreign Companies in several industrial sectors, such as Banking, Manufacturing, Property, Hospitality, FMCG, Oil and Gas and Tobacco. He currently holds pivotal roles in various companies within the RITZ Corp, including Founder & Managing Partner at PT RITZ Corpora Indonesia and President Director at PT RITZ Konsultan Indonesia, PT RITZ Investmen Indonesia. Additionally, he serves as the President Commissioner at PT RITZ Manatha Kapital. With over 32 years of experience in both banking and non-banking sectors, Zulfikar excels in corporate banking, asset management, restructuring, project financing, M&A, and more. He is renowned for an unwavering dedication to financial excellence and strategic leadership.",
         "credentials": [
@@ -122,7 +122,7 @@
       },
       "coo": {
         "name": "Indra Yurana Sugiarto",
-        "position": "Co-Founder & Managing Partner",
+        "position": "Commissioner",
         "experience": "Possesses a wealth of experience spanning 33 years in both banking and non-banking sectors. Holds Master of Science in Computer Information System (1995) and Master of Business Administration (1993) from Southern New Hampshire University, along with Bachelor's degree in Economics from Universitas Trisakti (1990)",
         "professionalSummary": "Indra possesses a wealth of experience spanning 33 years in both banking and non-banking sectors. He holds a Master of Science in Computer Information System (1995) and a Master of Business Administration (1995) from Southern New Hampshire University, along with a Bachelor's degree in Economics from Universitas Trisakti (1990). Having served as the Corporate Banking Director at Bank Muamalat Indonesia, and executive at Bank CIMB Niaga, Indra's professional background encompasses 25 years in the banking sector and an additional 8 years in the non-banking sector. Proficient in Corporate Banking, Relationship Management, Financial Services, Risk Management, Islamic Banking, Compliance, Business Development, and Trade Finance and Structured Finance, Indra brings a diverse skill set to the table. Throughout his career, Indra has showcased a consistent ability to navigate intricate financial landscapes, cultivate robust client relationships, ensure regulatory compliance, and spearhead business development initiatives.",
         "credentials": [
@@ -134,7 +134,7 @@
       },
       "director1": {
         "name": "Boyke",
-        "position": "Direktur",
+        "position": "President Director",
         "experience": "Business development and strategic planning professional",
         "professionalSummary": "Boyke is an experienced business development and strategic planning professional with extensive expertise in corporate strategy and market expansion. He brings comprehensive knowledge of business operations and has successfully led numerous strategic initiatives across various industry sectors.",
         "credentials": [
@@ -145,7 +145,7 @@
       },
       "director2": {
         "name": "Paulus SH MM MKn",
-        "position": "Direktur",
+        "position": "Director",
         "experience": "Legal and business administration professional",
         "professionalSummary": "Paulus SH MM MKn is a highly qualified legal and business administration professional holding a Bachelor of Law (SH), Master of Management (MM), and Master of Notary (MKn). He brings extensive expertise in legal and regulatory matters, corporate governance, and business administration with deep understanding of Indonesian business law and regulatory compliance.",
         "credentials": [
@@ -187,7 +187,7 @@
     }
   },
   "mainClients": {
-    "badge": "Our Partnership",
+    "badge": "Our Clients",
     "title": "Our Main Client",
     "subtitle": "Trusted by Leading Companies",
     "description": {

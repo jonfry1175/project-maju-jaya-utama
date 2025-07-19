@@ -24,7 +24,7 @@ const OurLeadership = () => {
     },
     {
       key: "director1",
-      role: "Direktur", 
+      role: "Direktur Utama", 
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
       roleColor: "bg-orange-400"
     },
