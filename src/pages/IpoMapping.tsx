@@ -171,9 +171,9 @@ const IpoMapping = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-primary/10">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
+        <div className="container mx-auto container-padding">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
             <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
               <Search className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
               {t("hero.badge")}
@@ -194,8 +194,8 @@ const IpoMapping = () => {
       </section>
 
       {/* Main Objectives Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-6">
+      <section className="section-padding animate-section">
+        <div className="container mx-auto container-padding">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 sm:mb-12 lg:mb-16">
               <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
@@ -237,8 +237,8 @@ const IpoMapping = () => {
       </section>
 
       {/* Mapping Components Section */}
-      <section className="py-16 lg:py-24 bg-muted/30">
-        <div className="container mx-auto px-6">
+      <section className="section-padding bg-muted/30 animate-section">
+        <div className="container mx-auto container-padding">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 sm:mb-12 lg:mb-16">
               <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
@@ -288,8 +288,8 @@ const IpoMapping = () => {
       </section>
 
       {/* Process Flow Section */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="section-padding bg-background animate-section">
+        <div className="container mx-auto container-padding">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
@@ -382,8 +382,8 @@ const IpoMapping = () => {
       </section>
 
       {/* Output & Benefits Section */}
-      <section className="py-16 lg:py-24 bg-muted/30">
-        <div className="container mx-auto px-6">
+      <section className="section-padding bg-muted/30 animate-section">
+        <div className="container mx-auto container-padding">
           <div className="max-w-7xl mx-auto">
             {/* Mapping Outputs */}
             <div className="mb-12 sm:mb-16 lg:mb-20">
@@ -451,8 +451,8 @@ const IpoMapping = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-6">
+      <section className="section-padding animate-section">
+        <div className="container mx-auto container-padding">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 sm:mb-12">
               <h2 className="heading-2 text-primary mb-4 sm:mb-6">
@@ -483,8 +483,8 @@ const IpoMapping = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-muted/30">
-        <div className="container mx-auto px-6">
+      <section className="section-padding bg-muted/30 animate-section">
+        <div className="container mx-auto container-padding">
           <div className="max-w-7xl mx-auto">
             <Card className="max-w-4xl mx-auto card-padding lg:card-padding-large bg-white border border-primary-subtle animate-card">
               <div className="text-center">
