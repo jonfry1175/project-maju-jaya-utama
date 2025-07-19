@@ -22,18 +22,18 @@ const OurPartnership = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
               <Building2 className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
-              Our Partnership
+              {t('our-partnership:hero.badge')}
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
-              Strategic Partners
+              {t('our-partnership:hero.title')}
               <span className="text-gradient">
-                & Global Expertise
+                {t('our-partnership:hero.titleHighlight')}
               </span>
             </h1>
             
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Building strong partnerships and leveraging our expertise to deliver exceptional IPO consulting services across Indonesia and beyond.
+              {t('our-partnership:hero.description')}
             </p>
           </div>
         </div>

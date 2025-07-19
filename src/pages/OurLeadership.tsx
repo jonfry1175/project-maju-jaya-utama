@@ -12,25 +12,25 @@ const OurLeadership = () => {
   const team = [
     {
       key: "ceo",
-      role: "President Director",
+      role: "Komisaris Utama",
       image: "/zulfikar-lukman.jpg",
       roleColor: "bg-orange-400"
     },
     {
       key: "coo", 
-      role: "Commissioner",
+      role: "Komisaris",
       image: "/indra-yurana-sugiarto.jpg",
       roleColor: "bg-orange-400"
     },
     {
-      key: "cfo",
-      role: "Chief Financial Officer", 
+      key: "director1",
+      role: "Direktur", 
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
       roleColor: "bg-orange-400"
     },
     {
-      key: "cfo2",
-      role: "Chief Operating Officer",
+      key: "director2",
+      role: "Direktur",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face", 
       roleColor: "bg-orange-400"
     }
@@ -55,11 +55,11 @@ const OurLeadership = () => {
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
-              Our Leadership
+              {t("team.pageTitle")}
             </h1>
             
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Meet our experienced leadership team committed to driving innovation and excellence in IPO consulting services.
+              {t("team.pageDescription")}
             </p>
           </div>
         </div>
@@ -109,7 +109,7 @@ const OurLeadership = () => {
                       
                       {/* Click to view text */}
                       <p className="text-blue-600 text-sm hover:text-blue-800 transition-colors duration-200">
-                        Click to view detailed profile and experience
+                        {t("team.clickToView")}
                       </p>
                     </div>
                   </div>

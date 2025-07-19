@@ -103,11 +103,56 @@
   },
   "team": {
     "title": "Tim Kepemimpinan",
+    "pageTitle": "Kepemimpinan Kami",
+    "pageDescription": "Temui tim kepemimpinan berpengalaman kami yang berkomitmen mendorong inovasi dan keunggulan dalam layanan konsultasi IPO.",
+    "clickToView": "Klik untuk melihat profil dan pengalaman detail",
+    "profileNotFound": "Profil tidak ditemukan",
+    "backToLeadership": "Kembali ke Kepemimpinan",
+    "detail": {
+      "badge": "Profil Kepemimpinan",
+      "professionalSummary": "Ringkasan Profesional",
+      "contactInfo": "Kontak tersedia melalui saluran perusahaan",
+      "location": "Jakarta, Indonesia",
+      "keyCredentials": "Kredensial & Pengalaman Utama",
+      "areasOfExpertise": "Bidang Keahlian",
+      "quote": "Berkomitmen memberikan keunggulan dalam konsultasi IPO dan membangun nilai berkelanjutan untuk klien kami.",
+      "experience": {
+        "ceo": "Pengalaman 32+ Tahun",
+        "coo": "Pengalaman 33+ Tahun",
+        "director1": "Pengalaman 15+ Tahun",
+        "director2": "Pengalaman 20+ Tahun"
+      },
+      "expertise": {
+        "ipoConsulting": "Konsultasi IPO",
+        "corporateStrategy": "Strategi Korporat",
+        "capitalMarkets": "Pasar Modal",
+        "businessTransformation": "Transformasi Bisnis",
+        "financialAdvisory": "Advisory Keuangan",
+        "riskManagement": "Manajemen Risiko",
+        "corporateBanking": "Corporate Banking",
+        "islamicBanking": "Perbankan Syariah",
+        "businessDevelopment": "Pengembangan Bisnis",
+        "compliance": "Kepatuhan",
+        "strategicPlanning": "Perencanaan Strategis",
+        "financialAuditing": "Audit Keuangan",
+        "ipoPreparation": "Persiapan IPO",
+        "advisoryServices": "Layanan Advisory",
+        "corporateFinance": "Keuangan Korporat",
+        "riskAssessment": "Penilaian Risiko"
+      },
+      "cta": {
+        "title": "Siap Bekerja dengan Tim Kepemimpinan Kami?",
+        "description": "Terhubung dengan tim kepemimpinan berpengalaman kami untuk membahas perjalanan IPO dan kebutuhan transformasi bisnis Anda.",
+        "schedule": "Jadwalkan Konsultasi",
+        "viewAll": "Lihat Semua Kepemimpinan"
+      }
+    },
     "members": {
       "ceo": {
         "name": "Zulfikar Lukman",
         "position": "Founder & Managing Partner",
         "experience": "Profesional keuangan berprestasi dengan gelar Sarjana Ekonomi dari Universitas Trisakti dan MBA dari Mt. Eliza Business School, Monash University",
+        "professionalSummary": "Zulfikar Lukman adalah profesional keuangan berprestasi dengan gelar Sarjana Ekonomi dari Universitas Trisakti dan MBA dari Mt. Eliza Business School, Monash University. Mantan eksekutif korporat di Perbankan, Perusahaan Swasta, Perusahaan Terbuka dan Perusahaan Asing di beberapa sektor industri, seperti Perbankan, Manufaktur, Properti, Perhotelan, FMCG, Minyak dan Gas serta Tembakau. Saat ini memegang peran penting di berbagai perusahaan dalam RITZ Corp, termasuk Founder & Managing Partner di PT RITZ Corpora Indonesia dan Direktur Utama di PT RITZ Konsultan Indonesia, PT RITZ Investmen Indonesia. Selain itu, beliau menjabat sebagai Komisaris Utama di PT RITZ Manatha Kapital. Dengan pengalaman lebih dari 32 tahun di sektor perbankan dan non-perbankan, Zulfikar unggul dalam corporate banking, manajemen aset, restrukturisasi, pembiayaan proyek, M&A, dan lainnya. Beliau terkenal dengan dedikasi yang teguh terhadap keunggulan keuangan dan kepemimpinan strategis.",
         "credentials": [
           "Lebih dari 32 tahun pengalaman di sektor perbankan dan non-perbankan",
           "Mantan eksekutif korporat di Perbankan, Perusahaan Terbuka, Perusahaan Asing",
@@ -119,6 +164,7 @@
         "name": "Indra Yurana Sugiarto",
         "position": "Co-Founder & Managing Partner",
         "experience": "Memiliki kekayaan pengalaman selama 33 tahun di sektor perbankan dan non-perbankan. Meraih gelar Master of Science in Computer Information System (1995) dan Master of Business Administration (1993) dari Southern New Hampshire University, serta gelar Sarjana Ekonomi dari Universitas Trisakti (1990)",
+        "professionalSummary": "Indra memiliki kekayaan pengalaman selama 33 tahun di sektor perbankan dan non-perbankan. Beliau meraih gelar Master of Science in Computer Information System (1995) dan Master of Business Administration (1995) dari Southern New Hampshire University, serta gelar Sarjana Ekonomi dari Universitas Trisakti (1990). Setelah menjabat sebagai Direktur Corporate Banking di Bank Muamalat Indonesia, dan eksekutif di Bank CIMB Niaga, latar belakang profesional Indra mencakup 25 tahun di sektor perbankan dan tambahan 8 tahun di sektor non-perbankan. Mahir dalam Corporate Banking, Relationship Management, Financial Services, Risk Management, Islamic Banking, Compliance, Business Development, dan Trade Finance serta Structured Finance, Indra membawa keahlian yang beragam. Sepanjang kariernya, Indra telah menunjukkan kemampuan konsisten dalam menavigasi lanskap keuangan yang rumit, memelihara hubungan klien yang kuat, memastikan kepatuhan regulasi, dan memimpin inisiatif pengembangan bisnis.",
         "credentials": [
           "33 tahun pengalaman di sektor perbankan dan non-perbankan",
           "Mantan Direktur Corporate Banking di Bank Muamalat Indonesia",
@@ -126,24 +172,27 @@
           "Ahli dalam Corporate Banking, Risk Management, Islamic Banking, Compliance, Business Development"
         ]
       },
-      "cfo": {
-        "name": "Agus Wijaya, CA",
-        "position": "Direktur Keuangan",
-        "experience": "Profesional audit dan advisory",
+      "director1": {
+        "name": "Boyke",
+        "position": "Direktur",
+        "experience": "Profesional pengembangan bisnis dan perencanaan strategis",
+        "professionalSummary": "Boyke adalah profesional pengembangan bisnis dan perencanaan strategis berpengalaman dengan keahlian luas dalam strategi korporat dan ekspansi pasar. Beliau membawa pengetahuan komprehensif tentang operasi bisnis dan telah berhasil memimpin berbagai inisiatif strategis di berbagai sektor industri.",
         "credentials": [
-          "Chartered Accountant",
-          "Mantan Senior Manager PwC",
-          "Ahli IPO"
+          "Ahli strategi bisnis",
+          "Spesialis pengembangan korporat",
+          "Ahli ekspansi pasar"
         ]
       },
-      "cfo2": {
-        "name": "Agus Wijaya, CA",
-        "position": "Direktur Keuangan",
-        "experience": "Profesional audit dan advisory",
+      "director2": {
+        "name": "Paulus SH MM MKn",
+        "position": "Direktur",
+        "experience": "Profesional hukum dan administrasi bisnis",
+        "professionalSummary": "Paulus SH MM MKn adalah profesional hukum dan administrasi bisnis yang sangat berkualitas dengan gelar Sarjana Hukum (SH), Magister Manajemen (MM), dan Magister Kenotariatan (MKn). Beliau membawa keahlian luas dalam masalah hukum dan regulasi, tata kelola perusahaan, dan administrasi bisnis dengan pemahaman mendalam tentang hukum bisnis Indonesia dan kepatuhan regulasi.",
         "credentials": [
-          "Chartered Accountant",
-          "Mantan Senior Manager PwC",
-          "Ahli IPO"
+          "Sarjana Hukum (SH)",
+          "Magister Manajemen (MM)",
+          "Magister Kenotariatan (MKn)",
+          "Ahli hukum dan regulasi"
         ]
       }
     }
