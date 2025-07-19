@@ -226,9 +226,12 @@ const Header = () => {
           {/* CTA Buttons - Ultra Compact */}
           <div className="hidden lg:flex items-center space-x-1 flex-shrink-0">
             <LanguageSwitcher />
-            <Button className="btn-gradient-brand shadow-brand text-xs font-medium px-2 xl:px-3 py-1.5 tracking-normal whitespace-nowrap">
-              <span className="hidden xl:inline">{t('cta.startIPOJourney')}</span>
-              <span className="xl:hidden">IPO</span>
+            <Button 
+              className="btn-gradient-brand shadow-brand text-xs font-medium px-2 xl:px-3 py-1.5 tracking-normal whitespace-nowrap"
+              onClick={(e) => handleNavClick(e, '#contact')}
+            >
+              <span className="hidden xl:inline">{t('nav.contact')}</span>
+              <span className="xl:hidden">{t('nav.contact')}</span>
             </Button>
           </div>
 
@@ -302,8 +305,11 @@ const Header = () => {
               <div className="flex flex-col space-y-2 pt-4 px-4">
                 <div className="flex items-center justify-between mb-2">
                   <LanguageSwitcher />
-                  <Button className="btn-gradient-brand text-sm font-semibold tracking-wide">
-                    {t('cta.startIPOJourney')}
+                  <Button 
+                    className="btn-gradient-brand text-sm font-semibold tracking-wide"
+                    onClick={(e) => handleNavClick(e, '#contact')}
+                  >
+                    {t('nav.contact')}
                   </Button>
                 </div>
                 <div className="flex items-center justify-between pt-4 mt-4 border-t border-subtle">
