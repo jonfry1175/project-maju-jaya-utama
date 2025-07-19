@@ -46,19 +46,19 @@ const OurLeadership = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-primary/10">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
-              <Users className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
+      <section className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
+        <div className="container mx-auto container-padding">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
+            <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
+              <Users className="icon-small mr-2" />
               {t("team.title")}
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
+            <h1 className="heading-1 text-primary mb-4 sm:mb-6">
               {t("team.pageTitle")}
             </h1>
             
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-body-large text-muted-foreground">
               {t("team.pageDescription")}
             </p>
           </div>
@@ -66,8 +66,8 @@ const OurLeadership = () => {
       </section>
 
       {/* Leadership Team Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-6">
+      <section className="section-padding animate-section">
+        <div className="container mx-auto container-padding">
           <div className="max-w-7xl mx-auto">
             {/* Leadership Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
@@ -75,11 +75,11 @@ const OurLeadership = () => {
                 <Card
                   key={index}
                   onClick={() => handleCardClick(member.key)}
-                  className="group overflow-hidden bg-gray-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1 rounded-2xl">
+                  className="group overflow-hidden bg-gray-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1 rounded-2xl animate-card">
                   
                   {/* Role Badge */}
                   <div className="relative">
-                    <div className={`absolute top-4 left-4 z-10 ${member.roleColor} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
+                    <div className={`absolute top-4 left-4 z-10 ${member.roleColor} text-white px-3 py-1 rounded-full text-body-small font-semibold`}>
                       {member.role}
                     </div>
                     
@@ -100,15 +100,15 @@ const OurLeadership = () => {
                   {/* Content Section */}
                   <div className="p-6 bg-white">
                     <div className="text-left">
-                      <h4 className="text-xl font-bold text-gray-800 mb-1">
+                      <h4 className="heading-5 text-foreground mb-1">
                         {t(`team.members.${member.key}.name`)}
                       </h4>
-                      <p className="text-gray-600 font-medium text-sm mb-3">
+                      <p className="text-body-small text-muted-foreground font-medium mb-3">
                         {t(`team.members.${member.key}.position`)}
                       </p>
                       
                       {/* Click to view text */}
-                      <p className="text-blue-600 text-sm hover:text-blue-800 transition-colors duration-200">
+                      <p className="text-primary text-body-small hover:text-primary/80 transition-colors duration-200">
                         {t("team.clickToView")}
                       </p>
                     </div>
