@@ -12,25 +12,25 @@ const OurLeadership = () => {
   const team = [
     {
       key: "ceo",
-      role: "Komisaris Utama",
+      roleKey: "presidentCommissioner",
       image: "/zulfikar-lukman.jpg",
       roleColor: "bg-orange-400"
     },
     {
       key: "coo", 
-      role: "Komisaris",
+      roleKey: "commissioner",
       image: "/indra-yurana-sugiarto.jpg",
       roleColor: "bg-orange-400"
     },
     {
       key: "director1",
-      role: "Direktur Utama", 
+      roleKey: "presidentDirector", 
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
       roleColor: "bg-orange-400"
     },
     {
       key: "director2",
-      role: "Direktur",
+      roleKey: "director",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face", 
       roleColor: "bg-orange-400"
     }
@@ -80,7 +80,7 @@ const OurLeadership = () => {
                   {/* Role Badge */}
                   <div className="relative">
                     <div className={`absolute top-4 left-4 z-10 ${member.roleColor} text-white px-3 py-1 rounded-full text-body-small font-semibold`}>
-                      {member.role}
+                      {t(`team.roles.${member.roleKey}`)}
                     </div>
                     
                     {/* Photo Section */}

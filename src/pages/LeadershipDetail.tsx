@@ -18,24 +18,24 @@ const LeadershipDetail = () => {
 
   // Get team member data
   const getTeamMemberData = (key: string) => {
-    const teamMapping: Record<string, { role: string; image: string; roleColor: string }> = {
+    const teamMapping: Record<string, { roleKey: string; image: string; roleColor: string }> = {
       ceo: {
-        role: "Komisaris Utama",
+        roleKey: "presidentCommissioner",
         image: "/zulfikar-lukman.jpg",
         roleColor: "bg-orange-400"
       },
       coo: {
-        role: "Komisaris", 
+        roleKey: "commissioner", 
         image: "/indra-yurana-sugiarto.jpg",
         roleColor: "bg-orange-400"
       },
       director1: {
-        role: "Direktur",
+        roleKey: "presidentDirector",
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
         roleColor: "bg-orange-400"
       },
       director2: {
-        role: "Direktur",
+        roleKey: "director",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
         roleColor: "bg-orange-400"
       }
@@ -100,7 +100,7 @@ const LeadershipDetail = () => {
               </h1>
               
               <div className={`inline-block ${memberData.roleColor} text-white px-4 py-2 rounded-full text-sm sm:text-base font-semibold mb-4`}>
-                {memberData.role}
+                {t(`team.roles.${memberData.roleKey}`)}
               </div>
               
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
@@ -151,7 +151,7 @@ const LeadershipDetail = () => {
                     <div className="flex flex-wrap gap-2 mb-6">
                       <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
                         <Building2 className="w-3 h-3 mr-1" />
-                        {memberData.role}
+                        {t(`team.roles.${memberData.roleKey}`)}
                       </Badge>
                       <Badge variant="secondary" className="bg-orange-50 text-orange-600 hover:bg-orange-100">
                         <Calendar className="w-3 h-3 mr-1" />
