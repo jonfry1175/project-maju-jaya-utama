@@ -52,7 +52,7 @@ npm run preview   # Preview production build locally
 - **Routing**: React Router v6
 - **State Management**: React Query (TanStack Query)
 - **Forms**: React Hook Form with Zod validation
-- **Animations**: Framer Motion
+- **Animations**: Framer Motion.
 
 ## Project Structure
 
