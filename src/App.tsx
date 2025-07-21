@@ -12,6 +12,7 @@ import IpoMapping from "./pages/IpoMapping";
 import ScenarioPlans from "./pages/ScenarioPlans";
 import ProformaFinancialReport from "./pages/ProformaFinancialReport";
 import ManagementImprovementPlans from "./pages/ManagementImprovementPlans";
+import BridgingFinancing from "./pages/BridgingFinancing";
 import NotFound from "./pages/NotFound";
 import { Navigate } from "react-router-dom";
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/ipo-process/scenario-plans" element={<ScenarioPlans />} />
           <Route path="/ipo-process/proforma-financial-report" element={<ProformaFinancialReport />} />
           <Route path="/ipo-process/management-improvement-plans" element={<ManagementImprovementPlans />} />
+          <Route path="/ipo-process/bridging-financing" element={<BridgingFinancing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
