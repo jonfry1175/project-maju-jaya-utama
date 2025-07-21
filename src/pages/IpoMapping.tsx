@@ -177,15 +177,15 @@ const IpoMapping = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding relative max-w-7xl mx-auto animate-section">
+      <section className="section-padding relative animate-section">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-2xl"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop)',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70 rounded-2xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70"></div>
         </div>
         <div className="container mx-auto container-padding relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
