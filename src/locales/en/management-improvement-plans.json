@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "badge": "IPO Process",
+    "title": "Management Improvement Plans",
+    "titleHighlight": "Leadership & Governance Enhancement",
+    "description": "Comprehensive management improvement plans to enhance managerial and operational capabilities before and after IPO, ensuring your company meets public company standards and regulatory requirements."
+  },
+  "objectives": {
+    "badge": "Main Objectives",
+    "title": "Purpose of Management Improvement Plans",
+    "description": "Our MIP aims to enhance your company's management capabilities and governance standards to meet public company expectations.",
+    "items": [
+      {
+        "title": "Enhance Managerial & Operational Capabilities",
+        "description": "Improve managerial and operational capabilities of the company before and after IPO to meet public company standards."
+      },
+      {
+        "title": "Demonstrate Reliable Leadership",
+        "description": "Show investors that the company has reliable and competent leadership team for sustainable growth."
+      },
+      {
+        "title": "Align Management Structure",
+        "description": "Adjust management structure to comply with public company standards and regulatory requirements."
+      }
+    ]
+  },
+  "components": {
+    "badge": "Key Components",
+    "title": "Main Components in Management Improvement Plans",
+    "description": "Our comprehensive MIP covers five critical areas to ensure your management team is ready for public company responsibilities.",
+    "items": [
+      {
+        "title": "Management Training & Strengthening",
+        "items": [
+          "GCG (Good Corporate Governance) training for directors and commissioners",
+          "Public financial reporting and investor communication training",
+          "Professional competency certification by field (e.g., CFA, CPA, GRC)"
+        ]
+      },
+      {
+        "title": "Organizational Restructuring",
+        "items": [
+          "Adjust structure for greater transparency and efficiency",
+          "Separate strategic vs operational functions (clearer command lines)",
+          "Establish internal committees: Audit Committee, Risk Committee, Remuneration Committee"
+        ]
+      },
+      {
+        "title": "Key Human Resources Recruitment & Strengthening",
+        "items": [
+          "Recruit experienced professionals in finance, legal, and investor relations",
+          "Add positions like Chief Risk Officer, Corporate Secretary, Head of Compliance"
+        ]
+      },
+      {
+        "title": "Implementation of Good Corporate Governance (GCG)",
+        "items": [
+          "Align practices with GCG guidelines from OJK and BEI",
+          "Establish BOD/BOC work guidelines (Board Manual)",
+          "Implement transparency policies, whistleblowing, and gratification control"
+        ]
+      },
+      {
+        "title": "Enhancement of Internal Control Systems & Risk Management",
+        "items": [
+          "Evaluate effectiveness of internal control systems (SPI)",
+          "Implement integrated risk management systems",
+          "Regular internal audits and reporting to board of directors"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "badge": "Process Flow",
+    "title": "Management Improvement Process in IPO",
+    "description": "Our systematic approach ensures comprehensive management enhancement and governance strengthening for IPO readiness.",
+    "steps": [
+      {
+        "title": "Current Management Capability Assessment",
+        "description": "Comprehensive evaluation of existing management capabilities, organizational structure, and governance practices."
+      },
+      {
+        "title": "Identify Competency & Structure Needs",
+        "description": "Identify gaps in competencies and structural requirements needed for public company compliance."
+      },
+      {
+        "title": "Training & Recruitment Planning",
+        "description": "Develop comprehensive training programs and strategic recruitment plans for key positions."
+      },
+      {
+        "title": "GCG Structure & Committee Implementation",
+        "description": "Establish proper corporate governance structure and implement required committees and policies."
+      },
+      {
+        "title": "Internal Control System Testing",
+        "description": "Test and validate the effectiveness of internal control systems and risk management frameworks."
+      },
+      {
+        "title": "Review & Finalization by IPO Consultants",
+        "description": "Final review and validation by IPO consultants to ensure full compliance with regulatory requirements."
+      }
+    ]
+  },
+  "outputs": {
+    "badge": "Final Outputs",
+    "title": "Outputs from Management Improvement Plans",
+    "items": [
+      {
+        "title": "New & Functional Organizational Structure",
+        "description": "Updated organizational chart with clear roles, responsibilities, and reporting lines for public company operations."
+      },
+      {
+        "title": "GCG Policy & Procedure Documentation",
+        "description": "Comprehensive documentation of corporate governance policies, procedures, and board manual."
+      },
+      {
+        "title": "Management Training & Certification Reports",
+        "description": "Documentation of completed training programs and professional certifications for key management personnel."
+      },
+      {
+        "title": "Internal Audit & Risk Management Evaluation Results",
+        "description": "Assessment reports on internal control systems and risk management framework effectiveness."
+      },
+      {
+        "title": "Improved GCG Assessment Score",
+        "description": "Enhanced corporate governance assessment score as evaluated by independent parties for regulatory compliance."
+      }
+    ]
+  },
+  "benefits": {
+    "badge": "Strategic Benefits",
+    "title": "Strategic Benefits",
+    "items": [
+      "Enhance investor confidence in management quality and governance standards",
+      "Increase competitive advantage and corporate reputation in the market", 
+      "Ensure readiness to fulfill reporting obligations and information disclosure post-IPO"
+    ]
+  },
+  "stats": {
+    "title": "Our Track Record",
+    "items": [
+      {
+        "value": "30+",
+        "label": "Management Teams Improved"
+      },
+      {
+        "value": "95%",
+        "label": "GCG Compliance Rate"
+      },
+      {
+        "value": "200+",
+        "label": "Professionals Trained"
+      },
+      {
+        "value": "100%",
+        "label": "Client Satisfaction"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Enhance Your Management Team?",
+    "description": "Get comprehensive management improvement services to strengthen your leadership capabilities and governance standards for IPO success. Our expert team will guide you through every aspect of management enhancement.",
+    "primaryButton": "Start Improvement",
+    "secondaryButton": "Download MIP Guide"
+  }
+}
