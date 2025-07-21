@@ -1,8 +1,8 @@
 {
+  "title": "Contact Us",
   "section": {
     "badge": "Contact Us",
-    "title": "Let's Discuss",
-    "titleHighlight": "Your IPO Plan",
+    "title": "Let's Discuss with Us",
     "description": "Our consultant team is ready to help realize your company's public listing ambition."
   },
   "info": {
@@ -27,10 +27,7 @@
     },
     "hours": {
       "title": "Business Hours",
-      "schedule": [
-        "Monday - Friday: 09:00 - 18:00",
-        "Saturday: 09:00 - 13:00"
-      ],
+      "schedule": ["Monday - Friday: 09:00 - 18:00", "Saturday: 09:00 - 13:00"],
       "action": "Schedule Meeting"
     }
   },

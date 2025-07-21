@@ -26,7 +26,7 @@ i18n
     resources,
     fallbackLng: 'id', // Default to Indonesian
     defaultNS: 'common',
-    ns: ['common', 'header', 'hero', 'about', 'services', 'testimonials', 'faq', 'contact', 'footer'],
+    ns: ['common', 'header', 'hero', 'about', 'services', 'testimonials', 'faq', 'contact', 'footer', 'partnership', 'partners-page'],
     debug: false,
 
     interpolation: {

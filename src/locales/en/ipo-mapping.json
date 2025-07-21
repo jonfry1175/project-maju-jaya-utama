@@ -1,0 +1,187 @@
+{
+  "hero": {
+    "badge": "IPO Process",
+    "title": "IPO Mapping",
+    "titleHighlight": "Assessment & Analysis",
+    "description": "Comprehensive mapping to understand your company's position and readiness for the IPO process, identifying areas for improvement and establishing the foundation for your IPO strategy."
+  },
+  "objectives": {
+    "badge": "Main Objectives",
+    "title": "Purpose of IPO Mapping",
+    "description": "Our comprehensive mapping process serves three critical objectives to ensure your IPO success.",
+    "items": [
+      {
+        "title": "Understand Company Position",
+        "description": "Comprehensive analysis of the company's current position and overall readiness for IPO process."
+      },
+      {
+        "title": "Identify Improvement Areas", 
+        "description": "Detailed identification of areas that need enhancement before going public to meet regulatory standards."
+      },
+      {
+        "title": "Strategic Foundation",
+        "description": "Establish the foundation for IPO strategy development and consultant/underwriter selection process."
+      }
+    ]
+  },
+  "components": {
+    "badge": "Mapping Components",
+    "title": "Key Areas of Assessment",
+    "description": "Our comprehensive evaluation covers all critical aspects of your business to ensure IPO readiness.",
+    "items": [
+      {
+        "title": "Organizational Structure",
+        "items": [
+          "Review organizational structure clarity and functionality",
+          "Evaluate management roles and responsibilities", 
+          "Assess Good Corporate Governance (GCG) compliance"
+        ]
+      },
+      {
+        "title": "Business Process",
+        "items": [
+          "Map core business workflow: production, distribution, sales, services",
+          "Identify manual or undocumented processes",
+          "Evaluate business process scalability post-IPO"
+        ]
+      },
+      {
+        "title": "Legal & Compliance",
+        "items": [
+          "Legal audit: asset ownership, permits, contracts, dispute potential",
+          "Compliance with capital market regulations",
+          "Legal and administrative document preparation"
+        ]
+      },
+      {
+        "title": "Financial Readiness",
+        "items": [
+          "Review 3-5 years financial reports",
+          "Identify capital structure, debt, and cash flow",
+          "Evaluate accounting systems and financial reporting (PSAK/IFRS compliance)"
+        ]
+      },
+      {
+        "title": "Operational Capability",
+        "items": [
+          "Assess HR, technology, information systems, and supply chain capabilities",
+          "Evaluate operational efficiency and modernization needs"
+        ]
+      },
+      {
+        "title": "SWOT Analysis",
+        "items": [
+          "Strengths: superior technology, large market share",
+          "Weaknesses: dependency on single supplier", 
+          "Opportunities: supportive market trends",
+          "Threats: new regulations or major competitors"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "badge": "Process Flow",
+    "title": "IPO Mapping Process Flow",
+    "description": "Systematic approach typically conducted by IPO consultants or internal teams.",
+    "steps": [
+      {
+        "title": "Kick-Off Meeting",
+        "description": "Initial stakeholder alignment and project scope definition",
+        "duration": "1-2 Weeks"
+      },
+      {
+        "title": "Data Collection", 
+        "description": "Comprehensive data gathering from all business units",
+        "duration": "2-3 Weeks"
+      },
+      {
+        "title": "Internal Stakeholder Interviews",
+        "description": "In-depth discussions with key management personnel",
+        "duration": "1-2 Weeks"
+      },
+      {
+        "title": "Internal Analysis & Audit",
+        "description": "Detailed assessment of all business aspects",
+        "duration": "3-4 Weeks"
+      },
+      {
+        "title": "SWOT Analysis & Gap Analysis",
+        "description": "Strategic analysis and identification of improvement areas",
+        "duration": "2-3 Weeks"
+      },
+      {
+        "title": "Mapping Report Preparation",
+        "description": "Comprehensive documentation of findings and recommendations",
+        "duration": "2-3 Weeks"
+      },
+      {
+        "title": "Improvement & IPO Strategy Recommendations",
+        "description": "Strategic roadmap for IPO readiness",
+        "duration": "1-2 Weeks"
+      }
+    ]
+  },
+  "outputs": {
+    "badge": "Mapping Outputs",
+    "title": "What You'll Receive",
+    "items": [
+      {
+        "title": "Mapping Report Document",
+        "description": "Comprehensive findings and in-depth analysis documentation"
+      },
+      {
+        "title": "IPO Roadmap",
+        "description": "Strategic action plan based on mapping results"
+      },
+      {
+        "title": "Gap Analysis",
+        "description": "List of improvement requirements before IPO"
+      },
+      {
+        "title": "Risk Matrix",
+        "description": "Risk identification and mitigation strategies"
+      }
+    ]
+  },
+  "benefits": {
+    "badge": "Direct Benefits",
+    "title": "Long-term Benefits of Mapping",
+    "items": [
+      "Avoid regulatory and technical obstacles during IPO process",
+      "Accelerate document preparation and audit processes",
+      "Build investor confidence and credibility"
+    ]
+  },
+  "stats": {
+    "title": "Our Mapping Track Record",
+    "items": [
+      {
+        "value": "3-6",
+        "label": "Months Duration"
+      },
+      {
+        "value": "95%",
+        "label": "Accuracy Rate"
+      },
+      {
+        "value": "50+",
+        "label": "Companies Mapped"
+      },
+      {
+        "value": "100%",
+        "label": "Success Rate"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Begin Your IPO Mapping?",
+    "description": "Start your IPO journey with comprehensive mapping and assessment. Our experts will guide you through every step of the process.",
+    "primaryButton": "Start IPO Mapping",
+    "secondaryButton": "Learn More"
+  },
+  "processCta": {
+    "title": "Ready to Start Your IPO Mapping Journey?",
+    "description": "Let our experts guide you through the comprehensive mapping process.",
+    "button": "Get Started Today"
+  }
+}

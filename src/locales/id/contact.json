@@ -1,8 +1,7 @@
 {
   "section": {
     "badge": "Hubungi Kami",
-    "title": "Mari Diskusikan",
-    "titleHighlight": "Rencana IPO Anda",
+    "title": "Mari Berdiskusi dengan Kami",
     "description": "Tim konsultan kami siap membantu mewujudkan ambisi go public perusahaan Anda."
   },
   "info": {
@@ -27,10 +26,7 @@
     },
     "hours": {
       "title": "Jam Operasional",
-      "schedule": [
-        "Senin - Jumat: 09:00 - 18:00",
-        "Sabtu: 09:00 - 13:00"
-      ],
+      "schedule": ["Senin - Jumat: 09:00 - 18:00", "Sabtu: 09:00 - 13:00"],
       "action": "Jadwalkan Meeting"
     }
   },

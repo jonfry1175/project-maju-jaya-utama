@@ -1,0 +1,175 @@
+{
+  "hero": {
+    "badge": "IPO Process",
+    "title": "Proforma Financial Report",
+    "titleHighlight": "Financial Projections & Modeling",
+    "description": "Comprehensive proforma financial reporting to demonstrate your company's financial projections post-IPO, providing realistic insights to investors about future performance and financial impact."
+  },
+  "objectives": {
+    "badge": "Main Objectives",
+    "title": "Purpose of Proforma Financial Report",
+    "description": "Our proforma financial report serves four critical objectives to support your IPO success and investor confidence.",
+    "items": [
+      {
+        "title": "Show Financial Projections",
+        "description": "Demonstrate the company's financial projection conditions post-IPO to stakeholders and investors."
+      },
+      {
+        "title": "Provide Realistic Insights",
+        "description": "Provide realistic insights to investors about future performance and growth potential."
+      },
+      {
+        "title": "Assess Financial Impact",
+        "description": "Assess the financial impact of IPO including fresh funds and debt reduction implications."
+      },
+      {
+        "title": "Meet Disclosure Requirements",
+        "description": "Fulfill information disclosure requirements from regulators (OJK and BEI) for IPO compliance."
+      }
+    ]
+  },
+  "components": {
+    "badge": "Key Components",
+    "title": "Main Components of Proforma Financial Report",
+    "description": "Our comprehensive proforma financial report includes three essential financial statements with detailed projections and assumptions.",
+    "items": [
+      {
+        "title": "Proforma Balance Sheet",
+        "items": [
+          "Shows changes in capital structure, cash, assets, and liabilities after IPO proceeds",
+          "Example changes: increased cash, reduced short-term debt"
+        ]
+      },
+      {
+        "title": "Proforma Income Statement",
+        "items": [
+          "Projects revenue, operational costs, and net profit in future periods",
+          "Assumes capacity increases or expansion funded by IPO proceeds"
+        ]
+      },
+      {
+        "title": "Proforma Cash Flow Statement",
+        "items": [
+          "Shows cash flows from operations, investments, and financing post-IPO",
+          "Includes IPO fund utilization for CAPEX, debt repayment, or expansion"
+        ]
+      }
+    ]
+  },
+  "assumptions": {
+    "badge": "Key Assumptions",
+    "title": "Assumptions Used in Proforma Reports",
+    "description": "Proforma reports must include clear and detailed assumptions covering all critical financial aspects and strategic initiatives.",
+    "items": [
+      {
+        "title": "IPO Fund Amount",
+        "description": "Total amount of funds to be raised from the IPO offering."
+      },
+      {
+        "title": "Use of Proceeds",
+        "description": "Detailed allocation of IPO funds for business expansion, debt repayment, and working capital."
+      },
+      {
+        "title": "Revenue Growth Projections",
+        "description": "Projected revenue growth rates and margin improvements over the forecast period."
+      },
+      {
+        "title": "Capital Structure Changes",
+        "description": "Changes in debt-to-equity ratio and interest rate assumptions post-IPO."
+      },
+      {
+        "title": "IPO Costs & Tax Effects",
+        "description": "Estimated IPO transaction costs and tax implications of the public offering."
+      }
+    ]
+  },
+  "process": {
+    "badge": "Process Flow",
+    "title": "Proforma Financial Report Development Process",
+    "description": "Our systematic approach ensures accurate financial projections and comprehensive analysis for your IPO documentation.",
+    "steps": [
+      {
+        "title": "Collect Historical Data (3-5 Years)",
+        "description": "Gather and analyze 3-5 years of historical financial data to establish baseline performance trends."
+      },
+      {
+        "title": "Determine Assumptions & Financial Scenarios",
+        "description": "Develop detailed assumptions for revenue growth, cost structure, and capital allocation scenarios."
+      },
+      {
+        "title": "Prepare Proforma Balance Sheet, Income Statement & Cash Flow",
+        "description": "Create comprehensive proforma financial statements showing post-IPO financial position and performance."
+      },
+      {
+        "title": "Internal & Consultant Validation",
+        "description": "Conduct thorough internal review and external consultant validation of assumptions and projections."
+      },
+      {
+        "title": "Underwriter & Legal Auditor Review",
+        "description": "Submit for review and approval by underwriters and legal auditors to ensure compliance."
+      },
+      {
+        "title": "Submission to Regulators & Investors",
+        "description": "Final submission to regulatory authorities and inclusion in investor presentation materials."
+      }
+    ]
+  },
+  "outputs": {
+    "badge": "Final Outputs",
+    "title": "Final Deliverables",
+    "items": [
+      {
+        "title": "Proforma Financial Report Document",
+        "description": "Complete audited proforma financial report ready for regulatory submission and investor presentations."
+      },
+      {
+        "title": "IPO Prospectus Disclosure",
+        "description": "Detailed financial disclosures formatted for inclusion in the official IPO prospectus document."
+      },
+      {
+        "title": "Roadshow & Investor Presentation",
+        "description": "Executive summary and key financial highlights prepared for roadshow and investor meetings."
+      },
+      {
+        "title": "Regulatory Filing Attachment",
+        "description": "Properly formatted documents for submission to OJK/BEI as part of IPO registration requirements."
+      }
+    ]
+  },
+  "benefits": {
+    "badge": "Strategic Benefits",
+    "title": "Benefits of Professional Proforma Financial Reporting",
+    "items": [
+      "Attract investor confidence with realistic and transparent financial projections",
+      "Support management in developing post-IPO business plans and strategic initiatives", 
+      "Enhance corporate accountability regarding IPO fund utilization and performance targets"
+    ]
+  },
+  "stats": {
+    "title": "Our Track Record",
+    "items": [
+      {
+        "value": "25+",
+        "label": "Proforma Reports Completed"
+      },
+      {
+        "value": "98%",
+        "label": "Regulatory Approval Rate"
+      },
+      {
+        "value": "100+",
+        "label": "Financial Models Built"
+      },
+      {
+        "value": "100%",
+        "label": "Client Satisfaction"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Develop Your Proforma Financial Report?",
+    "description": "Get professional proforma financial reporting services to strengthen your IPO documentation and investor confidence. Our expert team will help you create comprehensive and compliant financial projections.",
+    "primaryButton": "Start Development",
+    "secondaryButton": "Download Sample Report"
+  }
+}

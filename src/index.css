@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Lora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,14 +8,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 35% 15%;
+    --background: 220 14% 67%;
+    --foreground: 220 20% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 35% 15%;
+    --card: 220 15% 75%;
+    --card-foreground: 220 20% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 35% 15%;
+    --popover: 220 15% 75%;
+    --popover-foreground: 220 20% 15%;
 
     --primary: 215 85% 12%;
     --primary-foreground: 0 0% 98%;
@@ -25,7 +24,7 @@
     --secondary-foreground: 0 0% 98%;
 
     --accent: 42 87% 55%;
-    --accent-foreground: 215 85% 12%;
+    --accent-foreground: 220 20% 15%;
 
     --success: 200 70% 45%;
     --success-foreground: 0 0% 98%;
@@ -33,14 +32,14 @@
     --info: 200 90% 40%;
     --info-foreground: 0 0% 98%;
 
-    --muted: 210 40% 98%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 220 12% 80%;
+    --muted-foreground: 220 15% 35%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
+    --border: 220 20% 55%;
+    --input: 220 15% 85%;
     --ring: 215 85% 12%;
 
     --radius: 0.75rem;
@@ -56,36 +55,36 @@
   }
 
   .dark {
-    --background: 215 85% 8%;
-    --foreground: 210 40% 98%;
+    --background: 220 20% 25%;
+    --foreground: 220 15% 90%;
 
-    --card: 215 85% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 18% 30%;
+    --card-foreground: 220 15% 90%;
 
-    --popover: 215 85% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 18% 30%;
+    --popover-foreground: 220 15% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 215 85% 8%;
+    --primary: 220 15% 90%;
+    --primary-foreground: 220 20% 15%;
 
-    --secondary: 215 65% 25%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 25% 35%;
+    --secondary-foreground: 220 15% 90%;
 
-    --muted: 217 32% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 18% 20%;
+    --muted-foreground: 220 12% 65%;
 
     --accent: 42 87% 60%;
-    --accent-foreground: 215 85% 8%;
+    --accent-foreground: 220 20% 15%;
 
     --success: 200 70% 50%;
-    --success-foreground: 210 40% 98%;
+    --success-foreground: 220 15% 90%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 220 15% 90%;
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 212 27% 84%;
+    --border: 220 20% 45%;
+    --input: 220 18% 35%;
+    --ring: 220 15% 80%;
   }
 }
 
@@ -95,7 +94,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
+    @apply bg-background text-foreground font-sans antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
@@ -104,42 +103,163 @@
   }
 }
 
+/* Typography System */
 @layer utilities {
-  .font-inter {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Font Families - already defined in Tailwind config, these are fallbacks */
+  .font-sans {
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
   }
-  
+
   .font-display {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
   }
-  
+
   .font-mono {
-    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-family: "IBM Plex Mono", "Courier New", monospace;
   }
-  
+
+  /* Standardized Heading Sizes with Responsive Variants - More Conservative */
+  .heading-1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold font-display leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold font-display leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-xl sm:text-2xl lg:text-3xl font-semibold font-display leading-tight;
+  }
+
+  .heading-4 {
+    @apply text-lg sm:text-xl lg:text-2xl font-semibold font-display leading-tight;
+  }
+
+  .heading-5 {
+    @apply text-base sm:text-lg lg:text-xl font-semibold leading-tight;
+  }
+
+  .heading-6 {
+    @apply text-sm sm:text-base lg:text-lg font-semibold leading-tight;
+  }
+
+  /* Body Text Sizes - More Professional */
+  .text-body-large {
+    @apply text-base sm:text-lg font-normal leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-sm sm:text-base font-normal leading-relaxed;
+  }
+
+  .text-body-small {
+    @apply text-xs sm:text-sm font-normal leading-relaxed;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-8 sm:py-12 lg:py-16 xl:py-20;
+  }
+
+  .section-padding-small {
+    @apply py-6 sm:py-8 lg:py-12;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6;
+  }
+
+  /* Card Padding Variants */
+  .card-padding {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+
+  .card-padding-small {
+    @apply p-3 sm:p-4 lg:p-6;
+  }
+
+  .card-padding-large {
+    @apply p-6 sm:p-8 lg:p-12;
+  }
+
+  /* Icon Sizes */
+  .icon-small {
+    @apply w-4 h-4 sm:w-5 sm:h-5;
+  }
+
+  .icon-medium {
+    @apply w-5 h-5 sm:w-6 sm:h-6;
+  }
+
+  .icon-large {
+    @apply w-6 h-6 sm:w-8 sm:h-8;
+  }
+
+  /* Consistent Borders */
+  .border-subtle {
+    @apply border-border/50;
+  }
+
+  .border-medium {
+    @apply border-border/60;
+  }
+
+  .border-strong {
+    @apply border-border;
+  }
+
+  .border-primary-subtle {
+    @apply border-primary/20;
+  }
+
+  .border-primary-medium {
+    @apply border-primary/30;
+  }
+
   .gradient-brand {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%) !important;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%
+    ) !important;
   }
-  
+
   .btn-gradient-brand {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%) !important;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%
+    ) !important;
     color: white !important;
   }
-  
+
   .btn-gradient-brand:hover {
     opacity: 0.9;
   }
-  
+
   .gradient-accent {
-    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--success)) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--accent)) 0%,
+      hsl(var(--success)) 100%
+    );
   }
 
   .gradient-subtle {
-    background: linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--background)) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--muted)) 0%,
+      hsl(var(--background)) 100%
+    );
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -161,12 +281,22 @@
 
 /* Professional animations */
 @layer utilities {
+  /* Standard animation classes for consistent usage */
   .animate-fade-up {
     animation: fade-up 0.8s ease-out forwards;
   }
 
+  .animate-fade-up-delay {
+    animation: fade-up 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
   .animate-slide-in-left {
     animation: slide-in-left 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
   }
 
   .animate-scale-in {
@@ -179,6 +309,24 @@
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  /* Section-specific animations */
+  .animate-section {
+    animation: fade-up 0.8s ease-out forwards;
+  }
+
+  .animate-card {
+    animation: scale-in 0.6s ease-out forwards;
+  }
+
+  .animate-hero-content {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+
+  .animate-hero-stats {
+    animation: fade-up 0.8s ease-out 0.3s forwards;
+    opacity: 0;
   }
 
   @keyframes fade-up {
@@ -196,6 +344,17 @@
     from {
       opacity: 0;
       transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
     }
     to {
       opacity: 1;
@@ -226,7 +385,8 @@
   }
 
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {

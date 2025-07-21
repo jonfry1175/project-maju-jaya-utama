@@ -1,15 +1,29 @@
 {
   "companyName": "Global Sinergi Kapital",
-  "tagline": "Integrated Pre-IPO and IPO Consultant",
+  "tagline": "",
   "nav": {
+    "home": "Home",
     "about": "About Us",
+    "about.overview": "Our Company",
+    "about.leadership": "Our Leadership",
     "services": "Services",
-    "process": "IPO Process",
-    "contact": "Contact"
+    "services.fundRaising": "Fund Raising",
+    "services.professional": "Professional Services",
+    "partners": "Our Clients",
+    "ipoProcess": "IPO Process",
+    "ipoProcess.mapping": "Mapping",
+    "ipoProcess.scenarioPlans": "Scenario Plans",
+    "ipoProcess.proformaFinancialReport": "Proforma Financial Report",
+    "ipoProcess.managementImprovementPlans": "Management Improvement Plans",
+    "ipoProcess.bridgingFinancing": "Bridging Financing",
+    "ipoProcess.ipoCompliancePlans": "IPO Compliance Plans",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact Us"
   },
   "cta": {
     "freeConsultation": "Free Consultation",
-    "startIPOJourney": "Start Your IPO Journey"
+    "startIPOJourney": "Contact Us"
   },
   "phone": "(021) 1234-5678",
   "whatsapp": "WhatsApp"
