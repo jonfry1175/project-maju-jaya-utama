@@ -55,7 +55,7 @@ const Header = () => {
       href: "#",
       subItems: [
         { name: t('nav.ipoProcess.mapping'), href: "/ipo-process/mapping" },
-        { name: t('nav.ipoProcess.scenarioPlans'), href: "#" },
+        { name: t('nav.ipoProcess.scenarioPlans'), href: "/ipo-process/scenario-plans" },
         { name: t('nav.ipoProcess.proformaFinancialReport'), href: "#" },
         { name: t('nav.ipoProcess.managementImprovementPlans'), href: "#" },
         { name: t('nav.ipoProcess.bridgingFinancing'), href: "#" },
