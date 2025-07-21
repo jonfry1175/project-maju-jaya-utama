@@ -173,27 +173,41 @@ const FundRaising = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section id="hero" className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
-        <div className="container mx-auto container-padding">
-          {/* Header */}
+      {/* Hero Section */}
+      <section className="section-padding relative animate-section">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=800&fit=crop&q=80)',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70"></div>
+        </div>
+        <div className="container mx-auto container-padding relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
-            <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
-              <TrendingUp className="icon-small mr-2" />
+            <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
+              <TrendingUp className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
               Fund Raising Services
             </div>
             
-            <h2 className="heading-2 text-primary mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-4 sm:mb-6 leading-tight">
               Professional Fund Raising
-              <span className="text-gradient block mt-1 sm:mt-2 leading-normal pb-1 sm:pb-2">
+              <span className="text-white block mt-1 sm:mt-2">
                 Solutions
               </span>
-            </h2>
-
-            <p className="text-body-large text-muted-foreground">
+            </h1>
+            
+            <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
               Comprehensive fund raising services to secure the capital your business needs for growth, expansion, and strategic initiatives.
             </p>
           </div>
+        </div>
+      </section>
 
+      {/* Main Content Section */}
+      <section id="main-content" className="section-padding animate-section">
+        <div className="container mx-auto container-padding">
           {/* Fund Raising Categories Tabs */}
           <Tabs defaultValue="equity" className="w-full mb-8 sm:mb-12 lg:mb-18">
             <TabsList className="grid w-full max-w-full sm:max-w-4xl mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-0 mb-8 sm:mb-12 h-auto sm:h-10 p-1">
