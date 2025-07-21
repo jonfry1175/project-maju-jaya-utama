@@ -1,73 +1,91 @@
-# Welcome- to your Lovable project
+# Global Sinergi Kapital
 
-## Project info
+A modern single-page application for Global Sinergi Kapital, an Indonesian financial services company specializing in corporate finance and investment advisory.
 
-**URL**: https://lovable.dev/projects/d7598039-3468-4ead-bf1f-3a2f2639ed7b
+## Features
 
-## How can I edit this code?
+- Multilingual support (English and Indonesian)
+- Modern, responsive design
+- Service pages for various financial solutions
+- Client testimonials and portfolio
+- Contact information and team showcase
 
-There are several ways of editing your application.
+## Development
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d7598039-3468-4ead-bf1f-3a2f2639ed7b) and start prompting.
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone <repository-url>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd project-global-sinergi-kapital
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will run on http://localhost:8080
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+```bash
+npm run dev       # Start development server
+npm run build     # Create production build
+npm run lint      # Run ESLint
+npm run preview   # Preview production build locally
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Technology Stack
 
-## What technologies are used for this project?
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite with SWC for fast refresh
+- **UI Components**: shadcn/ui (Radix UI primitives)
+- **Styling**: Tailwind CSS with custom design system
+- **Routing**: React Router v6
+- **State Management**: React Query (TanStack Query)
+- **Forms**: React Hook Form with Zod validation
+- **Animations**: Framer Motion
 
-This project is built with:
+## Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── components/          # Feature components
+│   ├── ui/             # shadcn/ui components
+│   ├── Header.tsx      # Navigation header
+│   ├── HeroSection.tsx # Landing hero
+│   └── ...            # Other sections
+├── pages/              # Route-level components
+├── hooks/              # Custom React hooks
+├── lib/                # Utilities and helpers
+└── index.css          # Global styles and design tokens
+```
 
-## How can I deploy this project?
+## Services Offered
 
-Simply open [Lovable](https://lovable.dev/projects/d7598039-3468-4ead-bf1f-3a2f2639ed7b) and click on Share -> Publish.
+The application showcases various financial services:
 
-## Can I connect a custom domain to my Lovable project?
+- IPO Compliance Plans
+- Bridging Financing
+- Management Improvement Plans
+- Proforma Financial Reports
+- And more...
 
-Yes, you can!
+## Contributing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Create a new branch for your feature
+2. Make your changes
+3. Run `npm run lint` to check for linting errors
+4. Submit a pull request
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## License
+
+Private repository for Global Sinergi Kapital.
