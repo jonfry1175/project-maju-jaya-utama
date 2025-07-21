@@ -1,0 +1,175 @@
+{
+  "hero": {
+    "badge": "Proses IPO",
+    "title": "Laporan Keuangan Proforma",
+    "titleHighlight": "Proyeksi & Pemodelan Keuangan",
+    "description": "Pelaporan keuangan proforma yang komprehensif untuk menunjukkan proyeksi keuangan perusahaan pasca-IPO, memberikan wawasan realistis kepada investor mengenai kinerja mendatang dan dampak finansial."
+  },
+  "objectives": {
+    "badge": "Tujuan Utama",
+    "title": "Tujuan Laporan Keuangan Proforma",
+    "description": "Laporan keuangan proforma kami melayani empat tujuan kritis untuk mendukung kesuksesan IPO dan kepercayaan investor.",
+    "items": [
+      {
+        "title": "Menunjukkan Kondisi Keuangan Proyeksi",
+        "description": "Menunjukkan kondisi proyeksi keuangan perusahaan pasca-IPO kepada stakeholder dan investor."
+      },
+      {
+        "title": "Memberikan Gambaran Realistis",
+        "description": "Memberikan gambaran realistis kepada investor mengenai kinerja mendatang dan potensi pertumbuhan."
+      },
+      {
+        "title": "Menilai Dampak Finansial",
+        "description": "Menilai dampak finansial dari IPO seperti masuknya dana segar dan pengurangan utang."
+      },
+      {
+        "title": "Memenuhi Syarat Keterbukaan Informasi",
+        "description": "Memenuhi syarat keterbukaan informasi dari regulator (OJK dan BEI) untuk kepatuhan IPO."
+      }
+    ]
+  },
+  "components": {
+    "badge": "Komponen Utama",
+    "title": "Komponen Utama Laporan Keuangan Proforma",
+    "description": "Laporan keuangan proforma komprehensif kami mencakup tiga laporan keuangan penting dengan proyeksi dan asumsi yang terperinci.",
+    "items": [
+      {
+        "title": "Neraca (Balance Sheet) Proforma",
+        "items": [
+          "Menunjukkan perubahan struktur modal, kas, aset, dan liabilitas setelah dana IPO diterima",
+          "Contoh perubahan: kas bertambah, utang jangka pendek berkurang"
+        ]
+      },
+      {
+        "title": "Laporan Laba Rugi (Income Statement) Proforma",
+        "items": [
+          "Memproyeksikan pendapatan, beban operasional, dan laba bersih di masa depan",
+          "Mengasumsikan peningkatan kapasitas atau ekspansi yang dibiayai dari hasil IPO"
+        ]
+      },
+      {
+        "title": "Laporan Arus Kas (Cash Flow Statement) Proforma",
+        "items": [
+          "Menampilkan arus kas dari operasi, investasi, dan pendanaan setelah IPO",
+          "Termasuk penggunaan dana IPO untuk CAPEX, pelunasan utang, atau ekspansi"
+        ]
+      }
+    ]
+  },
+  "assumptions": {
+    "badge": "Asumsi-Asumsi",
+    "title": "Asumsi-Asumsi yang Digunakan",
+    "description": "Laporan proforma harus menyertakan asumsi yang jelas dan terukur, mencakup semua aspek keuangan kritis dan inisiatif strategis.",
+    "items": [
+      {
+        "title": "Jumlah Dana IPO",
+        "description": "Total jumlah dana yang akan diperoleh dari penawaran IPO."
+      },
+      {
+        "title": "Penggunaan Dana (Use of Proceeds)",
+        "description": "Alokasi terperinci dana IPO untuk ekspansi bisnis, pelunasan utang, dan modal kerja."
+      },
+      {
+        "title": "Proyeksi Pertumbuhan Pendapatan",
+        "description": "Proyeksi tingkat pertumbuhan pendapatan dan peningkatan margin selama periode peramalan."
+      },
+      {
+        "title": "Perubahan Struktur Modal",
+        "description": "Perubahan rasio utang terhadap ekuitas dan asumsi tingkat bunga pasca-IPO."
+      },
+      {
+        "title": "Biaya IPO dan Efek Pajak",
+        "description": "Estimasi biaya transaksi IPO dan implikasi pajak dari penawaran umum."
+      }
+    ]
+  },
+  "process": {
+    "badge": "Alur Proses",
+    "title": "Alur Proses Penyusunan Laporan Keuangan Proforma",
+    "description": "Pendekatan sistematis kami memastikan proyeksi keuangan yang akurat dan analisis komprehensif untuk dokumentasi IPO Anda.",
+    "steps": [
+      {
+        "title": "Kumpulkan Data Historis (3-5 Tahun)",
+        "description": "Mengumpulkan dan menganalisis data keuangan historis 3-5 tahun untuk menetapkan tren kinerja dasar."
+      },
+      {
+        "title": "Tentukan Asumsi & Skenario Keuangan",
+        "description": "Mengembangkan asumsi terperinci untuk pertumbuhan pendapatan, struktur biaya, dan skenario alokasi modal."
+      },
+      {
+        "title": "Susun Laporan Neraca, Laba Rugi & Arus Kas Proforma",
+        "description": "Membuat laporan keuangan proforma komprehensif yang menunjukkan posisi dan kinerja keuangan pasca-IPO."
+      },
+      {
+        "title": "Validasi Internal & Konsultan",
+        "description": "Melakukan tinjauan internal menyeluruh dan validasi konsultan eksternal terhadap asumsi dan proyeksi."
+      },
+      {
+        "title": "Review Underwriter & Legal Auditor",
+        "description": "Mengajukan untuk ditinjau dan disetujui oleh underwriter dan auditor hukum untuk memastikan kepatuhan."
+      },
+      {
+        "title": "Penyampaian ke Regulator & Investor",
+        "description": "Pengajuan final kepada otoritas regulasi dan penyertaan dalam materi presentasi investor."
+      }
+    ]
+  },
+  "outputs": {
+    "badge": "Output Akhir",
+    "title": "Hasil Akhir",
+    "items": [
+      {
+        "title": "Dokumen Proforma Financial Report",
+        "description": "Laporan keuangan proforma lengkap yang telah diaudit siap untuk pengajuan regulasi dan presentasi investor."
+      },
+      {
+        "title": "Disclosure di Prospektus IPO",
+        "description": "Pengungkapan keuangan terperinci yang diformat untuk disertakan dalam dokumen prospektus IPO resmi."
+      },
+      {
+        "title": "Bagian dari Roadshow & Presentasi ke Investor",
+        "description": "Ringkasan eksekutif dan highlight keuangan utama yang disiapkan untuk roadshow dan pertemuan investor."
+      },
+      {
+        "title": "Lampiran dalam Dokumen Pendaftaran ke OJK/BEI",
+        "description": "Dokumen yang diformat dengan benar untuk pengajuan ke OJK/BEI sebagai bagian dari persyaratan registrasi IPO."
+      }
+    ]
+  },
+  "benefits": {
+    "badge": "Manfaat Strategis",
+    "title": "Manfaat Pelaporan Keuangan Proforma Profesional",
+    "items": [
+      "Menarik kepercayaan investor dengan proyeksi keuangan yang realistis dan transparan",
+      "Membantu manajemen dalam menyusun rencana bisnis pasca-IPO dan inisiatif strategis", 
+      "Meningkatkan akuntabilitas perusahaan terhadap penggunaan dana IPO dan target kinerja"
+    ]
+  },
+  "stats": {
+    "title": "Rekam Jejak Kami",
+    "items": [
+      {
+        "value": "25+",
+        "label": "Laporan Proforma Diselesaikan"
+      },
+      {
+        "value": "98%",
+        "label": "Tingkat Persetujuan Regulator"
+      },
+      {
+        "value": "100+",
+        "label": "Model Keuangan Dibangun"
+      },
+      {
+        "value": "100%",
+        "label": "Kepuasan Klien"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Siap Mengembangkan Laporan Keuangan Proforma Anda?",
+    "description": "Dapatkan layanan pelaporan keuangan proforma profesional untuk memperkuat dokumentasi IPO dan kepercayaan investor. Tim ahli kami akan membantu Anda membuat proyeksi keuangan yang komprehensif dan patuh.",
+    "primaryButton": "Mulai Pengembangan",
+    "secondaryButton": "Unduh Contoh Laporan"
+  }
+}
