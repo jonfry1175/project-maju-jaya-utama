@@ -150,7 +150,7 @@ const Footer = () => {
                 </a>
                 <a href="mailto:info@globalsinergikapital.com" className="flex items-center space-x-2 hover:text-white transition-colors">
                   <Mail className="icon-small" />
-                  <span>info@ritzcorpora.com</span>
+                  <span>info@globalsinergikapital.com</span>
                 </a>
                 <div className="flex items-center space-x-2">
                   <Clock className="icon-small" />
@@ -159,8 +159,8 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Resources */}
-            <div>
+            {/* Resources Hidden*/}
+            <div className="hidden">
               <h4 className="heading-5 mb-4">{t('sections.resources.title')}</h4>
               <div className="space-y-2">
                 {resources.map((resource) => (

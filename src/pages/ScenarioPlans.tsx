@@ -29,9 +29,15 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 const ScenarioPlans = () => {
   const { t } = useTranslation("scenario-plans");
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const scenarioPlanningGoals = [
     {
@@ -193,22 +199,31 @@ const ScenarioPlans = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
-        <div className="container mx-auto container-padding">
+      <section className="section-padding relative max-w-7xl mx-auto animate-section">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-2xl"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop)',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70 rounded-2xl"></div>
+        </div>
+        <div className="container mx-auto container-padding relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
             <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
               <PieChart className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
               {t("hero.badge")}
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-4 sm:mb-6 leading-tight">
               {t("hero.title")}
-              <span className="text-gradient block mt-1 sm:mt-2">
+              <span className="text-white block mt-1 sm:mt-2">
                 {t("hero.titleHighlight")}
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
               {t("hero.description")}
             </p>
           </div>

@@ -37,9 +37,15 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 const BridgingFinancing = () => {
   const { t } = useTranslation("bridging-financing");
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const mainObjectives = [
     {
@@ -203,22 +209,31 @@ const BridgingFinancing = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
-        <div className="container mx-auto container-padding">
+      <section className="section-padding relative max-w-7xl mx-auto animate-section">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-2xl"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&h=600&fit=crop)',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70 rounded-2xl"></div>
+        </div>
+        <div className="container mx-auto container-padding relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
             <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
               <Banknote className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
               {t("hero.badge")}
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-4 sm:mb-6 leading-tight">
               {t("hero.title")}
-              <span className="text-gradient block mt-1 sm:mt-2">
+              <span className="text-white block mt-1 sm:mt-2">
                 {t("hero.titleHighlight")}
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
               {t("hero.description")}
             </p>
           </div>
@@ -332,35 +347,27 @@ const BridgingFinancing = () => {
               </p>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full bg-white rounded-xl border border-subtle shadow-sm">
-                <thead>
-                  <tr className="border-b border-subtle bg-muted/50">
-                    <th className="text-left p-4 font-semibold text-foreground">{t("fundUsage.table.need")}</th>
-                    <th className="text-left p-4 font-semibold text-foreground">{t("fundUsage.table.description")}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {fundUsage.map((usage, index) => {
-                    const Icon = usage.icon;
-                    return (
-                      <tr key={index} className="border-b border-subtle hover:bg-muted/20 transition-colors">
-                        <td className="p-4">
-                          <div className="flex items-center space-x-3">
-                            <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                              <Icon className="icon-small text-primary" />
-                            </div>
-                            <span className="font-semibold text-foreground">{usage.need}</span>
-                          </div>
-                        </td>
-                        <td className="p-4 text-muted-foreground">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {fundUsage.map((usage, index) => {
+                const Icon = usage.icon;
+                return (
+                  <Card key={index} className="bg-white border border-subtle hover:shadow-lg transition-all duration-300 card-padding animate-card">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon className="icon-small sm:icon-medium text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="heading-5 text-foreground mb-2">
+                          {usage.need}
+                        </h3>
+                        <p className="text-body-small text-muted-foreground">
                           {usage.description}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </div>

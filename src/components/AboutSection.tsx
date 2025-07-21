@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   const { t, i18n } = useTranslation("about");
@@ -26,36 +27,42 @@ const AboutSection = () => {
     {
       step: "1",
       titleKey: "mapping",
+      route: "/ipo-process/mapping",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop", // Business analysis and mapping
     },
     {
       step: "2",
       titleKey: "scenario",
+      route: "/ipo-process/scenario-plans",
       image:
         "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop", // Strategic planning and scenarios
     },
     {
       step: "3",
       titleKey: "proforma",
+      route: "/ipo-process/proforma-financial-report",
       image:
         "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop", // Financial reports and analysis
     },
     {
       step: "4",
       titleKey: "management",
+      route: "/ipo-process/management-improvement-plans",
       image:
         "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop", // Team management and improvement
     },
     {
       step: "5",
       titleKey: "bridging",
+      route: "/ipo-process/bridging-financing",
       image:
         "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800&h=600&fit=crop", // People connecting/celebrating representing bridging partnerships
     },
     {
       step: "6",
       titleKey: "compliance",
+      route: "/ipo-process/compliance-plans",
       image:
         "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop", // Compliance and documentation
     },
@@ -1045,10 +1052,14 @@ const AboutSection = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {roadmap.map((item, index) => (
-                <Card
+                <Link
                   key={index}
-                  className="group overflow-hidden hover:shadow-xl transition-all duration-300 animate-card"
-                  style={{ animationDelay: `${index * 0.1}s` }}>
+                  to={item.route}
+                  className="block transform hover:scale-105 transition-all duration-300"
+                >
+                  <Card
+                    className="group overflow-hidden hover:shadow-xl transition-all duration-300 animate-card cursor-pointer"
+                    style={{ animationDelay: `${index * 0.1}s` }}>
                   {/* Image Section */}
                   <div className="relative h-32 overflow-hidden">
                     <img
@@ -1087,6 +1098,7 @@ const AboutSection = () => {
                     </div>
                   </div>
                 </Card>
+                </Link>
               ))}
             </div>
           </div>
