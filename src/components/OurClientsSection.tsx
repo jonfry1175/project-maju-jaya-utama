@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Building2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import LazyImage from "@/components/LazyImage";
 
 const OurClientsSection = () => {
   const { t } = useTranslation("about");
@@ -38,7 +39,7 @@ const OurClientsSection = () => {
           <div className="flex justify-center">
             <Card className="card-padding bg-white border border-subtle hover:shadow-xl transition-all duration-300 group hover:scale-105 border-medium hover:border-primary/20">
               <div className="flex items-center justify-center">
-                <img
+                <LazyImage
                   src="/logologo/pandu-logistic.png"
                   alt="Pandu Logistic"
                   className="h-24 sm:h-32 lg:h-36 w-auto max-w-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"

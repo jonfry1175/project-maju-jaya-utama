@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import {
   Search,
   Target,
@@ -174,6 +175,11 @@ const IpoMapping = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="IPO Process Mapping - Pemetaan Proses Go Public"
+        description="Layanan pemetaan proses IPO komprehensif untuk membantu perusahaan memahami seluruh tahapan go public di Bursa Efek Indonesia. Analisis kesiapan, roadmap IPO, dan strategi implementasi."
+        keywords="IPO mapping, pemetaan proses IPO, tahapan go public, IPO readiness assessment, roadmap IPO, strategi IPO, konsultan IPO mapping"
+      />
       <Header />
       
       {/* Hero Section */}

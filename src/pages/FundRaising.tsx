@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import SEO from "@/components/SEO";
 import {
   TrendingUp,
   DollarSign,
@@ -171,6 +172,11 @@ const FundRaising = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Fund Raising Services - Pendanaan Perusahaan"
+        description="Layanan fund raising profesional untuk membantu perusahaan mendapatkan modal yang dibutuhkan untuk pertumbuhan, ekspansi, dan inisiatif strategis. Equity funding, debt financing, dan hybrid instruments."
+        keywords="fund raising, pendanaan perusahaan, equity funding, debt financing, investor network, modal usaha, venture capital, private equity"
+      />
       <Header />
       
       <section id="hero" className="section-padding bg-gradient-subtle max-w-7xl mx-auto animate-section">
