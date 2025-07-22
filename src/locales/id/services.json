@@ -5,8 +5,131 @@
     "titleHighlight": "Perjalanan IPO Anda",
     "description": "Kami menyediakan layanan konsultasi IPO yang komprehensif, dari persiapan awal hingga listing di bursa efek."
   },
+  "hero": {
+    "badge": "Layanan Penggalangan Dana",
+    "title": "Penggalangan Dana Profesional",
+    "subtitle": "Solusi",
+    "description": "Layanan penggalangan dana komprehensif untuk mengamankan modal yang dibutuhkan bisnis Anda untuk pertumbuhan, ekspansi, dan inisiatif strategis."
+  },
   "categories": {
+    "equity": {
+      "title": "Pendanaan Ekuitas",
+      "description": "Solusi penggalangan dana ekuitas yang komprehensif untuk perusahaan tahap pertumbuhan",
+      "services": {
+        "series": {
+          "title": "Penggalangan Dana Series A/B/C",
+          "description": "Panduan strategis melalui putaran pendanaan institusional dengan valuasi dan syarat yang optimal.",
+          "features": [
+            "Penargetan & Pendekatan Investor",
+            "Pengembangan Pitch Deck",
+            "Koordinasi Due Diligence",
+            "Negosiasi Term Sheet"
+          ],
+          "price": "Paket Premium"
+        },
+        "angel": {
+          "title": "Investasi Angel Strategis",
+          "description": "Akses ke individu berkekayaan tinggi dan jaringan investor angel untuk pendanaan tahap awal.",
+          "features": [
+            "Akses Jaringan Angel",
+            "Pencocokan Investor",
+            "Coaching Presentasi",
+            "Strukturisasi Deal"
+          ],
+          "price": "Angel Round"
+        },
+        "privateEquity": {
+          "title": "Solusi Private Equity",
+          "description": "Menghubungkan perusahaan matang dengan perusahaan private equity untuk peluang pertumbuhan atau exit.",
+          "features": [
+            "Identifikasi Perusahaan PE",
+            "Pemodelan Keuangan",
+            "Presentasi Manajemen",
+            "Perencanaan Exit"
+          ],
+          "price": "Advisory PE"
+        }
+      }
+    },
+    "debt": {
+      "title": "Pembiayaan Utang",
+      "description": "Solusi pembiayaan utang alternatif untuk mendorong pertumbuhan bisnis",
+      "services": {
+        "bankLoan": {
+          "title": "Fasilitasi Pinjaman Bank",
+          "description": "Bantuan dalam mengamankan pinjaman bank tradisional dengan syarat menguntungkan dan suku bunga kompetitif.",
+          "features": [
+            "Persiapan Aplikasi Pinjaman",
+            "Manajemen Hubungan Bank",
+            "Strategi Peningkatan Kredit",
+            "Negosiasi Suku Bunga"
+          ],
+          "price": "Advisory Utang"
+        },
+        "alternative": {
+          "title": "Pinjaman Alternatif",
+          "description": "Akses ke pemberi pinjaman non-tradisional termasuk fintech dan pembiayaan berbasis pendapatan.",
+          "features": [
+            "Jaringan Pemberi Pinjaman Fintech",
+            "Pembiayaan Berbasis Pendapatan",
+            "Uang Muka Pedagang",
+            "Pinjaman Berbasis Aset"
+          ],
+          "price": "Keuangan Alternatif"
+        },
+        "bonds": {
+          "title": "Obligasi & Surat Berharga",
+          "description": "Penerbitan obligasi korporat dan instrumen utang terstruktur untuk kebutuhan pendanaan yang lebih besar.",
+          "features": [
+            "Strukturisasi Obligasi",
+            "Dukungan Rating Kredit",
+            "Hubungan Investor",
+            "Kepatuhan Regulasi"
+          ],
+          "price": "Paket Surat Berharga"
+        }
+      }
+    },
     "advisory": {
+      "title": "Konsultasi Strategis",
+      "description": "Layanan konsultasi komprehensif untuk mengoptimalkan strategi penggalangan dana Anda",
+      "services": {
+        "strategy": {
+          "title": "Strategi Penggalangan Dana",
+          "description": "Perencanaan strategis komprehensif untuk menentukan bauran pendanaan dan timing yang optimal.",
+          "features": [
+            "Penilaian Kebutuhan Modal",
+            "Perencanaan Timeline Pendanaan",
+            "Evaluasi Kesiapan Investor",
+            "Roadmap Strategis"
+          ],
+          "price": "Konsultasi Strategi"
+        },
+        "relations": {
+          "title": "Hubungan Investor",
+          "description": "Membangun dan memelihara hubungan yang kuat dengan investor yang ada dan potensial.",
+          "features": [
+            "Komunikasi Investor",
+            "Pelaporan Triwulanan",
+            "Koordinasi Pertemuan Investor",
+            "Manajemen Hubungan"
+          ],
+          "price": "Layanan IR"
+        },
+        "modeling": {
+          "title": "Pemodelan Keuangan",
+          "description": "Proyeksi keuangan dan model valuasi yang detail untuk mendukung keputusan pendanaan.",
+          "features": [
+            "Peramalan Keuangan",
+            "Analisis Skenario",
+            "Model Valuasi",
+            "Pengujian Sensitivitas"
+          ],
+          "price": "Advisory Keuangan"
+        }
+      }
+    },
+    "ipoAdvisory": {
       "title": "Konsultasi IPO",
       "description": "Layanan konsultasi komprehensif untuk persiapan dan pelaksanaan IPO",
       "services": {
@@ -189,7 +312,21 @@
       ]
     }
   },
+  "stats": {
+    "fundsRaised": "Dana Terhimpun",
+    "timeline": "Timeline Bulan",
+    "successRate": "Tingkat Keberhasilan",
+    "investorNetwork": "Jaringan Investor"
+  },
+  "trackRecord": {
+    "title": "Rekam Jejak Kami"
+  },
   "cta": {
+    "title": "Siap Mengamankan Putaran Pendanaan Selanjutnya?",
+    "description": "Dapatkan bimbingan ahli dalam perjalanan penggalangan dana Anda. Tim kami akan membantu mengidentifikasi sumber pendanaan yang tepat dan mengoptimalkan strategi untuk kesuksesan.",
+    "startButton": "Mulai Penggalangan Dana",
+    "downloadButton": "Unduh Panduan",
+    "getStarted": "Mulai Sekarang",
     "getProposal": "Dapatkan Proposal",
     "bookConsultation": "Jadwalkan Konsultasi",
     "downloadBrochure": "Unduh Brosur",

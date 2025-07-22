@@ -1,9 +1,9 @@
 {
   "section": {
-    "badge": "Pertanyaan Umum",
-    "title": "Semua yang Perlu Anda",
-    "titleHighlight": "Ketahui tentang Proses IPO",
-    "description": "Temukan jawaban atas pertanyaan yang sering diajukan tentang IPO dan layanan kami."
+    "badge": "Pertanyaan yang Sering Ditanyakan",
+    "title": "Punya Pertanyaan?",
+    "titleHighlight": "Kami Punya Jawabannya.",
+    "description": "Temukan jawaban untuk pertanyaan umum seputar proses IPO dan layanan konsultasi kami."
   },
   "categories": {
     "requirements": {
@@ -13,22 +13,24 @@
           "question": "Apa saja persyaratan utama untuk melakukan IPO di Indonesia?",
           "answer": {
             "intro": "Persyaratan utama IPO di Indonesia meliputi:",
-            "points": [
+            "requirements": [
               "Berbentuk Perseroan Terbatas (PT)",
               "Modal disetor minimal Rp 3 miliar",
-              "Laporan keuangan audit 3 tahun terakhir",
-              "Memiliki minimal 300 pemegang saham",
-              "Saham yang ditawarkan minimal 150 juta lembar"
+              "Memiliki minimal 300 pemegang saham setelah IPO",
+              "Laporan keuangan audited 3 tahun terakhir dengan opini Wajar Tanpa Pengecualian (WTP) minimal 2 tahun terakhir",
+              "Memiliki profit minimal 1 tahun terakhir",
+              "Tidak dalam sengketa hukum material",
+              "Memenuhi ketentuan corporate governance yang ditetapkan OJK"
             ]
           }
         },
         {
           "question": "Berapa lama waktu yang dibutuhkan untuk proses IPO?",
-          "answer": "Proses IPO di Indonesia umumnya memakan waktu 6-12 bulan, tergantung pada kesiapan perusahaan dan kondisi pasar. Tahapan meliputi persiapan internal (3-6 bulan), proses regulasi OJK (2-3 bulan), dan masa penawaran hingga listing (1-2 bulan)."
+          "answer": "Proses IPO di Indonesia umumnya memakan waktu 6-12 bulan, tergantung pada kesiapan perusahaan dan kondisi pasar. Timeline meliputi: Persiapan internal dan restrukturisasi (2-4 bulan), Due diligence dan penyusunan prospektus (2-3 bulan), Proses persetujuan OJK (45-90 hari kerja), Bookbuilding dan Penawaran Umum (1-2 bulan). Global Sinergi Kapital menggunakan metodologi modern untuk memastikan proses yang efisien."
         },
         {
-          "question": "Apakah perusahaan harus sudah profit untuk IPO?",
-          "answer": "Tidak selalu. Meskipun profitabilitas meningkatkan daya tarik investor, OJK tidak mewajibkan perusahaan harus profit. Yang penting adalah prospek bisnis yang jelas, tata kelola yang baik, dan transparansi dalam pelaporan keuangan."
+          "question": "Berapa biaya yang diperlukan untuk melakukan IPO?",
+          "answer": "Biaya IPO bervariasi tergantung ukuran penawaran, namun umumnya berkisar 3-7% dari total dana yang dihimpun. Komponen biaya meliputi: Underwriting fee (2-4%), Biaya konsultan (Legal, akuntansi, IPO advisor), Biaya OJK dan BEI (Biaya pendaftaran dan pencatatan), Biaya notaris (Untuk dokumen legal), Biaya marketing dan roadshow (Promosi kepada investor), Biaya printing prospektus (Pencetakan dokumen). Global Sinergi Kapital menawarkan struktur biaya yang kompetitif dan transparan."
         }
       ]
     },
@@ -41,36 +43,56 @@
             "intro": "Tahapan utama IPO meliputi:",
             "timeline": [
               {
-                "phase": "Persiapan Internal",
-                "duration": "3-6 bulan",
-                "activities": "Restrukturisasi, audit, penyusunan dokumen"
+                "phase": "Feasibility study dan penunjukan konsultan",
+                "duration": "1 bulan",
+                "activities": "Evaluasi awal dan perencanaan"
               },
               {
-                "phase": "Due Diligence",
+                "phase": "Restrukturisasi perusahaan dan implementasi GCG",
+                "duration": "2-4 bulan",
+                "activities": "Penataan struktur dan tata kelola"
+              },
+              {
+                "phase": "Due diligence komprehensif",
                 "duration": "1-2 bulan",
-                "activities": "Pemeriksaan menyeluruh oleh konsultan"
+                "activities": "Pemeriksaan legal, financial, business"
               },
               {
-                "phase": "Pengajuan ke OJK",
+                "phase": "Penyusunan prospektus dan dokumen pernyataan pendaftaran",
                 "duration": "2-3 bulan",
-                "activities": "Submit dokumen dan ekspose"
+                "activities": "Persiapan dokumen regulasi"
               },
               {
-                "phase": "Penawaran Umum",
+                "phase": "Pengajuan ke OJK dan proses review",
+                "duration": "45-90 hari kerja",
+                "activities": "Proses persetujuan regulator"
+              },
+              {
+                "phase": "Paparan publik dan roadshow ke investor",
                 "duration": "2-4 minggu",
-                "activities": "Bookbuilding dan alokasi saham"
+                "activities": "Presentasi kepada investor"
               },
               {
-                "phase": "Listing",
+                "phase": "Bookbuilding dan penentuan harga",
+                "duration": "1-2 minggu",
+                "activities": "Penentuan harga IPO"
+              },
+              {
+                "phase": "Penjatahan saham dan pencatatan di BEI",
                 "duration": "1 minggu",
-                "activities": "Pencatatan di bursa efek"
+                "activities": "Alokasi saham dan listing"
+              },
+              {
+                "phase": "Monitoring dan stabilisasi harga pasca IPO",
+                "duration": "30 hari",
+                "activities": "Dukungan pasca listing"
               }
             ]
           }
         },
         {
-          "question": "Bagaimana cara menentukan harga saham IPO?",
-          "answer": "Harga saham IPO ditentukan melalui proses bookbuilding dengan mempertimbangkan valuasi perusahaan, kondisi pasar, minat investor, dan perbandingan dengan perusahaan sejenis. Underwriter akan membantu menentukan rentang harga yang optimal."
+          "question": "Bagaimana menentukan valuasi dan harga IPO yang tepat?",
+          "answer": "Penentuan valuasi IPO menggunakan berbagai metode: Discounted Cash Flow (DCF) untuk proyeksi arus kas, Price to Earnings (P/E) ratio dibandingkan dengan peers, Price to Book Value (PBV) untuk aset-heavy companies, Enterprise Value/EBITDA untuk perbandingan operasional. Tim ahli kami akan melakukan analisis mendalam terhadap industri, kompetitor, dan kondisi pasar untuk menentukan valuasi yang optimal dan menarik bagi investor."
         }
       ]
     },
@@ -101,7 +123,7 @@
       "title": "Pasca IPO",
       "questions": [
         {
-          "question": "Apa saja kewajiban perusahaan setelah IPO?",
+          "question": "Apa saja kewajiban perusahaan setelah menjadi perusahaan terbuka?",
           "answer": {
             "intro": "Kewajiban utama perusahaan publik:",
             "obligations": [
@@ -121,8 +143,8 @@
     }
   },
   "stillHaveQuestions": {
-    "title": "Masih ada pertanyaan?",
-    "description": "Tim ahli kami siap membantu menjawab pertanyaan spesifik Anda tentang proses IPO.",
-    "cta": "Hubungi Tim Ahli"
+    "title": "Masih Ada Pertanyaan Lain?",
+    "description": "Tim ahli kami siap membantu menjawab pertanyaan spesifik tentang situasi perusahaan Anda.",
+    "cta": "Konsultasi Gratis"
   }
 }

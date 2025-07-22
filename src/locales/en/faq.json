@@ -1,9 +1,9 @@
 {
   "section": {
     "badge": "Frequently Asked Questions",
-    "title": "Everything You Need to",
-    "titleHighlight": "Know About IPO Process",
-    "description": "Find answers to frequently asked questions about IPO and our services."
+    "title": "Have Questions?",
+    "titleHighlight": "We Have Answers.",
+    "description": "Find answers to common questions about the IPO process and our consulting services."
   },
   "categories": {
     "requirements": {
@@ -13,22 +13,24 @@
           "question": "What are the main requirements for IPO in Indonesia?",
           "answer": {
             "intro": "Main IPO requirements in Indonesia include:",
-            "points": [
-              "Limited Liability Company (PT) form",
+            "requirements": [
+              "Limited liability company (PT) structure",
               "Minimum paid-up capital of IDR 3 billion",
-              "Audited financial statements for the last 3 years",
-              "Minimum 300 shareholders",
-              "Minimum 150 million shares offered"
+              "Minimum 300 shareholders after IPO",
+              "Audited financial statements for the last 3 years with unqualified opinion for at least the last 2 years",
+              "Profit for at least the last 1 year",
+              "No material legal disputes",
+              "Compliance with corporate governance requirements set by OJK"
             ]
           }
         },
         {
           "question": "How long does the IPO process take?",
-          "answer": "The IPO process in Indonesia generally takes 6-12 months, depending on company readiness and market conditions. Stages include internal preparation (3-6 months), OJK regulatory process (2-3 months), and offering period until listing (1-2 months)."
+          "answer": "The IPO process in Indonesia generally takes 6-12 months, depending on company readiness and market conditions. Timeline includes: Internal preparation and restructuring (2-4 months), Due diligence and prospectus preparation (2-3 months), OJK approval process (45-90 working days), Bookbuilding and Public Offering (1-2 months). Global Sinergi Kapital uses modern methodology to ensure efficient process."
         },
         {
-          "question": "Does a company need to be profitable for IPO?",
-          "answer": "Not necessarily. While profitability increases investor appeal, OJK doesn't require companies to be profitable. What's important is clear business prospects, good governance, and transparency in financial reporting."
+          "question": "What are the costs required for IPO?",
+          "answer": "IPO costs vary depending on offering size, but generally range from 3-7% of total funds raised. Cost components include: Underwriting fee (2-4%), Consultant fees (Legal, accounting, IPO advisor), OJK and IDX fees (Registration and listing fees), Notary fees (For legal documents), Marketing and roadshow costs (Investor promotion), Prospectus printing costs (Document printing). Global Sinergi Kapital offers competitive and transparent fee structure."
         }
       ]
     },
@@ -41,36 +43,56 @@
             "intro": "Main IPO stages include:",
             "timeline": [
               {
-                "phase": "Internal Preparation",
-                "duration": "3-6 months",
-                "activities": "Restructuring, audit, document preparation"
+                "phase": "Feasibility study and consultant appointment",
+                "duration": "1 month",
+                "activities": "Initial evaluation and planning"
               },
               {
-                "phase": "Due Diligence",
+                "phase": "Company restructuring and GCG implementation",
+                "duration": "2-4 months",
+                "activities": "Structure arrangement and governance"
+              },
+              {
+                "phase": "Comprehensive due diligence",
                 "duration": "1-2 months",
-                "activities": "Comprehensive examination by consultants"
+                "activities": "Legal, financial, business examination"
               },
               {
-                "phase": "OJK Submission",
+                "phase": "Prospectus and registration statement preparation",
                 "duration": "2-3 months",
-                "activities": "Document submission and expose"
+                "activities": "Regulatory document preparation"
               },
               {
-                "phase": "Public Offering",
+                "phase": "OJK submission and review process",
+                "duration": "45-90 working days",
+                "activities": "Regulatory approval process"
+              },
+              {
+                "phase": "Public expose and investor roadshow",
                 "duration": "2-4 weeks",
-                "activities": "Bookbuilding and share allocation"
+                "activities": "Investor presentation"
               },
               {
-                "phase": "Listing",
+                "phase": "Bookbuilding and price determination",
+                "duration": "1-2 weeks",
+                "activities": "IPO pricing determination"
+              },
+              {
+                "phase": "Share allocation and IDX listing",
                 "duration": "1 week",
-                "activities": "Stock exchange listing"
+                "activities": "Share allocation and listing"
+              },
+              {
+                "phase": "Post-IPO monitoring and price stabilization",
+                "duration": "30 days",
+                "activities": "Post-listing support"
               }
             ]
           }
         },
         {
-          "question": "How is the IPO share price determined?",
-          "answer": "IPO share price is determined through bookbuilding process considering company valuation, market conditions, investor interest, and comparison with similar companies. Underwriters will help determine optimal price range."
+          "question": "How is the IPO valuation and price determined?",
+          "answer": "IPO valuation determination uses various methods: Discounted Cash Flow (DCF) for cash flow projections, Price to Earnings (P/E) ratio compared with peers, Price to Book Value (PBV) for asset-heavy companies, Enterprise Value/EBITDA for operational comparison. Our expert team will conduct in-depth analysis of industry, competitors, and market conditions to determine optimal and attractive valuation for investors."
         }
       ]
     },
@@ -121,8 +143,8 @@
     }
   },
   "stillHaveQuestions": {
-    "title": "Still have questions?",
-    "description": "Our expert team is ready to help answer your specific questions about the IPO process.",
-    "cta": "Contact Expert Team"
+    "title": "Still Have Other Questions?",
+    "description": "Our expert team is ready to help answer specific questions about your company's situation.",
+    "cta": "Free Consultation"
   }
 }

@@ -1,6 +1,7 @@
 import { 
   Linkedin, Mail, Phone, MapPin, Clock, ArrowRight, 
-  FileText, Shield, Award, ExternalLink, Download
+  FileText, Shield, Award, ExternalLink, Download,
+  MessageCircle, Instagram
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -53,7 +54,6 @@ const Footer = () => {
                 </div>
                 <div>
                   <h3 className="heading-4">Global Sinergi Kapital</h3>
-                  <p className="text-primary-foreground/80 text-body-small">{t('company.tagline')}</p>
                 </div>
               </div>
               <p className="text-primary-foreground/80 text-body">
@@ -95,6 +95,22 @@ const Footer = () => {
                 className="bg-white/10 hover:bg-white/20 p-3 rounded-xl transition-all duration-200 group"
               >
                 <Mail className="icon-medium group-hover:scale-110 transition-transform" />
+              </a>
+              <a 
+                href="https://wa.me/6281234567890" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 p-3 rounded-xl transition-all duration-200 group"
+              >
+                <MessageCircle className="icon-medium group-hover:scale-110 transition-transform" />
+              </a>
+              <a 
+                href="https://instagram.com/globalsinergikapital" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 p-3 rounded-xl transition-all duration-200 group"
+              >
+                <Instagram className="icon-medium group-hover:scale-110 transition-transform" />
               </a>
             </div>
           </div>

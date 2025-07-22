@@ -103,9 +103,6 @@ const LeadershipDetail = () => {
                 {t(`team.roles.${memberData.roleKey}`)}
               </div>
               
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                {t(`team.members.${memberKey}.position`)}
-              </p>
             </div>
           </div>
         </div>

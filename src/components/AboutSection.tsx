@@ -1045,7 +1045,7 @@ const AboutSection = () => {
         </div>
 
         {/* Roadmap Section - Enhanced with Images */}
-        <div className="mb-8 mt-12">
+        <div className="mb-8 mt-20">
           <h3 className="heading-4 text-primary text-center mb-6">
             {t("roadmap.title")}
           </h3>
