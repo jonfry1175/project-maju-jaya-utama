@@ -17,22 +17,23 @@ const OurPartnership = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-primary/10">
-        <div className="container mx-auto px-6">
+      <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-primary/10 bg-[url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&h=1080&fit=crop')] bg-cover bg-center bg-no-repeat">
+        <div className="absolute inset-0 bg-primary/60"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
               <Building2 className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
               {t('our-partnership:hero.badge')}
             </div> */}
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary font-display mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-4 sm:mb-6 leading-tight">
               {t('our-partnership:hero.title')}
-              <span className="text-gradient">
+              <span className="text-accent">
                 {t('our-partnership:hero.titleHighlight')}
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
               {t('our-partnership:hero.description')}
             </p>
           </div>

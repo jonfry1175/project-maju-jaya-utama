@@ -132,7 +132,7 @@ const AboutSection = () => {
         </div>
 
         {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-4 mb-6 sm:mb-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 mb-12 sm:mb-16 max-w-7xl mx-auto">
           <Card className="card-padding-small bg-white border border-primary-subtle animate-card">
             <div className="icon-large bg-primary rounded-xl flex items-center justify-center mb-4">
               <Target className="icon-medium text-white" />
@@ -1045,7 +1045,7 @@ const AboutSection = () => {
         </div>
 
         {/* Roadmap Section - Enhanced with Images */}
-        <div className="mb-8">
+        <div className="mb-8 mt-12">
           <h3 className="heading-4 text-primary text-center mb-6">
             {t("roadmap.title")}
           </h3>

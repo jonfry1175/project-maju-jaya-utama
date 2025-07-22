@@ -126,7 +126,7 @@
         "ceo": "Pengalaman 32+ Tahun",
         "coo": "Pengalaman 33+ Tahun",
         "director1": "Pengalaman 15+ Tahun",
-        "director2": "Pengalaman 20+ Tahun"
+        "director2": "Pengalaman 12+ Tahun"
       },
       "expertise": {
         "ipoConsulting": "Konsultasi IPO",
@@ -192,13 +192,16 @@
       "director2": {
         "name": "Paulus SH MM MKn",
         "position": "Direktur",
-        "experience": "Profesional hukum dan administrasi bisnis",
-        "professionalSummary": "Paulus SH MM MKn adalah profesional hukum dan administrasi bisnis yang sangat berkualitas dengan gelar Sarjana Hukum (SH), Magister Manajemen (MM), dan Magister Kenotariatan (MKn). Beliau membawa keahlian luas dalam masalah hukum dan regulasi, tata kelola perusahaan, dan administrasi bisnis dengan pemahaman mendalam tentang hukum bisnis Indonesia dan kepatuhan regulasi.",
+        "experience": "Profesional hukum dan administrasi bisnis dengan pengalaman 12+ tahun",
+        "professionalSummary": "Paulus SH MM MKn adalah profesional hukum dan administrasi bisnis yang sangat berkualitas dengan latar belakang pendidikan yang komprehensif dan pengalaman profesional yang luas. Beliau meraih gelar Sarjana Hukum (SH) dari STHB Bandung, Magister Manajemen (MM) dari Univ Harapan Medan, dan Magister Kenotariatan (MKn) dari USU Medan. Dengan pengalaman profesional lebih dari 12 tahun dari 2012-2021, beliau telah menjabat dalam peran-peran kunci di bidang hukum dan manajemen termasuk posisi Legal di PT Strata Bumi Surya dan Crown Property, serta sebagai General Manager HRD & General Affairs di PT Jaco Nusantara Mandiri. Beliau membawa keahlian luas dalam masalah hukum dan regulasi, tata kelola perusahaan, manajemen sumber daya manusia, dan administrasi bisnis dengan pemahaman mendalam tentang hukum bisnis Indonesia dan kepatuhan regulasi.",
         "credentials": [
-          "Sarjana Hukum (SH)",
-          "Magister Manajemen (MM)",
-          "Magister Kenotariatan (MKn)",
-          "Ahli hukum dan regulasi"
+          "Sarjana Hukum (SH) - STHB Bandung",
+          "Magister Manajemen (MM) - Univ Harapan Medan",
+          "Magister Kenotariatan (MKn) - USU Medan",
+          "Profesional Legal - PT Strata Bumi Surya (2012-2021)",
+          "Profesional Legal - Crown Property (2012-2021)",
+          "GM HRD & GA - PT Jaco Nusantara Mandiri (2012-2021)",
+          "Ahli dalam bidang hukum, tata kelola perusahaan, dan manajemen HR"
         ]
       }
     }
