@@ -142,15 +142,15 @@ const Footer = () => {
               <div className="space-y-3 text-primary-foreground/80 text-body-small">
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-2 hover:text-white transition-colors">
                   <MapPin className="icon-small flex-shrink-0 mt-0.5" />
-                  <span>The East Tower 36th Floor Central Business District Mega Kuningan Jl. DR. Ide Anak Agung Gde Agung, No. 1<br/>Jakarta, Indonesia, 12950</span>
+                  <span>{t('contact.address')}</span>
                 </a>
-                <a href="tel:+622112345678" className="flex items-center space-x-2 hover:text-white transition-colors">
+                <a href={`tel:${t('contact.phone').replace(/[^+\d]/g, '')}`} className="flex items-center space-x-2 hover:text-white transition-colors">
                   <Phone className="icon-small" />
-                  <span>(+62) 21-5152-423</span>
+                  <span>{t('contact.phone')}</span>
                 </a>
-                <a href="mailto:info@globalsinergikapital.com" className="flex items-center space-x-2 hover:text-white transition-colors">
+                <a href={`mailto:${t('contact.email')}`} className="flex items-center space-x-2 hover:text-white transition-colors">
                   <Mail className="icon-small" />
-                  <span>info@globalsinergikapital.com</span>
+                  <span>{t('contact.email')}</span>
                 </a>
                 <div className="flex items-center space-x-2">
                   <Clock className="icon-small" />

@@ -62,7 +62,7 @@ const Header = () => {
         { name: t('nav.ipoProcess.ipoCompliancePlans'), href: "/ipo-process/compliance-plans" }
       ]
     },
-    { name: t('nav.testimonials'), href: "#testimonials" },
+    // { name: t('nav.testimonials'), href: "#testimonials" },
     { name: t('nav.faq'), href: "#faq" },
     { name: t('nav.contact'), href: "#contact" }
   ];

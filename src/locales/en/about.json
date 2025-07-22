@@ -86,7 +86,7 @@
         "ceo": "32+ Years Experience",
         "coo": "33+ Years Experience",
         "director1": "15+ Years Experience",
-        "director2": "20+ Years Experience"
+        "director2": "12+ Years Experience"
       },
       "expertise": {
         "ipoConsulting": "IPO Consulting",
@@ -152,13 +152,16 @@
       "director2": {
         "name": "Paulus SH MM MKn",
         "position": "Director",
-        "experience": "Legal and business administration professional",
-        "professionalSummary": "Paulus SH MM MKn is a highly qualified legal and business administration professional holding a Bachelor of Law (SH), Master of Management (MM), and Master of Notary (MKn). He brings extensive expertise in legal and regulatory matters, corporate governance, and business administration with deep understanding of Indonesian business law and regulatory compliance.",
+        "experience": "Legal and business administration professional with 12+ years experience",
+        "professionalSummary": "Paulus SH MM MKn is a highly qualified legal and business administration professional with comprehensive educational background and extensive professional experience. He holds a Bachelor of Law (SH) from STHB Bandung, Master of Management (MM) from Univ Harapan Medan, and Master of Notary (MKn) from USU Medan. With over 12 years of professional experience from 2012-2021, he has served in key legal and management roles including Legal positions at PT Strata Bumi Surya and Crown Property, and as General Manager of HRD & General Affairs at PT Jaco Nusantara Mandiri. He brings extensive expertise in legal and regulatory matters, corporate governance, human resources management, and business administration with deep understanding of Indonesian business law and regulatory compliance.",
         "credentials": [
-          "Bachelor of Law (SH)",
-          "Master of Management (MM)",
-          "Master of Notary (MKn)",
-          "Legal and regulatory expert"
+          "Bachelor of Law (SH) - STHB Bandung",
+          "Master of Management (MM) - Univ Harapan Medan", 
+          "Master of Notary (MKn) - USU Medan",
+          "Legal Professional - PT Strata Bumi Surya (2012-2021)",
+          "Legal Professional - Crown Property (2012-2021)",
+          "GM HRD & GA - PT Jaco Nusantara Mandiri (2012-2021)",
+          "Expert in legal affairs, corporate governance, and HR management"
         ]
       }
     }
