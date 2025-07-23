@@ -25,9 +25,9 @@ const OurClientsSection = () => {
             </p>
             
             <div className="max-w-4xl mx-auto space-y-4">
-              <p className="text-body text-muted-foreground leading-relaxed">
+              {/* <p className="text-body text-muted-foreground leading-relaxed">
                 {t("mainClients.description.main")}
-              </p>
+              </p> */}
               <p className="text-body text-muted-foreground leading-relaxed">
                 {t("mainClients.description.secondary")}
               </p>

@@ -186,9 +186,9 @@ const ManagementImprovementPlans = () => {
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-4 sm:mb-6 leading-tight">
               {t("hero.title")}
-              <span className="text-white block mt-1 sm:mt-2">
+              {/* <span className="text-white block mt-1 sm:mt-2">
                 {t("hero.titleHighlight")}
-              </span>
+              </span> */}
             </h1>
             
             <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">

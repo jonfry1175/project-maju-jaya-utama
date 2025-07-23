@@ -19,5 +19,8 @@
   "filter": "Filter",
   "sort": "Urutkan",
   "yes": "Ya",
-  "no": "Tidak"
+  "no": "Tidak",
+  "whatsapp": {
+    "tooltip": "Chat dengan kami di WhatsApp"
+  }
 }
