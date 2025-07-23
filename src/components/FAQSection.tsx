@@ -228,20 +228,13 @@ const FAQSection = () => {
                 {t("stillHaveQuestions.description")}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+              <div className="flex justify-center">
                 <Button
                   size="lg"
-                  className="btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 group w-full sm:w-auto">
+                  className="btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 group">
                   <MessageCircle className="mr-2 icon-small" />
                   {t("stillHaveQuestions.cta")}
                   <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="text-body font-semibold px-6 sm:px-8 border-2 w-full sm:w-auto">
-                  <Shield className="mr-2 icon-small" />
-                  {i18n.language === "id" ? "Hubungi Kami" : "Contact Us"}
                 </Button>
               </div>
 

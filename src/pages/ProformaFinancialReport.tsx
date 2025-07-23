@@ -34,9 +34,15 @@ import {
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProformaFinancialReport = () => {
   const { t } = useTranslation("proforma-financial-report");
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate("/ipo-process/management-improvement-plans");
+  };
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -536,6 +542,7 @@ const ProformaFinancialReport = () => {
                     <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                   </Button>
                   <Button
+                    onClick={handleLearnMoreClick}
                     variant="outline"
                     size="lg"
                     className="text-body font-semibold px-6 sm:px-8 border-2 bg-white w-full sm:w-auto">

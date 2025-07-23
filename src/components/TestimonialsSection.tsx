@@ -13,9 +13,15 @@ import {
   Building,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const TestimonialsSection = () => {
   const { t, i18n } = useTranslation("testimonials");
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate("/ipo-process/mapping");
+  };
   const whyChooseUs = [
     {
       icon: Brain,
@@ -247,6 +253,7 @@ const TestimonialsSection = () => {
                   <ArrowRight className="ml-1 sm:ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
+                  onClick={handleLearnMoreClick}
                   variant="outline"
                   size="lg"
                   className="text-body font-semibold px-4 sm:px-6 lg:px-8 border-2 w-full sm:w-auto">

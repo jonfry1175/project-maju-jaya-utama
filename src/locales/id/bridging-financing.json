@@ -1,14 +1,14 @@
 {
   "hero": {
     "badge": "Proses IPO",
-    "title": "Pembiayaan Jembatan",
+    "title": "Jembatan Pembiayaan",
     "titleHighlight": "Solusi Pendanaan Sementara",
-    "description": "Pembiayaan Jembatan adalah solusi pendanaan sementara sebelum dana hasil IPO diterima. Memberikan pendanaan strategis untuk memenuhi kebutuhan operasional mendesak dan mempersiapkan penawaran umum yang sukses."
+    "description": "Jembatan Pembiayaan adalah solusi pendanaan sementara sebelum dana hasil IPO diterima. Memberikan pendanaan strategis untuk memenuhi kebutuhan operasional mendesak dan mempersiapkan penawaran umum yang sukses."
   },
   "objectives": {
     "badge": "Tujuan Utama",
-    "title": "Tujuan Pembiayaan Jembatan",
-    "description": "Solusi pembiayaan jembatan kami melayani empat tujuan kritis untuk memastikan transisi yang mulus ke IPO dan menjaga operasional bisnis.",
+    "title": "Tujuan Jembatan Pembiayaan",
+    "description": "Solusi jembatan pembiayaan kami melayani empat tujuan kritis untuk memastikan transisi yang mulus ke IPO dan menjaga operasional bisnis.",
     "items": [
       {
         "title": "Membiayai Kebutuhan Strategis Pra-IPO",
@@ -30,8 +30,8 @@
   },
   "characteristics": {
     "badge": "Karakteristik Utama",
-    "title": "Karakteristik Pembiayaan Jembatan",
-    "description": "Memahami fitur utama dan struktur solusi pembiayaan jembatan untuk persiapan IPO.",
+    "title": "Karakteristik Jembatan Pembiayaan",
+    "description": "Memahami fitur utama dan struktur solusi jembatan pembiayaan untuk persiapan IPO.",
     "items": [
       {
         "title": "Sifat Jangka Pendek",
@@ -53,8 +53,8 @@
   },
   "fundUsage": {
     "badge": "Penggunaan Dana",
-    "title": "Penggunaan Dana Bridging",
-    "description": "Dana pembiayaan jembatan dapat dialokasikan untuk berbagai kebutuhan kritis pra-IPO untuk memastikan persiapan penawaran umum yang sukses.",
+    "title": "Penggunaan Dana Jembatan Pembiayaan",
+    "description": "Dana jembatan pembiayaan dapat dialokasikan untuk berbagai kebutuhan kritis pra-IPO untuk memastikan persiapan penawaran umum yang sukses.",
     "table": {
       "need": "Kebutuhan Pra-IPO",
       "description": "Keterangan"
@@ -84,8 +84,8 @@
   },
   "process": {
     "badge": "Alur Proses",
-    "title": "Alur Proses Pembiayaan Jembatan dalam IPO",
-    "description": "Pendekatan sistematis kami memastikan pembiayaan jembatan yang tepat waktu dan sesuai untuk mendukung persiapan dan pelaksanaan IPO Anda.",
+    "title": "Alur Proses Jembatan Pembiayaan dalam IPO",
+    "description": "Pendekatan sistematis kami memastikan jembatan pembiayaan yang tepat waktu dan sesuai untuk mendukung persiapan dan pelaksanaan IPO Anda.",
     "steps": [
       {
         "title": "Identifikasi Kebutuhan Pra-IPO",
@@ -97,7 +97,7 @@
       },
       {
         "title": "Negosiasi dengan Pemberi Dana",
-        "description": "Berinteraksi dengan calon pemberi pinjaman dan menegosiasikan syarat yang menguntungkan untuk fasilitas bridging."
+        "description": "Berinteraksi dengan calon pemberi pinjaman dan menegosiasikan syarat yang menguntungkan untuk fasilitas jembatan pembiayaan."
       },
       {
         "title": "Penandatanganan Perjanjian Pembiayaan",
@@ -115,7 +115,7 @@
   },
   "riskManagement": {
     "badge": "Manajemen Risiko",
-    "title": "Manajemen Risiko Pembiayaan Jembatan",
+    "title": "Manajemen Risiko Jembatan Pembiayaan",
     "items": [
       {
         "title": "Kelebihan Beban Utang",
@@ -136,12 +136,12 @@
     "title": "Output dan Dokumentasi",
     "items": [
       {
-        "title": "Perjanjian Bridging Finance",
-        "description": "Perjanjian pinjaman bridging yang komprehensif dengan syarat, kondisi, dan struktur pembayaran yang jelas."
+        "title": "Perjanjian Jembatan Pembiayaan",
+        "description": "Perjanjian pinjaman jembatan pembiayaan yang komprehensif dengan syarat, kondisi, dan struktur pembayaran yang jelas."
       },
       {
         "title": "Breakdown Penggunaan Dana",
-        "description": "Rincian terperinci bagaimana dana bridging akan dialokasikan untuk berbagai aktivitas persiapan IPO."
+        "description": "Rincian terperinci bagaimana dana jembatan pembiayaan akan dialokasikan untuk berbagai aktivitas persiapan IPO."
       },
       {
         "title": "Rencana Pelunasan dan Pengaruh terhadap Laporan Proforma",
@@ -149,7 +149,7 @@
       },
       {
         "title": "Disclosure dalam Prospektus IPO",
-        "description": "Pengungkapan yang tepat tentang pengaturan pembiayaan jembatan dalam dokumentasi prospektus IPO."
+        "description": "Pengungkapan yang tepat tentang pengaturan jembatan pembiayaan dalam dokumentasi prospektus IPO."
       }
     ]
   },
@@ -167,7 +167,7 @@
     "items": [
       {
         "value": "20+",
-        "label": "Fasilitas Bridging Diatur"
+        "label": "Fasilitas Jembatan Pembiayaan Diatur"
       },
       {
         "value": "98%",
@@ -175,7 +175,7 @@
       },
       {
         "value": "$50M+",
-        "label": "Total Dana Bridging Difasilitasi"
+        "label": "Total Dana Jembatan Pembiayaan Difasilitasi"
       },
       {
         "value": "100%",
@@ -184,9 +184,9 @@
     ]
   },
   "cta": {
-    "title": "Butuh Pembiayaan Jembatan untuk IPO Anda?",
-    "description": "Dapatkan bantuan ahli dalam mengatur pembiayaan jembatan untuk mendukung persiapan IPO Anda. Tim kami akan membantu Anda mengamankan struktur dan syarat pendanaan yang tepat untuk kebutuhan pra-IPO.",
+    "title": "Butuh Jembatan Pembiayaan untuk IPO Anda?",
+    "description": "Dapatkan bantuan ahli dalam mengatur jembatan pembiayaan untuk mendukung persiapan IPO Anda. Tim kami akan membantu Anda mengamankan struktur dan syarat pendanaan yang tepat untuk kebutuhan pra-IPO.",
     "primaryButton": "Diskusi Pembiayaan",
-    "secondaryButton": "Unduh Panduan"
+    "secondaryButton": "Pelajari Lebih Lanjut"
   }
 }

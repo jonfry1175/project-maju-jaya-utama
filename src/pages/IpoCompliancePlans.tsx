@@ -38,9 +38,16 @@ import {
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const IpoCompliancePlans = () => {
   const { t } = useTranslation("ipo-compliance-plans");
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    // Redirect to mapping page to create a complete cycle
+    navigate("/ipo-process/mapping");
+  };
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -472,6 +479,7 @@ const IpoCompliancePlans = () => {
                     <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                   </Button>
                   <Button
+                    onClick={handleLearnMoreClick}
                     variant="outline"
                     size="lg"
                     className="text-body font-semibold px-6 sm:px-8 border-2 bg-white w-full sm:w-auto">

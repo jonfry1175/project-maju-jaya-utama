@@ -1,6 +1,6 @@
 import { 
   Linkedin, Mail, Phone, MapPin, Clock, ArrowRight, 
-  FileText, Shield, Award, ExternalLink, Download,
+  FileText, Shield, Award, Download,
   MessageCircle, Instagram
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -204,11 +204,6 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-body-small text-primary-foreground/60">
               <p>© {currentYear} PT Global Sinergi Kapital. {i18n.language === 'id' ? 'Hak cipta dilindungi.' : 'All rights reserved.'}</p>
-              <div className="flex space-x-6">
-                <a href="#" className="hover:text-white transition-colors">{i18n.language === 'id' ? 'Kebijakan Privasi' : 'Privacy Policy'}</a>
-                <a href="#" className="hover:text-white transition-colors">{i18n.language === 'id' ? 'Syarat & Ketentuan' : 'Terms & Conditions'}</a>
-                <a href="#" className="hover:text-white transition-colors">{i18n.language === 'id' ? 'Peta Situs' : 'Sitemap'}</a>
-              </div>
             </div>
             
             <div className="flex items-center space-x-4 text-body-small">
@@ -216,13 +211,6 @@ const Footer = () => {
                 <Shield className="icon-small" />
                 <span>{i18n.language === 'id' ? 'Terdaftar & Diawasi OJK' : 'Registered & Supervised by OJK'}</span>
               </div>
-              <a 
-                href="#" 
-                className="flex items-center space-x-1 text-primary-foreground/60 hover:text-white transition-colors"
-              >
-                <span>{i18n.language === 'id' ? 'Penyangkalan Hukum' : 'Legal Disclaimer'}</span>
-                <ExternalLink className="icon-small" />
-              </a>
             </div>
           </div>
         </div>

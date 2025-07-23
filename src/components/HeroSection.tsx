@@ -4,7 +4,7 @@ import {
   ArrowRight,
   Award,
   Building2,
-  Play,
+  Phone,
   TrendingUp,
   Users,
 } from "lucide-react";
@@ -13,6 +13,15 @@ import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
   const { t } = useTranslation("hero");
+
+  // WhatsApp integration
+  const whatsappNumber = "6281290001234";
+  const whatsappMessage = encodeURIComponent(t("cta.whatsappMessage"));
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  const handleWhatsAppClick = () => {
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  };
   const [counters, setCounters] = useState([0, 0, 0, 0]);
 
   const stats = [
@@ -156,10 +165,11 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
+                onClick={handleWhatsAppClick}
                 variant="outline"
                 size="lg"
-                className="text-body font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto border-2 group w-full sm:w-auto bg-white/90">
-                <Play className="mr-2 icon-small group-hover:scale-110 transition-transform" />
+                className="text-body font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto border-2 group w-full sm:w-auto bg-white/90 hover:bg-green-500 hover:text-white hover:border-green-500">
+                <Phone className="mr-2 icon-small group-hover:scale-110 transition-transform" />
                 {t("cta.watchVideo")}
               </Button>
             </div>
