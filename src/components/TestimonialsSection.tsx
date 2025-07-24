@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import LazyImage from "@/components/LazyImage";
 import {
   Shield,
   Star,
@@ -170,7 +171,7 @@ const TestimonialsSection = () => {
               className="group overflow-hidden bg-white border border-subtle hover:border-primary-medium hover:shadow-xl transition-all duration-300 animate-card">
               {/* Image Section */}
               <div className="relative h-32 sm:h-40 lg:h-48 overflow-hidden">
-                <img
+                <LazyImage
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Building2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import LazyImage from "@/components/LazyImage";
 
 const OurClientsSection = () => {
   const { t } = useTranslation("about");

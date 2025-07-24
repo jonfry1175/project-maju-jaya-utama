@@ -8,12 +8,18 @@ import PartnershipProcessSection from "@/components/PartnershipProcessSection";
 import PartnershipFAQSection from "@/components/PartnershipFAQSection";
 import { Building2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import SEO from "@/components/SEO";
 
 const OurPartnership = () => {
   const { t } = useTranslation(['our-partnership', 'about']);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Our Clients - Partner Perusahaan IPO"
+        description="Lihat daftar klien dan mitra strategis Global Sinergi Kapital. Kami telah membantu berbagai perusahaan dari berbagai sektor untuk sukses go public di Bursa Efek Indonesia."
+        keywords="klien IPO, partner IPO, perusahaan go public, success story IPO, portofolio klien, mitra strategis"
+      />
       <Header />
       
       {/* Hero Section */}
