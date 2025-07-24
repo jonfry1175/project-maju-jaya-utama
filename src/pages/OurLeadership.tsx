@@ -66,7 +66,7 @@ const OurLeadership = () => {
       </section>
 
       {/* Leadership Team Section */}
-      <section className="section-padding animate-section">
+      <section className="py-8 sm:py-12 animate-section">
         <div className="container mx-auto container-padding">
           <div className="max-w-7xl mx-auto">
             {/* Leadership Grid */}

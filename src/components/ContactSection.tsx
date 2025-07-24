@@ -148,9 +148,6 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
           {/* Left Column - Contact Info */}
           <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
-            <h3 className="heading-4 text-primary mb-4 sm:mb-6">
-              {t("title")}
-            </h3>
 
             {contactInfo.map((info, index) => (
               <Card

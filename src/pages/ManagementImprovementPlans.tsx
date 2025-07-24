@@ -37,9 +37,15 @@ import {
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ManagementImprovementPlans = () => {
   const { t } = useTranslation("management-improvement-plans");
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate("/ipo-process/bridging-financing");
+  };
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -186,9 +192,9 @@ const ManagementImprovementPlans = () => {
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-4 sm:mb-6 leading-tight">
               {t("hero.title")}
-              <span className="text-white block mt-1 sm:mt-2">
+              {/* <span className="text-white block mt-1 sm:mt-2">
                 {t("hero.titleHighlight")}
-              </span>
+              </span> */}
             </h1>
             
             <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
@@ -476,6 +482,7 @@ const ManagementImprovementPlans = () => {
                     <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                   </Button>
                   <Button
+                    onClick={handleLearnMoreClick}
                     variant="outline"
                     size="lg"
                     className="text-body font-semibold px-6 sm:px-8 border-2 bg-white w-full sm:w-auto">

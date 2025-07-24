@@ -19,5 +19,8 @@
   "filter": "Filter",
   "sort": "Sort",
   "yes": "Yes",
-  "no": "No"
+  "no": "No",
+  "whatsapp": {
+    "tooltip": "Chat with us on WhatsApp"
+  }
 }

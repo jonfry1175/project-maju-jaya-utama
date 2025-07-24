@@ -17,6 +17,7 @@ import BridgingFinancing from "./pages/BridgingFinancing";
 import IpoCompliancePlans from "./pages/IpoCompliancePlans";
 import NotFound from "./pages/NotFound";
 import { Navigate } from "react-router-dom";
+import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton";
 
 const queryClient = new QueryClient();
 

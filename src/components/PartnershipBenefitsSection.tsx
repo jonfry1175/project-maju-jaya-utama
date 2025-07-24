@@ -71,9 +71,9 @@ const PartnershipBenefitsSection = () => {
               {t("benefits.badge")}
             </div>
             
-            <h2 className="heading-2 font-bold text-primary font-display mb-4 leading-tight">
+            <h2 className="heading-2 font-bold text-primary font-display mb-4 leading-relaxed">
               {t("benefits.title")}
-              <span className="text-gradient block mt-2">
+              <span className="text-gradient block mt-2 pb-2">
                 {t("benefits.titleHighlight")}
               </span>
             </h2>

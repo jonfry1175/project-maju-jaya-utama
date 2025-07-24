@@ -5,8 +5,131 @@
     "titleHighlight": "Your IPO Journey",
     "description": "We provide comprehensive IPO consulting services, from initial preparation to stock exchange listing."
   },
+  "hero": {
+    "badge": "Fund Raising Services",
+    "title": "Professional Fund Raising Solutions",
+    "subtitle": "",
+    "description": "Comprehensive fund raising services to secure the capital your business needs for growth, expansion, and strategic initiatives."
+  },
   "categories": {
+    "equity": {
+      "title": "Equity Funding",
+      "description": "Comprehensive equity fundraising solutions for growth-stage companies",
+      "services": {
+        "series": {
+          "title": "Series A/B/C Fundraising",
+          "description": "Strategic guidance through institutional funding rounds with optimal valuation and terms.",
+          "features": [
+            "Investor Targeting & Outreach",
+            "Pitch Deck Development",
+            "Due Diligence Coordination",
+            "Term Sheet Negotiation"
+          ],
+          "price": "Premium Package"
+        },
+        "angel": {
+          "title": "Strategic Angel Investment",
+          "description": "Access to high-net-worth individuals and angel investor networks for early-stage funding.",
+          "features": [
+            "Angel Network Access",
+            "Investor Matching",
+            "Presentation Coaching",
+            "Deal Structuring"
+          ],
+          "price": "Angel Round"
+        },
+        "privateEquity": {
+          "title": "Private Equity Solutions",
+          "description": "Connecting mature companies with private equity firms for growth or exit opportunities.",
+          "features": [
+            "PE Firm Identification",
+            "Financial Modeling",
+            "Management Presentation",
+            "Exit Planning"
+          ],
+          "price": "PE Advisory"
+        }
+      }
+    },
+    "debt": {
+      "title": "Debt Financing",
+      "description": "Alternative debt financing solutions to fuel business growth",
+      "services": {
+        "bankLoan": {
+          "title": "Bank Loan Facilitation",
+          "description": "Assistance in securing traditional bank loans with favorable terms and competitive rates.",
+          "features": [
+            "Loan Application Preparation",
+            "Bank Relationship Management",
+            "Credit Enhancement Strategies",
+            "Rate Negotiation"
+          ],
+          "price": "Debt Advisory"
+        },
+        "alternative": {
+          "title": "Alternative Lending",
+          "description": "Access to non-traditional lenders including fintech and revenue-based financing.",
+          "features": [
+            "Fintech Lender Network",
+            "Revenue-Based Financing",
+            "Merchant Cash Advances",
+            "Asset-Based Lending"
+          ],
+          "price": "Alternative Finance"
+        },
+        "bonds": {
+          "title": "Bonds & Securities",
+          "description": "Corporate bond issuance and structured debt instruments for larger funding needs.",
+          "features": [
+            "Bond Structuring",
+            "Credit Rating Support",
+            "Investor Relations",
+            "Regulatory Compliance"
+          ],
+          "price": "Securities Package"
+        }
+      }
+    },
     "advisory": {
+      "title": "Strategic Advisory",
+      "description": "Comprehensive advisory services to optimize your fundraising strategy",
+      "services": {
+        "strategy": {
+          "title": "Fundraising Strategy",
+          "description": "Comprehensive strategic planning to determine optimal funding mix and timing.",
+          "features": [
+            "Capital Needs Assessment",
+            "Funding Timeline Planning",
+            "Investor Readiness Evaluation",
+            "Strategic Roadmap"
+          ],
+          "price": "Strategy Consulting"
+        },
+        "relations": {
+          "title": "Investor Relations",
+          "description": "Building and maintaining strong relationships with existing and potential investors.",
+          "features": [
+            "Investor Communication",
+            "Quarterly Reporting",
+            "Investor Meeting Coordination",
+            "Relationship Management"
+          ],
+          "price": "IR Services"
+        },
+        "modeling": {
+          "title": "Financial Modeling",
+          "description": "Detailed financial projections and valuation models to support funding decisions.",
+          "features": [
+            "Financial Forecasting",
+            "Scenario Analysis",
+            "Valuation Models",
+            "Sensitivity Testing"
+          ],
+          "price": "Financial Advisory"
+        }
+      }
+    },
+    "ipoAdvisory": {
       "title": "IPO Advisory",
       "description": "Comprehensive consulting services for IPO preparation and execution",
       "services": {
@@ -189,7 +312,21 @@
       ]
     }
   },
+  "stats": {
+    "fundsRaised": "Funds Raised",
+    "timeline": "Months Timeline",
+    "successRate": "Success Rate",
+    "investorNetwork": "Investor Network"
+  },
+  "trackRecord": {
+    "title": "Our Track Record"
+  },
   "cta": {
+    "title": "Ready to Secure Your Next Round of Funding?",
+    "description": "Get expert guidance on your fundraising journey. Our team will help you identify the right funding sources and optimize your strategy for success.",
+    "startButton": "Start Your Fundraising",
+    "downloadButton": "Download Guide",
+    "getStarted": "Get Started",
     "getProposal": "Get Proposal",
     "bookConsultation": "Schedule Consultation",
     "downloadBrochure": "Download Brochure",

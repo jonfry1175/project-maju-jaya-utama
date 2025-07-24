@@ -26,151 +26,96 @@ import { useTranslation } from "react-i18next";
 
 const ServicesSection = () => {
   const { t, i18n } = useTranslation("services");
-  const [activeCategory, setActiveCategory] = useState("advisory");
+  const [activeCategory, setActiveCategory] = useState("ipoAdvisory");
 
   const serviceCategories = {
-    advisory: {
-      title: "Konsultasi IPO",
+    ipoAdvisory: {
+      title: t("categories.ipoAdvisory.title"),
       icon: Briefcase,
-      description:
-        "Layanan konsultasi komprehensif untuk persiapan dan pelaksanaan IPO",
+      description: t("categories.ipoAdvisory.description"),
       image:
         "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&h=600&fit=crop", // Business consulting
       services: [
         {
           icon: FileText,
-          title: "Persiapan Dokumen IPO",
-          description:
-            "Penyusunan prospektus, laporan keuangan, dan dokumen regulasi lengkap sesuai standar OJK dan BEI.",
-          features: [
-            "Prospektus & Profil Perusahaan",
-            "Penyusunan Laporan Keuangan",
-            "Tinjauan Dokumen Hukum",
-            "Analisis Faktor Risiko",
-          ],
-          price: "Paket Premium",
+          title: t("categories.ipoAdvisory.services.documentation.title"),
+          description: t("categories.ipoAdvisory.services.documentation.description"),
+          features: t("categories.ipoAdvisory.services.documentation.features", { returnObjects: true }),
+          price: t("categories.ipoAdvisory.services.documentation.price"),
         },
         {
           icon: ChartLine,
-          title: "Valuasi & Analisis Pasar",
-          description:
-            "Penentuan nilai wajar perusahaan dan strategi pricing optimal berdasarkan kondisi pasar.",
-          features: [
-            "Valuasi Bisnis Komprehensif",
-            "Analisis Industri & Pasar",
-            "Studi Perbandingan Kompetitor",
-            "Strategi Penetapan Harga IPO",
-          ],
-          price: "Konsultasi Khusus",
+          title: t("categories.ipoAdvisory.services.valuation.title"),
+          description: t("categories.ipoAdvisory.services.valuation.description"),
+          features: t("categories.ipoAdvisory.services.valuation.features", { returnObjects: true }),
+          price: t("categories.ipoAdvisory.services.valuation.price"),
         },
         {
           icon: Target,
-          title: "Strategi Go Public",
-          description:
-            "Perencanaan strategis timeline IPO, pemilihan underwriter, dan roadshow preparation.",
-          features: [
-            "Perencanaan Timeline IPO",
-            "Pemilihan Penjamin Emisi",
-            "Persiapan Investor Roadshow",
-            "Strategi Pemasaran",
-          ],
-          price: "Layanan Penuh",
-        },
-      ],
-    },
-    restructuring: {
-      title: "Restrukturisasi Perusahaan",
-      icon: Building,
-      description: "Restrukturisasi perusahaan untuk memenuhi syarat go public",
-      image:
-        "https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=800&h=600&fit=crop", // Corporate structure
-      services: [
-        {
-          icon: Building,
-          title: "Restrukturisasi Entitas",
-          description:
-            "Penataan struktur kepemilikan dan entitas hukum sesuai persyaratan perusahaan terbuka.",
-          features: [
-            "Restrukturisasi Badan Hukum",
-            "Desain Struktur Kepemilikan",
-            "Integrasi Anak Perusahaan",
-            "Optimasi Pajak",
-          ],
-          price: "Solusi Khusus",
-        },
-        {
-          icon: Users,
-          title: "Tata Kelola Perusahaan",
-          description:
-            "Implementasi GCG, pembentukan organ perusahaan, dan sistem pengendalian internal.",
-          features: [
-            "Pembentukan Dewan Direksi",
-            "Komisaris Independen",
-            "Pembentukan Komite Audit",
-            "Sistem Pengendalian Internal",
-          ],
-          price: "Paket Tata Kelola",
-        },
-        {
-          icon: Shield,
-          title: "Manajemen Risiko",
-          description:
-            "Identifikasi, evaluasi, dan mitigasi risiko bisnis untuk perusahaan publik.",
-          features: [
-            "Kerangka Penilaian Risiko",
-            "Manajemen Kepatuhan",
-            "Pembentukan Audit Internal",
-            "Rencana Manajemen Krisis",
-          ],
-          price: "Konsultasi Risiko",
+          title: t("categories.ipoAdvisory.services.strategy.title"),
+          description: t("categories.ipoAdvisory.services.strategy.description"),
+          features: t("categories.ipoAdvisory.services.strategy.features", { returnObjects: true }),
+          price: t("categories.ipoAdvisory.services.strategy.price"),
         },
       ],
     },
     compliance: {
-      title: "Hukum & Kepatuhan",
+      title: t("categories.compliance.title"),
       icon: Scale,
-      description: "Pendampingan hukum dan kepatuhan regulasi pasar modal",
+      description: t("categories.compliance.description"),
       image:
         "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop", // Legal/compliance
       services: [
         {
           icon: Scale,
-          title: "Legal Due Diligence",
-          description:
-            "Pemeriksaan menyeluruh aspek hukum perusahaan untuk memastikan kesiapan IPO.",
-          features: [
-            "Tinjauan Hukum Perusahaan",
-            "Penilaian Kontrak",
-            "Pemeriksaan Litigasi",
-            "Kepatuhan Regulasi",
-          ],
-          price: "Paket Uji Tuntas",
+          title: t("categories.compliance.services.regulatory.title"),
+          description: t("categories.compliance.services.regulatory.description"),
+          features: t("categories.compliance.services.regulatory.features", { returnObjects: true }),
+          price: t("categories.compliance.services.regulatory.price"),
         },
         {
           icon: BookOpen,
-          title: "Kepatuhan Regulasi",
-          description:
-            "Memastikan pemenuhan seluruh persyaratan OJK, BEI, dan regulator terkait.",
-          features: [
-            "Bantuan Pengajuan OJK",
-            "Persyaratan Pencatatan BEI",
-            "Dukungan Kepatuhan Berkelanjutan",
-            "Pembaruan Regulasi",
-          ],
-          price: "Layanan Kepatuhan",
+          title: t("categories.compliance.services.corporate.title"),
+          description: t("categories.compliance.services.corporate.description"),
+          features: t("categories.compliance.services.corporate.features", { returnObjects: true }),
+          price: t("categories.compliance.services.corporate.price"),
         },
         {
           icon: Award,
-          title: "Dukungan Pasca IPO",
-          description:
-            "Pendampingan berkelanjutan pasca IPO untuk memenuhi kewajiban perusahaan terbuka.",
-          features: [
-            "Pelaporan Kuartalan",
-            "Dukungan Aksi Korporasi",
-            "Hubungan Investor",
-            "Penyusunan Laporan Tahunan",
-          ],
-          price: "Retainer Tahunan",
+          title: t("categories.compliance.services.reporting.title"),
+          description: t("categories.compliance.services.reporting.description"),
+          features: t("categories.compliance.services.reporting.features", { returnObjects: true }),
+          price: t("categories.compliance.services.reporting.price"),
+        },
+      ],
+    },
+    education: {
+      title: t("categories.education.title"),
+      icon: Building,
+      description: t("categories.education.description"),
+      image:
+        "https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=800&h=600&fit=crop", // Corporate structure
+      services: [
+        {
+          icon: Users,
+          title: t("categories.education.services.management.title"),
+          description: t("categories.education.services.management.description"),
+          features: t("categories.education.services.management.features", { returnObjects: true }),
+          price: t("categories.education.services.management.price"),
+        },
+        {
+          icon: BookOpen,
+          title: t("categories.education.services.employee.title"),
+          description: t("categories.education.services.employee.description"),
+          features: t("categories.education.services.employee.features", { returnObjects: true }),
+          price: t("categories.education.services.employee.price"),
+        },
+        {
+          icon: Award,
+          title: t("categories.education.services.certification.title"),
+          description: t("categories.education.services.certification.description"),
+          features: t("categories.education.services.certification.features", { returnObjects: true }),
+          price: t("categories.education.services.certification.price"),
         },
       ],
     },
@@ -192,9 +137,7 @@ const ServicesSection = () => {
         <div className="max-w-5xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 sm:mb-6 border border-primary-subtle">
             <Lightbulb className="icon-small mr-2" />
-            {i18n.language === "id"
-              ? "Layanan Profesional"
-              : "Professional Services"}
+{t("section.badge")}
           </div>
 
           <h2 className="heading-2 text-primary mb-4 sm:mb-6">
@@ -207,7 +150,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Service Categories Tabs */}
-        <Tabs defaultValue="advisory" className="w-full mb-8 sm:mb-12 lg:mb-18">
+        <Tabs defaultValue="ipoAdvisory" className="w-full mb-8 sm:mb-12 lg:mb-18">
           <TabsList className="grid w-full max-w-full sm:max-w-4xl mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-0 mb-8 sm:mb-12 h-auto sm:h-10 p-1">
             {Object.entries(serviceCategories).map(([key, category]) => {
               const Icon = category.icon;

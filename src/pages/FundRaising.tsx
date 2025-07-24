@@ -30,144 +30,99 @@ const FundRaising = () => {
 
   const fundRaisingCategories = {
     equity: {
-      title: "Equity Funding",
+      title: t("categories.equity.title"),
       icon: TrendingUp,
-      description: "Comprehensive equity fundraising solutions for growth-stage companies",
+      description: t("categories.equity.description"),
       image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop",
       services: [
         {
           icon: BarChart3,
-          title: "Series A/B/C Fundraising",
-          description: "Strategic guidance through institutional funding rounds with optimal valuation and terms.",
-          features: [
-            "Investor Targeting & Outreach",
-            "Pitch Deck Development",
-            "Due Diligence Coordination",
-            "Term Sheet Negotiation",
-          ],
-          price: "Premium Package",
+          title: t("categories.equity.services.series.title"),
+          description: t("categories.equity.services.series.description"),
+          features: t("categories.equity.services.series.features", { returnObjects: true }),
+          price: t("categories.equity.services.series.price"),
         },
         {
           icon: Target,
-          title: "Strategic Angel Investment",
-          description: "Access to high-net-worth individuals and angel investor networks for early-stage funding.",
-          features: [
-            "Angel Network Access",
-            "Investor Matching",
-            "Presentation Coaching",
-            "Deal Structuring",
-          ],
-          price: "Angel Round",
+          title: t("categories.equity.services.angel.title"),
+          description: t("categories.equity.services.angel.description"),
+          features: t("categories.equity.services.angel.features", { returnObjects: true }),
+          price: t("categories.equity.services.angel.price"),
         },
         {
           icon: Building,
-          title: "Private Equity Solutions",
-          description: "Connecting mature companies with private equity firms for growth or exit opportunities.",
-          features: [
-            "PE Firm Identification",
-            "Financial Modeling",
-            "Management Presentation",
-            "Exit Planning",
-          ],
-          price: "PE Advisory",
+          title: t("categories.equity.services.privateEquity.title"),
+          description: t("categories.equity.services.privateEquity.description"),
+          features: t("categories.equity.services.privateEquity.features", { returnObjects: true }),
+          price: t("categories.equity.services.privateEquity.price"),
         },
       ],
     },
     debt: {
-      title: "Debt Financing",
+      title: t("categories.debt.title"),
       icon: DollarSign,
-      description: "Alternative debt financing solutions to fuel business growth",
+      description: t("categories.debt.description"),
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
       services: [
         {
           icon: FileSearch,
-          title: "Bank Loan Facilitation",
-          description: "Assistance in securing traditional bank loans with favorable terms and competitive rates.",
-          features: [
-            "Loan Application Preparation",
-            "Bank Relationship Management",
-            "Credit Enhancement Strategies",
-            "Rate Negotiation",
-          ],
-          price: "Debt Advisory",
+          title: t("categories.debt.services.bankLoan.title"),
+          description: t("categories.debt.services.bankLoan.description"),
+          features: t("categories.debt.services.bankLoan.features", { returnObjects: true }),
+          price: t("categories.debt.services.bankLoan.price"),
         },
         {
           icon: PieChart,
-          title: "Alternative Lending",
-          description: "Access to non-traditional lenders including fintech and revenue-based financing.",
-          features: [
-            "Fintech Lender Network",
-            "Revenue-Based Financing",
-            "Merchant Cash Advances",
-            "Asset-Based Lending",
-          ],
-          price: "Alternative Finance",
+          title: t("categories.debt.services.alternative.title"),
+          description: t("categories.debt.services.alternative.description"),
+          features: t("categories.debt.services.alternative.features", { returnObjects: true }),
+          price: t("categories.debt.services.alternative.price"),
         },
         {
           icon: ShieldCheck,
-          title: "Bonds & Securities",
-          description: "Corporate bond issuance and structured debt instruments for larger funding needs.",
-          features: [
-            "Bond Structuring",
-            "Credit Rating Support",
-            "Investor Relations",
-            "Regulatory Compliance",
-          ],
-          price: "Securities Package",
+          title: t("categories.debt.services.bonds.title"),
+          description: t("categories.debt.services.bonds.description"),
+          features: t("categories.debt.services.bonds.features", { returnObjects: true }),
+          price: t("categories.debt.services.bonds.price"),
         },
       ],
     },
     advisory: {
-      title: "Strategic Advisory",
+      title: t("categories.advisory.title"),
       icon: Lightbulb,
-      description: "Comprehensive advisory services to optimize your fundraising strategy",
+      description: t("categories.advisory.description"),
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop",
       services: [
     {
       icon: Users,
-          title: "Fundraising Strategy",
-          description: "Comprehensive strategic planning to determine optimal funding mix and timing.",
-          features: [
-            "Capital Needs Assessment",
-            "Funding Timeline Planning",
-            "Investor Readiness Evaluation",
-            "Strategic Roadmap",
-          ],
-          price: "Strategy Consulting",
+          title: t("categories.advisory.services.strategy.title"),
+          description: t("categories.advisory.services.strategy.description"),
+          features: t("categories.advisory.services.strategy.features", { returnObjects: true }),
+          price: t("categories.advisory.services.strategy.price"),
         },
         {
           icon: Handshake,
-      title: "Investor Relations",
-          description: "Building and maintaining strong relationships with existing and potential investors.",
-          features: [
-            "Investor Communication",
-            "Quarterly Reporting",
-            "Investor Meeting Coordination",
-            "Relationship Management",
-          ],
-          price: "IR Services",
+      title: t("categories.advisory.services.relations.title"),
+          description: t("categories.advisory.services.relations.description"),
+          features: t("categories.advisory.services.relations.features", { returnObjects: true }),
+          price: t("categories.advisory.services.relations.price"),
         },
         {
           icon: BarChart3,
-          title: "Financial Modeling",
-          description: "Detailed financial projections and valuation models to support funding decisions.",
-          features: [
-            "Financial Forecasting",
-            "Scenario Analysis",
-            "Valuation Models",
-            "Sensitivity Testing",
-          ],
-          price: "Financial Advisory",
+          title: t("categories.advisory.services.modeling.title"),
+          description: t("categories.advisory.services.modeling.description"),
+          features: t("categories.advisory.services.modeling.features", { returnObjects: true }),
+          price: t("categories.advisory.services.modeling.price"),
         },
       ],
     },
   };
 
   const stats = [
-    { icon: TrendingUp, value: "$2.5B+", label: "Funds Raised" },
-    { icon: Clock, value: "6-18", label: "Months Timeline" },
-    { icon: Award, value: "95%", label: "Success Rate" },
-    { icon: Users, value: "200+", label: "Investor Network" },
+    { icon: TrendingUp, value: "$2.5B+", label: t("stats.fundsRaised") },
+    { icon: Clock, value: "6-18", label: t("stats.timeline") },
+    { icon: Award, value: "95%", label: t("stats.successRate") },
+    { icon: Users, value: "200+", label: t("stats.investorNetwork") },
   ];
 
   return (
@@ -194,18 +149,15 @@ const FundRaising = () => {
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
             <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6 border border-primary/20">
               <TrendingUp className="w-3 sm:w-4 h-3 sm:h-4 mr-2" />
-              Fund Raising Services
+              {t("hero.badge")}
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-4 sm:mb-6 leading-tight">
-              Professional Fund Raising
-              <span className="text-white block mt-1 sm:mt-2">
-                Solutions
-              </span>
+              {t("hero.title")}
             </h1>
             
             <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
-              Comprehensive fund raising services to secure the capital your business needs for growth, expansion, and strategic initiatives.
+              {t("hero.description")}
             </p>
           </div>
         </div>
@@ -307,7 +259,7 @@ const FundRaising = () => {
                           <Button
                             className="w-full btn-gradient-brand group-hover:shadow-lg transition-all text-body-small"
                             size="sm">
-                            Get Started
+{t("cta.getStarted")}
                             <ArrowRight className="ml-1 sm:ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                           </Button>
                   </div>
@@ -323,7 +275,7 @@ const FundRaising = () => {
           <div className="mt-12 sm:mt-16 lg:mt-20">
             <div className="max-w-4xl mx-auto">
               <h3 className="heading-3 text-primary text-center mb-6 sm:mb-8 lg:mb-12">
-                Our Track Record
+                {t("trackRecord.title")}
                 </h3>
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -353,17 +305,17 @@ const FundRaising = () => {
           <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
                           <Card className="max-w-4xl mx-auto card-padding lg:card-padding-large bg-white border border-primary-subtle animate-card">
               <h3 className="heading-3 text-primary mb-3 sm:mb-4">
-                Ready to Secure Your Next Round of Funding?
+                {t("cta.title")}
               </h3>
               <p className="text-body text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
-                Get expert guidance on your fundraising journey. Our team will help you identify the right funding sources and optimize your strategy for success.
+                {t("cta.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                 <Button
                   size="lg"
                   className="btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 group w-full sm:w-auto">
                   <Phone className="mr-2 icon-small" />
-                  Start Your Fundraising
+                  {t("cta.startButton")}
                   <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
@@ -371,7 +323,7 @@ const FundRaising = () => {
                   size="lg"
                   className="text-body font-semibold px-6 sm:px-8 border-2 bg-white w-full sm:w-auto">
                   <Download className="mr-2 icon-small" />
-                  Download Guide
+                  {t("cta.downloadButton")}
                 </Button>
               </div>
             </Card>

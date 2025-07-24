@@ -53,7 +53,7 @@
   },
   "fundUsage": {
     "badge": "Fund Usage",
-    "title": "Common Uses of Bridging Funds",
+    "title": "Common Uses of Bridging Financing Funds",
     "description": "Bridging financing can be allocated across various critical pre-IPO needs to ensure successful public offering preparation.",
     "table": {
       "need": "Pre-IPO Need",
@@ -187,6 +187,6 @@
     "title": "Need Bridging Financing for Your IPO?",
     "description": "Get expert assistance in arranging bridging financing to support your IPO preparation. Our team will help you secure the right funding structure and terms for your pre-IPO needs.",
     "primaryButton": "Discuss Financing",
-    "secondaryButton": "Download Guide"
+    "secondaryButton": "Learn More"
   }
 }

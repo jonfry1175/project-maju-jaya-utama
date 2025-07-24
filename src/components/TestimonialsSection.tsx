@@ -14,9 +14,15 @@ import {
   Building,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const TestimonialsSection = () => {
   const { t, i18n } = useTranslation("testimonials");
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate("/ipo-process/mapping");
+  };
   const whyChooseUs = [
     {
       icon: Brain,
@@ -145,8 +151,8 @@ const TestimonialsSection = () => {
               : "Trusted Partner for"}
             <span className="text-gradient block mt-1 sm:mt-2 leading-normal pb-1 sm:pb-2">
               {i18n.language === "id"
-                ? "Kesuksesan IPO Anda"
-                : "Your IPO Success"}
+                ? "Kesuksesan IPO Anda".toUpperCase()
+                : "Your IPO Success".toUpperCase()}
             </span>
           </h2>
 
@@ -248,6 +254,7 @@ const TestimonialsSection = () => {
                   <ArrowRight className="ml-1 sm:ml-2 icon-small group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
+                  onClick={handleLearnMoreClick}
                   variant="outline"
                   size="lg"
                   className="text-body font-semibold px-4 sm:px-6 lg:px-8 border-2 w-full sm:w-auto">

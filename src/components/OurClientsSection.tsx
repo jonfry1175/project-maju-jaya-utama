@@ -26,9 +26,9 @@ const OurClientsSection = () => {
             </p>
             
             <div className="max-w-4xl mx-auto space-y-4">
-              <p className="text-body text-muted-foreground leading-relaxed">
+              {/* <p className="text-body text-muted-foreground leading-relaxed">
                 {t("mainClients.description.main")}
-              </p>
+              </p> */}
               <p className="text-body text-muted-foreground leading-relaxed">
                 {t("mainClients.description.secondary")}
               </p>
@@ -38,23 +38,21 @@ const OurClientsSection = () => {
           {/* Client Logo Section */}
           <div className="flex justify-center">
             <Card className="card-padding bg-white border border-subtle hover:shadow-xl transition-all duration-300 group hover:scale-105 border-medium hover:border-primary/20">
-              <div className="flex items-center justify-center">
-                <LazyImage
-                  src="/logologo/pandu-logistic.png"
-                  alt="Pandu Logistic"
-                  className="h-24 sm:h-32 lg:h-36 w-auto max-w-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-                />
+              <div className="text-center space-y-4">
+                <div className="flex items-center justify-center">
+                  <img
+                    src="/logologo/pandu-logistic.png"
+                    alt="Pandu Logistic"
+                    className="h-24 sm:h-32 lg:h-36 w-auto max-w-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+                <div className="pt-2 border-t border-primary/10">
+                  <p className="text-body-small text-muted-foreground">
+                    Trusted partnership in logistics and transportation excellence
+                  </p>
+                </div>
               </div>
             </Card>
-          </div>
-
-          {/* Additional Context */}
-          <div className="mt-8 text-center">
-            <div className="inline-block card-padding bg-muted/30 rounded-2xl">
-              <p className="text-body-small text-muted-foreground">
-                Trusted partnership in logistics and transportation excellence
-              </p>
-            </div>
           </div>
         </div>
       </div>

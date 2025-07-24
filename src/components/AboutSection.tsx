@@ -102,7 +102,7 @@ const AboutSection = () => {
           <h2 className="heading-2 text-primary mb-4 sm:mb-6">
             {t("section.title")}
             <span className="text-gradient block mt-1 sm:mt-2 leading-normal">
-              {t("section.titleHighlight")}
+              {t("section.titleHighlight").toUpperCase()}
             </span>
           </h2>
 
@@ -1045,7 +1045,7 @@ const AboutSection = () => {
         </div>
 
         {/* Roadmap Section - Enhanced with Images */}
-        <div className="mb-8 mt-12">
+        <div className="mb-8" style={{marginTop: '8rem'}}>
           <h3 className="heading-4 text-primary text-center mb-6">
             {t("roadmap.title")}
           </h3>
