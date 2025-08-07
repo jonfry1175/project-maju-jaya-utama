@@ -125,7 +125,7 @@ const Footer = () => {
                     href={link.href} 
                     className="text-primary-foreground/70 hover:text-white transition-colors text-body-small flex items-center group"
                   >
-                    <ArrowRight className="icon-small mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    {/* <ArrowRight className="icon-small mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" /> */}
                     {link.name}
                   </a>
                 </li>
@@ -143,7 +143,7 @@ const Footer = () => {
                     href={service.href} 
                     className="text-primary-foreground/70 hover:text-white transition-colors text-body-small flex items-center group"
                   >
-                    <ArrowRight className="icon-small mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    {/* <ArrowRight className="icon-small mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" /> */}
                     {service.name}
                   </a>
                 </li>

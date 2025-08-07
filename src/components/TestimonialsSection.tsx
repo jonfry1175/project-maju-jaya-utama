@@ -152,7 +152,7 @@ const TestimonialsSection = () => {
             <span className="text-gradient block mt-1 sm:mt-2 leading-normal pb-1 sm:pb-2">
               {i18n.language === "id"
                 ? "Kesuksesan IPO Anda".toUpperCase()
-                : "Your IPO Success".toUpperCase()}
+                : "Your Success IPO".toUpperCase()}
             </span>
           </h2>
 

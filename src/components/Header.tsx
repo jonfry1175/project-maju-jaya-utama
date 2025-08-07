@@ -37,7 +37,7 @@ const Header = () => {
       name: t('nav.about'), 
       href: "#about",
       subItems: [
-        { name: t('nav.about.overview'), href: "#about" },
+        { name: t('nav.about.overview'), href: "/about-company" },
         { name: t('nav.about.leadership'), href: "/our-leadership" }
       ]
     },
@@ -45,7 +45,7 @@ const Header = () => {
       name: t('nav.services'), 
       href: "#services",
       subItems: [
-        { name: t('nav.services.professional'), href: "#services" },
+        { name: t('nav.services.professional'), href: "/professional-services" },
         { name: t('nav.services.fundRaising'), href: "/fund-raising" }
       ]
     },

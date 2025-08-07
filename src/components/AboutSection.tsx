@@ -101,9 +101,6 @@ const AboutSection = () => {
 
           <h2 className="heading-2 text-primary mb-4 sm:mb-6">
             {t("section.title")}
-            <span className="text-gradient block mt-1 sm:mt-2 leading-normal">
-              {t("section.titleHighlight").toUpperCase()}
-            </span>
           </h2>
 
           <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">

@@ -59,7 +59,7 @@ const ContactSection = () => {
       icon: Phone,
       title: t("info.phone.title"),
       details: t("info.phone.numbers", { returnObjects: true }) as string[],
-      action: { label: t("info.phone.action"), link: "tel:+622112345678" },
+      action: { label: t("info.phone.action"), link: "tel:+62215152423" },
     },
     {
       icon: MessageSquare,
