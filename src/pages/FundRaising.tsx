@@ -152,7 +152,7 @@ const FundRaising = () => {
               {t("hero.badge")}
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display mb-4 sm:mb-6" style={{ lineHeight: '1.3' }}>
               {t("hero.title")}
             </h1>
             

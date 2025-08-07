@@ -63,8 +63,7 @@ const Header = () => {
       ]
     },
     // { name: t('nav.testimonials'), href: "#testimonials" },
-    { name: t('nav.faq'), href: "#faq" },
-    { name: t('nav.contact'), href: "#contact" }
+    { name: t('nav.faq'), href: "#faq" }
   ];
 
   const handleLogoClick = () => {
@@ -226,13 +225,6 @@ const Header = () => {
           {/* CTA Buttons - Ultra Compact */}
           <div className="hidden lg:flex items-center space-x-1 flex-shrink-0">
             <LanguageSwitcher />
-            <Button 
-              className="btn-gradient-brand shadow-brand text-xs font-medium px-2 xl:px-3 py-1.5 tracking-normal whitespace-nowrap"
-              onClick={(e) => handleNavClick(e, '#contact')}
-            >
-              <span className="hidden xl:inline">{t('nav.contact')}</span>
-              <span className="xl:hidden">{t('nav.contact')}</span>
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -303,14 +295,8 @@ const Header = () => {
                 );
               })}
               <div className="flex flex-col space-y-2 pt-4 px-4">
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center justify-center mb-2">
                   <LanguageSwitcher />
-                  <Button 
-                    className="btn-gradient-brand text-sm font-semibold tracking-wide"
-                    onClick={(e) => handleNavClick(e, '#contact')}
-                  >
-                    {t('nav.contact')}
-                  </Button>
                 </div>
                 <div className="flex items-center justify-between pt-4 mt-4 border-t border-subtle">
                   <a href="tel:+622112345678" className="flex items-center text-sm text-muted-foreground font-medium tracking-wide">

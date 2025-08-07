@@ -23,7 +23,7 @@ const OurPartnership = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-primary/5 to-primary/10 bg-[url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&h=1080&fit=crop')] bg-cover bg-center bg-no-repeat">
+      <section className="relative py-12 sm:py-16 lg:py-20 bg-[url('/handshake.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-primary/60"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
