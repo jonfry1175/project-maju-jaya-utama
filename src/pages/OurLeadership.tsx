@@ -25,13 +25,13 @@ const OurLeadership = () => {
     {
       key: "director1",
       roleKey: "presidentDirector", 
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
+      image: "/boyke.jpg",
       roleColor: "bg-orange-400"
     },
     {
       key: "director2",
       roleKey: "director",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face", 
+      image: "/paulus.JPG", 
       roleColor: "bg-orange-400"
     }
   ];
