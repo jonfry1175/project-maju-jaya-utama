@@ -36,7 +36,7 @@ const LeadershipDetail = () => {
       },
       director2: {
         roleKey: "director",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
+        image: "/paulus.JPG",
         roleColor: "bg-orange-400"
       }
     };

@@ -49,16 +49,6 @@ const FAQSection = () => {
             </div>
           ),
         },
-        {
-          q: t("categories.requirements.questions.2.question"),
-          a: (
-            <div className="space-y-3">
-              <p className="text-muted-foreground">
-                {t("categories.requirements.questions.2.answer")}
-              </p>
-            </div>
-          ),
-        },
       ],
     },
     {
