@@ -31,7 +31,7 @@ const LeadershipDetail = () => {
       },
       director1: {
         roleKey: "presidentDirector",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
+        image: "/boyke.jpg",
         roleColor: "bg-orange-400"
       },
       director2: {
