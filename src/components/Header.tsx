@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown, Menu, MessageCircle, Phone, X } from "lucide-react";
+import { ChevronDown, Menu, MessageCircle, Phone, X, ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -63,7 +63,13 @@ const Header = () => {
       ]
     },
     // { name: t('nav.testimonials'), href: "#testimonials" },
-    { name: t('nav.faq'), href: "#faq" }
+    { name: t('nav.faq'), href: "#faq" },
+    { 
+      name: "Part of RITZ Consultant", 
+      href: "/ritz-consultant",
+      isExternal: true,
+      icon: <ExternalLink className="ml-1 w-3 h-3" />
+    }
   ];
 
   const handleLogoClick = () => {
@@ -197,15 +203,16 @@ const Header = () => {
                 );
               }
               
-              const isExternal = item.href.startsWith('/');
+              const isExternal = item.href.startsWith('/') || item.isExternal;
               if (isExternal) {
                 return (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`px-1.5 xl:px-2 py-1.5 text-xs xl:text-sm font-medium text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-md transition-all duration-200 tracking-normal whitespace-nowrap ${hideOnLG ? 'hidden xl:flex' : ''}`}
+                    className={`px-1.5 xl:px-2 py-1.5 text-xs xl:text-sm font-medium text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-md transition-all duration-200 tracking-normal whitespace-nowrap ${hideOnLG ? 'hidden xl:flex' : ''} flex items-center`}
                   >
                     {item.name}
+                    {item.icon}
                   </Link>
                 );
               }
@@ -270,16 +277,17 @@ const Header = () => {
                   );
                 }
                 
-                const isExternal = item.href.startsWith('/');
+                const isExternal = item.href.startsWith('/') || item.isExternal;
                 if (isExternal) {
                   return (
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="px-4 py-3 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 tracking-wide"
+                      className="px-4 py-3 text-sm font-semibold text-foreground/85 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-200 tracking-wide flex items-center"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
+                      {item.icon}
                     </Link>
                   );
                 }
