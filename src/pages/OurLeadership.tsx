@@ -66,7 +66,7 @@ const OurLeadership = () => {
       </section>
 
       {/* Leadership Team Section */}
-      <section className="py-8 sm:py-12 animate-section">
+      <section className="pb-8 sm:pb-12 animate-section">
         <div className="container mx-auto container-padding">
           <div className="max-w-7xl mx-auto">
             {/* Leadership Grid */}
@@ -89,7 +89,7 @@ const OurLeadership = () => {
                         src={member.image}
                         alt={t(`team.members.${member.key}.name`)}
                         className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${
-                          index === 0 || index === 1 ? 'object-[50%_20%]' : 'object-center'
+                          index === 0 || index === 1 ? 'object-top' : index === 3 ? 'object-[50%_20%]' : 'object-center'
                         }`}
                       />
                       {/* Subtle overlay */}

@@ -52,7 +52,62 @@ const OurPartnership = () => {
       {/* Our Clients Section */}
       <OurClientsSection />
 
-      {/* Our Main Clients Section - Removed */}
+      {/* Affiliate by RITZ Consultant Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto container-padding">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+                Affiliate by RITZ Consultant
+              </h2>
+              <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Our strategic partnership with RITZ Corpora Indonesia brings additional expertise and trusted client relationships
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+              {[
+                { name: 'Pertamina', logo: '/logologo/pertamina.png', alt: 'Pertamina Logo' },
+                { name: 'BNI', logo: '/logologo/bni.png', alt: 'BNI Logo' },
+                { name: 'Maybank', logo: '/Sponsor/logo-sponsor-gsk-maybank.jpg', alt: 'Maybank Logo' },
+                { name: 'Angkasa Pura II', logo: '/logologo/angkasa.png', alt: 'Angkasa Pura II Logo' },
+                { name: 'Bank Mandiri', logo: '/logologo/mandiri.png', alt: 'Bank Mandiri Logo' },
+                { name: 'BRI Agro', logo: '/logologo/bri.png', alt: 'BRI Agro Logo' },
+                { name: 'Telkomsel', logo: '/logologo/telkomsel.png', alt: 'Telkomsel Logo' },
+                { name: 'Pelindo', logo: '/Sponsor/logo-ski-sponsor-pelindo.png', alt: 'Pelindo Logo' },
+                { name: 'Tempo Media Group', logo: '/Sponsor/logo-sponsor-gsk-tempo.png', alt: 'Tempo Media Group Logo' },
+                { name: 'Alif', logo: '/Sponsor/logo-sponsor-gsk-alif.png', alt: 'Alif Logo' }
+              ].map((client, index) => (
+                <div key={index} className="bg-card p-6 rounded-xl shadow-soft border border-subtle text-center hover:shadow-medium transition-all duration-300 group">
+                  <div className="flex flex-col items-center justify-center h-20 mb-3">
+                    <img 
+                      src={client.logo} 
+                      alt={client.alt}
+                      className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.innerHTML = `<div class="text-sm font-semibold text-foreground">${client.name}</div>`;
+                        }
+                      }}
+                    />
+                  </div>
+                  <div className="text-sm font-medium text-muted-foreground">{client.name}</div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+                Through our partnership with RITZ Consultant, we extend our reach to serve prestigious clients across diverse sectors, combining our IPO expertise with their comprehensive financial and business consulting services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Partnership Benefits Section */}
       <PartnershipBenefitsSection />
