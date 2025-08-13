@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Users, Target, Shield, TrendingUp, Award, ExternalLink, ChevronDown } from "lucide-react";
+import { ArrowRight, Building2, Users, Target, Shield, TrendingUp, Award, ExternalLink, ChevronDown, ChevronLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const RitzConsultant = () => {
   const { t } = useTranslation();
@@ -54,7 +55,17 @@ const RitzConsultant = () => {
       
       <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section id="hero" className="relative h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        {/* Back to Home Link */}
+        <div className="absolute top-8 left-8 z-10">
+          <Link
+            to="/"
+            className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors duration-200 group"
+          >
+            <ChevronLeft className="w-4 h-4 mr-1 transition-transform group-hover:-translate-x-1" />
+            <span className="text-sm font-medium">Back to Home</span>
+          </Link>
+        </div>
         <div className="container mx-auto container-padding">
           <div className="max-w-6xl mx-auto text-center">
             <div className="mb-8">
@@ -78,7 +89,7 @@ const RitzConsultant = () => {
         </div>
         
         {/* Scroll Down Button */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-up" style={{animationDelay: '0.8s', animationFillMode: 'forwards'}}>
+        <div className="absolute bottom-4 md:bottom-8 left-0 right-0 flex justify-center opacity-0 animate-fade-up" style={{animationDelay: '0.8s', animationFillMode: 'forwards'}}>
           <button
             onClick={handleScrollToAbout}
             className="flex flex-col items-center text-muted-foreground hover:text-primary transition-all duration-300 group"
@@ -216,8 +227,8 @@ const RitzConsultant = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="relative h-full">
-                <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 rounded-2xl border border-primary/20 h-full flex flex-col">
-                  <div className="bg-primary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold">
+                <div className="group bg-white p-8 rounded-2xl border border-primary/20 h-full flex flex-col hover:shadow-xl hover:border-primary transition-all duration-300 transform hover:scale-105">
+                  <div className="bg-primary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold group-hover:scale-105 transition-transform">
                     01
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-4">Client Assessment</h3>
@@ -228,8 +239,8 @@ const RitzConsultant = () => {
               </div>
               
               <div className="relative h-full">
-                <div className="bg-gradient-to-br from-secondary/10 to-secondary/5 p-8 rounded-2xl border border-secondary/20 h-full flex flex-col">
-                  <div className="bg-secondary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold">
+                <div className="group bg-white p-8 rounded-2xl border border-secondary/20 h-full flex flex-col hover:shadow-xl hover:border-secondary transition-all duration-300 transform hover:scale-105">
+                  <div className="bg-secondary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold group-hover:scale-105 transition-transform">
                     02
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-4">Strategic Advisory</h3>
@@ -240,8 +251,8 @@ const RitzConsultant = () => {
               </div>
               
               <div className="relative h-full">
-                <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 rounded-2xl border border-primary/20 h-full flex flex-col">
-                  <div className="bg-primary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold">
+                <div className="group bg-white p-8 rounded-2xl border border-primary/20 h-full flex flex-col hover:shadow-xl hover:border-primary transition-all duration-300 transform hover:scale-105">
+                  <div className="bg-primary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold group-hover:scale-105 transition-transform">
                     03
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-4">Implementation Guidance</h3>
@@ -252,8 +263,8 @@ const RitzConsultant = () => {
               </div>
               
               <div className="relative h-full">
-                <div className="bg-gradient-to-br from-secondary/10 to-secondary/5 p-8 rounded-2xl border border-secondary/20 h-full flex flex-col">
-                  <div className="bg-secondary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold">
+                <div className="group bg-white p-8 rounded-2xl border border-secondary/20 h-full flex flex-col hover:shadow-xl hover:border-secondary transition-all duration-300 transform hover:scale-105">
+                  <div className="bg-secondary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold group-hover:scale-105 transition-transform">
                     04
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-4">Long-term Support</h3>
