@@ -231,12 +231,10 @@ const OurPartnership = () => {
         <div className="container mx-auto container-padding">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center bg-white text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary/20">
-                {t('our-partnership:portfolio.badge')}
-              </div>
-              <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+              <h2 className="heading-2 font-bold text-primary font-display mb-4 leading-tight">
                 {t('our-partnership:portfolio.title')}
               </h2>
+              
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 {t('our-partnership:portfolio.description')}
               </p>

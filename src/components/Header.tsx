@@ -65,7 +65,7 @@ const Header = () => {
     // { name: t('nav.testimonials'), href: "#testimonials" },
     { name: t('nav.faq'), href: "#faq" },
     { 
-      name: "Part of RITZ Consultant", 
+      name: t('nav.partOfRitz'), 
       href: "/ritz-consultant",
       isExternal: true
     }
