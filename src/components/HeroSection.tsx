@@ -10,9 +10,11 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const { t } = useTranslation("hero");
+  const navigate = useNavigate();
 
   // WhatsApp integration
   const whatsappNumber = "6281290001234";
@@ -160,7 +162,8 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button
                 size="lg"
-                className="btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto group w-full sm:w-auto">
+                className="btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 py-4 sm:py-6 h-auto group w-full sm:w-auto"
+                onClick={() => navigate('/ipo-process/mapping')}>
                 {t("cta.startJourney")}
                 <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
               </Button>
