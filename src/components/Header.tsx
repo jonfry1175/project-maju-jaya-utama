@@ -67,8 +67,7 @@ const Header = () => {
     { 
       name: "Part of RITZ Consultant", 
       href: "/ritz-consultant",
-      isExternal: true,
-      icon: <ExternalLink className="ml-1 w-3 h-3" />
+      isExternal: true
     }
   ];
 
@@ -172,7 +171,7 @@ const Header = () => {
           )}
 
           {/* Desktop Navigation - Ultra Compact */}
-          <nav className="hidden lg:flex items-center space-x-0 xl:space-x-0.5 flex-1 justify-center">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6 flex-1 justify-center">
             {navItems.map((item, index) => {
               // Hide less important items on smaller screens
               const isImportant = ['home', 'about', 'services', 'partners', 'contact'].includes(item.href.replace('#', '').replace('/', ''));
@@ -234,13 +233,16 @@ const Header = () => {
             <LanguageSwitcher />
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-1.5 hover:bg-muted/50 rounded-lg transition-colors flex-shrink-0"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          {/* Mobile Actions - Language Switcher + Menu Button */}
+          <div className="lg:hidden flex items-center space-x-2 flex-shrink-0">
+            <LanguageSwitcher />
+            <button
+              className="p-1.5 hover:bg-muted/50 rounded-lg transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation - Enhanced */}
@@ -303,9 +305,6 @@ const Header = () => {
                 );
               })}
               <div className="flex flex-col space-y-2 pt-4 px-4">
-                <div className="flex items-center justify-center mb-2">
-                  <LanguageSwitcher />
-                </div>
                 <div className="flex items-center justify-between pt-4 mt-4 border-t border-subtle">
                   <a href="tel:+622112345678" className="flex items-center text-sm text-muted-foreground font-medium tracking-wide">
                     <Phone className="icon-small mr-2" />

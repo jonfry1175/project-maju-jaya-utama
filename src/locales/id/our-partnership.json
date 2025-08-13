@@ -200,6 +200,12 @@
       "button": "Mulai Sekarang"
     }
   },
+  "portfolio": {
+    "badge": "Afiliasi dari RITZ Consultant",
+    "title": "Klien & Project Unggulan",
+    "description": "Kami bangga telah berkolaborasi dengan berbagai institusi dan perusahaan",
+    "footer": "Sebagai bagian dari RITZ Consultant, kami memperluas jangkauan kami untuk melayani klien bergengsi di berbagai sektor, menggabungkan keahlian IPO kami dengan layanan konsultasi keuangan dan bisnis komprehensif mereka."
+  },
   "faq": {
     "badge": "FAQ",
     "title": "Pertanyaan Kemitraan",

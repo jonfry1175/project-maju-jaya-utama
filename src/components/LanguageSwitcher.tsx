@@ -8,8 +8,8 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const languages = [
-  { code: 'id', name: 'Indonesia', flag: '🇮🇩' },
-  { code: 'en', name: 'English', flag: '🇬🇧' },
+  { code: 'id', name: 'Indonesia', flag: '/flags/id.svg' },
+  { code: 'en', name: 'English', flag: '/flags/gb.svg' },
 ];
 
 const LanguageSwitcher = () => {
@@ -22,20 +22,20 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="px-3 min-w-0">
-          <span className="text-lg">{currentLanguage.flag}</span>
+          <img src={currentLanguage.flag} alt={currentLanguage.name} className="w-4 h-3 object-cover" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="z-[100] mt-1">
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
             className={`gap-2 ${i18n.language === lang.code ? 'bg-muted' : ''}`}
           >
-            <span className="text-lg">{lang.flag}</span>
+            <img src={lang.flag} alt={lang.name} className="w-4 h-3 object-cover" />
             <span className="text-sm">{lang.name}</span>
           </DropdownMenuItem>
         ))}
