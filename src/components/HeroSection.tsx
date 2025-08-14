@@ -49,11 +49,12 @@ const HeroSection = () => {
       color: "primary",
     },
     {
-      icon: Users,
-      value: 30,
-      suffix: "+",
-      label: t("stats.team.label"),
+      icon: null,
+      value: null,
+      suffix: "",
+      label: "partnership",
       color: "accent",
+      isPartnership: true,
     },
   ];
 
@@ -211,11 +212,11 @@ const HeroSection = () => {
                     className="h-8 sm:h-10 lg:h-12 xl:h-full w-auto object-contain max-w-full"
                   />
                 </div>
-                                  <div className="flex items-center justify-center h-10 sm:h-12 lg:h-14 xl:h-16 bg-muted rounded px-2 sm:px-3 col-span-2 sm:col-span-1">
+                                  <div className="flex items-center justify-center h-10 sm:h-12 lg:h-14 xl:h-16 col-span-2 sm:col-span-1">
                   <img
                     src="/logo/logo-kpei.png"
                     alt="KPEI - Indonesia Clearing Guarantee Corporation"
-                    className="h-6 sm:h-8 lg:h-10 xl:h-12 w-auto object-contain max-w-full"
+                    className="h-8 sm:h-10 lg:h-12 xl:h-full w-auto object-contain max-w-full"
                   />
                 </div>
               </div>
@@ -229,9 +230,33 @@ const HeroSection = () => {
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               const displayValue =
-                stat.value % 1 !== 0
+                stat.value && stat.value % 1 !== 0
                   ? counters[index].toFixed(1)
-                  : Math.floor(counters[index]);
+                  : stat.value ? Math.floor(counters[index]) : null;
+
+              // Special card for partnership
+              if (stat.isPartnership) {
+                return (
+                  <Card
+                    key={index}
+                    className="group relative overflow-hidden bg-white/90 backdrop-blur-sm border border-subtle hover:border-primary-medium hover:shadow-lg transition-all duration-200 animate-card">
+                    <div className="card-padding space-y-2 sm:space-y-3 lg:space-y-4 text-center">
+                      <div className="space-y-2">
+                        <p className="text-xs text-muted-foreground font-medium leading-tight">
+                          Global Sinergi Kapital part of
+                        </p>
+                        <div className="flex items-center justify-center">
+                          <img
+                            src="/logo-ritz-1.png"
+                            alt="RITZ Corp"
+                            className="h-20 sm:h-24 lg:h-28 xl:h-32 w-auto object-contain max-w-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              }
 
               return (
                 <Card
