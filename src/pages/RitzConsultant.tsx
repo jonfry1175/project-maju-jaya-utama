@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const RitzConsultant = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ritz-consultant');
 
   useEffect(() => {
     // Scroll to top when component mounts
@@ -63,7 +63,7 @@ const RitzConsultant = () => {
             className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors duration-200 group"
           >
             <ChevronLeft className="w-4 h-4 mr-1 transition-transform group-hover:-translate-x-1" />
-            <span className="text-sm font-medium">Back to Home</span>
+            <span className="text-sm font-medium">{t('hero.backToHome')}</span>
           </Link>
         </div>
         <div className="container mx-auto container-padding">
@@ -82,7 +82,7 @@ const RitzConsultant = () => {
                 RITZ <span className="text-primary">Corpora Indonesia</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed opacity-0 animate-fade-up" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                Integrated Financial & Business Consulting Solutions
+                {t('hero.subtitle')}
               </p>
             </div>
           </div>
@@ -94,7 +94,7 @@ const RitzConsultant = () => {
             onClick={handleScrollToAbout}
             className="flex flex-col items-center text-muted-foreground hover:text-primary transition-all duration-300 group"
           >
-            <span className="text-sm font-medium mb-2 opacity-75 group-hover:opacity-100">Learn More</span>
+            <span className="text-sm font-medium mb-2 opacity-75 group-hover:opacity-100">{t('hero.learnMore')}</span>
             <div className="w-8 h-8 rounded-full border-2 border-muted-foreground group-hover:border-primary transition-all duration-300 flex items-center justify-center group-hover:bg-primary/10">
               <ChevronDown className="w-4 h-4 animate-bounce" />
             </div>
@@ -108,7 +108,7 @@ const RitzConsultant = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-                About RITZ Corp
+                {t('about.title')}
               </h2>
               <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
             </div>
@@ -116,10 +116,10 @@ const RitzConsultant = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-                  RITZ Corp is an integrated business with two main business lines: <strong>Financial and Business Consulting</strong> through PT RITZ Konsultan Indonesia (RKI) and <strong>PT RITZ Investment Indonesia</strong> (RII).
+                  {t('about.description1')}
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed text-justify">
-                  We offer comprehensive Corporate Law Services through RITZ & Partners Law Firm and Commercial Litigation Services through Rivai & Co. Law Firm, with extensive experience in banking, commercial investment banking, private equity, and capital markets.
+                  {t('about.description2')}
                 </p>
               </div>
               
@@ -131,8 +131,8 @@ const RitzConsultant = () => {
                         <Building2 className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-2">RKI - Financial Consulting</h3>
-                        <p className="text-sm text-muted-foreground">Corporate Law Services & Commercial Litigation</p>
+                        <h3 className="font-semibold text-foreground mb-2">{t('about.rki.title')}</h3>
+                        <p className="text-sm text-muted-foreground">{t('about.rki.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
@@ -140,8 +140,8 @@ const RitzConsultant = () => {
                         <TrendingUp className="w-6 h-6 text-secondary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-2">RII - Investment Services</h3>
-                        <p className="text-sm text-muted-foreground">Private Equity & Capital Market Solutions</p>
+                        <h3 className="font-semibold text-foreground mb-2">{t('about.rii.title')}</h3>
+                        <p className="text-sm text-muted-foreground">{t('about.rii.description')}</p>
                       </div>
                     </div>
                   </div>
@@ -158,11 +158,11 @@ const RitzConsultant = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-                Advantages of RITZ Corp
+                {t('advantages.title')}
               </h2>
               <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Four key advantages that set us apart in financial and business consulting
+                {t('advantages.subtitle')}
               </p>
             </div>
             
@@ -171,9 +171,9 @@ const RitzConsultant = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
                   <Target className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Advisory Process Excellence</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{t('advantages.advisory.title')}</h3>
                 <p className="text-muted-foreground">
-                  Supporting planning, management, and execution of assessment needs, business transactions, and corporate financing
+                  {t('advantages.advisory.description')}
                 </p>
               </div>
               
@@ -181,9 +181,9 @@ const RitzConsultant = () => {
                 <div className="bg-secondary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
                   <Users className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Team Assembly Capability</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{t('advantages.team.title')}</h3>
                 <p className="text-muted-foreground">
-                  Assembling the right teams with appropriate experiences and expertise for each client
+                  {t('advantages.team.description')}
                 </p>
               </div>
               
@@ -191,9 +191,9 @@ const RitzConsultant = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
                   <Shield className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Client Collaboration</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{t('advantages.collaboration.title')}</h3>
                 <p className="text-muted-foreground">
-                  Close collaboration offering tailored solutions addressing debt covenants, cashflow issues, and tax impact
+                  {t('advantages.collaboration.description')}
                 </p>
               </div>
               
@@ -201,9 +201,9 @@ const RitzConsultant = () => {
                 <div className="bg-secondary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform">
                   <Award className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Professional Expertise</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{t('advantages.expertise.title')}</h3>
                 <p className="text-muted-foreground">
-                  Expertise in assessing risks and identifying opportunities, ensuring successful transaction completion
+                  {t('advantages.expertise.description')}
                 </p>
               </div>
             </div>
@@ -217,11 +217,11 @@ const RitzConsultant = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-                Our Approach
+                {t('approach.title')}
               </h2>
               <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                A systematic 4-step process to ensure successful project outcomes
+                {t('approach.subtitle')}
               </p>
             </div>
             
@@ -231,9 +231,9 @@ const RitzConsultant = () => {
                   <div className="bg-primary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold group-hover:scale-105 transition-transform">
                     01
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Client Assessment</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">{t('approach.step1.title')}</h3>
                   <p className="text-muted-foreground flex-grow">
-                    Addressing client needs by assembling specialized teams tailored to meet specific requirements
+                    {t('approach.step1.description')}
                   </p>
                 </div>
               </div>
@@ -243,9 +243,9 @@ const RitzConsultant = () => {
                   <div className="bg-secondary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold group-hover:scale-105 transition-transform">
                     02
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Strategic Advisory</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">{t('approach.step2.title')}</h3>
                   <p className="text-muted-foreground flex-grow">
-                    Developing customized solutions that align with unique requirements and objectives
+                    {t('approach.step2.description')}
                   </p>
                 </div>
               </div>
@@ -255,9 +255,9 @@ const RitzConsultant = () => {
                   <div className="bg-primary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold group-hover:scale-105 transition-transform">
                     03
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Implementation Guidance</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">{t('approach.step3.title')}</h3>
                   <p className="text-muted-foreground flex-grow">
-                    Guiding through various scenarios, recommending measures to ensure solvency and future positioning
+                    {t('approach.step3.description')}
                   </p>
                 </div>
               </div>
@@ -267,9 +267,9 @@ const RitzConsultant = () => {
                   <div className="bg-secondary text-white w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-xl font-bold group-hover:scale-105 transition-transform">
                     04
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Long-term Support</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">{t('approach.step4.title')}</h3>
                   <p className="text-muted-foreground flex-grow">
-                    Dedicated professionals who genuinely care about business and long-term success
+                    {t('approach.step4.description')}
                   </p>
                 </div>
               </div>
@@ -284,11 +284,11 @@ const RitzConsultant = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-                Our Services
+                {t('services.title')}
               </h2>
               <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Comprehensive financial and legal services across multiple business sectors
+                {t('services.subtitle')}
               </p>
             </div>
             
@@ -298,14 +298,14 @@ const RitzConsultant = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                   <TrendingUp className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-6">Business Advisory & Investment</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-6">{t('services.businessAdvisory.title')}</h3>
                 <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />Assessment & Due Diligence</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />Debt Restructuring</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />Management Turnaround</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />Corporate Financing</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />M&A Services</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />Asset Management</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />{t('services.businessAdvisory.items.assessment')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />{t('services.businessAdvisory.items.debtRestructuring')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />{t('services.businessAdvisory.items.turnaround')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />{t('services.businessAdvisory.items.financing')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />{t('services.businessAdvisory.items.ma')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-primary" />{t('services.businessAdvisory.items.assetManagement')}</li>
                 </ul>
               </div>
               
@@ -314,14 +314,14 @@ const RitzConsultant = () => {
                 <div className="bg-secondary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                   <Building2 className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-6">Investment Group</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-6">{t('services.investmentGroup.title')}</h3>
                 <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />Energy Solutions</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />Infrastructure Development</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />Property & Development</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />Japan Desk Advisory</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />Employment Services</li>
-                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />Digital Platform Business</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />{t('services.investmentGroup.items.energy')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />{t('services.investmentGroup.items.infrastructure')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />{t('services.investmentGroup.items.property')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />{t('services.investmentGroup.items.japanDesk')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />{t('services.investmentGroup.items.employment')}</li>
+                  <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-2 text-secondary" />{t('services.investmentGroup.items.digital')}</li>
                 </ul>
               </div>
               
@@ -330,22 +330,22 @@ const RitzConsultant = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
                   <Shield className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-6">Legal Services</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-6">{t('services.legal.title')}</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Corporate Law</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{t('services.legal.corporateLaw.title')}</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />Banking & Finance</li>
-                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />M&A Transactions</li>
-                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />Capital Market & Securities</li>
+                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />{t('services.legal.corporateLaw.items.banking')}</li>
+                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />{t('services.legal.corporateLaw.items.ma')}</li>
+                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />{t('services.legal.corporateLaw.items.capitalMarket')}</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Commercial Litigation</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{t('services.legal.litigation.title')}</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />PKPU & Bankruptcy</li>
-                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />Alternative Dispute Resolution</li>
-                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />BANI Arbitration</li>
+                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />{t('services.legal.litigation.items.pkpu')}</li>
+                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />{t('services.legal.litigation.items.adr')}</li>
+                      <li className="flex items-center"><ArrowRight className="w-3 h-3 mr-2 text-primary" />{t('services.legal.litigation.items.arbitration')}</li>
                     </ul>
                   </div>
                 </div>
@@ -356,50 +356,50 @@ const RitzConsultant = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-muted/50 border-t border-subtle">
-        <div className="container mx-auto container-padding">
+      <footer className="bg-primary text-primary-foreground">
+        <div className="container mx-auto container-padding py-16">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="lg:col-span-2">
-                <h3 className="text-xl font-semibold text-foreground mb-4">RITZ Corpora Indonesia</h3>
-                <p className="text-muted-foreground mb-4 max-w-md">
-                  Integrated Financial & Business Consulting Solutions with comprehensive legal services and investment advisory.
+                <h3 className="text-xl font-semibold text-primary-foreground mb-4">{t('footer.title')}</h3>
+                <p className="text-primary-foreground/80 mb-4 max-w-md">
+                  {t('footer.description')}
                 </p>
-                <div className="text-sm text-muted-foreground">
-                  <p>Head Office:</p>
-                  <p>The East Tower 36th Floor</p>
-                  <p>Central Business District Mega Kuningan</p>
-                  <p>Jakarta Selatan, DKI Jakarta, 12950</p>
-                  <p className="mt-2">Phone: (+62) 21-5152 423</p>
+                <div className="text-sm text-primary-foreground/70">
+                  <p>{t('footer.address.title')}</p>
+                  <p>{t('footer.address.line1')}</p>
+                  <p>{t('footer.address.line2')}</p>
+                  <p>{t('footer.address.line3')}</p>
+                  <p className="mt-2">{t('footer.address.phone')}</p>
                 </div>
               </div>
               
               <div>
-                <h4 className="text-lg font-semibold text-foreground mb-4">Services</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>Business Advisory</li>
-                  <li>Investment Services</li>
-                  <li>Legal Services</li>
-                  <li>M&A Advisory</li>
-                  <li>Debt Restructuring</li>
+                <h4 className="text-lg font-semibold text-primary-foreground mb-4">{t('footer.services.title')}</h4>
+                <ul className="space-y-2 text-sm text-primary-foreground/70">
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.services.items.advisory')}</li>
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.services.items.investment')}</li>
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.services.items.legal')}</li>
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.services.items.ma')}</li>
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.services.items.restructuring')}</li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="text-lg font-semibold text-foreground mb-4">Sectors</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>Banking & Finance</li>
-                  <li>Energy & Infrastructure</li>
-                  <li>Property Development</li>
-                  <li>Technology</li>
-                  <li>Government Relations</li>
+                <h4 className="text-lg font-semibold text-primary-foreground mb-4">{t('footer.sectors.title')}</h4>
+                <ul className="space-y-2 text-sm text-primary-foreground/70">
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.sectors.items.banking')}</li>
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.sectors.items.energy')}</li>
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.sectors.items.property')}</li>
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.sectors.items.technology')}</li>
+                  <li className="hover:text-white transition-colors cursor-pointer">{t('footer.sectors.items.government')}</li>
                 </ul>
               </div>
             </div>
             
-            <div className="border-t border-subtle mt-8 pt-8 text-center">
-              <p className="text-sm text-muted-foreground">
-                © 2024 RITZ Corpora Indonesia. All rights reserved.
+            <div className="border-t border-white/10 mt-8 pt-8 text-center">
+              <p className="text-sm text-primary-foreground/60">
+                {t('footer.copyright')}
               </p>
             </div>
           </div>

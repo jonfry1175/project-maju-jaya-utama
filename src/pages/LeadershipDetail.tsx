@@ -230,7 +230,17 @@ const LeadershipDetail = () => {
                         <Badge variant="outline" className="mr-2 mb-2">{t("team.detail.expertise.strategicPlanning")}</Badge>
                       </>
                     )}
-                    {(memberKey === 'director1' || memberKey === 'director2') && (
+                    {memberKey === 'director1' && (
+                      <>
+                        <Badge variant="outline" className="mr-2 mb-2">{t("team.detail.expertise.businessDevelopment")}</Badge>
+                        <Badge variant="outline" className="mr-2 mb-2">{t("team.detail.expertise.strategicPlanning")}</Badge>
+                        <Badge variant="outline" className="mr-2 mb-2">{t("team.detail.expertise.ipoPreparation")}</Badge>
+                        <Badge variant="outline" className="mr-2 mb-2">{t("team.detail.expertise.advisoryServices")}</Badge>
+                        <Badge variant="outline" className="mr-2 mb-2">{t("team.detail.expertise.riskManagement")}</Badge>
+                        <Badge variant="outline" className="mr-2 mb-2">{t("team.detail.expertise.capitalMarkets")}</Badge>
+                      </>
+                    )}
+                    {memberKey === 'director2' && (
                       <>
                         <Badge variant="outline" className="mr-2 mb-2">{t("team.detail.expertise.financialAuditing")}</Badge>
                         <Badge variant="outline" className="mr-2 mb-2">{t("team.detail.expertise.ipoPreparation")}</Badge>
