@@ -1,0 +1,138 @@
+{
+  "hero": {
+    "backToHome": "Kembali ke Beranda",
+    "title": "RITZ Corpora Indonesia",
+    "subtitle": "Solusi Konsultasi Keuangan & Bisnis Terintegrasi",
+    "learnMore": "Pelajari Lebih Lanjut"
+  },
+  "about": {
+    "title": "Tentang RITZ Corp",
+    "description1": "RITZ Corp adalah bisnis terintegrasi dengan dua lini bisnis utama: Konsultasi Keuangan dan Bisnis melalui PT RITZ Konsultan Indonesia (RKI) dan PT RITZ Investment Indonesia (RII).",
+    "description2": "Kami menawarkan Layanan Hukum Korporat yang komprehensif melalui RITZ & Partners Law Firm dan Layanan Litigasi Komersial melalui Rivai & Co. Law Firm, dengan pengalaman luas dalam perbankan, investment banking komersial, private equity, dan pasar modal.",
+    "rki": {
+      "title": "RKI - Konsultasi Keuangan",
+      "description": "Layanan Hukum Korporat & Litigasi Komersial"
+    },
+    "rii": {
+      "title": "RII - Layanan Investasi", 
+      "description": "Solusi Private Equity & Pasar Modal"
+    }
+  },
+  "advantages": {
+    "title": "Keunggulan RITZ Corp",
+    "subtitle": "Empat keunggulan utama yang membedakan kami dalam konsultasi keuangan dan bisnis",
+    "advisory": {
+      "title": "Keunggulan Proses Advisory",
+      "description": "Mendukung perencanaan, manajemen, dan eksekusi kebutuhan penilaian, transaksi bisnis, dan pembiayaan korporat"
+    },
+    "team": {
+      "title": "Kemampuan Penyusunan Tim",
+      "description": "Menyusun tim yang tepat dengan pengalaman dan keahlian yang sesuai untuk setiap klien"
+    },
+    "collaboration": {
+      "title": "Kolaborasi Klien",
+      "description": "Kolaborasi erat menawarkan solusi yang disesuaikan untuk mengatasi debt covenant, masalah arus kas, dan dampak pajak"
+    },
+    "expertise": {
+      "title": "Keahlian Profesional",
+      "description": "Keahlian dalam menilai risiko dan mengidentifikasi peluang, memastikan penyelesaian transaksi yang berhasil"
+    }
+  },
+  "approach": {
+    "title": "Pendekatan Kami",
+    "subtitle": "Proses sistematis 4 langkah untuk memastikan hasil proyek yang sukses",
+    "step1": {
+      "title": "Penilaian Klien",
+      "description": "Mengatasi kebutuhan klien dengan menyusun tim khusus yang disesuaikan untuk memenuhi persyaratan spesifik"
+    },
+    "step2": {
+      "title": "Advisory Strategis",
+      "description": "Mengembangkan solusi yang disesuaikan yang selaras dengan persyaratan dan tujuan unik"
+    },
+    "step3": {
+      "title": "Panduan Implementasi", 
+      "description": "Membimbing melalui berbagai skenario, merekomendasikan langkah-langkah untuk memastikan solvabilitas dan posisi masa depan"
+    },
+    "step4": {
+      "title": "Dukungan Jangka Panjang",
+      "description": "Profesional yang berdedikasi yang benar-benar peduli dengan bisnis dan kesuksesan jangka panjang"
+    }
+  },
+  "services": {
+    "title": "Layanan Kami",
+    "subtitle": "Layanan keuangan dan hukum yang komprehensif di berbagai sektor bisnis",
+    "businessAdvisory": {
+      "title": "Advisory Bisnis & Investasi",
+      "items": {
+        "assessment": "Penilaian & Due Diligence",
+        "debtRestructuring": "Restrukturisasi Utang", 
+        "turnaround": "Management Turnaround",
+        "financing": "Pembiayaan Korporat",
+        "ma": "Layanan M&A",
+        "assetManagement": "Manajemen Aset"
+      }
+    },
+    "investmentGroup": {
+      "title": "Grup Investasi",
+      "items": {
+        "energy": "Solusi Energi",
+        "infrastructure": "Pengembangan Infrastruktur",
+        "property": "Properti & Pengembangan",
+        "japanDesk": "Advisory Japan Desk",
+        "employment": "Layanan Ketenagakerjaan",
+        "digital": "Bisnis Platform Digital"
+      }
+    },
+    "legal": {
+      "title": "Layanan Hukum",
+      "corporateLaw": {
+        "title": "Hukum Korporat",
+        "items": {
+          "banking": "Perbankan & Keuangan",
+          "ma": "Transaksi M&A", 
+          "capitalMarket": "Pasar Modal & Sekuritas"
+        }
+      },
+      "litigation": {
+        "title": "Litigasi Komersial",
+        "items": {
+          "pkpu": "PKPU & Kepailitan",
+          "adr": "Penyelesaian Sengketa Alternatif",
+          "arbitration": "Arbitrase BANI"
+        }
+      }
+    }
+  },
+  "footer": {
+    "title": "RITZ Corpora Indonesia",
+    "description": "Solusi Konsultasi Keuangan & Bisnis Terintegrasi dengan layanan hukum komprehensif dan advisory investasi.",
+    "address": {
+      "title": "Kantor Pusat:",
+      "line1": "The East Tower Lantai 36",
+      "line2": "Central Business District Mega Kuningan", 
+      "line3": "Jakarta Selatan, DKI Jakarta, 12950",
+      "phone": "Telepon: (+62) 21-5152 423"
+    },
+    "services": {
+      "title": "Layanan",
+      "items": {
+        "advisory": "Advisory Bisnis",
+        "investment": "Layanan Investasi",
+        "legal": "Layanan Hukum", 
+        "ma": "Advisory M&A",
+        "restructuring": "Restrukturisasi Utang"
+      }
+    },
+    "sectors": {
+      "title": "Sektor",
+      "items": {
+        "banking": "Perbankan & Keuangan",
+        "energy": "Energi & Infrastruktur",
+        "property": "Pengembangan Properti",
+        "technology": "Teknologi",
+        "government": "Hubungan Pemerintah"
+      }
+    },
+    "copyright": "© 2024 RITZ Corpora Indonesia. Seluruh hak cipta dilindungi."
+  }
+}
