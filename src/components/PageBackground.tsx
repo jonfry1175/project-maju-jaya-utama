@@ -3,8 +3,21 @@ const PageBackground = () => (
     aria-hidden
     className="pointer-events-none absolute inset-0 overflow-hidden"
   >
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,hsl(var(--accent)/0.24),transparent_40%),radial-gradient(circle_at_82%_8%,hsl(var(--primary)/0.24),transparent_38%),radial-gradient(circle_at_70%_78%,hsl(var(--secondary)/0.2),transparent_42%)]" />
+    <div
+      className="absolute inset-0 opacity-55"
+      style={{
+        backgroundImage:
+          "url(\"data:image/svg+xml,%3Csvg width='48' height='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grain' width='48' height='48' patternUnits='userSpaceOnUse'%3E%3Cpath d='M48 0H0V48' fill='none' stroke='rgba(0,0,0,0.035)' stroke-width='1'/%3E%3C/path d='M0 16H48' stroke='rgba(0,0,0,0.02)' stroke-width='1'/%3E%3Cpath d='M0 32H48' stroke='rgba(0,0,0,0.02)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grain)'/%3E%3C/svg%3E\")",
+      }}
+    />
+    <div className="absolute -top-28 left-[4%] h-80 w-80 rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.28),transparent_62%)] blur-2xl" />
+    <div className="absolute bottom-[-12%] right-[8%] h-96 w-96 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.26),transparent_62%)] blur-2xl" />
+    <div className="absolute top-[34%] right-[-10%] h-72 w-72 rotate-12 rounded-[34px] border border-primary/30 bg-[linear-gradient(145deg,hsl(var(--card)/0.75),transparent_58%)]" />
+    <div className="absolute top-[14%] left-[-8%] h-64 w-64 -rotate-12 rounded-[30px] border border-border/50 bg-[linear-gradient(120deg,hsl(var(--accent)/0.16),transparent_52%)]" />
+
     <svg
-      className="absolute -top-8 -left-12 h-auto w-[300px] text-primary/15 sm:w-[380px] lg:w-[460px]"
+      className="absolute -top-8 -left-12 h-auto w-[300px] text-primary/22 sm:w-[380px] lg:w-[460px]"
       viewBox="0 0 420 420"
       fill="none"
     >
@@ -30,7 +43,7 @@ const PageBackground = () => (
     </svg>
 
     <svg
-      className="absolute -bottom-12 -right-12 h-auto w-[320px] text-secondary/10 sm:w-[420px] lg:w-[520px]"
+      className="absolute -bottom-12 -right-12 h-auto w-[320px] text-secondary/18 sm:w-[420px] lg:w-[520px]"
       viewBox="0 0 520 360"
       fill="none"
     >

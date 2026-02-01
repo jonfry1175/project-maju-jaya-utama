@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
+import SectionArt from "@/components/SectionArt";
 
 const PartnerLogosSection = () => {
   const { t } = useTranslation("capabilities");
@@ -9,8 +10,12 @@ const PartnerLogosSection = () => {
   }>;
 
   return (
-    <section id="capabilities" className="section-padding bg-background">
-      <div className="container mx-auto container-padding">
+    <section
+      id="capabilities"
+      className="section-padding bg-background relative overflow-hidden"
+    >
+      <SectionArt />
+      <div className="container mx-auto container-padding relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-10">
           <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 border border-primary-subtle">
             {t("section.badge")}

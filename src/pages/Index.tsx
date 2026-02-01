@@ -8,24 +8,20 @@ import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import PageBackground from "@/components/PageBackground";
 
 const Index = () => (
-  <div className="min-h-screen bg-background relative isolate overflow-hidden">
+  <>
     <SEO />
-    <PageBackground />
-    <div className="relative z-10">
-      <Header />
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <PartnerLogosSection />
-      <TestimonialsSection />
-      <FAQSection />
-      <ContactSection />
-      <Footer />
-    </div>
-  </div>
+    <Header />
+    <HeroSection />
+    <AboutSection />
+    <ServicesSection />
+    <PartnerLogosSection />
+    <TestimonialsSection />
+    <FAQSection />
+    <ContactSection />
+    <Footer />
+  </>
 );
 
 export default Index;
