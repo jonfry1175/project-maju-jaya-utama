@@ -25,8 +25,10 @@ const PartnerLogosSection = () => {
           {items.map((item) => (
             <Card
               key={item.title}
-              className="card-padding bg-gradient-to-br from-card to-white/80 border border-primary-subtle shadow-soft"
+              className="card-padding card-surface card-inset card-hover-premium group"
             >
+              <div className="card-accent-line" />
+              <div className="card-corner-cut" />
               <h3 className="heading-5 text-foreground mb-2">{item.title}</h3>
               <p className="text-body-small text-muted-foreground">
                 {item.description}

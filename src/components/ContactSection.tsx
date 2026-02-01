@@ -33,9 +33,13 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <div className="space-y-4">
-            <Card className="card-padding bg-white border border-primary-subtle">
+            <Card className="card-padding card-surface card-inset card-hover-premium group">
+              <div className="card-accent-line" />
+              <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary mt-1" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
                     {t("info.office.title")}
@@ -46,9 +50,13 @@ const ContactSection = () => {
                 </div>
               </div>
             </Card>
-            <Card className="card-padding bg-white border border-primary-subtle">
+            <Card className="card-padding card-surface card-inset card-hover-premium group">
+              <div className="card-accent-line" />
+              <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary mt-1" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
                     {t("info.phone.title")}
@@ -59,9 +67,13 @@ const ContactSection = () => {
                 </div>
               </div>
             </Card>
-            <Card className="card-padding bg-white border border-primary-subtle">
+            <Card className="card-padding card-surface card-inset card-hover-premium group">
+              <div className="card-accent-line" />
+              <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-primary mt-1" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
+                  <Mail className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
                     {t("info.email.title")}
@@ -74,7 +86,9 @@ const ContactSection = () => {
             </Card>
           </div>
 
-          <Card className="lg:col-span-2 card-padding lg:card-padding-large bg-white border border-primary-subtle shadow-soft">
+          <Card className="lg:col-span-2 card-padding lg:card-padding-large card-surface card-inset">
+            <div className="card-accent-line" />
+            <div className="card-corner-cut" />
             <h3 className="heading-3 text-primary mb-2">
               {t("form.title")}
             </h3>

@@ -88,10 +88,12 @@ const HeroSection = () => {
             {stats.map((stat) => (
               <Card
                 key={stat.label}
-                className="card-padding bg-white/90 border border-primary-subtle shadow-soft"
+                className="card-padding card-surface card-inset card-hover-premium bg-white/90 backdrop-blur-sm group"
               >
+                <div className="card-accent-line" />
+                <div className="card-corner-cut" />
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                     <stat.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>

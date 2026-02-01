@@ -277,6 +277,40 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
+
+  .card-surface {
+    @apply relative overflow-hidden border border-primary-subtle shadow-soft;
+    background: linear-gradient(
+      145deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--background)) 100%
+    );
+  }
+
+  .card-inset {
+    box-shadow:
+      inset 0 1px 0 hsl(var(--background) / 0.7),
+      inset 0 0 0 1px hsl(var(--border) / 0.35);
+  }
+
+  .card-hover-premium {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px -20px hsl(var(--primary) / 0.35);
+    border-color: hsl(var(--primary) / 0.35);
+  }
+
+  .card-accent-line {
+    @apply absolute inset-x-0 top-0 h-1 gradient-brand opacity-70;
+  }
+
+  .card-corner-cut {
+    @apply absolute -right-8 -top-8 h-16 w-16 rotate-45;
+    background: hsl(var(--accent) / 0.15);
+  }
 }
 
 /* Professional animations */

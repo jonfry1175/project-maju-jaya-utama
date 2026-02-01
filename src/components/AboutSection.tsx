@@ -39,7 +39,9 @@ const AboutSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-6 max-w-6xl mx-auto">
-          <Card className="card-padding-large bg-gradient-to-br from-card to-white/80 border border-primary-subtle shadow-soft">
+          <Card className="card-padding-large card-surface card-inset">
+            <div className="card-accent-line" />
+            <div className="card-corner-cut" />
             <h3 className="heading-4 text-primary mb-4">{t("profile.title")}</h3>
             <p className="text-body text-muted-foreground mb-6">
               {t("profile.description")}
@@ -60,9 +62,13 @@ const AboutSection = () => {
           </Card>
 
           <div className="grid gap-4">
-            <Card className="card-padding bg-white border border-primary-subtle">
+            <Card className="card-padding card-surface card-inset card-hover-premium group">
+              <div className="card-accent-line" />
+              <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary mt-1" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
                     {t("address.title")}
@@ -73,9 +79,13 @@ const AboutSection = () => {
                 </div>
               </div>
             </Card>
-            <Card className="card-padding bg-white border border-primary-subtle">
+            <Card className="card-padding card-surface card-inset card-hover-premium group">
+              <div className="card-accent-line" />
+              <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary mt-1" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
                     {t("contact.title")}
@@ -86,9 +96,13 @@ const AboutSection = () => {
                 </div>
               </div>
             </Card>
-            <Card className="card-padding bg-white border border-primary-subtle">
+            <Card className="card-padding card-surface card-inset card-hover-premium group">
+              <div className="card-accent-line" />
+              <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
-                <Building2 className="w-5 h-5 text-primary mt-1" />
+                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
+                  <Building2 className="w-5 h-5 text-primary" />
+                </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
                     {t("industry.title")}
