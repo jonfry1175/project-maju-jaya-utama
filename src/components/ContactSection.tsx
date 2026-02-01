@@ -40,7 +40,7 @@ const ContactSection = () => {
               <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
-                  <MapPin className="w-5 h-5 text-primary" />
+                  <MapPin className="icon-small text-primary" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
@@ -57,7 +57,7 @@ const ContactSection = () => {
               <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
-                  <Phone className="w-5 h-5 text-primary" />
+                  <Phone className="icon-small text-primary" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
@@ -74,7 +74,7 @@ const ContactSection = () => {
               <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
-                  <Mail className="w-5 h-5 text-primary" />
+                  <Mail className="icon-small text-primary" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">

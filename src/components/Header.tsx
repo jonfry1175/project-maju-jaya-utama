@@ -95,7 +95,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen((prev) => !prev)}
               aria-label="Toggle navigation"
             >
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMenuOpen ? <X className="icon-small" /> : <Menu className="icon-small" />}
             </button>
           </div>
         </div>

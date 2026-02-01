@@ -55,7 +55,7 @@ const AboutSection = () => {
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="w-12 h-12 rounded-full bg-primary/10 mx-auto flex items-center justify-center mb-3">
-                    <stat.icon className="w-6 h-6 text-primary" />
+                    <stat.icon className="icon-medium text-primary" />
                   </div>
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
                   <div className="text-base font-semibold text-foreground">
@@ -72,7 +72,7 @@ const AboutSection = () => {
               <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
-                  <MapPin className="w-5 h-5 text-primary" />
+                  <MapPin className="icon-small text-primary" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
@@ -89,7 +89,7 @@ const AboutSection = () => {
               <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
-                  <Phone className="w-5 h-5 text-primary" />
+                  <Phone className="icon-small text-primary" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">
@@ -106,7 +106,7 @@ const AboutSection = () => {
               <div className="card-corner-cut" />
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1">
-                  <Building2 className="w-5 h-5 text-primary" />
+                  <Building2 className="icon-small text-primary" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-foreground">

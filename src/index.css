@@ -121,27 +121,27 @@
 
   /* Standardized Heading Sizes with Responsive Variants - More Conservative */
   .heading-1 {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold font-display leading-tight;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold font-display leading-tight tracking-tight;
   }
 
   .heading-2 {
-    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold font-display leading-tight;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold font-display leading-tight tracking-tight;
   }
 
   .heading-3 {
-    @apply text-xl sm:text-2xl lg:text-3xl font-semibold font-display leading-tight;
+    @apply text-xl sm:text-2xl lg:text-3xl font-semibold leading-tight tracking-normal;
   }
 
   .heading-4 {
-    @apply text-lg sm:text-xl lg:text-2xl font-semibold font-display leading-tight;
+    @apply text-lg sm:text-xl lg:text-2xl font-semibold leading-tight tracking-normal;
   }
 
   .heading-5 {
-    @apply text-base sm:text-lg lg:text-xl font-semibold leading-tight;
+    @apply text-base sm:text-lg lg:text-xl font-semibold leading-tight tracking-normal;
   }
 
   .heading-6 {
-    @apply text-sm sm:text-base lg:text-lg font-semibold leading-tight;
+    @apply text-sm sm:text-base lg:text-lg font-semibold leading-tight tracking-normal;
   }
 
   /* Body Text Sizes - More Professional */
@@ -186,14 +186,23 @@
   /* Icon Sizes */
   .icon-small {
     @apply w-4 h-4 sm:w-5 sm:h-5;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .icon-medium {
     @apply w-5 h-5 sm:w-6 sm:h-6;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .icon-large {
     @apply w-6 h-6 sm:w-8 sm:h-8;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   /* Consistent Borders */

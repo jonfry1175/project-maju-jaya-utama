@@ -94,7 +94,7 @@ const HeroSection = () => {
                 <div className="card-corner-cut" />
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <stat.icon className="w-6 h-6 text-primary" />
+                    <stat.icon className="icon-medium text-primary" />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground font-medium">
