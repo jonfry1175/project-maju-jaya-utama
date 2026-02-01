@@ -26,7 +26,18 @@ i18n
     resources,
     fallbackLng: 'id', // Default to Indonesian
     defaultNS: 'common',
-    ns: ['common', 'header', 'hero', 'about', 'services', 'testimonials', 'faq', 'contact', 'footer', 'partnership', 'partners-page', 'bridging-financing', 'ipo-mapping', 'management-improvement-plans', 'ipo-compliance-plans', 'scenario-plans', 'proforma-financial-report'],
+    ns: [
+      'common',
+      'header',
+      'hero',
+      'about',
+      'services',
+      'capabilities',
+      'sustainability',
+      'faq',
+      'contact',
+      'footer',
+    ],
     debug: false,
 
     interpolation: {

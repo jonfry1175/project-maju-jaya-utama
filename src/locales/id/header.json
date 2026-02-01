@@ -1,31 +1,13 @@
 {
-  "companyName": "Global Sinergi Kapital",
-  "tagline": "",
+  "companyName": "PT Maju Jaya Utama Lestari",
   "nav": {
-    "home": "Beranda",
-    "about": "Tentang Kami",
-    "about.overview": "Profil Perusahaan",
-    "about.leadership": "Kepemimpinan Kami",
-    "services": "Layanan",
-    "services.fundRaising": "Penggalangan Dana",
-    "services.professional": "Layanan Profesional",
-    "partners": "Klien Kami",
-    "ipoProcess": "Proses IPO",
-    "ipoProcess.mapping": "Pemetaan",
-    "ipoProcess.scenarioPlans": "Rencana Skenario",
-    "ipoProcess.proformaFinancialReport": "Laporan Keuangan Proforma",
-    "ipoProcess.managementImprovementPlans": "Rencana Perbaikan Manajemen",
-    "ipoProcess.bridgingFinancing": "Jembatan Pembiayaan",
-    "ipoProcess.ipoCompliancePlans": "Rencana Kepatuhan IPO",
-    "testimonials": "Testimoni",
-    "faq": "FAQ",
-    "contact": "Hubungi Kami",
-    "partOfRitz": "Bagian dari RITZ Consultant"
+    "about": "Tentang",
+    "products": "Produk",
+    "capabilities": "Kapabilitas",
+    "sustainability": "Keberlanjutan",
+    "contact": "Kontak"
   },
   "cta": {
-    "freeConsultation": "Konsultasi Gratis",
-    "startIPOJourney": "Hubungi Kami"
-  },
-  "phone": "+62 812-9000-1234",
-  "whatsapp": "WhatsApp"
+    "contact": "Hubungi Sales"
+  }
 }

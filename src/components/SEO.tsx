@@ -21,155 +21,119 @@ const SEO = ({
 }: SEOProps) => {
   const { i18n } = useTranslation();
   const location = useLocation();
-  
-  const defaultTitle = "Global Sinergi Kapital - Konsultan IPO Inovatif Indonesia";
-  const defaultDescription = "Konsultan IPO inovatif yang baru berdiri di Indonesia. Kami menghadirkan perspektif segar dan pendekatan modern untuk membantu perusahaan go public di Bursa Efek Indonesia.";
-  const defaultKeywords = "IPO, konsultan IPO, go public, bursa efek indonesia, pasar modal, konsultan bisnis, initial public offering, underwriter, fund raising, pendanaan perusahaan";
-  const defaultImage = "https://globalsinergikapital.com/logo-wording.png";
-  
-  const finalTitle = title ? `${title} | Global Sinergi Kapital` : defaultTitle;
+
+  const baseUrl = "https://majujaya-utama-lestari.com";
+  const defaultTitle =
+    "PT Maju Jaya Utama Lestari | Converted Paper Products Manufacturer";
+  const defaultDescription =
+    "PT Maju Jaya Utama Lestari is a converted paper products manufacturer in Tangerang, Indonesia, delivering reliable quality and custom sizing for industrial clients.";
+  const defaultKeywords =
+    "converted paper products, paper manufacturing, industrial paper, packaging paper, custom sizing, Tangerang, Indonesia";
+  const defaultImage = `${baseUrl}/logo.png`;
+
+  const finalTitle = title ? `${title} | PT Maju Jaya Utama Lestari` : defaultTitle;
   const finalDescription = description || defaultDescription;
   const finalKeywords = keywords || defaultKeywords;
   const finalImage = image || defaultImage;
-  const canonicalUrl = `https://globalsinergikapital.com${location.pathname}`;
-  
-  // Structured data for Organization
+  const canonicalUrl = `${baseUrl}${location.pathname}`;
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Global Sinergi Kapital",
-    alternateName: "GSK",
-    url: "https://globalsinergikapital.com",
-    logo: "https://globalsinergikapital.com/logo.png",
-    description: "Konsultan IPO inovatif yang menghadirkan pendekatan modern untuk membantu perusahaan go public di Indonesia",
-    foundingDate: "2023",
+    name: "PT Maju Jaya Utama Lestari",
+    alternateName: "Maju Jaya Utama Lestari",
+    url: baseUrl,
+    logo: `${baseUrl}/logo.png`,
+    description: defaultDescription,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "ID",
+      addressLocality: "Tangerang",
+      addressRegion: "Banten",
+      streetAddress: "9 Jl. Manis II Manis Industrial Estate",
+      postalCode: "15136",
+    },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+62-21-12345678",
-      contactType: "customer service",
+      telephone: "+62-215918872",
+      contactType: "sales",
       areaServed: "ID",
-      availableLanguage: ["Indonesian", "English"]
+      availableLanguage: ["Indonesian", "English"],
     },
-    sameAs: [
-      "https://www.linkedin.com/company/global-sinergi-kapital",
-      "https://twitter.com/globalsinergikapital"
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "ID",
-      addressLocality: "Jakarta",
-      addressRegion: "DKI Jakarta"
-    }
   };
-  
-  // Structured data for LocalBusiness
+
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "FinancialService",
-    name: "Global Sinergi Kapital",
-    image: "https://globalsinergikapital.com/logo.png",
-    priceRange: "$$$",
+    "@type": "LocalBusiness",
+    name: "PT Maju Jaya Utama Lestari",
+    image: `${baseUrl}/logo.png`,
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       addressCountry: "ID",
-      addressLocality: "Jakarta",
-      addressRegion: "DKI Jakarta"
+      addressLocality: "Tangerang",
+      addressRegion: "Banten",
+      streetAddress: "9 Jl. Manis II Manis Industrial Estate",
+      postalCode: "15136",
     },
-    telephone: "+62-21-12345678",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "18:00"
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: -6.2088,
-      longitude: 106.8456
-    },
-    url: "https://globalsinergikapital.com",
+    telephone: "+62-215918872",
+    url: baseUrl,
     areaServed: {
       "@type": "Country",
-      name: "Indonesia"
+      name: "Indonesia",
     },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "IPO Consulting Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "IPO Process Mapping",
-            description: "Comprehensive IPO readiness assessment and roadmap planning"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Financial Advisory",
-            description: "Professional financial consulting for going public"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Fund Raising",
-            description: "Strategic fund raising and investor relations services"
-          }
-        }
-      ]
-    }
+    industry: "Converted Paper Products Manufacturing",
   };
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <html lang={i18n.language} />
       <title>{finalTitle}</title>
       <meta name="description" content={finalDescription} />
       <meta name="keywords" content={finalKeywords} />
       {noindex && <meta name="robots" content="noindex, nofollow" />}
-      
-      {/* Canonical URL */}
+
       <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Hreflang Tags */}
-      <link rel="alternate" hreflang="id" href={`https://globalsinergikapital.com/id${location.pathname}`} />
-      <link rel="alternate" hreflang="en" href={`https://globalsinergikapital.com/en${location.pathname}`} />
+
+      <link
+        rel="alternate"
+        hreflang="id"
+        href={`${baseUrl}/id${location.pathname}`}
+      />
+      <link
+        rel="alternate"
+        hreflang="en"
+        href={`${baseUrl}/en${location.pathname}`}
+      />
       <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
-      
-      {/* Open Graph Tags */}
+
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={finalImage} />
-      <meta property="og:site_name" content="Global Sinergi Kapital" />
-      <meta property="og:locale" content={i18n.language === "id" ? "id_ID" : "en_US"} />
-      
-      {/* Twitter Card Tags */}
+      <meta property="og:site_name" content="PT Maju Jaya Utama Lestari" />
+      <meta
+        property="og:locale"
+        content={i18n.language === "id" ? "id_ID" : "en_US"}
+      />
+
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@globalsinergikapital" />
+      <meta name="twitter:site" content="@majujayautama" />
       <meta name="twitter:title" content={finalTitle} />
       <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={finalImage} />
-      
-      {/* Structured Data */}
+
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
       </script>
       <script type="application/ld+json">
         {JSON.stringify(localBusinessSchema)}
       </script>
-      
-      {/* Additional Meta Tags */}
-      <meta name="author" content="Global Sinergi Kapital" />
+
+      <meta name="author" content="PT Maju Jaya Utama Lestari" />
       <meta name="generator" content="React + Vite" />
-      
-      {/* Favicon */}
+
       <link rel="icon" type="image/png" href="/logo.png" />
       <link rel="apple-touch-icon" href="/logo.png" />
     </Helmet>

@@ -1,36 +1,15 @@
 {
-  "badge": "Mitra Resmi BEI & OJK",
-  "title": "Wujudkan Ambisi IPO",
-  "titleHighlight": "Dengan Kepastian",
-  "description": "Sebagai konsultan IPO inovatif yang baru berdiri, kami menghadirkan perspektif segar dan pendekatan modern untuk memandu transformasi perusahaan Anda menuju pasar modal Indonesia.",
+  "badge": "Produk Kertas Konversi",
+  "title": "Manufaktur",
+  "titleHighlight": "Dibangun dengan keahlian, skala, dan konsistensi",
+  "description": "PT Maju Jaya Utama Lestari memproduksi produk kertas konversi untuk klien industri dengan kualitas andal, ukuran kustom, dan pengiriman tepat waktu dari Tangerang, Indonesia.",
   "cta": {
-    "startJourney": "Mulai Perjalanan IPO",
-    "watchVideo": "Hubungi Kami",
-    "whatsappMessage": "Halo! Saya tertarik untuk mengetahui lebih lanjut tentang layanan konsultasi IPO dari Global Sinergi Kapital."
-  },
-  "partners": {
-    "label": "Mitra terpercaya:"
+    "primary": "Minta Penawaran",
+    "secondary": "Hubungi Sales"
   },
   "stats": {
-    "commitment": {
-      "value": "100",
-      "suffix": "%",
-      "label": "Komitmen Penuh"
-    },
-    "support": {
-      "value": "24",
-      "suffix": "/7",
-      "label": "Dukungan Konsultasi"
-    },
-    "solution": {
-      "value": "1",
-      "suffix": "",
-      "label": "Solusi Terintegrasi"
-    },
-    "team": {
-      "value": "30",
-      "suffix": "+",
-      "label": "Tim Profesional"
-    }
+    "employees": { "label": "Karyawan", "value": "100" },
+    "industry": { "label": "Industri", "value": "Produk Kertas Konversi" },
+    "location": { "label": "Lokasi", "value": "Tangerang, Indonesia" }
   }
 }

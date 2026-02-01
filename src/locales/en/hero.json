@@ -1,36 +1,15 @@
 {
-  "badge": "Official Partner of IDX & OJK",
-  "title": "Realize Your IPO Ambition",
-  "titleHighlight": "With Certainty",
-  "description": "As a newly established innovative IPO consultant, we bring fresh perspectives and modern approaches to guide your company's transformation towards the Indonesian capital market.",
+  "badge": "Converted Paper Products",
+  "title": "Manufacturing",
+  "titleHighlight": "Built on craft, scale, and consistency",
+  "description": "PT Maju Jaya Utama Lestari manufactures converted paper products for industrial clients with reliable quality, custom sizing, and on-time delivery from Tangerang, Indonesia.",
   "cta": {
-    "startJourney": "Start Your IPO Journey",
-    "watchVideo": "Contact Us",
-    "whatsappMessage": "Hello! I am interested in learning more about IPO consultation services from Global Sinergi Kapital."
-  },
-  "partners": {
-    "label": "Trusted partners:"
+    "primary": "Request a Quote",
+    "secondary": "Contact Sales"
   },
   "stats": {
-    "commitment": {
-      "value": "100",
-      "suffix": "%",
-      "label": "Full Commitment"
-    },
-    "support": {
-      "value": "24",
-      "suffix": "/7",
-      "label": "Consultation Support"
-    },
-    "solution": {
-      "value": "1",
-      "suffix": "",
-      "label": "Integrated Solution"
-    },
-    "team": {
-      "value": "30",
-      "suffix": "+",
-      "label": "Professional Team"
-    }
+    "employees": { "label": "Employees", "value": "100" },
+    "industry": { "label": "Industry", "value": "Converted Paper Products" },
+    "location": { "label": "Location", "value": "Tangerang, Indonesia" }
   }
 }

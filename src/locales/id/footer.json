@@ -1,70 +1,19 @@
 {
-  "company": {
-    "name": "Global Sinergi Kapital",
-    "tagline": "Konsultan Pre IPO dan IPO yang terintegrasi untuk memandu perjalanan go public perusahaan Indonesia menuju pasar modal.",
-    "certifications": [
-      "Terdaftar OJK",
-      "Anggota AEI",
-      "ISO 9001:2015"
-    ]
-  },
+  "description": "PT Maju Jaya Utama Lestari memproduksi produk kertas konversi untuk rantai pasok industri dengan kualitas konsisten dan pengiriman yang andal.",
   "sections": {
-    "services": {
-      "title": "Layanan",
-      "links": [
-        { "text": "IPO Advisory", "href": "#services" },
-        { "text": "Valuasi Bisnis", "href": "#services" },
-        { "text": "Due Diligence", "href": "#services" },
-        { "text": "Regulatory Compliance", "href": "#services" }
-      ]
-    },
-    "company": {
-      "title": "Perusahaan",
-      "links": [
-        { "text": "Tentang Kami", "href": "#about" },
-        { "text": "Tim Kepemimpinan", "href": "#team" },
-        { "text": "Karir", "href": "#careers" },
-        { "text": "Berita & Media", "href": "#news" }
-      ]
-    },
-    "resources": {
-      "title": "Resources",
-      "links": [
-        { "text": "Panduan IPO", "href": "#guide" },
-        { "text": "FAQ", "href": "#faq" },
-        { "text": "Blog", "href": "#blog" },
-        { "text": "Webinar", "href": "#webinar" }
-      ]
-    },
-    "legal": {
-      "title": "Legal",
-      "links": [
-        { "text": "Kebijakan Privasi", "href": "#privacy" },
-        { "text": "Syarat & Ketentuan", "href": "#terms" },
-        { "text": "Disclaimer", "href": "#disclaimer" }
-      ]
-    }
+    "links": "Tautan Cepat"
   },
-  "newsletter": {
-    "title": "Berlangganan Newsletter",
-    "description": "Dapatkan update terbaru tentang pasar modal dan tips IPO.",
-    "placeholder": "Email Anda",
-    "button": "Berlangganan",
-    "success": "Terima kasih telah berlangganan!",
-    "error": "Terjadi kesalahan. Silakan coba lagi."
+  "links": {
+    "about": "Tentang",
+    "products": "Produk",
+    "capabilities": "Kapabilitas",
+    "sustainability": "Keberlanjutan",
+    "contact": "Kontak"
   },
   "contact": {
-    "title": "Hubungi Kami",
-    "phone": "(+62) 21-5152-423",
-    "email": "info@globalsinergikapital.com",
-    "address": "Gedung Jaya Lantai 9 Blok A02, Jalan M.H Thamrin Nomor 12, Kebon Sirih, Menteng, Kota Adm.Jakarta Pusat, DKI Jakarta"
-  },
-  "social": {
-    "followUs": "Ikuti Kami"
-  },
-  "copyright": "© 2025 Global Sinergi Kapital. All rights reserved.",
-  "bottomLinks": [
-    { "text": "Peta Situs", "href": "#sitemap" },
-    { "text": "Hubungi Kami", "href": "#contact" }
-  ]
+    "title": "Kontak",
+    "address": "9 Jl. Manis II Manis Industrial Estate, Tangerang 15136, Indonesia",
+    "phone": "+62-215918872",
+    "email": "sales@majujayautama.co.id"
+  }
 }

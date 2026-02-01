@@ -1,0 +1,25 @@
+{
+  "section": {
+    "badge": "Kapabilitas",
+    "title": "Dirancang untuk Skala Industri",
+    "description": "Kapasitas operasional untuk volume stabil dan timeline yang menantang."
+  },
+  "items": [
+    {
+      "title": "Konversi Volume Besar",
+      "description": "Output konsisten untuk jadwal produksi ber-volume tinggi."
+    },
+    {
+      "title": "Spesifikasi Kustom",
+      "description": "Lebar, panjang, dan format roll fleksibel sesuai kebutuhan."
+    },
+    {
+      "title": "Kontrol Kualitas",
+      "description": "Kontrol proses untuk menjaga konsistensi antar batch."
+    },
+    {
+      "title": "Kesiapan Logistik",
+      "description": "Koordinasi pengiriman yang andal ke berbagai wilayah."
+    }
+  ]
+}

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://globalsinergikapital.com/sitemap.xml
+Sitemap: https://majujaya-utama-lestari.com/sitemap.xml

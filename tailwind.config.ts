@@ -21,8 +21,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Lato', 'sans-serif'],
-				display: ['Lora', 'serif'],
+				sans: ['Work Sans', 'sans-serif'],
+				display: ['Fraunces', 'serif'],
 				mono: ['IBM Plex Mono', 'monospace'],
 			},
 			colors: {

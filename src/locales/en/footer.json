@@ -1,70 +1,19 @@
 {
-  "company": {
-    "name": "Global Sinergi Kapital",
-    "tagline": "Integrated Pre-IPO and IPO consultant to guide Indonesian companies' public listing journey to capital markets.",
-    "certifications": [
-      "OJK Registered",
-      "AEI Member",
-      "ISO 9001:2015"
-    ]
-  },
+  "description": "PT Maju Jaya Utama Lestari manufactures converted paper products for industrial supply chains with consistent quality and dependable delivery.",
   "sections": {
-    "services": {
-      "title": "Services",
-      "links": [
-        { "text": "IPO Advisory", "href": "#services" },
-        { "text": "Business Valuation", "href": "#services" },
-        { "text": "Due Diligence", "href": "#services" },
-        { "text": "Regulatory Compliance", "href": "#services" }
-      ]
-    },
-    "company": {
-      "title": "Company",
-      "links": [
-        { "text": "About Us", "href": "#about" },
-        { "text": "Leadership Team", "href": "#team" },
-        { "text": "Careers", "href": "#careers" },
-        { "text": "News & Media", "href": "#news" }
-      ]
-    },
-    "resources": {
-      "title": "Resources",
-      "links": [
-        { "text": "IPO Guide", "href": "#guide" },
-        { "text": "FAQ", "href": "#faq" },
-        { "text": "Blog", "href": "#blog" },
-        { "text": "Webinar", "href": "#webinar" }
-      ]
-    },
-    "legal": {
-      "title": "Legal",
-      "links": [
-        { "text": "Privacy Policy", "href": "#privacy" },
-        { "text": "Terms & Conditions", "href": "#terms" },
-        { "text": "Disclaimer", "href": "#disclaimer" }
-      ]
-    }
+    "links": "Quick Links"
   },
-  "newsletter": {
-    "title": "Subscribe Newsletter",
-    "description": "Get the latest updates on capital markets and IPO tips.",
-    "placeholder": "Your Email",
-    "button": "Subscribe",
-    "success": "Thank you for subscribing!",
-    "error": "An error occurred. Please try again."
+  "links": {
+    "about": "About",
+    "products": "Products",
+    "capabilities": "Capabilities",
+    "sustainability": "Sustainability",
+    "contact": "Contact"
   },
   "contact": {
-    "title": "Contact Us",
-    "phone": "(+62) 21-5152-423",
-    "email": "info@globalsinergikapital.com",
-    "address": "Gedung Jaya Floor 9 Block A02, Jalan M.H Thamrin Number 12, Kebon Sirih, Menteng, Central Jakarta Administrative City, DKI Jakarta"
-  },
-  "social": {
-    "followUs": "Follow Us"
-  },
-  "copyright": "© 2025 Global Sinergi Kapital. All rights reserved.",
-  "bottomLinks": [
-    { "text": "Sitemap", "href": "#sitemap" },
-    { "text": "Contact Us", "href": "#contact" }
-  ]
+    "title": "Contact",
+    "address": "9 Jl. Manis II Manis Industrial Estate, Tangerang 15136, Indonesia",
+    "phone": "+62-215918872",
+    "email": "sales@majujayautama.co.id"
+  }
 }

@@ -1,14 +1,14 @@
-# Global Sinergi Kapital
+# PT Maju Jaya Utama Lestari
 
-A modern single-page application for Global Sinergi Kapital, an Indonesian financial services company specializing in corporate finance and investment advisory.
+A modern single-page application for PT Maju Jaya Utama Lestari, an Indonesian converted paper products manufacturer based in Tangerang.
 
 ## Features
 
 - Multilingual support (English and Indonesian)
-- Modern, responsive design
-- Service pages for various financial solutions
-- Client testimonials and portfolio
-- Contact information and team showcase
+- Manufacturing company profile
+- Product and capability highlights
+- Sustainability and quality commitments
+- Contact and inquiry information
 
 ## Development
 
@@ -23,7 +23,7 @@ A modern single-page application for Global Sinergi Kapital, an Indonesian finan
 git clone <repository-url>
 
 # Navigate to the project directory
-cd project-global-sinergi-kapital
+cd project-maju-jaya-utama-lestari
 
 # Install dependencies
 npm install
@@ -52,7 +52,7 @@ npm run preview   # Preview production build locally
 - **Routing**: React Router v6
 - **State Management**: React Query (TanStack Query)
 - **Forms**: React Hook Form with Zod validation
-- **Animations**: Framer Motion.
+- **Animations**: Framer Motion
 
 ## Project Structure
 
@@ -66,26 +66,9 @@ src/
 ├── pages/              # Route-level components
 ├── hooks/              # Custom React hooks
 ├── lib/                # Utilities and helpers
-└── index.css          # Global styles and design tokens
+└── index.css           # Global styles and design tokens
 ```
-
-## Services Offered
-
-The application showcases various financial services:
-
-- IPO Compliance Plans
-- Bridging Financing
-- Management Improvement Plans
-- Proforma Financial Reports
-- And more...
-
-## Contributing
-
-1. Create a new branch for your feature
-2. Make your changes
-3. Run `npm run lint` to check for linting errors
-4. Submit a pull request
 
 ## License
 
-Private repository for Global Sinergi Kapital.
+Private repository for PT Maju Jaya Utama Lestari.

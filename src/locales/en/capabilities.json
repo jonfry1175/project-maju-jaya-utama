@@ -1,0 +1,25 @@
+{
+  "section": {
+    "badge": "Capabilities",
+    "title": "Built for Industrial Scale",
+    "description": "Operational capacity designed for steady volume and demanding timelines."
+  },
+  "items": [
+    {
+      "title": "Large-Run Converting",
+      "description": "Consistent output for high-volume production schedules."
+    },
+    {
+      "title": "Custom Specifications",
+      "description": "Flexible widths, lengths, and roll formats to meet exact requirements."
+    },
+    {
+      "title": "Quality Control",
+      "description": "Process controls to maintain consistency across batches."
+    },
+    {
+      "title": "Logistics Readiness",
+      "description": "Reliable dispatch and delivery coordination across regions."
+    }
+  ]
+}

@@ -1,80 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://globalsinergikapital.com/</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://majujaya-utama-lestari.com/</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="id" href="https://globalsinergikapital.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://globalsinergikapital.com/en"/>
-  </url>
-  
-  <!-- Our Clients -->
-  <url>
-    <loc>https://globalsinergikapital.com/our-clients</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Our Leadership -->
-  <url>
-    <loc>https://globalsinergikapital.com/our-leadership</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Fund Raising -->
-  <url>
-    <loc>https://globalsinergikapital.com/fund-raising</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- IPO Process Pages -->
-  <url>
-    <loc>https://globalsinergikapital.com/ipo-process/mapping</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://globalsinergikapital.com/ipo-process/scenario-plans</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://globalsinergikapital.com/ipo-process/proforma-financial-report</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://globalsinergikapital.com/ipo-process/management-improvement-plans</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://globalsinergikapital.com/ipo-process/bridging-financing</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://globalsinergikapital.com/ipo-process/compliance-plans</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 </urlset>

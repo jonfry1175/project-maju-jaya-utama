@@ -13,7 +13,7 @@ npm run preview   # Preview production build locally
 
 ## Project Architecture
 
-This is a React + TypeScript single-page application for Global Sinergi Kapital, an Indonesian financial services company.
+This is a React + TypeScript single-page application for PT Maju Jaya Utama Lestari, an Indonesian converted paper products manufacturer.
 
 ### Technology Stack
 - **Framework**: React 18 with TypeScript
