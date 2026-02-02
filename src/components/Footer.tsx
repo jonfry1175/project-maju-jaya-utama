@@ -50,7 +50,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           
           {/* Brand Column */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-3 space-y-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Column */}
-          <div className="lg:col-span-2 lg:col-start-6 space-y-6">
+          <div className="lg:col-span-2 lg:col-start-5 space-y-6">
             <h4 className="text-lg font-semibold text-white">{t("sections.links")}</h4>
             <nav className="flex flex-col space-y-3">
               {quickLinks.map((link) => (
