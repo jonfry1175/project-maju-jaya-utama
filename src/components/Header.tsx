@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const { t } = useTranslation("header");
@@ -13,7 +15,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -27,7 +29,7 @@ const Header = () => {
     { name: t("nav.contact"), href: "#contact" },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
     if (location.pathname !== "/") {
       window.location.href = `/${href}`;
@@ -35,98 +37,150 @@ const Header = () => {
     }
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
     setIsMenuOpen(false);
   };
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 blur-backdrop border-b border-medium shadow-soft"
-          : "bg-background/80 blur-backdrop border-b border-subtle"
-      }`}
-    >
-      <div
-        className={`container mx-auto container-padding ${
-          isScrolled ? "py-2" : "py-3"
-        } transition-all duration-300`}
+    <>
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out font-sans",
+          isScrolled
+            ? "bg-background/80 backdrop-blur-xl border-b border-white/20 py-3 shadow-sm"
+            : "bg-transparent py-5 lg:py-6"
+        )}
       >
-        <div className="flex items-center justify-between gap-3">
-          <a
-            href="#hero"
-            onClick={(e) => handleNavClick(e, "#hero")}
-            className="flex items-center"
-          >
-            <img src="/logo.png" alt="Maju Jaya Utama Lestari" className="h-10 w-auto mr-3" />
-            <div className="flex flex-col leading-none">
-              <span className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
-                PT
-              </span>
-              <span className="text-lg sm:text-xl lg:text-2xl font-display font-semibold text-primary">
-                Maju Jaya Utama Lestari
-              </span>
-            </div>
-          </a>
+        <div className="container mx-auto container-padding">
+          <div className="flex items-center justify-between">
+            {/* Logo Section */}
+            <a
+              href="#hero"
+              onClick={(e) => handleNavClick(e, "#hero")}
+              className="group flex items-center gap-3 md:gap-4 select-none"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <img 
+                  src="/logo.png" 
+                  alt="Maju Jaya Utama Lestari" 
+                  className={cn(
+                    "relative z-10 w-auto transition-all duration-300",
+                    isScrolled ? "h-10 md:h-12" : "h-12 md:h-14"
+                  )} 
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground font-medium">
+                  PT Maju Jaya
+                </span>
+                <span className={cn(
+                  "font-display font-bold leading-none text-primary transition-all duration-300",
+                  isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+                )}>
+                  Utama Lestari
+                </span>
+              </div>
+            </a>
 
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-1 bg-white/50 backdrop-blur-md px-2 py-1.5 rounded-full border border-white/20 shadow-sm">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="px-5 py-2 text-sm font-medium text-foreground/70 hover:text-primary relative group overflow-hidden rounded-full transition-colors"
+                >
+                  <span className="relative z-10">{item.name}</span>
+                  <span className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
+                </a>
+              ))}
+            </nav>
+
+            {/* Actions */}
+            <div className="flex items-center gap-3">
+              <div className="hidden sm:block">
+                <LanguageSwitcher />
+              </div>
+              
+              <Button
+                size={isScrolled ? "sm" : "default"}
+                className={cn(
+                  "hidden sm:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-lg shadow-primary/25 transition-all duration-300",
+                  isScrolled ? "px-4" : "px-6"
+                )}
+                onClick={(e) => handleNavClick(e, "#contact")}
               >
-                {item.name}
-              </a>
-            ))}
-          </nav>
+                {t("cta.contact")}
+              </Button>
 
-          <div className="flex items-center gap-2">
-            <LanguageSwitcher />
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden lg:inline-flex border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
-              onClick={(e) => handleNavClick(e as any, "#contact")}
-            >
-              {t("cta.contact")}
-            </Button>
-            <button
-              className="lg:hidden p-2 rounded-md border border-border"
-              onClick={() => setIsMenuOpen((prev) => !prev)}
-              aria-label="Toggle navigation"
-            >
-              {isMenuOpen ? <X className="icon-small" /> : <Menu className="icon-small" />}
-            </button>
+              <button
+                className="lg:hidden p-2 text-foreground/80 hover:text-primary transition-colors relative z-50"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
+      </motion.header>
 
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 border-t border-border pt-4 space-y-3">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className="block text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+          <motion.div
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-40 lg:hidden bg-background/95 backdrop-blur-xl flex flex-col pt-32 px-6"
+          >
+            <nav className="flex flex-col gap-6 items-center text-center">
+              {navItems.map((item, i) => (
+                <motion.a
+                  key={item.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 + i * 0.1 }}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-2xl font-display font-medium text-foreground hover:text-primary transition-colors"
+                >
+                  {item.name}
+                </motion.a>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="pt-8 flex flex-col gap-4 w-full max-w-xs"
               >
-                {item.name}
-              </a>
-            ))}
-            <Button
-              variant="outline"
-              size="sm"
-              className="w-full border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
-              onClick={(e) => handleNavClick(e as any, "#contact")}
-            >
-              {t("cta.contact")}
-            </Button>
-          </div>
+                <LanguageSwitcher />
+                <Button 
+                  className="w-full h-12 text-lg shadow-xl shadow-primary/20"
+                  onClick={(e) => handleNavClick(e, "#contact")}
+                >
+                  {t("cta.contact")}
+                </Button>
+              </motion.div>
+            </nav>
+          </motion.div>
         )}
-      </div>
-    </header>
+      </AnimatePresence>
+    </>
   );
 };
 
