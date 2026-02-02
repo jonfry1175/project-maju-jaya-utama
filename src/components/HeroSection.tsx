@@ -93,14 +93,14 @@ const HeroSection = () => {
               </span>
             </motion.div>
 
-            <motion.div className="space-y-4" variants={itemVariants}>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-foreground leading-[1.05] tracking-tight">
+            <motion.div className="space-y-6" variants={itemVariants}>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] tracking-tight">
                 {t("title")}
                 <span className="block italic text-primary mt-2">
                   {t("titleHighlight")}
                 </span>
               </h1>
-              <p className="text-body-large text-muted-foreground max-w-xl leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
                 {t("description")}
               </p>
             </motion.div>
