@@ -185,10 +185,10 @@ const ContactSection = () => {
               <div className="card-noise opacity-10" />
               
               <h3 className="text-3xl font-display font-bold text-foreground mb-2">
-                Send a Message
+                {t("form.heading")}
               </h3>
               <p className="text-muted-foreground mb-10">
-                Direct inquiries to our manufacturing team
+                {t("form.subheading")}
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
@@ -297,7 +297,7 @@ const ContactSection = () => {
                      rel="noopener noreferrer"
                      className="inline-flex items-center text-sm font-semibold text-primary/70 hover:text-primary transition-colors space-x-2"
                    >
-                     <span>Or chat with our team on WhatsApp</span>
+                     <span>{t("form.whatsapp.cta")}</span>
                      <ArrowRight className="w-4 h-4" />
                    </a>
                 </div>

@@ -25,6 +25,8 @@
   "form": {
     "title": "Dapatkan Penawaran Kustom",
     "description": "Beritahu kami kebutuhan Anda. Kami akan menganalisis dan memberikan penawaran kompetitif dalam 24 jam.",
+    "heading": "Kirim Pesan",
+    "subheading": "Pertanyaan langsung ke tim manufaktur kami",
     "fields": {
       "name": { 
         "label": "Nama Lengkap",
@@ -59,7 +61,8 @@
     },
     "submit": "Minta Penawaran",
     "whatsapp": {
-      "text": "Lebih suka chat langsung?"
+      "text": "Lebih suka chat langsung?",
+      "cta": "Atau chat dengan tim kami di WhatsApp"
     }
   }
 }

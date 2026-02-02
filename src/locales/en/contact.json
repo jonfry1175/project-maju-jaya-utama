@@ -25,6 +25,8 @@
   "form": {
     "title": "Get a Custom Quote",
     "description": "Tell us what you need. We'll analyze your requirements and provide a competitive proposal within 24 hours.",
+    "heading": "Send a Message",
+    "subheading": "Direct inquiries to our manufacturing team",
     "fields": {
       "name": { 
         "label": "Full Name",
@@ -59,7 +61,8 @@
     },
     "submit": "Request Quote",
     "whatsapp": {
-      "text": "Prefer to chat directly?"
+      "text": "Prefer to chat directly?",
+      "cta": "Or chat with our team on WhatsApp"
     }
   }
 }

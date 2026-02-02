@@ -72,7 +72,7 @@ const HeroSection = () => {
       {/* Cinematic Overlays */}
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
-      <div className="container mx-auto container-padding relative z-10 w-full">
+      <div className="container mx-auto container-padding relative z-10 max-w-7xl">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
           <motion.div 
             className="space-y-8"
