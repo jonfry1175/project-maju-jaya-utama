@@ -1,12 +1,12 @@
 {
   "section": {
-    "badge": "Kontak",
-    "title": "Mulai Permintaan Anda",
-    "description": "Ceritakan kebutuhan produk kertas Anda dan kami akan merespons dengan cepat."
+    "badge": "Hubungi Kami",
+    "title": "Mulai Proyek Anda",
+    "description": "Terhubung dengan tim sales engineering kami untuk penawaran, sampel, atau konsultasi teknis."
   },
   "info": {
     "office": {
-      "title": "Kantor Pusat",
+      "title": "Pabrik & HQ",
       "address": "9 Jl. Manis II Manis Industrial Estate, Tangerang 15136, Indonesia"
     },
     "phone": {
@@ -14,7 +14,7 @@
       "number": "+62-215918872"
     },
     "email": {
-      "title": "Email",
+      "title": "Email Sales",
       "value": "sales@majujayautama.co.id"
     },
     "hours": {
@@ -23,41 +23,41 @@
     }
   },
   "form": {
-    "title": "Minta Penawaran",
-    "description": "Bagikan spesifikasi dan volume kebutuhan Anda. Tim kami akan menghubungi dengan harga dan timeline.",
+    "title": "Dapatkan Penawaran Kustom",
+    "description": "Beritahu kami kebutuhan Anda. Kami akan menganalisis dan memberikan penawaran kompetitif dalam 24 jam.",
     "fields": {
       "name": { 
         "label": "Nama Lengkap",
-        "placeholder": "Nama lengkap" 
+        "placeholder": "Masukkan nama Anda" 
       },
       "email": { 
-        "label": "Email",
-        "placeholder": "Email kerja" 
+        "label": "Email Bisnis",
+        "placeholder": "nama@perusahaan.com" 
       },
       "company": { 
-        "label": "Perusahaan",
-        "placeholder": "Nama perusahaan" 
+        "label": "Nama Perusahaan",
+        "placeholder": "Organisasi Anda" 
       },
       "phone": { 
-        "label": "Telepon",
+        "label": "Nomor Telepon",
         "placeholder": "+62 812-3456-7890" 
       },
       "product": {
         "label": "Produk yang Diminati",
-        "placeholder": "Pilih jenis produk",
+        "placeholder": "Pilih kategori produk",
         "options": [
-          "Roll kertas konversi",
-          "Kertas kemasan industri",
-          "Ukuran kustom & slitting",
-          "Lainnya"
+          "Roll Kertas Konversi",
+          "Kemasan Industri",
+          "Layanan Slitting Kustom",
+          "Lainnya / Pertanyaan Umum"
         ]
       },
       "message": { 
-        "label": "Pesan",
-        "placeholder": "Jelaskan spesifikasi, ukuran, dan volume yang dibutuhkan." 
+        "label": "Detail Proyek",
+        "placeholder": "Jelaskan spesifikasi, estimasi volume, dan persyaratan khusus lainnya." 
       }
     },
-    "submit": "Kirim Permintaan",
+    "submit": "Minta Penawaran",
     "whatsapp": {
       "text": "Lebih suka chat langsung?"
     }

@@ -1,25 +1,25 @@
 {
   "section": {
-    "badge": "Kapabilitas",
-    "title": "Dirancang untuk Skala Industri",
-    "description": "Kapasitas operasional untuk volume stabil dan timeline yang menantang."
+    "badge": "Kapabilitas Kami",
+    "title": "Kekuatan Produksi untuk Rantai Pasok Anda",
+    "description": "Kami menggabungkan mesin berkapasitas tinggi dengan kontrol proses yang ketat untuk mengirimkan pesanan tepat waktu, setiap saat."
   },
   "items": [
     {
-      "title": "Konversi Volume Besar",
-      "description": "Output konsisten untuk jadwal produksi ber-volume tinggi."
+      "title": "Produksi Volume Tinggi",
+      "description": "Output konsisten yang mampu mengimbangi jadwal produksi terpadat Anda."
     },
     {
       "title": "Spesifikasi Kustom",
-      "description": "Lebar, panjang, dan format roll fleksibel sesuai kebutuhan."
+      "description": "Lebar, panjang, dan format roll yang presisi, disesuaikan agar pas dengan mesin Anda."
     },
     {
-      "title": "Kontrol Kualitas",
-      "description": "Kontrol proses untuk menjaga konsistensi antar batch."
+      "title": "Kontrol Kualitas Ketat",
+      "description": "Pemeriksaan terstandarisasi di setiap tahap untuk memastikan konsistensi material antar batch."
     },
     {
-      "title": "Kesiapan Logistik",
-      "description": "Koordinasi pengiriman yang andal ke berbagai wilayah."
+      "title": "Logistik Andal",
+      "description": "Sistem pengiriman yang terkoordinasi untuk memastikan stok inventaris Anda tetap terjaga."
     }
   ]
 }

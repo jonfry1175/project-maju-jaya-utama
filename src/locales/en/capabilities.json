@@ -1,25 +1,25 @@
 {
   "section": {
-    "badge": "Capabilities",
-    "title": "Built for Industrial Scale",
-    "description": "Operational capacity designed for steady volume and demanding timelines."
+    "badge": "Our Capabilities",
+    "title": "Production Power for Your Supply Chain",
+    "description": "We combine high-capacity machinery with rigorous process controls to deliver on time, every time."
   },
   "items": [
     {
-      "title": "Large-Run Converting",
-      "description": "Consistent output for high-volume production schedules."
+      "title": "High-Volume Production",
+      "description": "Consistent output that keeps pace with your most demanding schedules."
     },
     {
       "title": "Custom Specifications",
-      "description": "Flexible widths, lengths, and roll formats to meet exact requirements."
+      "description": "Exact widths, lengths, and roll formats tailored to fit your machinery perfectly."
     },
     {
-      "title": "Quality Control",
-      "description": "Process controls to maintain consistency across batches."
+      "title": "Rigorous Quality Control",
+      "description": "Standardized checks at every stage to ensure material consistency across batches."
     },
     {
-      "title": "Logistics Readiness",
-      "description": "Reliable dispatch and delivery coordination across regions."
+      "title": "Reliable Logistics",
+      "description": "Coordinated dispatch and delivery systems to keep your inventory stocked."
     }
   ]
 }

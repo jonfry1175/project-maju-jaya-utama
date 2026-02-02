@@ -1,12 +1,12 @@
 {
   "section": {
-    "badge": "Contact",
-    "title": "Start Your Inquiry",
-    "description": "Tell us about your paper product needs and we will respond promptly."
+    "badge": "Contact Us",
+    "title": "Start Your Project",
+    "description": "Connect with our sales engineering team for quotes, samples, or technical consultation."
   },
   "info": {
     "office": {
-      "title": "Head Office",
+      "title": "Factory & HQ",
       "address": "9 Jl. Manis II Manis Industrial Estate, Tangerang 15136, Indonesia"
     },
     "phone": {
@@ -14,50 +14,50 @@
       "number": "+62-215918872"
     },
     "email": {
-      "title": "Email",
+      "title": "Sales Email",
       "value": "sales@majujayautama.co.id"
     },
     "hours": {
-      "title": "Business Hours",
+      "title": "Operating Hours",
       "value": "Monday - Saturday: 08:00 - 17:00"
     }
   },
   "form": {
-    "title": "Request a Quote",
-    "description": "Share your specifications and volume needs. Our team will follow up with pricing and timelines.",
+    "title": "Get a Custom Quote",
+    "description": "Tell us what you need. We'll analyze your requirements and provide a competitive proposal within 24 hours.",
     "fields": {
       "name": { 
         "label": "Full Name",
-        "placeholder": "Full name" 
+        "placeholder": "Enter your name" 
       },
       "email": { 
-        "label": "Email",
-        "placeholder": "Work email" 
+        "label": "Business Email",
+        "placeholder": "name@company.com" 
       },
       "company": { 
-        "label": "Company",
-        "placeholder": "Company name" 
+        "label": "Company Name",
+        "placeholder": "Your organization" 
       },
       "phone": { 
-        "label": "Phone",
+        "label": "Phone Number",
         "placeholder": "+62 812-3456-7890" 
       },
       "product": {
         "label": "Product Interest",
-        "placeholder": "Select product type",
+        "placeholder": "Select a product category",
         "options": [
-          "Converted paper rolls",
-          "Industrial packaging paper",
-          "Custom sizing & slitting",
-          "Other"
+          "Converted Paper Rolls",
+          "Industrial Packaging",
+          "Custom Slitting Services",
+          "Other / General Inquiry"
         ]
       },
       "message": { 
-        "label": "Message",
-        "placeholder": "Tell us about your specifications, sizes, and volume." 
+        "label": "Project Details",
+        "placeholder": "Please describe your specifications, estimated volume, and any special requirements." 
       }
     },
-    "submit": "Send Inquiry",
+    "submit": "Request Quote",
     "whatsapp": {
       "text": "Prefer to chat directly?"
     }

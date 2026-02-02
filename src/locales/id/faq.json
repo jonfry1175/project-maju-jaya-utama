@@ -2,24 +2,24 @@
   "section": {
     "badge": "FAQ",
     "title": "Pertanyaan Umum",
-    "description": "Informasi untuk kebutuhan pengadaan dan perencanaan suplai."
+    "description": "Jawaban cepat untuk membantu perencanaan pengadaan Anda."
   },
   "items": [
     {
       "question": "Produk apa yang Anda produksi?",
-      "answer": "Kami memproduksi produk kertas konversi termasuk roll dengan ukuran kustom dan kertas kemasan industri."
+      "answer": "Kami mengkhususkan diri dalam produk kertas konversi, termasuk roll ukuran kustom, slitting roll, dan kertas kemasan industri."
     },
     {
-      "question": "Berapa estimasi lead time?",
-      "answer": "Lead time tergantung volume dan spesifikasi. Tim kami akan mengonfirmasi jadwal setelah meninjau kebutuhan Anda."
+      "question": "Berapa estimasi lead time Anda?",
+      "answer": "Lead time bervariasi tergantung volume dan spesifikasi, tetapi umumnya kami memenuhi pesanan standar dalam 5-7 hari kerja."
     },
     {
-      "question": "Apakah bisa ukuran kustom?",
-      "answer": "Ya. Kami menyediakan sizing, slitting, dan finishing yang fleksibel sesuai kebutuhan."
+      "question": "Bisakah saya memesan ukuran kustom?",
+      "answer": "Tentu saja. Kami menawarkan layanan slitting dan resizing yang fleksibel untuk memenuhi kebutuhan mesin Anda secara presisi."
     },
     {
-      "question": "Standar kualitas apa yang digunakan?",
-      "answer": "Kami menerapkan kontrol kualitas yang konsisten untuk material masuk dan produk akhir."
+      "question": "Apakah Anda memiliki sertifikasi kualitas?",
+      "answer": "Ya, kami menerapkan standar kontrol kualitas internal yang ketat dan mengambil sumber dari pemasok bersertifikat."
     }
   ]
 }

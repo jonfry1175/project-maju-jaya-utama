@@ -1,25 +1,25 @@
 {
   "section": {
-    "badge": "Produk",
-    "title": "Lini Produk Kertas Konversi",
-    "description": "Solusi yang disesuaikan untuk kebutuhan produksi dan pengemasan industri."
+    "badge": "Produk Kami",
+    "title": "Solusi Kertas untuk Industri",
+    "description": "Dari kemasan pelindung hingga roll konversi kustom, kami menyediakan material esensial untuk operasi Anda."
   },
   "items": [
     {
-      "title": "Konversi & Finishing",
-      "description": "Pemotongan presisi, rewinding, dan finishing sesuai spesifikasi."
+      "title": "Konversi & Slitting Kertas",
+      "description": "Pemotongan presisi dari parent roll menjadi ukuran dan diameter spesifik untuk aplikasi Anda."
     },
     {
       "title": "Kertas Kemasan Industri",
-      "description": "Grade kertas tahan lama untuk perlindungan dan performa distribusi."
+      "description": "Grade kertas berdaya tahan tinggi yang dirancang untuk melindungi barang Anda selama penyimpanan dan transit."
     },
     {
-      "title": "Ukuran Kustom & Slitting",
-      "description": "Fleksibel untuk ukuran, slitting, dan format roll sesuai proses Anda."
+      "title": "Format Kustom",
+      "description": "Opsi roll dan lembaran fleksibel untuk meminimalkan limbah dan memaksimalkan efisiensi di fasilitas Anda."
     },
     {
-      "title": "Jaminan Kualitas",
-      "description": "Kontrol kualitas yang konsisten dan kepatuhan di setiap batch."
+      "title": "Maklon Manufaktur",
+      "description": "Layanan toll manufacturing (maklon) yang andal untuk memperluas kapasitas produksi Anda tanpa investasi modal."
     }
   ]
 }

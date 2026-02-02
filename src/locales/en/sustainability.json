@@ -2,20 +2,20 @@
   "section": {
     "badge": "Sustainability & Quality",
     "title": "Responsible by Design",
-    "description": "We prioritize responsible sourcing, efficient production, and dependable quality standards."
+    "description": "We believe high performance and environmental responsibility go hand in hand."
   },
   "items": [
     {
       "title": "Responsible Sourcing",
-      "description": "Working with suppliers that meet industry and compliance standards."
+      "description": "We partner exclusively with suppliers who adhere to strict environmental and compliance standards."
     },
     {
-      "title": "Process Efficiency",
-      "description": "Optimized production flow to reduce waste and improve yield."
+      "title": "Efficient Production",
+      "description": "Our optimized workflows minimize waste and maximize yield, reducing our environmental footprint."
     },
     {
-      "title": "Quality Assurance",
-      "description": "Reliable checks across incoming materials and finished goods."
+      "title": "Certified Quality",
+      "description": "Rigorous testing of raw materials and finished goods ensures you receive only the best product."
     }
   ]
 }

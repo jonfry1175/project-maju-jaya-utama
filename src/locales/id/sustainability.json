@@ -2,20 +2,20 @@
   "section": {
     "badge": "Keberlanjutan & Kualitas",
     "title": "Bertanggung Jawab Sejak Desain",
-    "description": "Kami mengutamakan sumber bahan yang bertanggung jawab, produksi efisien, dan standar kualitas yang andal."
+    "description": "Kami percaya performa tinggi dan tanggung jawab lingkungan berjalan beriringan."
   },
   "items": [
     {
       "title": "Sumber Bertanggung Jawab",
-      "description": "Bekerja dengan pemasok yang memenuhi standar industri dan kepatuhan."
+      "description": "Kami bermitra secara eksklusif dengan pemasok yang mematuhi standar lingkungan dan kepatuhan yang ketat."
     },
     {
-      "title": "Efisiensi Proses",
-      "description": "Alur produksi yang optimal untuk mengurangi limbah dan meningkatkan yield."
+      "title": "Produksi Efisien",
+      "description": "Alur kerja kami yang optimal meminimalkan limbah dan memaksimalkan hasil, mengurangi jejak lingkungan kami."
     },
     {
-      "title": "Jaminan Kualitas",
-      "description": "Pengecekan konsisten untuk material masuk dan produk akhir."
+      "title": "Kualitas Tersertifikasi",
+      "description": "Pengujian ketat terhadap bahan baku dan barang jadi memastikan Anda hanya menerima produk terbaik."
     }
   ]
 }

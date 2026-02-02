@@ -1,25 +1,25 @@
 {
   "section": {
-    "badge": "Products",
-    "title": "Converted Paper Product Lines",
-    "description": "Tailored solutions for industrial packaging and production needs."
+    "badge": "Our Products",
+    "title": "Paper Solutions for Industry",
+    "description": "From protective packaging to custom-converted rolls, we provide the essential materials for your operations."
   },
   "items": [
     {
-      "title": "Paper Converting & Finishing",
-      "description": "Precision cutting, rewinding, and finishing to meet exact specifications."
+      "title": "Paper Converting & Slitting",
+      "description": "Precision resizing of parent rolls into custom widths and diameters for your specific applications."
     },
     {
       "title": "Industrial Packaging Paper",
-      "description": "Durable paper grades designed for protection and performance in transit."
+      "description": "High-durability grades designed to protect your goods during storage and transit."
     },
     {
-      "title": "Custom Sizing & Slitting",
-      "description": "Flexible sizing, slitting, and roll formats for your production workflow."
+      "title": "Custom Formats",
+      "description": "Flexible roll and sheet options to minimize waste and maximize efficiency in your facility."
     },
     {
-      "title": "Quality Assurance",
-      "description": "Consistent quality control and compliance across every batch."
+      "title": "Contract Manufacturing",
+      "description": "Reliable toll manufacturing services to expand your production capacity without capital investment."
     }
   ]
 }

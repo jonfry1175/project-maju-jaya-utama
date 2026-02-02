@@ -1,25 +1,25 @@
 {
   "section": {
     "badge": "FAQ",
-    "title": "Common Questions",
-    "description": "Helpful details for procurement and supply planning."
+    "title": "Frequent Questions",
+    "description": "Quick answers to help you plan your procurement."
   },
   "items": [
     {
       "question": "What products do you manufacture?",
-      "answer": "We manufacture converted paper products including custom-sized rolls and industrial packaging paper."
+      "answer": "We specialize in converted paper products, including custom-sized rolls, slit rolls, and industrial packaging paper."
     },
     {
-      "question": "What is the typical lead time?",
-      "answer": "Lead time depends on volume and specification. Our team will confirm schedule after reviewing your requirements."
+      "question": "What is your typical lead time?",
+      "answer": "Lead times vary by volume and specs, but we generally fulfill standard orders within 5-7 business days."
     },
     {
-      "question": "Can you handle custom sizes?",
-      "answer": "Yes. We offer flexible sizing, slitting, and finishing to meet custom requirements."
+      "question": "Can I order custom sizes?",
+      "answer": "Absolutely. We offer flexible slitting and resizing services to meet your exact machinery requirements."
     },
     {
-      "question": "What quality standards do you follow?",
-      "answer": "We apply consistent quality control across incoming materials and finished products."
+      "question": "Do you have quality certifications?",
+      "answer": "Yes, we maintain rigorous internal quality control standards and source from certified suppliers."
     }
   ]
 }
