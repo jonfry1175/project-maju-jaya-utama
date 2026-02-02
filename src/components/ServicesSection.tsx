@@ -11,7 +11,7 @@ const productImages = [
 ];
 
 const ServicesSection = () => {
-  const { t } = useTranslation("services");
+  const { t, i18n } = useTranslation("services");
   const items = t("items", { returnObjects: true }) as Array<{
     title: string;
     description: string;
@@ -85,6 +85,7 @@ const ServicesSection = () => {
         </div>
 
         <motion.div 
+          key={i18n.language}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}
           initial="hidden"
@@ -93,7 +94,7 @@ const ServicesSection = () => {
         >
           {items.map((item, index) => (
             <motion.div 
-              key={item.title} 
+              key={`${i18n.language}-${index}`} 
               variants={cardVariants}
               className={`${index % 2 === 1 ? 'lg:translate-y-12' : ''}`}
             >

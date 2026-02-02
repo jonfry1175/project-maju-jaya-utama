@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const PartnerLogosSection = () => {
-  const { t } = useTranslation("capabilities");
+  const { t, i18n } = useTranslation("capabilities");
   const items = t("items", { returnObjects: true }) as Array<{
     title: string;
     description: string;
@@ -57,6 +57,7 @@ const PartnerLogosSection = () => {
         </AnimatedSection>
 
         <motion.div 
+          key={i18n.language}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}
           initial="hidden"
@@ -64,7 +65,7 @@ const PartnerLogosSection = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           {items.map((item, index) => (
-            <motion.div key={item.title} variants={cardVariants}>
+            <motion.div key={`${i18n.language}-${index}`} variants={cardVariants}>
               <Card
                 className="group relative h-full bg-card/50 backdrop-blur-sm border border-primary/10 p-8 rounded-2xl hover:border-primary/30 transition-all duration-500 overflow-hidden shadow-xl"
               >

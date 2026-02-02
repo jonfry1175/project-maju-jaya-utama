@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
 
 const TestimonialsSection = () => {
-  const { t } = useTranslation("sustainability");
+  const { t, i18n } = useTranslation("sustainability");
   const items = t("items", { returnObjects: true }) as Array<{
     title: string;
     description: string;
@@ -57,6 +57,7 @@ const TestimonialsSection = () => {
         </AnimatedSection>
 
         <motion.div 
+          key={i18n.language}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -64,7 +65,7 @@ const TestimonialsSection = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           {items.map((item, index) => (
-            <motion.div key={item.title} variants={cardVariants}>
+            <motion.div key={`${i18n.language}-${index}`} variants={cardVariants}>
               <Card
                 className="group relative h-full bg-card/40 backdrop-blur-md border border-primary/10 p-10 rounded-3xl hover:border-primary/30 transition-all duration-500 shadow-2xl overflow-hidden"
               >
