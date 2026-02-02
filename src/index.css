@@ -17,14 +17,14 @@
     --popover: 36 32% 96%;
     --popover-foreground: 24 25% 15%;
 
-    --primary: 150 40% 20%;
+    --primary: 10 100% 55%;
     --primary-foreground: 36 38% 96%;
 
-    --secondary: 24 25% 28%;
+    --secondary: 24 30% 22%;
     --secondary-foreground: 36 38% 96%;
 
-    --accent: 32 80% 50%;
-    --accent-foreground: 24 25% 15%;
+    --accent: 38 90% 50%;
+    --accent-foreground: 24 30% 15%;
 
     --success: 140 35% 35%;
     --success-foreground: 36 38% 96%;
@@ -40,7 +40,7 @@
 
     --border: 30 20% 70%;
     --input: 36 28% 90%;
-    --ring: 150 40% 20%;
+    --ring: 10 100% 55%;
 
     --radius: 0.75rem;
 

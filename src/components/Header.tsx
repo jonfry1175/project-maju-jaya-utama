@@ -57,14 +57,17 @@ const Header = () => {
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, "#hero")}
-            className="flex flex-col leading-none"
+            className="flex items-center"
           >
-            <span className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
-              PT
-            </span>
-            <span className="text-lg sm:text-xl lg:text-2xl font-display font-semibold text-primary">
-              Maju Jaya Utama Lestari
-            </span>
+            <img src="/logo.png" alt="Maju Jaya Utama Lestari" className="h-10 w-auto mr-3" />
+            <div className="flex flex-col leading-none">
+              <span className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
+                PT
+              </span>
+              <span className="text-lg sm:text-xl lg:text-2xl font-display font-semibold text-primary">
+                Maju Jaya Utama Lestari
+              </span>
+            </div>
           </a>
 
           <nav className="hidden lg:flex items-center gap-4 xl:gap-6">

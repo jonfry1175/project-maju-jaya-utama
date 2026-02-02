@@ -19,6 +19,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2 space-y-4">
             <div>
+              <img src="/logo.png" alt="Maju Jaya Utama Lestari" className="h-12 w-auto mb-4" />
               <div className="text-sm uppercase tracking-[0.3em] text-primary-foreground/70">
                 PT
               </div>
