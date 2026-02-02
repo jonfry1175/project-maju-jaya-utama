@@ -59,22 +59,22 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="flex items-center gap-4">
-                <div className="relative p-2 bg-white/5 rounded-2xl border border-white/10">
+              <div className="flex items-center gap-5">
+                <div className="relative p-2 bg-white/5 rounded-2xl border border-white/10 shrink-0">
                   <img
                     src="/logo.png"
                     alt="Maju Jaya Utama Lestari"
-                    className="h-14 w-auto brightness-0 invert"
+                    className="h-14 w-auto"
                   />
                 </div>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-3xl font-display font-bold text-white leading-tight">
-                  Maju Jaya <span className="text-primary">Utama Lestari</span>
-                </h3>
-                <p className="text-xs font-mono uppercase tracking-[0.3em] text-primary/80 font-semibold">
-                  {i18n.language === "id" ? "Produsen Kertas Konversi" : "Converted Paper Manufacturer"}
-                </p>
+                <div className="space-y-1">
+                  <h3 className="text-2xl font-display font-bold text-white leading-tight lg:whitespace-nowrap">
+                    Maju Jaya <span className="text-primary">Utama Lestari</span>
+                  </h3>
+                  <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-primary/80 font-semibold">
+                    {i18n.language === "id" ? "Produsen Kertas Konversi" : "Converted Paper Manufacturer"}
+                  </p>
+                </div>
               </div>
               <p className="text-secondary-foreground/60 leading-relaxed text-lg font-light">
                 {t("description")}
