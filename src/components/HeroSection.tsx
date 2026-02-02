@@ -36,154 +36,93 @@ const HeroSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 30, filter: "blur(5px)" },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeInOut" as any },
-    },
-  };
-
-  const statsVariants = {
-    hidden: { opacity: 0, x: 30 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.6, ease: "easeInOut" as any },
+      filter: "blur(0px)",
+      transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] as any },
     },
   };
 
   return (
     <section
       id="hero"
-      className="relative overflow-hidden min-h-screen flex items-center"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background"
     >
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
+      {/* Background Layers */}
+      <div className="absolute inset-0 z-0">
         <img 
           src="/assets/images/hero-manufacturing-v2.png" 
           alt="Paper Manufacturing"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent" />
+        <div className="absolute inset-0 bg-grid-industrial opacity-[0.1]" />
+        <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
       </div>
 
-      {/* Decorative Elements */}
-      <motion.div 
-        className="absolute top-20 right-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl"
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{ 
-          duration: 8, 
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div 
-        className="absolute bottom-40 left-10 w-96 h-96 rounded-full bg-accent/10 blur-3xl"
-        animate={{ 
-          scale: [1.2, 1, 1.2],
-          opacity: [0.2, 0.4, 0.2],
-        }}
-        transition={{ 
-          duration: 10, 
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
+      {/* Cinematic Overlays */}
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
-      {/* Floating Paper Elements */}
-      <motion.div 
-        className="absolute top-1/4 right-1/4 w-16 h-20 bg-white/20 rounded-sm shadow-lg backdrop-blur-sm rotate-12"
-        animate={{ 
-          y: [0, -20, 0],
-          rotate: [12, 15, 12],
-        }}
-        transition={{ 
-          duration: 6, 
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div 
-        className="absolute top-1/3 right-1/6 w-12 h-16 bg-white/15 rounded-sm shadow-lg backdrop-blur-sm -rotate-6"
-        animate={{ 
-          y: [0, -15, 0],
-          rotate: [-6, -10, -6],
-        }}
-        transition={{ 
-          duration: 7, 
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-      />
-
-      {/* Pattern Overlay */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M60 0H0V60' fill='none' stroke='rgba(0,0,0,0.03)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E\")",
-        }}
-      />
-
-      <div className="container mx-auto container-padding section-padding relative z-10">
-        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
+      <div className="container mx-auto container-padding relative z-10 w-full">
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
           <motion.div 
-            className="space-y-6"
+            className="space-y-8"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
             <motion.div 
-              className="inline-flex items-center bg-white/90 text-primary px-4 py-2 rounded-full text-body-small font-semibold border border-primary/20 shadow-sm backdrop-blur-sm"
+              className="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full shadow-2xl"
               variants={itemVariants}
             >
-              <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse" />
-              {t("badge")}
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+              </span>
+              <span className="text-xs font-mono uppercase tracking-[0.2em] text-foreground/80 font-semibold">
+                {t("badge")}
+              </span>
             </motion.div>
 
             <motion.div className="space-y-4" variants={itemVariants}>
-              <h1 className="heading-1 text-primary">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-foreground leading-[1.05] tracking-tight">
                 {t("title")}
-                <span className="text-gradient block mt-3">
+                <span className="block italic text-primary mt-2">
                   {t("titleHighlight")}
                 </span>
               </h1>
-              <p className="text-body-large text-muted-foreground max-w-2xl">
+              <p className="text-body-large text-muted-foreground max-w-xl leading-relaxed">
                 {t("description")}
               </p>
             </motion.div>
 
             <motion.div 
-              className="flex flex-col sm:flex-row gap-3"
+              className="flex flex-wrap gap-4"
               variants={itemVariants}
             >
               <Button
                 size="lg"
-                className="btn-gradient-brand shadow-brand text-body font-semibold px-6 sm:px-8 py-4 h-auto group relative overflow-hidden"
+                className="h-16 px-10 text-lg font-display font-semibold transition-all duration-500 bg-primary hover:bg-primary/90 text-white shadow-[0_0_30px_rgba(255,65,27,0.3)] hover:shadow-[0_0_50px_rgba(255,65,27,0.5)] group relative overflow-hidden"
                 onClick={scrollToContact}
               >
                 <span className="relative z-10 flex items-center">
                   {t("cta.primary")}
-                  <ArrowRight className="ml-2 icon-small group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="text-body font-semibold px-6 sm:px-8 py-4 h-auto border-2 bg-white/80 backdrop-blur-sm hover:bg-white transition-all"
+                className="h-16 px-10 text-lg font-display font-semibold border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-500"
                 onClick={scrollToContact}
               >
                 {t("cta.secondary")}
@@ -192,38 +131,54 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.div 
-            className="grid gap-4"
+            className="relative"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                variants={statsVariants}
-                transition={{ delay: 0.3 + index * 0.15 }}
-              >
-                <Card
-                  className="card-padding card-surface card-inset card-hover-premium bg-white/90 backdrop-blur-sm group"
+            {/* Visual Element: Industrial Pattern */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px]" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-accent/10 rounded-full blur-[100px]" />
+
+            <div className="grid gap-6 relative">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  variants={itemVariants}
+                  className={`${index === 1 ? 'lg:translate-x-12' : ''}`}
                 >
-                  <div className="card-accent-line" />
-                  <div className="card-corner-cut" />
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <stat.icon className="icon-medium text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground font-medium">
-                        {stat.label}
+                  <Card
+                    className="group border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:border-primary/40 transition-all duration-500"
+                  >
+                    <div className="flex items-center gap-6">
+                      <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <stat.icon className="w-8 h-8 text-primary" />
                       </div>
-                      <div className="text-lg font-semibold text-foreground">
-                        {stat.value}
+                      <div>
+                        <div className="text-sm font-mono uppercase tracking-widest text-muted-foreground mb-1">
+                          {stat.label}
+                        </div>
+                        <div className="text-3xl font-display font-bold text-foreground">
+                          {stat.value}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Scroll Indicator */}
+            <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 lg:left-0 lg:-translate-x-0 hidden md:block">
+               <motion.div 
+                 animate={{ y: [0, 10, 0] }}
+                 transition={{ duration: 2, repeat: Infinity }}
+                 className="flex flex-col items-center space-y-2"
+               >
+                 <span className="text-[10px] uppercase tracking-[0.3em] font-mono text-muted-foreground">Discover</span>
+                 <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />
+               </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

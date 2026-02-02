@@ -31,17 +31,16 @@ const AboutSection = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, x: -20 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeInOut" as any },
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" as any },
     },
   };
 
@@ -50,142 +49,96 @@ const AboutSection = () => {
       id="about"
       className="section-padding bg-background relative overflow-hidden"
     >
-      {/* Decorative Background Elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-full opacity-5">
-        <img 
-          src="/assets/images/factory-interior.jpg" 
-          alt="" 
-          className="w-full h-full object-cover"
-        />
+      {/* Background Layers */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-grid-industrial opacity-[0.1]" />
+        <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background to-transparent" />
 
-      <div className="container mx-auto container-padding relative z-10">
-        <AnimatedSection className="max-w-4xl mx-auto text-center mb-10">
-          <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 border border-primary-subtle shadow-sm">
-            <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse" />
-            {t("section.badge")}
-          </div>
-          <h2 className="heading-2 text-primary mb-4">
-            {t("section.title")}
-          </h2>
-          <p className="text-body-large text-muted-foreground">
-            {t("section.description")}
-          </p>
-        </AnimatedSection>
-
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-6 max-w-6xl mx-auto">
-          <AnimatedSection delay={0.1} direction="left">
-            <Card className="card-padding-large card-surface card-inset h-full relative overflow-hidden group">
-              <div className="card-accent-line" />
-              <div className="card-corner-cut" />
-              
-              {/* Factory Image */}
-              <div className="absolute -right-10 -bottom-10 w-48 h-48 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
-                <img 
-                  src="/assets/images/factory-interior.jpg" 
-                  alt="" 
-                  className="w-full h-full object-cover rounded-full"
-                />
+      <div className="container mx-auto container-padding relative z-10 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-12">
+            <AnimatedSection className="text-left m-0">
+              <div className="inline-flex items-center space-x-2 bg-primary/5 border border-primary/10 px-3 py-1 rounded-full mb-6">
+                <span className="text-xs font-mono uppercase tracking-widest text-primary/80">
+                  {t("section.badge")}
+                </span>
               </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] mb-8">
+                {t("section.title")}
+              </h2>
+              <p className="text-body-large text-muted-foreground leading-relaxed">
+                {t("section.description")}
+              </p>
+            </AnimatedSection>
 
-              <h3 className="heading-4 text-primary mb-4 relative z-10">{t("profile.title")}</h3>
-              <p className="text-body text-muted-foreground mb-6 relative z-10">
+            <motion.div 
+              className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {stats.map((stat) => (
+                <motion.div key={stat.label} variants={itemVariants} className="group">
+                  <div className="p-6 bg-card/40 backdrop-blur-md border border-primary/10 rounded-2xl hover:border-primary/30 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <stat.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="text-2xl font-display font-bold text-foreground mb-1">{stat.value}</div>
+                    <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground">{stat.label}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          <AnimatedSection direction="right" className="relative group m-0">
+            {/* Main Profile Card */}
+            <Card className="relative z-10 overflow-hidden bg-card/60 backdrop-blur-xl border border-white/20 rounded-[2rem] shadow-2xl p-10">
+              <div className="absolute top-0 left-0 w-2 h-full bg-primary" />
+              <div className="card-noise opacity-10" />
+              
+              <h3 className="text-2xl font-display font-bold text-foreground mb-6">
+                {t("profile.title")}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-10 text-lg">
                 {t("profile.description")}
               </p>
-              <motion.div 
-                className="grid sm:grid-cols-3 gap-4 relative z-10"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                {stats.map((stat, index) => (
-                  <motion.div 
-                    key={stat.label} 
-                    className="text-center"
-                    variants={itemVariants}
-                  >
-                    <div className="w-12 h-12 rounded-full bg-primary/10 mx-auto flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                      <stat.icon className="icon-medium text-primary" />
-                    </div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
-                    <div className="text-base font-semibold text-foreground">
-                      {stat.value}
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </Card>
-          </AnimatedSection>
 
-          <motion.div 
-            className="grid gap-4"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            <motion.div variants={itemVariants}>
-              <Card className="card-padding card-surface card-inset card-hover-premium group">
-                <div className="card-accent-line" />
-                <div className="card-corner-cut" />
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300">
-                    <MapPin className="icon-small text-primary" />
+              <div className="space-y-6">
+                <div className="flex items-start gap-5 p-5 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/30 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-foreground">
-                      {t("address.title")}
-                    </div>
-                    <p className="text-body-small text-muted-foreground">
-                      {t("address.value")}
-                    </p>
+                    <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-1">{t("address.title")}</div>
+                    <div className="text-sm font-semibold text-foreground leading-snug">{t("address.value")}</div>
                   </div>
                 </div>
-              </Card>
-            </motion.div>
+
+                <div className="flex items-start gap-5 p-5 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/30 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <Phone className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-1">{t("contact.title")}</div>
+                    <div className="text-sm font-semibold text-foreground leading-snug">{t("contact.value")}</div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Decorative Image Overlays */}
+            <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full border border-primary/20 p-2 animate-float">
+               <div className="w-full h-full rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+                  <img src="/assets/images/factory-interior.jpg" alt="" className="w-full h-full object-cover" />
+               </div>
+            </div>
             
-            <motion.div variants={itemVariants}>
-              <Card className="card-padding card-surface card-inset card-hover-premium group">
-                <div className="card-accent-line" />
-                <div className="card-corner-cut" />
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300">
-                    <Phone className="icon-small text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-foreground">
-                      {t("contact.title")}
-                    </div>
-                    <p className="text-body-small text-muted-foreground">
-                      {t("contact.value")}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-            
-            <motion.div variants={itemVariants}>
-              <Card className="card-padding card-surface card-inset card-hover-premium group">
-                <div className="card-accent-line" />
-                <div className="card-corner-cut" />
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300">
-                    <Building2 className="icon-small text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-foreground">
-                      {t("industry.title")}
-                    </div>
-                    <p className="text-body-small text-muted-foreground">
-                      {t("industry.value")}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-          </motion.div>
+            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+          </AnimatedSection>
         </div>
       </div>
     </section>
