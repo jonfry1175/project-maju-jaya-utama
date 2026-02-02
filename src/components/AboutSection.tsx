@@ -131,11 +131,7 @@ const AboutSection = () => {
             </Card>
 
             {/* Decorative Image Overlays */}
-            <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full border border-primary/20 p-2 animate-float">
-               <div className="w-full h-full rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
-                  <img src="/assets/images/factory-interior.jpg" alt="" className="w-full h-full object-cover" />
-               </div>
-            </div>
+
             
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
           </AnimatedSection>
