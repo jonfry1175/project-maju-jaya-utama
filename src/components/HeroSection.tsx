@@ -68,7 +68,7 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="/assets/images/hero-manufacturing.jpg" 
+          src="/assets/images/hero-manufacturing-v2.png" 
           alt="Paper Manufacturing"
           className="w-full h-full object-cover"
         />
