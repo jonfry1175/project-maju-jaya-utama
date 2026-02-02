@@ -21,9 +21,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Work Sans', 'sans-serif'],
-				display: ['Fraunces', 'serif'],
-				mono: ['IBM Plex Mono', 'monospace'],
+				sans: ['Inter', 'sans-serif'],
+				display: ['Poppins', 'sans-serif'],
+				mono: ['Inter', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
