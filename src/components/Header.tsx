@@ -70,7 +70,7 @@ const Header = () => {
             <a
               href="#hero"
               onClick={(e) => handleNavClick(e, "#hero")}
-              className="group flex items-center gap-4 select-none"
+              className="group flex items-center gap-3 select-none"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -79,19 +79,16 @@ const Header = () => {
                   alt="Maju Jaya Utama Lestari" 
                   className={cn(
                     "relative z-10 w-auto transition-all duration-500",
-                    isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"
+                    isScrolled ? "h-10 md:h-12" : "h-12 md:h-14"
                   )} 
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] md:text-sm uppercase tracking-[0.4em] text-muted-foreground font-mono leading-none mb-1 opacity-70">
-                  PT Maju Jaya
-                </span>
                 <span className={cn(
-                  "font-display font-bold leading-none text-foreground transition-all duration-500",
-                  isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"
+                  "font-display font-bold leading-none text-foreground transition-all duration-500 whitespace-nowrap",
+                  isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
                 )}>
-                  Utama <span className="text-primary">Lestari</span>
+                  Maju Jaya <span className="text-primary">Utama Lestari</span>
                 </span>
               </div>
             </a>
@@ -104,7 +101,7 @@ const Header = () => {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="px-6 py-2.5 text-sm font-semibold text-foreground/70 hover:text-primary relative group/item transition-all duration-300 rounded-full"
+                  className="px-4 py-2 text-sm font-semibold text-foreground/70 hover:text-primary relative group/item transition-all duration-300 rounded-full"
                 >
                   <span className="relative z-10">{item.name}</span>
                   <span className="absolute inset-0 bg-primary/10 scale-0 group-hover/item:scale-100 transition-transform duration-300 rounded-full" />
