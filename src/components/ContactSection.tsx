@@ -99,7 +99,7 @@ const ContactSection = () => {
               {t("section.badge")}
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] mb-6">
+          <h2 className="heading-1 mb-6">
             {t("section.title")}
           </h2>
           <p className="text-body-large text-muted-foreground">
@@ -117,10 +117,10 @@ const ContactSection = () => {
             viewport={{ once: true }}
           >
             <motion.div variants={itemVariants}>
-              <h3 className="text-3xl font-display font-bold text-foreground mb-4 italic">
+              <h3 className="heading-2 mb-4 italic">
                 {t("form.title")}
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <p className="text-body-large text-muted-foreground">
                 {t("form.description")}
               </p>
             </motion.div>
@@ -136,7 +136,7 @@ const ContactSection = () => {
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                         <info.icon className="w-6 h-6 text-primary" />
                       </div>
-                      <h4 className="text-lg font-display font-bold text-foreground mb-2">
+                      <h4 className="heading-5 mb-2">
                         {info.title}
                       </h4>
                       {info.link ? (
@@ -144,12 +144,12 @@ const ContactSection = () => {
                           href={info.link}
                           target={info.link.startsWith("http") ? "_blank" : undefined}
                           rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors text-sm break-words leading-relaxed"
+                          className="text-body-small text-muted-foreground hover:text-primary transition-colors break-words"
                         >
                           {info.content}
                         </a>
                       ) : (
-                        <p className="text-muted-foreground text-sm leading-relaxed">
+                        <p className="text-body-small text-muted-foreground">
                           {info.content}
                         </p>
                       )}
@@ -184,10 +184,10 @@ const ContactSection = () => {
               <div className="absolute top-0 right-0 w-1 h-full bg-primary" />
               <div className="card-noise opacity-10" />
               
-              <h3 className="text-3xl font-display font-bold text-foreground mb-2">
+              <h3 className="heading-2 mb-2">
                 {t("form.heading")}
               </h3>
-              <p className="text-muted-foreground mb-10">
+              <p className="text-body text-muted-foreground mb-10">
                 {t("form.subheading")}
               </p>
 
@@ -201,7 +201,7 @@ const ContactSection = () => {
                     name="name"
                     required
                     placeholder={t("form.fields.name.placeholder")}
-                    className="h-14 bg-white/5 border-white/10 focus:ring-primary focus:border-primary rounded-xl text-lg transition-all"
+                    className="h-14 bg-white/5 border-white/10 focus:ring-primary focus:border-primary rounded-xl text-base sm:text-lg transition-all"
                   />
                 </div>
 
@@ -276,14 +276,14 @@ const ContactSection = () => {
                     required
                     rows={4}
                     placeholder={t("form.fields.message.placeholder")}
-                    className="bg-white/5 border-white/10 rounded-xl min-h-[140px] text-lg transition-all"
+                    className="bg-white/5 border-white/10 rounded-xl min-h-[140px] text-base sm:text-lg transition-all"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full h-16 bg-primary hover:bg-primary/90 text-white font-display font-bold text-lg rounded-2xl shadow-[0_0_30px_rgba(255,65,27,0.2)] hover:shadow-[0_0_40px_rgba(255,65,27,0.4)] transition-all duration-500 group"
+                  className="w-full h-16 bg-primary hover:bg-primary/90 text-white font-display font-bold text-base sm:text-lg rounded-2xl shadow-[0_0_30px_rgba(255,65,27,0.2)] hover:shadow-[0_0_40px_rgba(255,65,27,0.4)] transition-all duration-500 group"
                 >
                   <Send className="w-6 h-6 mr-3 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
                   {t("form.submit")}
@@ -295,7 +295,7 @@ const ContactSection = () => {
                      href="https://api.whatsapp.com/send?phone=622159493388" 
                      target="_blank" 
                      rel="noopener noreferrer"
-                     className="inline-flex items-center text-sm font-semibold text-primary/70 hover:text-primary transition-colors space-x-2"
+                     className="inline-flex items-center text-body-small font-semibold text-primary/70 hover:text-primary transition-colors space-x-2"
                    >
                      <span>{t("form.whatsapp.cta")}</span>
                      <ArrowRight className="w-4 h-4" />

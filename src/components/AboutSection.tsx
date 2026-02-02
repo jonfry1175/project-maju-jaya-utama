@@ -65,7 +65,7 @@ const AboutSection = () => {
                   {t("section.badge")}
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] mb-8">
+              <h2 className="heading-1 mb-8">
                 {t("section.title")}
               </h2>
               <p className="text-body-large text-muted-foreground leading-relaxed">
@@ -86,7 +86,7 @@ const AboutSection = () => {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <stat.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <div className="text-2xl font-display font-bold text-foreground mb-1">{stat.value}</div>
+                    <div className="text-xl sm:text-2xl font-display font-bold text-foreground mb-1">{stat.value}</div>
                     <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground">{stat.label}</div>
                   </div>
                 </motion.div>
@@ -100,10 +100,10 @@ const AboutSection = () => {
               <div className="absolute top-0 left-0 w-2 h-full bg-primary" />
               <div className="card-noise opacity-10" />
               
-              <h3 className="text-2xl font-display font-bold text-foreground mb-6">
+              <h3 className="heading-3 mb-6">
                 {t("profile.title")}
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-10 text-lg">
+              <p className="text-body-large text-muted-foreground mb-10">
                 {t("profile.description")}
               </p>
 
@@ -114,7 +114,7 @@ const AboutSection = () => {
                   </div>
                   <div>
                     <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-1">{t("address.title")}</div>
-                    <div className="text-sm font-semibold text-foreground leading-snug">{t("address.value")}</div>
+                    <div className="text-body text-foreground font-semibold leading-snug">{t("address.value")}</div>
                   </div>
                 </div>
 
@@ -124,7 +124,7 @@ const AboutSection = () => {
                   </div>
                   <div>
                     <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-1">{t("contact.title")}</div>
-                    <div className="text-sm font-semibold text-foreground leading-snug">{t("contact.value")}</div>
+                    <div className="text-body text-foreground font-semibold leading-snug">{t("contact.value")}</div>
                   </div>
                 </div>
               </div>

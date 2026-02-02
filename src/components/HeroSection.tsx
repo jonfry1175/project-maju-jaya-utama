@@ -94,13 +94,13 @@ const HeroSection = () => {
             </motion.div>
 
             <motion.div className="space-y-6" variants={itemVariants}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] tracking-tight">
+              <h1 className="heading-1">
                 {t("title")}
                 <span className="block italic text-primary mt-2">
                   {t("titleHighlight")}
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+              <p className="text-body-large text-muted-foreground max-w-xl">
                 {t("description")}
               </p>
             </motion.div>
@@ -111,7 +111,7 @@ const HeroSection = () => {
             >
               <Button
                 size="lg"
-                className="h-16 px-10 text-lg font-display font-semibold transition-all duration-500 bg-primary hover:bg-primary/90 text-white shadow-[0_0_30px_rgba(255,65,27,0.3)] hover:shadow-[0_0_50px_rgba(255,65,27,0.5)] group relative overflow-hidden"
+                className="h-16 px-10 text-base sm:text-lg font-display font-semibold transition-all duration-500 bg-primary hover:bg-primary/90 text-white shadow-[0_0_30px_rgba(255,65,27,0.3)] hover:shadow-[0_0_50px_rgba(255,65,27,0.5)] group relative overflow-hidden"
                 onClick={scrollToContact}
               >
                 <span className="relative z-10 flex items-center">
@@ -122,7 +122,7 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="h-16 px-10 text-lg font-display font-semibold border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-500"
+                className="h-16 px-10 text-base sm:text-lg font-display font-semibold border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-500"
                 onClick={scrollToContact}
               >
                 {t("cta.secondary")}
@@ -155,10 +155,10 @@ const HeroSection = () => {
                         <stat.icon className="w-8 h-8 text-primary" />
                       </div>
                       <div>
-                        <div className="text-sm font-mono uppercase tracking-widest text-muted-foreground mb-1">
+                        <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-1">
                           {stat.label}
                         </div>
-                        <div className="text-3xl font-display font-bold text-foreground">
+                        <div className="text-2xl sm:text-3xl font-display font-bold text-foreground">
                           {stat.value}
                         </div>
                       </div>

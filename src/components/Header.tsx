@@ -101,7 +101,7 @@ const Header = () => {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="px-4 py-2 text-sm font-semibold text-foreground/70 hover:text-primary relative group/item transition-all duration-300 rounded-full"
+                  className="px-4 py-2 text-xs sm:text-sm font-semibold text-foreground/70 hover:text-primary relative group/item transition-all duration-300 rounded-full"
                 >
                   <span className="relative z-10">{item.name}</span>
                   <span className="absolute inset-0 bg-primary/10 scale-0 group-hover/item:scale-100 transition-transform duration-300 rounded-full" />
@@ -164,7 +164,7 @@ const Header = () => {
                   transition={{ delay: 0.2 + i * 0.1, duration: 0.6 }}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="text-4xl font-display font-bold text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
+                  className="heading-1 hover:text-primary transition-all duration-300 transform hover:scale-110"
                 >
                   {item.name}
                 </motion.a>
@@ -180,7 +180,7 @@ const Header = () => {
                   <LanguageSwitcher />
                 </div>
                 <Button 
-                  className="w-full h-16 text-xl font-display font-black tracking-widest bg-primary hover:bg-primary/90 text-white shadow-2xl shadow-primary/30 rounded-2xl"
+                  className="w-full h-16 text-lg sm:text-xl font-display font-black tracking-widest bg-primary hover:bg-primary/90 text-white shadow-2xl shadow-primary/30 rounded-2xl"
                   onClick={(e) => handleNavClick(e, "#contact")}
                 >
                   {t("cta.contact")}

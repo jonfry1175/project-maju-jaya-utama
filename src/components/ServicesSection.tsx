@@ -67,7 +67,7 @@ const ServicesSection = () => {
                 {t("section.badge")}
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] mb-6">
+            <h2 className="heading-1 mb-6">
               {t("section.title")}
             </h2>
             <p className="text-body-large text-muted-foreground max-w-xl">
@@ -119,10 +119,10 @@ const ServicesSection = () => {
 
                 <div className="p-8 relative">
                   <div className="w-8 h-1 bg-primary mb-6 transition-all duration-500 group-hover:w-full" />
-                  <h3 className="text-xl md:text-2xl font-display font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
+                  <h3 className="heading-4 mb-4 group-hover:text-primary transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-body text-muted-foreground">
                     {item.description}
                   </p>
                   
