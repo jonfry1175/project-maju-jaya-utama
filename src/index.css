@@ -317,7 +317,7 @@
   }
 
   .card-corner-cut {
-    @apply absolute -right-8 -top-8 h-16 w-16 rotate-45;
+    @apply hidden sm:block absolute -right-8 -top-8 h-16 w-16 rotate-45;
     background: hsl(var(--accent) / 0.15);
   }
 }

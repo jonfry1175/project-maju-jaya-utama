@@ -16,17 +16,34 @@
     "email": {
       "title": "Email",
       "value": "sales@majujayautama.co.id"
+    },
+    "hours": {
+      "title": "Business Hours",
+      "value": "Monday - Saturday: 08:00 - 17:00"
     }
   },
   "form": {
     "title": "Request a Quote",
     "description": "Share your specifications and volume needs. Our team will follow up with pricing and timelines.",
     "fields": {
-      "name": { "placeholder": "Full name" },
-      "email": { "placeholder": "Work email" },
-      "company": { "placeholder": "Company name" },
-      "phone": { "placeholder": "+62 812-3456-7890" },
+      "name": { 
+        "label": "Full Name",
+        "placeholder": "Full name" 
+      },
+      "email": { 
+        "label": "Email",
+        "placeholder": "Work email" 
+      },
+      "company": { 
+        "label": "Company",
+        "placeholder": "Company name" 
+      },
+      "phone": { 
+        "label": "Phone",
+        "placeholder": "+62 812-3456-7890" 
+      },
       "product": {
+        "label": "Product Interest",
         "placeholder": "Select product type",
         "options": [
           "Converted paper rolls",
@@ -35,8 +52,14 @@
           "Other"
         ]
       },
-      "message": { "placeholder": "Tell us about your specifications, sizes, and volume." }
+      "message": { 
+        "label": "Message",
+        "placeholder": "Tell us about your specifications, sizes, and volume." 
+      }
     },
-    "submit": "Send Inquiry"
+    "submit": "Send Inquiry",
+    "whatsapp": {
+      "text": "Prefer to chat directly?"
+    }
   }
 }

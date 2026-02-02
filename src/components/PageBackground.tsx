@@ -13,7 +13,7 @@ const PageBackground = () => (
     />
     <div className="absolute -top-28 left-[4%] h-80 w-80 rounded-full bg-[radial-gradient(circle,hsl(var(--accent)/0.28),transparent_62%)] blur-2xl" />
     <div className="absolute bottom-[-12%] right-[8%] h-96 w-96 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.26),transparent_62%)] blur-2xl" />
-    <div className="absolute top-[34%] right-[-10%] h-72 w-72 rotate-12 rounded-[34px] border border-primary/30 bg-[linear-gradient(145deg,hsl(var(--card)/0.75),transparent_58%)]" />
+    <div className="hidden sm:block absolute top-[34%] right-[-10%] h-72 w-72 rotate-12 rounded-[34px] border border-primary/30 bg-[linear-gradient(145deg,hsl(var(--card)/0.75),transparent_58%)]" />
     <div className="absolute top-[14%] left-[-8%] h-64 w-64 -rotate-12 rounded-[30px] border border-border/50 bg-[linear-gradient(120deg,hsl(var(--accent)/0.16),transparent_52%)]" />
 
     <svg
@@ -43,7 +43,7 @@ const PageBackground = () => (
     </svg>
 
     <svg
-      className="absolute -bottom-12 -right-12 h-auto w-[320px] text-secondary/18 sm:w-[420px] lg:w-[520px]"
+      className="hidden sm:block absolute -bottom-12 -right-12 h-auto w-[320px] text-secondary/18 sm:w-[420px] lg:w-[520px]"
       viewBox="0 0 520 360"
       fill="none"
     >
