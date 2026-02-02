@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
+import AnimatedSection from "@/components/AnimatedSection";
 import { Card } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
-import SectionArt from "@/components/SectionArt";
 
 const TestimonialsSection = () => {
   const { t } = useTranslation("sustainability");
@@ -9,38 +10,84 @@ const TestimonialsSection = () => {
     description: string;
   }>;
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" as any },
+    },
+  };
+
   return (
     <section
       id="sustainability"
-      className="section-padding bg-muted/30 relative overflow-hidden"
+      className="section-padding bg-background relative overflow-hidden"
     >
-      <SectionArt />
-      <div className="container mx-auto container-padding relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-10">
-          <div className="inline-flex items-center bg-white text-primary px-3 sm:px-4 py-2 rounded-full text-body-small font-semibold mb-4 border border-primary-subtle">
-            {t("section.badge")}
+      {/* Background Layers */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-grid-industrial opacity-[0.05]" />
+        <div className="absolute inset-0 bg-noise opacity-[0.02] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="container mx-auto container-padding relative z-10 max-w-7xl">
+        <AnimatedSection className="max-w-4xl mx-auto text-center mb-16">
+          <div className="inline-flex items-center space-x-2 bg-primary/5 border border-primary/10 px-3 py-1 rounded-full mb-6">
+            <span className="text-xs font-mono uppercase tracking-widest text-primary/80">
+              {t("section.badge")}
+            </span>
           </div>
-          <h2 className="heading-2 text-primary mb-4">{t("section.title")}</h2>
-          <p className="text-body-large text-muted-foreground">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+            {t("section.title")}
+          </h2>
+          <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
             {t("section.description")}
           </p>
-        </div>
+        </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {items.map((item) => (
-            <Card
-              key={item.title}
-              className="card-padding card-surface card-inset card-hover-premium group"
-            >
-              <div className="card-accent-line" />
-              <div className="card-corner-cut" />
-              <h3 className="heading-5 text-foreground mb-2">{item.title}</h3>
-              <p className="text-body-small text-muted-foreground">
-                {item.description}
-              </p>
-            </Card>
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {items.map((item, index) => (
+            <motion.div key={item.title} variants={cardVariants}>
+              <Card
+                className="group relative h-full bg-card/40 backdrop-blur-md border border-primary/10 p-10 rounded-3xl hover:border-primary/30 transition-all duration-500 shadow-2xl overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 w-2 h-0 bg-primary group-hover:h-full transition-all duration-500" />
+                
+                <div className="relative z-10">
+                  <div className="text-4xl font-display font-bold text-primary/10 mb-6 group-hover:text-primary/20 transition-colors">
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
+                  <h3 className="text-2xl font-display font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    {item.description}
+                  </p>
+                </div>
+                
+                {/* Decorative Pattern */}
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-700" />
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

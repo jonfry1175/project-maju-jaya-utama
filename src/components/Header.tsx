@@ -54,72 +54,75 @@ const Header = () => {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out font-sans",
           isScrolled
-            ? "bg-background/80 backdrop-blur-xl border-b border-white/20 py-3 shadow-sm"
-            : "bg-transparent py-5 lg:py-6"
+            ? "bg-background/80 backdrop-blur-xl border-b border-primary/10 py-3 shadow-2xl"
+            : "bg-transparent py-6 lg:py-8"
         )}
       >
-        <div className="container mx-auto container-padding">
+        {isScrolled && <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />}
+        
+        <div className="container mx-auto container-padding relative z-10 max-w-7xl">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <a
               href="#hero"
               onClick={(e) => handleNavClick(e, "#hero")}
-              className="group flex items-center gap-3 md:gap-4 select-none"
+              className="group flex items-center gap-4 select-none"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <img 
                   src="/logo.png" 
                   alt="Maju Jaya Utama Lestari" 
                   className={cn(
-                    "relative z-10 w-auto transition-all duration-300",
-                    isScrolled ? "h-10 md:h-12" : "h-12 md:h-14"
+                    "relative z-10 w-auto transition-all duration-500",
+                    isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"
                   )} 
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground font-medium">
+                <span className="text-[10px] md:text-sm uppercase tracking-[0.4em] text-muted-foreground font-mono leading-none mb-1 opacity-70">
                   PT Maju Jaya
                 </span>
                 <span className={cn(
-                  "font-display font-bold leading-none text-primary transition-all duration-300",
-                  isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+                  "font-display font-bold leading-none text-foreground transition-all duration-500",
+                  isScrolled ? "text-xl md:text-2xl" : "text-2xl md:text-3xl"
                 )}>
-                  Utama Lestari
+                  Utama <span className="text-primary">Lestari</span>
                 </span>
               </div>
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1 bg-white/50 backdrop-blur-md px-2 py-1.5 rounded-full border border-white/20 shadow-sm">
+            <nav className="hidden lg:flex items-center gap-2 bg-white/5 backdrop-blur-xl px-2 py-2 rounded-full border border-white/20 shadow-xl overflow-hidden relative group">
+              <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none" />
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="px-5 py-2 text-sm font-medium text-foreground/70 hover:text-primary relative group overflow-hidden rounded-full transition-colors"
+                  className="px-6 py-2.5 text-sm font-semibold text-foreground/70 hover:text-primary relative group/item transition-all duration-300 rounded-full"
                 >
                   <span className="relative z-10">{item.name}</span>
-                  <span className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
+                  <span className="absolute inset-0 bg-primary/10 scale-0 group-hover/item:scale-100 transition-transform duration-300 rounded-full" />
                 </a>
               ))}
             </nav>
 
             {/* Actions */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <div className="hidden sm:block">
                 <LanguageSwitcher />
               </div>
               
               <Button
-                size={isScrolled ? "sm" : "default"}
+                size={isScrolled ? "default" : "lg"}
                 className={cn(
-                  "hidden sm:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-lg shadow-primary/25 transition-all duration-300",
-                  isScrolled ? "px-4" : "px-6"
+                  "hidden sm:inline-flex bg-primary hover:bg-primary/90 text-white font-display font-black tracking-wide shadow-[0_0_20px_rgba(255,65,27,0.2)] hover:shadow-[0_0_30px_rgba(255,65,27,0.4)] transition-all duration-500 rounded-xl",
+                  isScrolled ? "h-11 px-6" : "h-14 px-8"
                 )}
                 onClick={(e) => handleNavClick(e, "#contact")}
               >
@@ -127,7 +130,7 @@ const Header = () => {
               </Button>
 
               <button
-                className="lg:hidden p-2 text-foreground/80 hover:text-primary transition-colors relative z-50"
+                className="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-primary/5 border border-primary/20 text-foreground transition-all hover:bg-primary/10"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Toggle menu"
               >
@@ -145,38 +148,54 @@ const Header = () => {
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 lg:hidden bg-background/95 backdrop-blur-xl flex flex-col pt-32 px-6"
+            transition={{ type: "spring", damping: 30, stiffness: 200 }}
+            className="fixed inset-0 z-40 lg:hidden bg-background flex flex-col pt-32 px-6 overflow-hidden"
           >
-            <nav className="flex flex-col gap-6 items-center text-center">
+            {/* Background Layers */}
+            <div className="absolute inset-0 z-0">
+              <div className="absolute inset-0 bg-grid-industrial opacity-[0.05]" />
+              <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64" />
+            </div>
+
+            <nav className="relative z-10 flex flex-col gap-8 items-center text-center">
               {navItems.map((item, i) => (
                 <motion.a
                   key={item.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 + i * 0.1 }}
+                  initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ delay: 0.2 + i * 0.1, duration: 0.6 }}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="text-2xl font-display font-medium text-foreground hover:text-primary transition-colors"
+                  className="text-4xl font-display font-bold text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
                 >
                   {item.name}
                 </motion.a>
               ))}
+              
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="pt-8 flex flex-col gap-4 w-full max-w-xs"
+                transition={{ delay: 0.6 }}
+                className="pt-12 flex flex-col gap-6 w-full max-w-xs"
               >
-                <LanguageSwitcher />
+                <div className="flex justify-center">
+                  <LanguageSwitcher />
+                </div>
                 <Button 
-                  className="w-full h-12 text-lg shadow-xl shadow-primary/20"
+                  className="w-full h-16 text-xl font-display font-black tracking-widest bg-primary hover:bg-primary/90 text-white shadow-2xl shadow-primary/30 rounded-2xl"
                   onClick={(e) => handleNavClick(e, "#contact")}
                 >
                   {t("cta.contact")}
                 </Button>
               </motion.div>
             </nav>
+            
+            <div className="absolute bottom-12 left-0 right-0 text-center">
+               <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-muted-foreground opacity-50">
+                  PT Maju Jaya Utama Lestari
+               </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
@@ -39,40 +39,44 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-secondary text-secondary-foreground relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-accent blur-[120px]" />
+    <footer className="bg-[#0f1115] text-secondary-foreground relative overflow-hidden border-t border-primary/10">
+      {/* Background Layers */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-grid-industrial opacity-[0.05]" />
+        <div className="absolute inset-0 bg-noise opacity-[0.02] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] -mr-96 -mt-96" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] -ml-64 -mb-64" />
       </div>
 
-      <div className="container mx-auto container-padding relative z-10 pt-20 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+      <div className="container mx-auto container-padding relative z-10 pt-24 pb-12 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12">
           
           {/* Brand Column */}
-          <div className="lg:col-span-3 space-y-6">
+          <div className="lg:col-span-4 space-y-10">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="space-y-4"
+              className="space-y-6"
             >
-              <div className="flex items-center gap-3">
-                <img
-                  src="/logo.png"
-                  alt="Maju Jaya Utama Lestari"
-                  className="h-16 w-auto brightness-0 invert opacity-90"
-                />
+              <div className="flex items-center gap-4">
+                <div className="relative p-2 bg-white/5 rounded-2xl border border-white/10">
+                  <img
+                    src="/logo.png"
+                    alt="Maju Jaya Utama Lestari"
+                    className="h-14 w-auto brightness-0 invert"
+                  />
+                </div>
               </div>
-              <div className="space-y-1">
-                <h3 className="text-2xl font-display font-semibold tracking-tight text-white">
-                  Maju Jaya Utama Lestari
+              <div className="space-y-2">
+                <h3 className="text-3xl font-display font-bold text-white leading-tight">
+                  Maju Jaya <span className="text-primary">Utama Lestari</span>
                 </h3>
-                <p className="text-sm uppercase tracking-widest text-primary font-medium">
+                <p className="text-xs font-mono uppercase tracking-[0.3em] text-primary/80 font-semibold">
                   {i18n.language === "id" ? "Produsen Kertas Konversi" : "Converted Paper Manufacturer"}
                 </p>
               </div>
-              <p className="text-secondary-foreground/70 leading-relaxed max-w-sm">
+              <p className="text-secondary-foreground/60 leading-relaxed text-lg font-light">
                 {t("description")}
               </p>
             </motion.div>
@@ -88,10 +92,10 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 group"
+                  className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary text-white transition-all duration-500 group"
                   title={social.name}
                 >
-                  <div className="group-hover:scale-110 transition-transform duration-300">
+                  <div className="group-hover:scale-110 transition-transform duration-500">
                     {social.icon}
                   </div>
                 </motion.a>
@@ -100,16 +104,16 @@ const Footer = () => {
           </div>
 
           {/* Navigation Column */}
-          <div className="lg:col-span-2 lg:col-start-5 space-y-6">
-            <h4 className="text-lg font-semibold text-white">{t("sections.links")}</h4>
-            <nav className="flex flex-col space-y-3">
+          <div className="lg:col-span-2 lg:col-start-6 space-y-8">
+            <h4 className="text-sm font-mono uppercase tracking-widest text-white/40 pb-4 border-b border-white/5">{t("sections.links")}</h4>
+            <nav className="flex flex-col space-y-4">
               {quickLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-secondary-foreground/70 hover:text-primary transition-colors hover:translate-x-1 duration-300 inline-flex items-center gap-2"
+                  className="text-secondary-foreground/60 hover:text-primary transition-all duration-300 flex items-center group text-lg"
                 >
-                  <span className="w-1 h-1 rounded-full bg-primary/0 group-hover:bg-primary transition-colors" />
+                  <ArrowRight className="w-4 h-4 mr-2 scale-0 group-hover:scale-100 transition-all opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0" />
                   {link.name}
                 </a>
               ))}
@@ -117,101 +121,75 @@ const Footer = () => {
           </div>
 
           {/* Contact Column */}
-          <div className="lg:col-span-3 space-y-6">
-            <h4 className="text-lg font-semibold text-white">{t("contact.title")}</h4>
-            <div className="space-y-5">
-               <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <MapPin className="w-5 h-5 text-primary" />
+          <div className="lg:col-span-4 lg:col-start-9 space-y-8">
+            <h4 className="text-sm font-mono uppercase tracking-widest text-white/40 pb-4 border-b border-white/5">{t("contact.title")}</h4>
+            <div className="space-y-6">
+               <div className="flex items-start gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-500 border border-white/10 group-hover:border-primary">
+                  <MapPin className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-xs uppercase tracking-wider text-white/50 block">Address</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">Office & Factory</span>
                   <a 
                     href="https://maps.google.com/?q=Jl.+Raya+Legok+No.88,+Tangerang,+Banten"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-secondary-foreground/80 hover:text-white transition-colors leading-relaxed block"
+                    className="text-secondary-foreground/80 hover:text-white transition-colors leading-relaxed block text-base"
                   >
                     {t("contact.address")}
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <Phone className="w-5 h-5 text-primary" />
+              <div className="flex items-start gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-500 border border-white/10 group-hover:border-primary">
+                  <Phone className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-xs uppercase tracking-wider text-white/50 block">Phone</span>
-                  <a href="tel:+622159493388" className="text-secondary-foreground/80 hover:text-white transition-colors block font-mono">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">Inquiries</span>
+                  <a href="tel:+622159493388" className="text-secondary-foreground/80 hover:text-white transition-colors block font-mono text-xl">
                     +62 21 5949 3388
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 group">
-                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <Mail className="w-5 h-5 text-primary" />
+              <div className="flex items-start gap-5 group">
+                <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-500 border border-white/10 group-hover:border-primary">
+                  <Mail className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                 </div>
                  <div className="space-y-1">
-                  <span className="text-xs uppercase tracking-wider text-white/50 block">Email</span>
-                  <a href="mailto:info@majujayautama.co.id" className="text-secondary-foreground/80 hover:text-white transition-colors block">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">Email Support</span>
+                  <a href="mailto:info@majujayautama.co.id" className="text-secondary-foreground/80 hover:text-white transition-colors block text-base italic underline underline-offset-4 decoration-primary/30 hover:decoration-primary">
                     info@majujayautama.co.id
                   </a>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Map Column */}
-          <div className="lg:col-span-3 space-y-6">
-            <h4 className="text-lg font-semibold text-white">Location</h4>
-            <div className="group relative overflow-hidden rounded-2xl border border-white/10 aspect-video md:aspect-square lg:aspect-[4/3]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.068137330752!2d106.606774!3d-6.2614533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fc0f17105555%3A0x7e7c81d3f23d0c2a!2sJl.+Raya+Legok+No.88%2C+Klp.+Dua%2C+Kec.+Klp.+Dua%2C+Kabupaten+Tangerang%2C+Banten+15810!5e0!3m2!1sen!2sid!4v1629858586326!5m2!1sen!2sid"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="filter grayscale contrast-125 opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                title="Location Map"
-              />
-              <a
-                href="https://maps.google.com/?q=Jl.+Raya+Legok+No.88,+Tangerang,+Banten"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors pointer-events-none"
-              />
-              <div className="absolute bottom-4 left-4">
-                 <Button size="sm" variant="secondary" className="backdrop-blur-md bg-white/90 hover:bg-white text-black shadow-lg">
-                    <ExternalLink className="w-3 h-3 mr-2" />
-                    Open Maps
-                 </Button>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10 bg-black/20">
-        <div className="container mx-auto container-padding py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-secondary-foreground/40">
-            <p>
-              © {currentYear} PT Maju Jaya Utama Lestari. {i18n.language === "id" ? "Hak cipta dilindungi." : "All rights reserved."}
-            </p>
-            <div className="flex items-center gap-6">
-              <span className="hidden md:inline-block w-1 h-1 rounded-full bg-white/20" />
-               <p>
-              {i18n.language === "id"
-                ? "Produsen Produk Kertas Konversi Berkualitas"
-                : "Quality Converted Paper Products Manufacturer"}
+        {/* Bottom Bar */}
+        <div className="mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 text-center md:text-left">
+              <p className="text-xs font-mono uppercase tracking-widest text-white/40">
+                © {currentYear} PT Maju Jaya Utama Lestari
               </p>
-            </div>
-          </div>
+              <div className="flex items-center gap-2">
+                 <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                 <p className="text-xs text-secondary-foreground/40 font-medium tracking-tight">
+                    {i18n.language === "id"
+                      ? "Produsen Produk Kertas Konversi Berkualitas"
+                      : "Quality Converted Paper Products Manufacturer"}
+                 </p>
+              </div>
+           </div>
+           
+           <div className="flex items-center gap-4">
+              <div className="h-px w-8 bg-white/10 hidden sm:block" />
+              <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/20">
+                 Banten, Indonesia
+              </p>
+           </div>
         </div>
       </div>
     </footer>

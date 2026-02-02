@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const productImages = [
-  "/assets/images/products/cardboard-boxes.jpg",
-  "/assets/images/products/paper-rolls.jpg",
-  "/assets/images/products/packaging-materials.jpg",
-  "/assets/images/sustainability.jpg",
+  "/assets/images/services/paper-converting.png",
+  "/assets/images/services/industrial-packaging.png",
+  "/assets/images/services/paper-slitting.png",
+  "/assets/images/services/quality-assurance.png",
 ];
 
 const ServicesSection = () => {

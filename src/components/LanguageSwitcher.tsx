@@ -6,6 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { cn } from '@/lib/utils';
 
 const languages = [
   { code: 'id', name: 'Indonesia', flag: '/flags/id.svg' },
@@ -24,19 +25,31 @@ const LanguageSwitcher = () => {
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm" className="px-3 min-w-0">
-          <img src={currentLanguage.flag} alt={currentLanguage.name} className="w-4 h-3 object-cover" />
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className="h-11 px-4 bg-white/5 border-white/10 hover:border-primary/50 text-foreground rounded-xl transition-all duration-300"
+        >
+          <img src={currentLanguage.flag} alt={currentLanguage.name} className="w-5 h-3.5 object-cover rounded-sm mr-2 shadow-sm" />
+          <span className="text-xs font-mono font-bold uppercase tracking-widest">{currentLanguage.code}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="z-[100] mt-1">
+      <DropdownMenuContent 
+        align="end" 
+        className="z-[100] mt-2 bg-background/80 backdrop-blur-xl border border-primary/10 rounded-2xl p-1 shadow-2xl overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none" />
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
-            className={`gap-2 ${i18n.language === lang.code ? 'bg-muted' : ''}`}
+            className={cn(
+               "gap-3 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer focus:bg-primary/10",
+               i18n.language === lang.code ? 'bg-primary/10 text-primary' : 'text-muted-foreground'
+            )}
           >
-            <img src={lang.flag} alt={lang.name} className="w-4 h-3 object-cover" />
-            <span className="text-sm">{lang.name}</span>
+            <img src={lang.flag} alt={lang.name} className="w-5 h-3.5 object-cover rounded-sm shadow-sm" />
+            <span className="text-sm font-semibold tracking-tight">{lang.name}</span>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
