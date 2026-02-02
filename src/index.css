@@ -453,4 +453,117 @@
   .animate-scroll-left:hover {
     animation-play-state: paused;
   }
+
+  /* Image Overlay Utilities */
+  .image-overlay-gradient {
+    position: relative;
+  }
+
+  .image-overlay-gradient::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      hsl(var(--background) / 0.5) 80%,
+      hsl(var(--background)) 100%
+    );
+  }
+
+  /* Shimmer Effect for Loading */
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 0%,
+      hsl(var(--background)) 50%,
+      hsl(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  /* Glow Effect */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3),
+                0 0 40px hsl(var(--primary) / 0.1);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.3),
+                0 0 40px hsl(var(--accent) / 0.1);
+  }
+
+  /* Parallax-like scroll effects */
+  .parallax-slow {
+    will-change: transform;
+    transition: transform 0.1s linear;
+  }
+
+  /* Stagger delay utilities */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+
+  /* Image hover zoom */
+  .image-zoom {
+    overflow: hidden;
+  }
+
+  .image-zoom img {
+    transition: transform 0.5s ease-out;
+  }
+
+  .image-zoom:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Reveal animation */
+  .animate-reveal {
+    animation: reveal 0.8s ease-out forwards;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  @keyframes reveal {
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  /* Pulse ring effect */
+  .pulse-ring {
+    position: relative;
+  }
+
+  .pulse-ring::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    border: 2px solid hsl(var(--primary) / 0.3);
+    animation: pulse-ring 2s ease-out infinite;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
 }
+
