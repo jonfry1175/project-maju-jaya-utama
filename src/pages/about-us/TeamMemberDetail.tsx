@@ -12,7 +12,7 @@ const TeamMemberDetail = () => {
   const { i18n } = useTranslation();
   const isId = i18n.language === "id";
 
-  const member = slug ? getTeamMemberBySlug(slug) : undefined;
+  const member = slug ? getTeamMemberBySlug(slug, i18n.language) : undefined;
   if (!member) return <Navigate to="/about-us/our-team" replace />;
 
   return (

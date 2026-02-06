@@ -13,8 +13,9 @@ export type NewsArticle = {
 };
 
 export type LocalizedNewsArticle = NewsArticle;
+export type LocaleCode = "en" | "id";
 
-export const newsArticles: NewsArticle[] = [
+const enNewsArticles: NewsArticle[] = [
   {
     id: 1,
     slug: "mjul-company-profile-established-1993",
@@ -71,8 +72,75 @@ export const newsArticles: NewsArticle[] = [
   },
 ];
 
-export const getArticleBySlug = (slug: string) =>
-  newsArticles.find((article) => article.slug === slug);
+const idNewsArticles: NewsArticle[] = [
+  {
+    id: 1,
+    slug: "mjul-company-profile-established-1993",
+    title: "Profil Perusahaan MJUL dan Fondasi Produksi",
+    excerpt:
+      "PT Maju Jaya Utama Lestari beroperasi sejak 1993 dan berfokus pada produksi kemasan berbahan PP, HDPE, dan LDPE.",
+    category: "Pembaruan Perusahaan",
+    author: "Redaksi MJUL",
+    date: "2026-02-06",
+    readTime: "3 menit baca",
+    image: "/assets/images/news/factory-production.jpg",
+    content: [
+      "PT Maju Jaya Utama Lestari (MJUL) didirikan pada tahun 1993 dan terus melayani kebutuhan kemasan industri dengan model operasional yang berfokus pada kualitas.",
+      "Perusahaan menyediakan produk berbasis Poly Propylene (PP), High Density Poly Ethylene (HDPE), dan Low Density Poly Ethylene (LDPE).",
+      "MJUL menempatkan pengalaman, pemahaman proses, dan dukungan pelanggan yang praktis sebagai inti dari kemitraan bisnis jangka panjang.",
+    ],
+    source: "Company Profile PDF 2026",
+  },
+  {
+    id: 2,
+    slug: "mjul-sustainable-packaging-initiatives",
+    title: "Inisiatif Kemasan Berkelanjutan: Go Green dan Biodegradable",
+    excerpt:
+      "MJUL menghadirkan lini produk yang mendukung prioritas lingkungan melalui teknologi kemasan degradable dan biodegradable.",
+    category: "Keberlanjutan",
+    author: "Redaksi MJUL",
+    date: "2026-02-06",
+    readTime: "3 menit baca",
+    image: "/assets/images/news/eco-packaging.jpg",
+    content: [
+      "MJUL memproduksi produk plastik Go Green yang dirancang dapat terurai dalam waktu sekitar dua tahun.",
+      "Perusahaan juga menyediakan produk biodegradable berbahan tapioka/singkong yang dirancang terurai dalam sekitar enam bulan.",
+      "Inisiatif ini didukung oleh sertifikasi eco-label, dan lini produk biodegradable juga telah tersertifikasi SNI.",
+    ],
+    source: "Company Profile PDF 2026",
+  },
+  {
+    id: 3,
+    slug: "mjul-customer-trust-and-integrated-service",
+    title: "Kepercayaan Pelanggan melalui Layanan Terintegrasi dan Kualitas Produk",
+    excerpt:
+      "MJUL menekankan layanan terintegrasi, konsistensi produk, dan kolaborasi responsif sebagai dasar kepercayaan pelanggan.",
+    category: "Pembaruan Perusahaan",
+    author: "Redaksi MJUL",
+    date: "2026-02-06",
+    readTime: "2 menit baca",
+    image: "/assets/images/news/customer-trust.jpg",
+    content: [
+      "MJUL menyatakan bahwa kepercayaan pelanggan dibangun melalui kualitas produk yang konsisten dan harga yang kompetitif.",
+      "Perusahaan beroperasi dengan pendekatan layanan terintegrasi serta menekankan inovasi, kualitas solusi, dan eksekusi tim.",
+      "MJUL tetap terbuka terhadap masukan pelanggan untuk meningkatkan kualitas layanan dan menjaga kemitraan jangka panjang.",
+    ],
+    source: "Company Profile PDF 2026",
+  },
+];
 
-export const getLocalizedNews = (_language: "en" | "id" = "id") =>
-  newsArticles;
+const newsByLocale: Record<LocaleCode, NewsArticle[]> = {
+  en: enNewsArticles,
+  id: idNewsArticles,
+};
+
+const resolveLocale = (language: string): LocaleCode =>
+  language.startsWith("id") ? "id" : "en";
+
+export const getLocalizedNews = (language: string = "id"): NewsArticle[] =>
+  newsByLocale[resolveLocale(language)];
+
+export const getArticleBySlug = (slug: string, language: string = "id") =>
+  getLocalizedNews(language).find((article) => article.slug === slug);
+
+export const newsArticles: NewsArticle[] = idNewsArticles;

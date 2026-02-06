@@ -9,7 +9,9 @@ export type TeamMember = {
   photo: string;
 };
 
-export const teamMembers: TeamMember[] = [
+type LocaleCode = "en" | "id";
+
+const enTeamMembers: TeamMember[] = [
   {
     slug: "lilis-simardjo",
     name: "Lilis Simardjo",
@@ -42,5 +44,51 @@ export const teamMembers: TeamMember[] = [
   },
 ];
 
-export const getTeamMemberBySlug = (slug: string) =>
-  teamMembers.find((member) => member.slug === slug);
+const idTeamMembers: TeamMember[] = [
+  {
+    slug: "lilis-simardjo",
+    name: "Lilis Simardjo",
+    role: "Direktur Komersial",
+    focus: "Kemitraan pelanggan dan pertumbuhan strategis",
+    bio: "Memimpin strategi akun dan program kemitraan jangka panjang untuk memastikan setiap klien MJUL memperoleh pasokan yang andal, komunikasi responsif, dan rekomendasi produk yang tepat guna.",
+    email: "sales@majujayautama.co.id",
+    location: "Tangerang, Banten",
+    photo: "/paulus.JPG",
+  },
+  {
+    slug: "lucky-sumantri",
+    name: "Lucky Sumantri",
+    role: "Direktur Operasional",
+    focus: "Operasional pabrik dan kualitas produksi",
+    bio: "Mengawasi perencanaan produksi harian, utilisasi mesin, dan alur quality assurance untuk lini produk PP, HDPE, LDPE, paper bag, dan non-woven.",
+    email: "mjul168@yahoo.com",
+    location: "Tangerang, Banten",
+    photo: "/zulfikar-lukman.jpg",
+  },
+  {
+    slug: "manufacturing-team",
+    name: "Tim Manufaktur MJUL",
+    role: "Tim Produksi & Kualitas",
+    focus: "Keunggulan eksekusi pada setiap batch produksi",
+    bio: "Tim lintas fungsi yang terdiri dari operator dan personel QC untuk menjaga konsistensi produksi, pelaksanaan spesifikasi kustom, dan komitmen pengiriman tepat waktu.",
+    email: "sales@majujayautama.co.id",
+    location: "Kawasan Industri Manis",
+    photo: "/orangorang.png",
+  },
+];
+
+const teamByLocale: Record<LocaleCode, TeamMember[]> = {
+  en: enTeamMembers,
+  id: idTeamMembers,
+};
+
+const resolveLocale = (language: string): LocaleCode =>
+  language.startsWith("id") ? "id" : "en";
+
+export const getLocalizedTeamMembers = (language: string = "id"): TeamMember[] =>
+  teamByLocale[resolveLocale(language)];
+
+export const getTeamMemberBySlug = (slug: string, language: string = "id") =>
+  getLocalizedTeamMembers(language).find((member) => member.slug === slug);
+
+export const teamMembers: TeamMember[] = idTeamMembers;

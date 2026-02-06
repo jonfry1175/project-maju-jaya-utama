@@ -5,6 +5,8 @@
     "description": "Connect with our sales engineering team for quotes, samples, or technical consultation."
   },
   "info": {
+    "sectionTitle": "Contact Information",
+    "mapTitle": "Factory Location",
     "office": {
       "title": "Factory & HQ",
       "address": "9 Jl. Manis II Manis Industrial Estate, Tangerang 15136, Indonesia"
@@ -60,9 +62,14 @@
       }
     },
     "submit": "Request Quote",
+    "mailto": {
+      "subject": "Inquiry from {{name}}",
+      "body": "Name: {{name}}\nEmail: {{email}}\n\nMessage:\n{{message}}"
+    },
     "whatsapp": {
       "text": "Prefer to chat directly?",
-      "cta": "Or chat with our team on WhatsApp"
+      "cta": "Or chat with our team on WhatsApp",
+      "prefill": "Hi, I am {{name}} from {{company}}.\n\nEmail: {{email}}\nPhone: {{phone}}\nProduct: {{product}}\n\nMessage:\n{{message}}"
     }
   }
 }

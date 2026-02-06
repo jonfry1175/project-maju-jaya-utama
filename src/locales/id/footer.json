@@ -15,6 +15,13 @@
     "title": "Kontak",
     "address": "9 Jl. Manis II Manis Industrial Estate, Tangerang 15136, Indonesia",
     "phone": "+62-215918872",
-    "email": "sales@majujayautama.co.id"
+    "email": "sales@majujayautama.co.id",
+    "officeFactoryLabel": "Kantor & Pabrik",
+    "inquiriesLabel": "Pertanyaan",
+    "emailSupportLabel": "Dukungan Email"
+  },
+  "meta": {
+    "partnershipTagline": "Kualitas Konsisten untuk Kemitraan Jangka Panjang",
+    "location": "Banten, Indonesia"
   }
 }

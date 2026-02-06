@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getStaticPageMeta, resolveMeta } from "@/lib/seo-pages";
-import { teamMembers } from "@/lib/team";
+import { getLocalizedTeamMembers } from "@/lib/team";
 import { ArrowRight, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 const OurTeam = () => {
   const { i18n } = useTranslation();
   const isId = i18n.language === "id";
+  const members = getLocalizedTeamMembers(i18n.language);
   const meta = resolveMeta(getStaticPageMeta("aboutTeam"));
 
   return (
@@ -34,7 +35,7 @@ const OurTeam = () => {
       <MotionSection className="pb-20 bg-background-secondary">
         <div className="container mx-auto container-padding max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {teamMembers.map((member) => (
+            {members.map((member) => (
               <Card key={member.slug} className="h-full border-card-border card-hover">
                 <CardContent className="p-6 flex flex-col h-full">
                   <div className="h-48 rounded-xl overflow-hidden bg-muted mb-4">

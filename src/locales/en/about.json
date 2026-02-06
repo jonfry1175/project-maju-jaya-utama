@@ -24,5 +24,15 @@
   "industry": {
     "title": "Category",
     "value": "Converted Paper Products Manufacturing Industry"
+  },
+  "mainClients": {
+    "badge": "Main Clients",
+    "title": "Trusted by Key Business Partners",
+    "subtitle": "Long-term partnerships in logistics and distribution",
+    "description": {
+      "main": "MJUL supports business partners with dependable packaging quality and responsive operational coordination.",
+      "secondary": "Our customer portfolio includes long-standing partnerships that prioritize reliability, precision, and scalable supply."
+    },
+    "cardCaption": "Trusted partnership in logistics and transportation excellence"
   }
 }

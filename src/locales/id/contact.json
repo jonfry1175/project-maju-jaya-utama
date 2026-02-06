@@ -5,6 +5,8 @@
     "description": "Terhubung dengan tim sales engineering kami untuk penawaran, sampel, atau konsultasi teknis."
   },
   "info": {
+    "sectionTitle": "Informasi Kontak",
+    "mapTitle": "Lokasi Pabrik",
     "office": {
       "title": "Pabrik & HQ",
       "address": "9 Jl. Manis II Manis Industrial Estate, Tangerang 15136, Indonesia"
@@ -60,9 +62,14 @@
       }
     },
     "submit": "Minta Penawaran",
+    "mailto": {
+      "subject": "Pertanyaan dari {{name}}",
+      "body": "Nama: {{name}}\nEmail: {{email}}\n\nPesan:\n{{message}}"
+    },
     "whatsapp": {
       "text": "Lebih suka chat langsung?",
-      "cta": "Atau chat dengan tim kami di WhatsApp"
+      "cta": "Atau chat dengan tim kami di WhatsApp",
+      "prefill": "Halo, saya {{name}} dari {{company}}.\n\nEmail: {{email}}\nTelepon: {{phone}}\nProduk: {{product}}\n\nPesan:\n{{message}}"
     }
   }
 }

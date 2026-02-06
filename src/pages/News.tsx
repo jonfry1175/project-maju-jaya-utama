@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { newsArticles } from "@/lib/news";
+import { getLocalizedNews } from "@/lib/news";
 import { createBreadcrumbJsonLd, createWebPageJsonLd } from "@/lib/seo";
 import { getStaticPageMeta, resolveMeta } from "@/lib/seo-pages";
 import { ArrowRight, CalendarDays } from "lucide-react";
@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 const News = () => {
   const { i18n, t } = useTranslation("common");
   const isId = i18n.language === "id";
+  const articles = getLocalizedNews(i18n.language);
   const meta = resolveMeta(getStaticPageMeta("news"));
   const title = isId
     ? "Update Terbaru PT Maju Jaya Utama Lestari"
@@ -61,7 +62,7 @@ const News = () => {
       <MotionSection className="pb-20 bg-background-secondary">
         <div className="container mx-auto container-padding max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {newsArticles.map((article) => (
+            {articles.map((article) => (
               <Card key={article.slug} className="h-full border-card-border card-hover">
                 <CardContent className="p-0 flex flex-col h-full pb-6">
                   <div className="aspect-video w-full overflow-hidden rounded-t-lg bg-muted">

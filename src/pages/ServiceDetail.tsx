@@ -46,6 +46,13 @@ const ServiceDetail = () => {
     service.description ||
     service.shortDescription;
   const localizedFeatures = localizedItem?.features || service.features;
+  const localizedService = {
+    ...service,
+    title: localizedTitle,
+    description: localizedDescription,
+    shortDescription: localizedItem?.description || service.shortDescription,
+    features: localizedFeatures,
+  };
 
   const meta = getServiceDetailMeta({
     slug: service.slug,
@@ -84,7 +91,7 @@ const ServiceDetail = () => {
             url: meta.canonical,
             image: service.image,
           }),
-          createServiceJsonLd(service),
+          createServiceJsonLd(localizedService),
           breadcrumbs,
         ]}
       />

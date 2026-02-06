@@ -14,5 +14,8 @@
   },
   "cta": {
     "contact": "Hubungi Kami"
+  },
+  "accessibility": {
+    "toggleMenu": "Buka/tutup menu"
   }
 }

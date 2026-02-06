@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { getArticleBySlug, newsArticles } from "@/lib/news";
+import { getArticleBySlug, getLocalizedNews } from "@/lib/news";
 import { createBreadcrumbJsonLd, createNewsArticleJsonLd, createWebPageJsonLd } from "@/lib/seo";
 import { getNewsDetailMeta } from "@/lib/seo-pages";
 import { ArrowLeft, CalendarDays, Clock, User } from "lucide-react";
@@ -14,8 +14,9 @@ const NewsDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { i18n } = useTranslation();
   const isId = i18n.language === "id";
+  const articles = getLocalizedNews(i18n.language);
 
-  const article = slug ? getArticleBySlug(slug) : undefined;
+  const article = slug ? getArticleBySlug(slug, i18n.language) : undefined;
   if (!article) return <Navigate to="/news" replace />;
   const meta = getNewsDetailMeta({
     slug: article.slug,
@@ -29,7 +30,7 @@ const NewsDetail = () => {
     { name: article.title, url: `/news/${article.slug}` },
   ]);
 
-  const related = newsArticles.filter((item) => item.slug !== article.slug).slice(0, 2);
+  const related = articles.filter((item) => item.slug !== article.slug).slice(0, 2);
 
   return (
     <>

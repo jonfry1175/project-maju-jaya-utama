@@ -14,5 +14,8 @@
   },
   "cta": {
     "contact": "Contact Us"
+  },
+  "accessibility": {
+    "toggleMenu": "Toggle menu"
   }
 }

@@ -2,7 +2,7 @@ import MotionSection from "@/components/MotionSection";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { newsArticles } from "@/lib/news";
+import { getLocalizedNews } from "@/lib/news";
 import { ArrowRight, CalendarDays } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -10,8 +10,9 @@ import { Link } from "react-router-dom";
 const NewsSection = () => {
   const { i18n, t } = useTranslation("common");
   const isId = i18n.language === "id";
+  const localizedNews = getLocalizedNews(i18n.language);
 
-  const featured = [...newsArticles]
+  const featured = [...localizedNews]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
