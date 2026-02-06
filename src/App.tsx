@@ -20,6 +20,19 @@ const queryClient = new QueryClient();
 const Index = lazy(() => import("./pages/Index"));
 const Services = lazy(() => import("./pages/Services"));
 const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+const Products = lazy(() => import("./pages/Products"));
+const News = lazy(() => import("./pages/News"));
+const NewsDetail = lazy(() => import("./pages/NewsDetail"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Location = lazy(() => import("./pages/Location"));
+const CareerEmployee = lazy(() => import("./pages/CareerEmployee"));
+const CareerIntern = lazy(() => import("./pages/CareerIntern"));
+const OurCompany = lazy(() => import("./pages/about-us/OurCompany"));
+const OurTeam = lazy(() => import("./pages/about-us/OurTeam"));
+const TeamMemberDetail = lazy(() => import("./pages/about-us/TeamMemberDetail"));
+const Certifications = lazy(() => import("./pages/about-us/Certifications"));
+const CompanyAwards = lazy(() => import("./pages/about-us/CompanyAwards"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const Page = ({ children }: { children: ReactNode }) => (
@@ -31,22 +44,6 @@ const Page = ({ children }: { children: ReactNode }) => (
   >
     {children}
   </motion.div>
-);
-
-const RoutePlaceholder = ({ title }: { title: string }) => (
-  <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-8">
-    <div className="layout-container">
-      <div className="max-w-3xl rounded-2xl border border-border/70 bg-card/90 p-8 shadow-soft">
-        <p className="text-small uppercase tracking-wide text-muted-foreground">
-          Planned Route
-        </p>
-        <h1 className="heading-md mt-2">{title}</h1>
-        <p className="text-body mt-4 text-muted-foreground">
-          This route shell is ready and will be populated in the next tasks.
-        </p>
-      </div>
-    </div>
-  </section>
 );
 
 const AnimatedRoutes = () => {
@@ -68,7 +65,7 @@ const AnimatedRoutes = () => {
             path="/about-us/our-company"
             element={
               <Page>
-                <RoutePlaceholder title="About Us / Our Company" />
+                <OurCompany />
               </Page>
             }
           />
@@ -76,7 +73,7 @@ const AnimatedRoutes = () => {
             path="/about-us/our-team"
             element={
               <Page>
-                <RoutePlaceholder title="About Us / Our Team" />
+                <OurTeam />
               </Page>
             }
           />
@@ -84,7 +81,7 @@ const AnimatedRoutes = () => {
             path="/about-us/our-team/:slug"
             element={
               <Page>
-                <RoutePlaceholder title="About Us / Team Member Detail" />
+                <TeamMemberDetail />
               </Page>
             }
           />
@@ -92,7 +89,7 @@ const AnimatedRoutes = () => {
             path="/about-us/certifications"
             element={
               <Page>
-                <RoutePlaceholder title="About Us / Certifications" />
+                <Certifications />
               </Page>
             }
           />
@@ -100,7 +97,7 @@ const AnimatedRoutes = () => {
             path="/about-us/company-awards"
             element={
               <Page>
-                <RoutePlaceholder title="About Us / Company Awards" />
+                <CompanyAwards />
               </Page>
             }
           />
@@ -116,7 +113,7 @@ const AnimatedRoutes = () => {
             path="/products"
             element={
               <Page>
-                <RoutePlaceholder title="Products" />
+                <Products />
               </Page>
             }
           />
@@ -124,7 +121,7 @@ const AnimatedRoutes = () => {
             path="/gallery"
             element={
               <Page>
-                <RoutePlaceholder title="Gallery" />
+                <Gallery />
               </Page>
             }
           />
@@ -132,7 +129,7 @@ const AnimatedRoutes = () => {
             path="/news"
             element={
               <Page>
-                <RoutePlaceholder title="News" />
+                <News />
               </Page>
             }
           />
@@ -140,7 +137,7 @@ const AnimatedRoutes = () => {
             path="/news/:slug"
             element={
               <Page>
-                <RoutePlaceholder title="News Detail" />
+                <NewsDetail />
               </Page>
             }
           />
@@ -168,7 +165,7 @@ const AnimatedRoutes = () => {
             path="/career/employee"
             element={
               <Page>
-                <RoutePlaceholder title="Career / Employee" />
+                <CareerEmployee />
               </Page>
             }
           />
@@ -176,7 +173,7 @@ const AnimatedRoutes = () => {
             path="/career/intern"
             element={
               <Page>
-                <RoutePlaceholder title="Career / Intern" />
+                <CareerIntern />
               </Page>
             }
           />
@@ -184,7 +181,7 @@ const AnimatedRoutes = () => {
             path="/contact"
             element={
               <Page>
-                <RoutePlaceholder title="Contact" />
+                <Contact />
               </Page>
             }
           />
@@ -192,7 +189,7 @@ const AnimatedRoutes = () => {
             path="/location"
             element={
               <Page>
-                <RoutePlaceholder title="Location" />
+                <Location />
               </Page>
             }
           />

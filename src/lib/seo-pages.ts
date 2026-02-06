@@ -1,14 +1,15 @@
 import { buildCanonicalUrl, siteMetadata, toAbsoluteUrl } from "@/lib/seo";
 
-type StaticPageKey =
+export type StaticPageKey =
   | "home"
   | "services"
   | "products"
   | "news"
-  | "career"
-  | "contact"
   | "gallery"
+  | "contact"
   | "location"
+  | "careerEmployee"
+  | "careerIntern"
   | "aboutCompany"
   | "aboutTeam"
   | "certifications"
@@ -38,79 +39,86 @@ export const staticPageMeta: Record<StaticPageKey, PageMeta> = {
     keywords: siteMetadata.defaultKeywords,
   },
   services: {
-    title: "Products and Service Portfolio",
+    title: "Services",
     description:
-      "Explore MJUL product and service portfolio including plastic packaging, biodegradable options, paper bags, and non-woven solutions.",
+      "Explore MJUL service portfolio covering plastic packaging, biodegradable products, paper bags, and integrated packaging consultation.",
     path: "/services",
     image: defaultImage,
   },
   products: {
-    title: "Product Catalog",
+    title: "Products",
     description:
-      "Review available MJUL packaging products for industrial, retail, and commercial applications.",
+      "Browse MJUL products for industrial, retail, and commercial packaging requirements.",
     path: "/products",
     image: defaultImage,
   },
   news: {
-    title: "Company News and Insights",
+    title: "News",
     description:
-      "Latest company updates and operational insights from PT Maju Jaya Utama Lestari.",
+      "Latest updates and company insights from PT Maju Jaya Utama Lestari.",
     path: "/news",
-    image: defaultImage,
-  },
-  career: {
-    title: "Career Opportunities",
-    description:
-      "Join PT Maju Jaya Utama Lestari and grow with a team focused on quality, innovation, and customer satisfaction.",
-    path: "/career",
-    image: defaultImage,
-  },
-  contact: {
-    title: "Contact PT Maju Jaya Utama Lestari",
-    description:
-      "Get in touch with MJUL for product inquiries, pricing, and long-term partnership discussions.",
-    path: "/contact",
     image: defaultImage,
   },
   gallery: {
     title: "Gallery",
     description:
-      "Visual documentation of MJUL operations, facilities, and product outputs.",
+      "Visual documentation of MJUL factory operations, production process, and packaging outputs.",
     path: "/gallery",
     image: defaultImage,
   },
-  location: {
-    title: "Factory Location",
+  contact: {
+    title: "Contact",
     description:
-      "Find MJUL factory location and contact details in Tangerang, Banten, Indonesia.",
+      "Contact PT Maju Jaya Utama Lestari for quotations, custom specifications, and partnership opportunities.",
+    path: "/contact",
+    image: defaultImage,
+  },
+  location: {
+    title: "Location",
+    description:
+      "Factory and office location information of PT Maju Jaya Utama Lestari in Tangerang, Banten, Indonesia.",
     path: "/location",
+    image: defaultImage,
+  },
+  careerEmployee: {
+    title: "Career Employee",
+    description:
+      "Open employee positions at PT Maju Jaya Utama Lestari for operations, QC, and commercial functions.",
+    path: "/career/employee",
+    image: defaultImage,
+  },
+  careerIntern: {
+    title: "Career Internship",
+    description:
+      "Internship opportunities at PT Maju Jaya Utama Lestari for students and fresh graduates.",
+    path: "/career/intern",
     image: defaultImage,
   },
   aboutCompany: {
     title: "Our Company",
     description:
-      "Company profile of PT Maju Jaya Utama Lestari, established in 1993 and focused on packaging manufacturing excellence.",
+      "Company profile of PT Maju Jaya Utama Lestari, established in 1993 with focus on quality manufacturing and integrated service.",
     path: "/about-us/our-company",
     image: defaultImage,
   },
   aboutTeam: {
     title: "Our Team",
     description:
-      "Meet the people behind PT Maju Jaya Utama Lestari and our quality-driven service culture.",
+      "Meet the key people behind PT Maju Jaya Utama Lestari operations and partnership management.",
     path: "/about-us/our-team",
     image: defaultImage,
   },
   certifications: {
     title: "Certifications",
     description:
-      "Learn about certifications supporting MJUL quality and sustainability commitments.",
+      "Certification and compliance overview supporting MJUL quality and sustainability commitments.",
     path: "/about-us/certifications",
     image: defaultImage,
   },
   companyAwards: {
-    title: "Company Awards",
+    title: "Company Awards and Milestones",
     description:
-      "Highlights of recognition and achievements earned by PT Maju Jaya Utama Lestari.",
+      "Milestones and company achievements of PT Maju Jaya Utama Lestari.",
     path: "/about-us/company-awards",
     image: defaultImage,
   },
@@ -123,3 +131,57 @@ export const resolveMeta = (meta: PageMeta): ResolvedPageMeta => ({
   canonical: buildCanonicalUrl(meta.path),
   image: meta.image ?? defaultImage,
 });
+
+export const getServiceDetailMeta = ({
+  slug,
+  title,
+  description,
+}: {
+  slug: string;
+  title: string;
+  description: string;
+}): ResolvedPageMeta =>
+  resolveMeta({
+    title,
+    description,
+    path: `/services/${slug}`,
+    image: defaultImage,
+  });
+
+export const getNewsDetailMeta = ({
+  slug,
+  title,
+  description,
+  image,
+}: {
+  slug: string;
+  title: string;
+  description: string;
+  image?: string;
+}): ResolvedPageMeta =>
+  resolveMeta({
+    title,
+    description,
+    path: `/news/${slug}`,
+    image: image || defaultImage,
+  });
+
+export const getTeamMemberMeta = ({
+  slug,
+  name,
+  role,
+  description,
+  image,
+}: {
+  slug: string;
+  name: string;
+  role: string;
+  description: string;
+  image?: string;
+}): ResolvedPageMeta =>
+  resolveMeta({
+    title: `${name} - ${role}`,
+    description,
+    path: `/about-us/our-team/${slug}`,
+    image: image || defaultImage,
+  });

@@ -2,6 +2,7 @@ import CTASection from "@/components/CTASection";
 import MotionSection from "@/components/MotionSection";
 import SEO from "@/components/SEO";
 import ServicesSection from "@/components/ServicesSection";
+import { createBreadcrumbJsonLd, createWebPageJsonLd } from "@/lib/seo";
 import { getStaticPageMeta, resolveMeta } from "@/lib/seo-pages";
 import { useTranslation } from "react-i18next";
 
@@ -9,17 +10,36 @@ const Services = () => {
   const { i18n } = useTranslation();
   const isId = i18n.language === "id";
   const meta = resolveMeta(getStaticPageMeta("services"));
+  const pageTitle = isId
+    ? "Layanan dan Solusi Kemasan Industri"
+    : "Services and Industrial Packaging Solutions";
+  const breadcrumbs = createBreadcrumbJsonLd([
+    { name: isId ? "Beranda" : "Home", url: "/" },
+    { name: isId ? "Layanan" : "Services", url: "/services" },
+  ]);
 
   return (
     <>
       <SEO
-        title={
-          isId
-            ? "Layanan dan Solusi Kemasan Industri"
-            : "Services and Industrial Packaging Solutions"
-        }
+        title={pageTitle}
         description={meta.description}
-        keywords={meta.keywords?.join(", ")}
+        canonical={meta.canonical}
+        keywords={meta.keywords}
+        openGraph={{
+          title: pageTitle,
+          description: meta.description,
+          url: meta.canonical,
+          image: meta.image,
+        }}
+        jsonLd={[
+          createWebPageJsonLd({
+            name: pageTitle,
+            description: meta.description,
+            url: meta.canonical,
+            image: meta.image,
+          }),
+          breadcrumbs,
+        ]}
       />
 
       <MotionSection className="pt-32 pb-12 bg-background relative overflow-hidden">

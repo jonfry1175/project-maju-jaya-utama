@@ -12,8 +12,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { services, getServiceBySlug } from "@/lib/services";
-import { siteMetadata } from "@/lib/seo";
-import { getStaticPageMeta, resolveMeta } from "@/lib/seo-pages";
+import { createBreadcrumbJsonLd, createServiceJsonLd, createWebPageJsonLd, siteMetadata } from "@/lib/seo";
+import { getServiceDetailMeta } from "@/lib/seo-pages";
 import { ArrowRight, CheckCircle2, Mail, Phone } from "lucide-react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -24,7 +24,6 @@ const ServiceDetail = () => {
   const isId = i18n.language === "id";
 
   const service = slug ? getServiceBySlug(slug) : undefined;
-  const pageMeta = resolveMeta(getStaticPageMeta("services"));
 
   if (!service) {
     return <Navigate to="/services" replace />;
@@ -39,16 +38,46 @@ const ServiceDetail = () => {
   const localizedDescription =
     localizedItem?.description || service.description || service.shortDescription;
 
+  const meta = getServiceDetailMeta({
+    slug: service.slug,
+    title: localizedTitle,
+    description: localizedDescription,
+  });
+
   const relatedServices = services
     .filter((item) => item.slug !== service.slug)
     .slice(0, 3);
+
+  const breadcrumbs = createBreadcrumbJsonLd([
+    { name: isId ? "Beranda" : "Home", url: "/" },
+    { name: isId ? "Layanan" : "Services", url: "/services" },
+    { name: localizedTitle, url: `/services/${service.slug}` },
+  ]);
 
   return (
     <>
       <SEO
         title={localizedTitle}
         description={localizedDescription}
+        canonical={meta.canonical}
         keywords={service.features.join(", ")}
+        openGraph={{
+          title: localizedTitle,
+          description: localizedDescription,
+          url: meta.canonical,
+          image: service.image,
+          type: "article",
+        }}
+        jsonLd={[
+          createWebPageJsonLd({
+            name: localizedTitle,
+            description: localizedDescription,
+            url: meta.canonical,
+            image: service.image,
+          }),
+          createServiceJsonLd(service),
+          breadcrumbs,
+        ]}
       />
 
       <MotionSection className="pt-28 pb-14 bg-background-secondary">
@@ -166,7 +195,7 @@ const ServiceDetail = () => {
                       : "This service page is generated from current MJU data."}
                   </p>
                   <p className="text-xs text-muted-foreground/80 mt-4 break-all">
-                    {pageMeta.canonical}
+                    {meta.canonical}
                   </p>
                 </CardContent>
               </Card>

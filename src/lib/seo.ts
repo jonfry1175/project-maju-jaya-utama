@@ -188,3 +188,44 @@ export const createContactPageJsonLd = () => ({
     "@id": siteMetadata.organizationId,
   },
 });
+
+export const createPlaceJsonLd = () => ({
+  "@context": "https://schema.org",
+  "@type": "Place",
+  name: `${siteMetadata.name} Factory`,
+  url: buildCanonicalUrl("/location"),
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteMetadata.address.streetAddress,
+    addressLocality: siteMetadata.address.addressLocality,
+    addressRegion: siteMetadata.address.addressRegion,
+    postalCode: siteMetadata.address.postalCode,
+    addressCountry: siteMetadata.address.addressCountry,
+  },
+  telephone: siteMetadata.contactPhone,
+});
+
+export const createPersonJsonLd = ({
+  name,
+  jobTitle,
+  url,
+  image,
+  email,
+}: {
+  name: string;
+  jobTitle: string;
+  url: string;
+  image?: string;
+  email?: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name,
+  jobTitle,
+  url: buildCanonicalUrl(url),
+  image: image ? toAbsoluteUrl(image) : undefined,
+  email,
+  worksFor: {
+    "@id": siteMetadata.organizationId,
+  },
+});

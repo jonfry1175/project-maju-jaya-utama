@@ -63,7 +63,7 @@ const HeroSection = () => {
         >
           <source src="/assets/videos/hero-maju.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
+
         <div className="absolute inset-0 bg-grid-industrial opacity-[0.12]" />
         <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
       </div>
