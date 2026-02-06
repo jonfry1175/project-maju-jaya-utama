@@ -37,7 +37,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="flex items-center gap-5">
+              <div className="flex items-center gap-5 -mt-4">
                 <div className="relative shrink-0">
                   <img
                     src="/logo.png"
