@@ -80,7 +80,7 @@ const Header = () => {
                   alt="Maju Jaya Utama Lestari"
                   className={cn(
                     "relative z-10 w-auto transition-all duration-500",
-                    isScrolled ? "h-16 md:h-20" : "h-20 md:h-32",
+                    isScrolled ? "h-12 md:h-14" : "h-14 md:h-20",
                   )}
                 />
               </div>

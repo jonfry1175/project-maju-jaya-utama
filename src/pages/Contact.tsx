@@ -92,6 +92,20 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
+                
+                {/* Map Section */}
+                <div className="rounded-lg overflow-hidden border border-border h-[300px] w-full mt-2">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src="https://maps.google.com/maps?q=9%20Jl.%20Manis%20II%2C%20Manis%20Industrial%20Estate%2C%20Tangerang%2015136%2C%20Indonesia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    title="Factory Location"
+                  ></iframe>
+                </div>
               </CardContent>
             </Card>
           </div>
