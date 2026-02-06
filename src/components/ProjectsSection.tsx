@@ -8,10 +8,24 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation("services");
   const isId = i18n.language === "id";
+  const localizedItems = t("items", { returnObjects: true }) as Array<{
+    title?: string;
+    description?: string;
+    features?: string[];
+  }>;
 
-  const highlights = services.slice(0, 3);
+  const highlights = services.slice(0, 3).map((service, index) => {
+    const localizedItem = localizedItems[index];
+    return {
+      ...service,
+      localizedTitle: localizedItem?.title ?? service.title,
+      localizedDescription:
+        localizedItem?.description ?? service.shortDescription,
+      localizedFeatures: localizedItem?.features ?? service.features,
+    };
+  });
 
   return (
     <MotionSection className="section-padding bg-background" id="projects-section">
@@ -39,10 +53,12 @@ const ProjectsSection = () => {
                 <div className="mb-4">
                   <Badge variant="secondary">{isId ? "Layanan" : "Service"}</Badge>
                 </div>
-                <h3 className="heading-sm text-foreground">{item.title}</h3>
-                <p className="text-body text-muted-foreground mt-3">{item.shortDescription}</p>
+                <h3 className="heading-sm text-foreground">{item.localizedTitle}</h3>
+                <p className="text-body text-muted-foreground mt-3">
+                  {item.localizedDescription}
+                </p>
                 <ul className="mt-4 space-y-2">
-                  {item.features.slice(0, 3).map((feature) => (
+                  {item.localizedFeatures.slice(0, 3).map((feature) => (
                     <li key={feature} className="text-sm text-muted-foreground flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-accent mt-0.5" />
                       <span>{feature}</span>

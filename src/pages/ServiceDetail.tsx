@@ -32,11 +32,20 @@ const ServiceDetail = () => {
   const serviceIndex = services.findIndex((item) => item.slug === service.slug);
   const localizedItems = t("services:items", {
     returnObjects: true,
-  }) as Array<{ title?: string; description?: string }>;
+  }) as Array<{
+    title?: string;
+    description?: string;
+    detailDescription?: string;
+    features?: string[];
+  }>;
   const localizedItem = serviceIndex >= 0 ? localizedItems[serviceIndex] : undefined;
   const localizedTitle = localizedItem?.title || service.title;
   const localizedDescription =
-    localizedItem?.description || service.description || service.shortDescription;
+    localizedItem?.detailDescription ||
+    localizedItem?.description ||
+    service.description ||
+    service.shortDescription;
+  const localizedFeatures = localizedItem?.features || service.features;
 
   const meta = getServiceDetailMeta({
     slug: service.slug,
@@ -60,7 +69,7 @@ const ServiceDetail = () => {
         title={localizedTitle}
         description={localizedDescription}
         canonical={meta.canonical}
-        keywords={service.features.join(", ")}
+        keywords={localizedFeatures.join(", ")}
         openGraph={{
           title: localizedTitle,
           description: localizedDescription,
@@ -129,7 +138,7 @@ const ServiceDetail = () => {
                     {isId ? "Fitur Layanan" : "Service Features"}
                   </h2>
                   <ul className="mt-4 space-y-3">
-                    {service.features.map((feature, index) => (
+                    {localizedFeatures.map((feature, index) => (
                       <li
                         key={`${service.slug}-feature-${index}`}
                         className="flex items-start gap-3 text-body text-muted-foreground"

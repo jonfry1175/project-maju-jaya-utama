@@ -48,5 +48,20 @@
     "url": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=800",
     "localPath": "/assets/images/products/paper-sheets.jpg",
     "description": "Stacked paper sheets"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1530982011887-3cc11cc85693?q=80&w=800",
+    "localPath": "/assets/images/news/factory-production.jpg",
+    "description": "Factory production line"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800",
+    "localPath": "/assets/images/news/eco-packaging.jpg",
+    "description": "Eco friendly packaging"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800",
+    "localPath": "/assets/images/news/customer-trust.jpg",
+    "description": "Business meeting handshake"
   }
 ]

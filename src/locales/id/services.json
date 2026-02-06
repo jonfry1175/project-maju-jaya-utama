@@ -7,19 +7,43 @@
   "items": [
     {
       "title": "Konversi & Slitting Kertas",
-      "description": "Pemotongan presisi dari parent roll menjadi ukuran dan diameter spesifik untuk aplikasi Anda."
+      "description": "Pemotongan presisi dari parent roll menjadi ukuran dan diameter spesifik untuk aplikasi Anda.",
+      "detailDescription": "Kami menyediakan layanan slitting dan rewinding presisi tinggi untuk mengonversi master roll menjadi ukuran yang sesuai dengan kebutuhan mesin Anda. Peralatan modern kami menghasilkan potongan rapi dan gulungan yang stabil.",
+      "features": [
+        "Kemampuan lebar dan diameter kustom",
+        "Tepi potong rapi untuk proses produksi lancar",
+        "Tersedia berbagai pilihan ukuran core"
+      ]
     },
     {
       "title": "Kertas Kemasan Industri",
-      "description": "Grade kertas berdaya tahan tinggi yang dirancang untuk melindungi barang Anda selama penyimpanan dan transit."
+      "description": "Grade kertas berdaya tahan tinggi yang dirancang untuk melindungi barang Anda selama penyimpanan dan transit.",
+      "detailDescription": "Kertas kemasan industri kami dirancang untuk kekuatan dan perlindungan maksimal. Cocok untuk wrapping, interleaving, dan void filling agar produk Anda tiba dengan aman.",
+      "features": [
+        "Kekuatan tarik dan sobek yang tinggi",
+        "Beragam gramatur (GSM) tersedia",
+        "Kualitas dan hasil akhir konsisten"
+      ]
     },
     {
       "title": "Format Kustom",
-      "description": "Opsi roll dan lembaran fleksibel untuk meminimalkan limbah dan memaksimalkan efisiensi di fasilitas Anda."
+      "description": "Opsi roll dan lembaran fleksibel untuk meminimalkan limbah dan memaksimalkan efisiensi di fasilitas Anda.",
+      "detailDescription": "Kami memahami bahwa ukuran standar tidak selalu cocok untuk setiap aplikasi. Layanan sheeting dan formatting kustom kami menyediakan dimensi kertas yang tepat, mengurangi limbah, dan mengoptimalkan proses produksi Anda.",
+      "features": [
+        "Sheeting presisi sesuai panjang kustom",
+        "Optimasi yield untuk mengurangi scrap",
+        "Minimum order quantity yang fleksibel"
+      ]
     },
     {
       "title": "Maklon Manufaktur",
-      "description": "Layanan toll manufacturing (maklon) yang andal untuk memperluas kapasitas produksi Anda tanpa investasi modal."
+      "description": "Layanan toll manufacturing (maklon) yang andal untuk memperluas kapasitas produksi Anda tanpa investasi modal.",
+      "detailDescription": "Manfaatkan keahlian dan fasilitas manufaktur kami untuk memproduksi produk kertas Anda. Kami bertindak sebagai mitra produksi yang memastikan kualitas tinggi dan pengiriman tepat waktu atas nama merek Anda.",
+      "features": [
+        "Kapasitas produksi yang dapat diskalakan",
+        "Standar kontrol kualitas yang ketat",
+        "Model kemitraan yang terjaga kerahasiaannya"
+      ]
     }
   ]
 }

@@ -37,11 +37,19 @@ const NewsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {featured.map((article) => (
             <Card key={article.id} className="h-full card-hover bg-card border-card-border">
-              <CardContent className="p-6 flex flex-col gap-4 h-full">
-                <div className="flex items-center justify-between">
-                  <Badge variant="secondary">{article.category}</Badge>
-                  <span className="text-xs text-muted-foreground">{article.readTime}</span>
+              <CardContent className="p-0 flex flex-col gap-4 h-full pb-6">
+                <div className="aspect-video w-full overflow-hidden rounded-t-lg bg-muted">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
+                <div className="px-6 flex flex-col gap-4 flex-1">
+                  <div className="flex items-center justify-between">
+                    <Badge variant="secondary">{article.category}</Badge>
+                    <span className="text-xs text-muted-foreground">{article.readTime}</span>
+                  </div>
 
                 <h3 className="heading-sm text-foreground">{article.title}</h3>
                 <p className="text-body text-muted-foreground line-clamp-4">{article.excerpt}</p>
@@ -59,6 +67,7 @@ const NewsSection = () => {
                       <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                   </Button>
+                </div>
                 </div>
               </CardContent>
             </Card>

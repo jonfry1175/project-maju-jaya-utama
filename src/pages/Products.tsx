@@ -10,8 +10,12 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Products = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation("services");
   const isId = i18n.language === "id";
+  const localizedItems = t("items", { returnObjects: true }) as Array<{
+    title?: string;
+    description?: string;
+  }>;
   const meta = resolveMeta(getStaticPageMeta("products"));
   const title = isId
     ? "Portofolio Produk Kemasan Industri MJUL"
@@ -66,19 +70,27 @@ const Products = () => {
       <MotionSection className="pb-20 bg-background-secondary">
         <div className="container mx-auto container-padding max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => (
+            {services.map((service, index) => {
+              const localizedItem = localizedItems[index];
+              const localizedTitle = localizedItem?.title ?? service.title;
+              const localizedDescription =
+                localizedItem?.description ?? service.shortDescription;
+
+              return (
               <Card key={service.slug} className="h-full border-card-border card-hover">
                 <CardContent className="p-6 flex flex-col h-full">
                   <div className="aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-muted">
                     <img
                       src={service.image}
-                      alt={service.title}
+                      alt={localizedTitle}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="heading-sm">{service.title}</h3>
-                  <p className="text-body text-muted-foreground mt-3">{service.shortDescription}</p>
+                  <h3 className="heading-sm">{localizedTitle}</h3>
+                  <p className="text-body text-muted-foreground mt-3">
+                    {localizedDescription}
+                  </p>
                   <Button asChild variant="ghost" className="mt-4 h-auto p-0 text-primary">
                     <Link to={`/services/${service.slug}`}>
                       {isId ? "Lihat Detail" : "View Details"}
@@ -87,7 +99,8 @@ const Products = () => {
                   </Button>
                 </CardContent>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </MotionSection>

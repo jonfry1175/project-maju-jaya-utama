@@ -25,7 +25,7 @@ export const newsArticles: NewsArticle[] = [
     author: "MJUL Editorial",
     date: "2026-02-06",
     readTime: "3 min read",
-    image: "/logo.png",
+    image: "/assets/images/news/factory-production.jpg",
     content: [
       "PT Maju Jaya Utama Lestari (MJUL) was established in 1993 and continues to serve industrial packaging needs with a quality-first operating model.",
       "The company provides products built on Poly Propylene (PP), High Density Poly Ethylene (HDPE), and Low Density Poly Ethylene (LDPE) materials.",
@@ -43,7 +43,7 @@ export const newsArticles: NewsArticle[] = [
     author: "MJUL Editorial",
     date: "2026-02-06",
     readTime: "3 min read",
-    image: "/placeholder.svg",
+    image: "/assets/images/news/eco-packaging.jpg",
     content: [
       "MJUL manufactures Go Green plastic products that are designed to degrade within approximately two years.",
       "The company also provides biodegradable products made from tapioca/cassava materials, designed to break down within around six months.",
@@ -61,7 +61,7 @@ export const newsArticles: NewsArticle[] = [
     author: "MJUL Editorial",
     date: "2026-02-06",
     readTime: "2 min read",
-    image: "/placeholder.svg",
+    image: "/assets/images/news/customer-trust.jpg",
     content: [
       "MJUL states that customer trust is built through consistent product quality and competitive pricing.",
       "The company operates with an integrated service approach and emphasizes innovation, solution quality, and team execution.",

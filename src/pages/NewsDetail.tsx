@@ -110,13 +110,22 @@ const NewsDetail = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {related.map((item) => (
               <Card key={item.slug} className="border-card-border card-hover">
-                <CardContent className="p-5">
-                  <p className="text-xs uppercase tracking-[0.16em] text-accent">{item.category}</p>
-                  <h3 className="heading-sm mt-2">{item.title}</h3>
-                  <p className="text-body text-muted-foreground mt-2">{item.excerpt}</p>
-                  <Button asChild variant="ghost" className="mt-3 h-auto p-0 text-primary">
-                    <Link to={`/news/${item.slug}`}>{isId ? "Baca Detail" : "Read Detail"}</Link>
-                  </Button>
+                <CardContent className="p-0 pb-5">
+                  <div className="aspect-video w-full overflow-hidden rounded-t-lg bg-muted mb-4">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="px-5">
+                    <p className="text-xs uppercase tracking-[0.16em] text-accent">{item.category}</p>
+                    <h3 className="heading-sm mt-2">{item.title}</h3>
+                    <p className="text-body text-muted-foreground mt-2">{item.excerpt}</p>
+                    <Button asChild variant="ghost" className="mt-3 h-auto p-0 text-primary">
+                      <Link to={`/news/${item.slug}`}>{isId ? "Baca Detail" : "Read Detail"}</Link>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}

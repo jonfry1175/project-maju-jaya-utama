@@ -7,19 +7,43 @@
   "items": [
     {
       "title": "Paper Converting & Slitting",
-      "description": "Precision resizing of parent rolls into custom widths and diameters for your specific applications."
+      "description": "Precision resizing of parent rolls into custom widths and diameters for your specific applications.",
+      "detailDescription": "We offer high-precision slitting and rewinding services to convert master rolls into smaller sizes that fit your exact machinery requirements. Our advanced equipment ensures clean cuts and perfectly wound rolls.",
+      "features": [
+        "Custom width and diameter capabilities",
+        "Clean-cut edges for smooth runnability",
+        "Wide range of core sizes available"
+      ]
     },
     {
       "title": "Industrial Packaging Paper",
-      "description": "High-durability grades designed to protect your goods during storage and transit."
+      "description": "High-durability grades designed to protect your goods during storage and transit.",
+      "detailDescription": "Our industrial packaging papers are engineered for strength and protection. Ideal for wrapping, interleaving, and void filling, ensuring your products arrive safely.",
+      "features": [
+        "High tensile and tear strength",
+        "Various basis weights (GSM) available",
+        "Consistent quality and finish"
+      ]
     },
     {
       "title": "Custom Formats",
-      "description": "Flexible roll and sheet options to minimize waste and maximize efficiency in your facility."
+      "description": "Flexible roll and sheet options to minimize waste and maximize efficiency in your facility.",
+      "detailDescription": "We understand that standard sizes do not fit every application. Our custom sheeting and formatting services provide the exact paper dimensions you need, reducing waste and optimizing production.",
+      "features": [
+        "Precise sheeting to custom lengths",
+        "Optimized yield to reduce scrap",
+        "Flexible minimum order quantities"
+      ]
     },
     {
       "title": "Contract Manufacturing",
-      "description": "Reliable toll manufacturing services to expand your production capacity without capital investment."
+      "description": "Reliable toll manufacturing services to expand your production capacity without capital investment.",
+      "detailDescription": "Leverage our manufacturing expertise and facilities to produce your paper products. We act as your production partner, ensuring high quality and timely delivery under your brand.",
+      "features": [
+        "Scalable production capacity",
+        "Strict quality control standards",
+        "Confidential partnership model"
+      ]
     }
   ]
 }
