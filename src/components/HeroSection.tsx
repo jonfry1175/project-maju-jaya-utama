@@ -53,11 +53,16 @@ const HeroSection = () => {
       className="relative min-h-screen overflow-hidden bg-background pt-24 pb-16 flex items-center"
     >
       <div className="absolute inset-0 z-0">
-        <img
-          src="/assets/images/hero-manufacturing-v2.png"
-          alt="Paper manufacturing facility"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/assets/images/hero-manufacturing-v2.png"
           className="h-full w-full object-cover scale-105"
-        />
+        >
+          <source src="/assets/videos/hero-maju.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
         <div className="absolute inset-0 bg-grid-industrial opacity-[0.12]" />
         <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
