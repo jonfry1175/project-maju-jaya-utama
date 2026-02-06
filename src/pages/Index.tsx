@@ -1,22 +1,26 @@
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import PartnerLogosSection from "@/components/PartnerLogosSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import FAQSection from "@/components/FAQSection";
-import ContactSection from "@/components/ContactSection";
 import SEO from "@/components/SEO";
+import { Suspense, lazy } from "react";
+
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const ProjectsSection = lazy(() => import("@/components/ProjectsSection"));
+const ClientsSection = lazy(() => import("@/components/ClientsSection"));
+const NewsSection = lazy(() => import("@/components/NewsSection"));
+const CTASection = lazy(() => import("@/components/CTASection"));
 
 const Index = () => (
   <>
     <SEO />
     <HeroSection />
-    <AboutSection />
-    <ServicesSection />
-    <PartnerLogosSection />
-    <TestimonialsSection />
-    <FAQSection />
-    <ContactSection />
+    <Suspense fallback={null}>
+      <AboutSection />
+      <ServicesSection limit={3} />
+      <ProjectsSection />
+      <ClientsSection />
+      <NewsSection />
+      <CTASection />
+    </Suspense>
   </>
 );
 
