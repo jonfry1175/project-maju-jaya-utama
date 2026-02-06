@@ -27,11 +27,17 @@ import { useTranslation } from "react-i18next";
 
 type GalleryProject = "adaro" | "borneo" | "kalimantan";
 type GalleryFilter = "all" | GalleryProject;
+type LocaleCode = "en" | "id";
+
+type LocalizedLabel = {
+  en: string;
+  id: string;
+};
 
 type ImgItem = {
   id: string;
   src: string;
-  alt: string;
+  alt: LocalizedLabel;
   project: GalleryProject;
 };
 
@@ -70,6 +76,12 @@ type GalleryCopy = {
   autoplayPause: string;
   autoplayPrev: string;
   autoplayNext: string;
+  featuredAlts: {
+    operations: string;
+    productionFloor: string;
+    paperConverting: string;
+    industrialPackaging: string;
+  };
   categories: Record<GalleryProject, CategoryCopy>;
 };
 
@@ -84,19 +96,28 @@ const adaro: ImgItem[] = [
   {
     id: "ad-1",
     src: "/assets/images/hero-manufacturing-v2.png",
-    alt: "Main manufacturing line",
+    alt: {
+      en: "Main manufacturing line",
+      id: "Lini manufaktur utama",
+    },
     project: "adaro",
   },
   {
     id: "ad-2",
     src: "/assets/images/factory-interior.jpg",
-    alt: "Production floor operations",
+    alt: {
+      en: "Production floor operations",
+      id: "Operasional lantai produksi",
+    },
     project: "adaro",
   },
   {
     id: "ad-3",
     src: "/assets/images/team-workers.jpg",
-    alt: "Operations team in plant",
+    alt: {
+      en: "Operations team in plant",
+      id: "Tim operasional di pabrik",
+    },
     project: "adaro",
   },
 ];
@@ -105,19 +126,28 @@ const borneo: ImgItem[] = [
   {
     id: "bor-1",
     src: "/assets/images/quality-control.jpg",
-    alt: "Quality control process",
+    alt: {
+      en: "Quality control process",
+      id: "Proses quality control",
+    },
     project: "borneo",
   },
   {
     id: "bor-2",
     src: "/assets/images/services/quality-assurance.png",
-    alt: "Quality assurance station",
+    alt: {
+      en: "Quality assurance station",
+      id: "Stasiun quality assurance",
+    },
     project: "borneo",
   },
   {
     id: "bor-3",
     src: "/assets/images/services/paper-slitting.png",
-    alt: "Precision paper slitting",
+    alt: {
+      en: "Precision paper slitting",
+      id: "Slitting kertas presisi",
+    },
     project: "borneo",
   },
 ];
@@ -126,19 +156,28 @@ const kalimantan: ImgItem[] = [
   {
     id: "kal-1",
     src: "/assets/images/services/paper-converting.png",
-    alt: "Paper converting system",
+    alt: {
+      en: "Paper converting system",
+      id: "Sistem konversi kertas",
+    },
     project: "kalimantan",
   },
   {
     id: "kal-2",
     src: "/assets/images/services/industrial-packaging.png",
-    alt: "Industrial packaging process",
+    alt: {
+      en: "Industrial packaging process",
+      id: "Proses kemasan industri",
+    },
     project: "kalimantan",
   },
   {
     id: "kal-3",
     src: "/assets/images/products/cardboard-boxes.jpg",
-    alt: "Finished packaging output",
+    alt: {
+      en: "Finished packaging output",
+      id: "Hasil akhir kemasan",
+    },
     project: "kalimantan",
   },
 ];
@@ -147,7 +186,7 @@ const getCopy = (isId: boolean): GalleryCopy => {
   if (isId) {
     return {
       label: "Galeri Perusahaan",
-      title: "Dokumentasi Operasional dan Produksi MJUL",
+      title: "Dokumentasi Operasional dan Produksi PT Maju Jaya Utama Lestari",
       description:
         "Visual proses produksi, quality control, dan hasil akhir produk PT Maju Jaya Utama Lestari.",
       keyboardHint:
@@ -176,6 +215,12 @@ const getCopy = (isId: boolean): GalleryCopy => {
       autoplayPause: "Jeda auto-play",
       autoplayPrev: "Foto sebelumnya",
       autoplayNext: "Foto berikutnya",
+      featuredAlts: {
+        operations: "Sorotan operasional pabrik",
+        productionFloor: "Sorotan area produksi",
+        paperConverting: "Sorotan proses konversi kertas",
+        industrialPackaging: "Sorotan proses kemasan industri",
+      },
       categories: {
         adaro: {
           title: "Operasional Pabrik",
@@ -198,7 +243,7 @@ const getCopy = (isId: boolean): GalleryCopy => {
 
   return {
     label: "Company Gallery",
-    title: "MJUL Operations and Production Documentation",
+    title: "PT Maju Jaya Utama Lestari Operations and Production Documentation",
     description:
       "Visual records of production workflow, quality control, and final output across PT Maju Jaya Utama Lestari.",
     keyboardHint:
@@ -228,6 +273,12 @@ const getCopy = (isId: boolean): GalleryCopy => {
     autoplayPause: "Pause auto slideshow",
     autoplayPrev: "Previous photo",
     autoplayNext: "Next photo",
+    featuredAlts: {
+      operations: "Featured factory operations",
+      productionFloor: "Featured production floor",
+      paperConverting: "Featured paper converting",
+      industrialPackaging: "Featured industrial packaging",
+    },
     categories: {
       adaro: {
         title: "Factory Operations",
@@ -268,12 +319,14 @@ const GallerySection = React.memo(
     title,
     description,
     items,
+    language,
     copy,
   }: {
     label: string;
     title: string;
     description: string;
     items: ImgItem[];
+    language: LocaleCode;
     copy: GalleryCopy;
   }) => {
     const prefersReduced = useReducedMotion();
@@ -432,53 +485,57 @@ const GallerySection = React.memo(
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
           >
-            {items.map((itemData, index) => (
-              <motion.div
-                key={itemData.id}
-                className="flex-shrink-0 w-80 snap-start group"
-                variants={item}
-                whileHover={prefersReduced ? {} : { y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 280, damping: 25 }}
-              >
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <button className="w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 rounded-2xl group">
-                      <div className="relative overflow-hidden rounded-2xl bg-card border border-border shadow-md hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group-hover:border-primary/30">
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            {items.map((itemData, index) => {
+              const localizedAlt = itemData.alt[language];
 
-                        <GalleryImageCard src={itemData.src} alt={itemData.alt} />
+              return (
+                <motion.div
+                  key={itemData.id}
+                  className="flex-shrink-0 w-80 snap-start group"
+                  variants={item}
+                  whileHover={prefersReduced ? {} : { y: -8, scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 280, damping: 25 }}
+                >
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button className="w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 rounded-2xl group">
+                        <div className="relative overflow-hidden rounded-2xl bg-card border border-border shadow-md hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group-hover:border-primary/30">
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                          <p className="text-white text-sm font-medium">
-                            {copy.photoPrefix} {index + 1} - {title}
-                          </p>
-                          <p className="text-white/80 text-xs mt-1">{copy.clickToView}</p>
+                          <GalleryImageCard src={itemData.src} alt={localizedAlt} />
+
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p className="text-white text-sm font-medium">
+                              {copy.photoPrefix} {index + 1} - {title}
+                            </p>
+                            <p className="text-white/80 text-xs mt-1">{copy.clickToView}</p>
+                          </div>
                         </div>
-                      </div>
-                    </button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-7xl p-0 overflow-hidden border-0 bg-black/95 backdrop-blur-sm">
-                    <motion.div
-                      initial={{ scale: 0.9, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      exit={{ scale: 0.9, opacity: 0 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                      className="relative"
-                    >
-                      <img
-                        src={itemData.src}
-                        alt={itemData.alt}
-                        className="w-full h-auto max-h-[90vh] object-contain"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                        <h4 className="text-white text-lg font-semibold">{itemData.alt}</h4>
-                        <p className="text-white/80 text-sm mt-1">{copy.companyName}</p>
-                      </div>
-                    </motion.div>
-                  </DialogContent>
-                </Dialog>
-              </motion.div>
-            ))}
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-7xl p-0 overflow-hidden border-0 bg-black/95 backdrop-blur-sm">
+                      <motion.div
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0.9, opacity: 0 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        className="relative"
+                      >
+                        <img
+                          src={itemData.src}
+                          alt={localizedAlt}
+                          className="w-full h-auto max-h-[90vh] object-contain"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                          <h4 className="text-white text-lg font-semibold">{localizedAlt}</h4>
+                          <p className="text-white/80 text-sm mt-1">{copy.companyName}</p>
+                        </div>
+                      </motion.div>
+                    </DialogContent>
+                  </Dialog>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </section>
@@ -490,10 +547,12 @@ const FilteredGalleryGrid = React.memo(
   ({
     items,
     activeFilter,
+    language,
     copy,
   }: {
     items: ImgItem[];
     activeFilter: GalleryFilter;
+    language: LocaleCode;
     copy: GalleryCopy;
   }) => {
     const prefersReduced = useReducedMotion();
@@ -556,71 +615,75 @@ const FilteredGalleryGrid = React.memo(
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {items.map((itemData, index) => (
-            <motion.div
-              key={itemData.id}
-              className="group"
-              variants={item}
-              whileHover={prefersReduced ? {} : { y: -8, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 280, damping: 25 }}
-            >
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button className="w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 rounded-2xl group">
-                    <div className="relative overflow-hidden rounded-2xl bg-card border border-border shadow-md hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group-hover:border-primary/30">
-                      <div className="absolute top-3 left-3 z-10">
-                        <Badge
-                          variant={itemData.project === "kalimantan" ? "default" : "secondary"}
-                          className="text-xs"
-                        >
-                          {copy.categories[itemData.project].badge}
-                        </Badge>
+          {items.map((itemData, index) => {
+            const localizedAlt = itemData.alt[language];
+
+            return (
+              <motion.div
+                key={itemData.id}
+                className="group"
+                variants={item}
+                whileHover={prefersReduced ? {} : { y: -8, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 280, damping: 25 }}
+              >
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2 rounded-2xl group">
+                      <div className="relative overflow-hidden rounded-2xl bg-card border border-border shadow-md hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 group-hover:border-primary/30">
+                        <div className="absolute top-3 left-3 z-10">
+                          <Badge
+                            variant={itemData.project === "kalimantan" ? "default" : "secondary"}
+                            className="text-xs"
+                          >
+                            {copy.categories[itemData.project].badge}
+                          </Badge>
+                        </div>
+
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                        <GalleryImageCard src={itemData.src} alt={localizedAlt} />
+
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                          <p className="text-white text-sm font-medium">
+                            {copy.photoPrefix} {index + 1} - {copy.projectLabelPrefix} {copy.categories[itemData.project].badge}
+                          </p>
+                          <p className="text-white/80 text-xs mt-1">{copy.clickToView}</p>
+                        </div>
                       </div>
+                    </button>
+                  </DialogTrigger>
 
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                      <GalleryImageCard src={itemData.src} alt={itemData.alt} />
-
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <p className="text-white text-sm font-medium">
-                          {copy.photoPrefix} {index + 1} - {copy.projectLabelPrefix} {copy.categories[itemData.project].badge}
-                        </p>
-                        <p className="text-white/80 text-xs mt-1">{copy.clickToView}</p>
+                  <DialogContent className="max-w-7xl p-0 overflow-hidden border-0 bg-black/95 backdrop-blur-sm">
+                    <motion.div
+                      initial={{ scale: 0.9, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0.9, opacity: 0 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      className="relative"
+                    >
+                      <img
+                        src={itemData.src}
+                        alt={localizedAlt}
+                        className="w-full h-auto max-h-[90vh] object-contain"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Badge
+                            variant={itemData.project === "kalimantan" ? "default" : "secondary"}
+                            className="text-xs"
+                          >
+                            {copy.categories[itemData.project].badge}
+                          </Badge>
+                        </div>
+                        <h4 className="text-white text-lg font-semibold">{localizedAlt}</h4>
+                        <p className="text-white/80 text-sm mt-1">{copy.companyName}</p>
                       </div>
-                    </div>
-                  </button>
-                </DialogTrigger>
-
-                <DialogContent className="max-w-7xl p-0 overflow-hidden border-0 bg-black/95 backdrop-blur-sm">
-                  <motion.div
-                    initial={{ scale: 0.9, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.9, opacity: 0 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    className="relative"
-                  >
-                    <img
-                      src={itemData.src}
-                      alt={itemData.alt}
-                      className="w-full h-auto max-h-[90vh] object-contain"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                      <div className="flex items-center gap-3 mb-2">
-                        <Badge
-                          variant={itemData.project === "kalimantan" ? "default" : "secondary"}
-                          className="text-xs"
-                        >
-                          {copy.categories[itemData.project].badge}
-                        </Badge>
-                      </div>
-                      <h4 className="text-white text-lg font-semibold">{itemData.alt}</h4>
-                      <p className="text-white/80 text-sm mt-1">{copy.companyName}</p>
-                    </div>
-                  </motion.div>
-                </DialogContent>
-              </Dialog>
-            </motion.div>
-          ))}
+                    </motion.div>
+                  </DialogContent>
+                </Dialog>
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         {items.length === 0 && (
@@ -645,6 +708,7 @@ const FilteredGalleryGrid = React.memo(
 const Gallery = () => {
   const { i18n } = useTranslation();
   const isId = i18n.language.startsWith("id");
+  const language: LocaleCode = isId ? "id" : "en";
   const copy = useMemo(() => getCopy(isId), [isId]);
 
   const breadcrumbs = useMemo(
@@ -884,6 +948,7 @@ const Gallery = () => {
                 title={copy.categories.adaro.title}
                 description={copy.categories.adaro.description}
                 items={adaro}
+                language={language}
                 copy={copy}
               />
               <GallerySection
@@ -891,6 +956,7 @@ const Gallery = () => {
                 title={copy.categories.borneo.title}
                 description={copy.categories.borneo.description}
                 items={borneo}
+                language={language}
                 copy={copy}
               />
               <GallerySection
@@ -898,11 +964,17 @@ const Gallery = () => {
                 title={copy.categories.kalimantan.title}
                 description={copy.categories.kalimantan.description}
                 items={kalimantan}
+                language={language}
                 copy={copy}
               />
             </div>
           ) : (
-            <FilteredGalleryGrid items={filteredItems} activeFilter={activeFilter} copy={copy} />
+            <FilteredGalleryGrid
+              items={filteredItems}
+              activeFilter={activeFilter}
+              language={language}
+              copy={copy}
+            />
           )}
 
           <motion.div
@@ -951,7 +1023,7 @@ const Gallery = () => {
                       <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg group relative">
                         <img
                           src={featuredAd}
-                          alt="Featured factory operations"
+                          alt={copy.featuredAlts.operations}
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
@@ -959,7 +1031,7 @@ const Gallery = () => {
                       <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg group relative">
                         <img
                           src={featuredBorneo}
-                          alt="Featured production floor"
+                          alt={copy.featuredAlts.productionFloor}
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
@@ -976,7 +1048,7 @@ const Gallery = () => {
                       <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg group relative">
                         <img
                           src={featuredKalimantan}
-                          alt="Featured paper converting"
+                          alt={copy.featuredAlts.paperConverting}
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
@@ -984,7 +1056,7 @@ const Gallery = () => {
                       <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg group relative">
                         <img
                           src={featuredCement}
-                          alt="Featured industrial packaging"
+                          alt={copy.featuredAlts.industrialPackaging}
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />

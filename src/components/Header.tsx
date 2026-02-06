@@ -176,7 +176,7 @@ const Header = () => {
               <button
                 className="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-primary/5 border border-primary/20 text-foreground transition-all hover:bg-primary/10"
                 onClick={() => setIsMenuOpen((open) => !open)}
-                aria-label="Toggle menu"
+                aria-label={t("accessibility.toggleMenu")}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>

@@ -41,14 +41,14 @@ export const staticPageMeta: Record<StaticPageKey, PageMeta> = {
   services: {
     title: "Services",
     description:
-      "Explore MJUL service portfolio covering plastic packaging, biodegradable products, paper bags, and integrated packaging consultation.",
+      "Explore PT Maju Jaya Utama Lestari service portfolio covering plastic packaging, biodegradable products, paper bags, and integrated packaging consultation.",
     path: "/services",
     image: defaultImage,
   },
   products: {
     title: "Products",
     description:
-      "Browse MJUL products for industrial, retail, and commercial packaging requirements.",
+      "Browse PT Maju Jaya Utama Lestari products for industrial, retail, and commercial packaging requirements.",
     path: "/products",
     image: defaultImage,
   },
@@ -62,7 +62,7 @@ export const staticPageMeta: Record<StaticPageKey, PageMeta> = {
   gallery: {
     title: "Gallery",
     description:
-      "Visual documentation of MJUL factory operations, production process, and packaging outputs.",
+      "Visual documentation of PT Maju Jaya Utama Lestari factory operations, production process, and packaging outputs.",
     path: "/gallery",
     image: defaultImage,
   },
@@ -111,7 +111,7 @@ export const staticPageMeta: Record<StaticPageKey, PageMeta> = {
   certifications: {
     title: "Certifications",
     description:
-      "Certification and compliance overview supporting MJUL quality and sustainability commitments.",
+      "Certification and compliance overview supporting PT Maju Jaya Utama Lestari quality and sustainability commitments.",
     path: "/about-us/certifications",
     image: defaultImage,
   },

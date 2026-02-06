@@ -134,7 +134,7 @@ const AnimatedRoutes = () => {
             }
           />
           <Route
-            path="/news/:slug"
+            path="/news/:prefix"
             element={
               <Page>
                 <NewsDetail />
@@ -224,7 +224,7 @@ const App = () => (
                   <span className="relative inline-flex h-16 w-16 items-center justify-center rounded-[18px] bg-card shadow-medium">
                     <img
                       src="/logo.png"
-                      alt="Maju Jaya logo"
+                      alt="PT Maju Jaya Utama Lestari"
                       className="h-9 w-9 object-contain"
                     />
                   </span>

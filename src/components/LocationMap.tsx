@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const LocationMap = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation("contact");
   const isId = i18n.language === "id";
   const fullAddress = `${siteMetadata.address.streetAddress}, ${siteMetadata.address.addressLocality}, ${siteMetadata.address.addressRegion}, ${siteMetadata.address.postalCode}, ${siteMetadata.address.addressCountry}`;
 
@@ -27,7 +27,7 @@ const LocationMap = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1.25fr_0.75fr] gap-6">
           <div className="overflow-hidden rounded-2xl border border-card-border shadow-soft bg-card">
             <iframe
-              title="MJUL Location"
+              title={t("info.mapTitle")}
               src={`https://maps.google.com/maps?q=${encodeURIComponent(fullAddress)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
               className="w-full h-[420px]"
               loading="lazy"
@@ -50,7 +50,7 @@ const LocationMap = () => {
                 <Phone className="h-5 w-5 text-accent mt-0.5" />
                 <div>
                   <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                    {isId ? "Telepon" : "Phone"}
+                    {t("info.phone.title")}
                   </p>
                   <a
                     href={`tel:${siteMetadata.contactPhone.replace(/[^+\d]/g, "")}`}
@@ -64,7 +64,7 @@ const LocationMap = () => {
                 <Mail className="h-5 w-5 text-accent mt-0.5" />
                 <div>
                   <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                    Email
+                    {t("info.email.title")}
                   </p>
                   <a
                     href={`mailto:${siteMetadata.contactEmail}`}

@@ -58,8 +58,8 @@ const Services = () => {
           </h1>
           <p className="text-body-large text-muted-foreground mt-6 max-w-3xl">
             {isId
-              ? "MJUL menyediakan solusi kemasan berbasis plastik, paper bag, dan non-woven dengan pendekatan kualitas konsisten serta dukungan spesifikasi kustom."
-              : "MJUL provides plastic, paper bag, and non-woven packaging solutions with consistent quality and support for custom specifications."}
+              ? "PT Maju Jaya Utama Lestari menyediakan solusi kemasan berbasis plastik, paper bag, dan non-woven dengan pendekatan kualitas konsisten serta dukungan spesifikasi kustom."
+              : "PT Maju Jaya Utama Lestari provides plastic, paper bag, and non-woven packaging solutions with consistent quality and support for custom specifications."}
           </p>
         </div>
       </MotionSection>

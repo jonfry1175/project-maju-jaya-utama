@@ -133,7 +133,7 @@ const ServiceDetail = () => {
               </div>
               <CardContent className="p-7 lg:p-8">
                 <Badge variant="secondary">
-                  {isId ? "Layanan Utama MJUL" : "MJUL Core Service"}
+                  {isId ? "Layanan Utama PT Maju Jaya Utama Lestari" : "PT Maju Jaya Utama Lestari Core Service"}
                 </Badge>
                 <h1 className="heading-md mt-4">{localizedTitle}</h1>
                 <p className="text-body text-muted-foreground mt-4">
@@ -167,8 +167,8 @@ const ServiceDetail = () => {
                   </p>
                   <h2 className="heading-sm mt-3">
                     {isId
-                      ? "Diskusikan spesifikasi layanan Anda dengan tim MJUL"
-                      : "Discuss your service specifications with MJUL team"}
+                      ? "Diskusikan spesifikasi layanan Anda dengan tim PT Maju Jaya Utama Lestari"
+                      : "Discuss your service specifications with PT Maju Jaya Utama Lestari team"}
                   </h2>
                   <p className="text-body text-muted-foreground mt-4">
                     {isId

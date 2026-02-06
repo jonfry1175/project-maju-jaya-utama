@@ -21,8 +21,10 @@ const Contact = () => {
     const name = String(formData.get("name") || "");
     const email = String(formData.get("email") || "");
     const message = String(formData.get("message") || "");
-    const subject = encodeURIComponent(`Inquiry from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const subject = encodeURIComponent(t("form.mailto.subject", { name }));
+    const body = encodeURIComponent(
+      t("form.mailto.body", { name, email, message }),
+    );
     window.location.href = `mailto:${siteMetadata.contactEmail}?subject=${subject}&body=${body}`;
   };
 
@@ -63,7 +65,7 @@ const Contact = () => {
 
             <Card className="border-card-border">
               <CardContent className="p-6 lg:p-8 space-y-6">
-                <h2 className="heading-sm">{isId ? "Informasi Kontak" : "Contact Information"}</h2>
+                <h2 className="heading-sm">{t("info.sectionTitle")}</h2>
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-accent mt-0.5" />
                   <div>
@@ -103,7 +105,7 @@ const Contact = () => {
                     allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"
                     src="https://maps.google.com/maps?q=9%20Jl.%20Manis%20II%2C%20Manis%20Industrial%20Estate%2C%20Tangerang%2015136%2C%20Indonesia&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                    title="Factory Location"
+                    title={t("info.mapTitle")}
                   ></iframe>
                 </div>
               </CardContent>

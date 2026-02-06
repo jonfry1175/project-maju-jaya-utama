@@ -40,8 +40,8 @@ const ContactSection = () => {
     },
     {
       icon: Clock,
-      title: t("info.hours.title", "Business Hours"),
-      content: t("info.hours.value", "Monday - Saturday: 08:00 - 17:00"),
+      title: t("info.hours.title"),
+      content: t("info.hours.value"),
       link: null,
     },
   ];
@@ -56,7 +56,14 @@ const ContactSection = () => {
     const product = formData.get("product") as string;
     const message = formData.get("message") as string;
 
-    const whatsappMessage = `Halo, saya ${name} dari ${company}.\n\nEmail: ${email}\nTelepon: ${phone}\nProduk: ${product}\n\nPesan:\n${message}`;
+    const whatsappMessage = t("form.whatsapp.prefill", {
+      name,
+      company: company || "-",
+      email,
+      phone: phone || "-",
+      product: product || "-",
+      message,
+    });
     const whatsappUrl = `https://api.whatsapp.com/send?phone=622159493388&text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -171,7 +178,7 @@ const ContactSection = () => {
                     style={{ border: 0, filter: 'grayscale(0.8) contrast(1.2)' }}
                     allowFullScreen
                     loading="lazy"
-                    title="Location Map"
+                    title={t("info.mapTitle")}
                   />
                   <div className="absolute inset-0 pointer-events-none border-[12px] border-white/5 rounded-3xl" />
                </Card>

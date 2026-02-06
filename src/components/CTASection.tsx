@@ -31,8 +31,8 @@ const CTASection = () => {
               </h2>
               <p className="text-body text-white/85">
                 {isId
-                  ? "Tim MJUL siap membantu pemilihan produk, spesifikasi, dan skema pasokan yang sesuai kebutuhan bisnis Anda."
-                  : "MJUL team is ready to help you choose the right products, specifications, and supply scheme for your business needs."}
+                  ? "Tim PT Maju Jaya Utama Lestari siap membantu pemilihan produk, spesifikasi, dan skema pasokan yang sesuai kebutuhan bisnis Anda."
+                  : "PT Maju Jaya Utama Lestari team is ready to help you choose the right products, specifications, and supply scheme for your business needs."}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <Button asChild className="bg-accent hover:bg-accent-light text-accent-foreground">

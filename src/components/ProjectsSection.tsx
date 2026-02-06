@@ -41,8 +41,8 @@ const ProjectsSection = () => {
           </h2>
           <p className="text-body text-muted-foreground mt-3">
             {isId
-              ? "Bagian ini menggantikan portfolio/works dengan fokus pada layanan unggulan MJUL."
-              : "This section replaces portfolio/works with MJUL service-focused highlights."}
+              ? "Bagian ini menggantikan portfolio/works dengan fokus pada layanan unggulan PT Maju Jaya Utama Lestari."
+              : "This section replaces portfolio/works with PT Maju Jaya Utama Lestari service-focused highlights."}
           </p>
         </div>
 

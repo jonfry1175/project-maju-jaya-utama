@@ -99,8 +99,8 @@ const ClientsSection = () => {
           </h2>
           <p className="text-body text-muted-foreground mt-3">
             {isId
-              ? "Sebagian pelanggan MJUL berdasarkan company profile resmi."
-              : "Selected MJUL customers based on the official company profile."}
+              ? "Sebagian pelanggan PT Maju Jaya Utama Lestari berdasarkan company profile resmi."
+              : "Selected PT Maju Jaya Utama Lestari customers based on the official company profile."}
           </p>
         </div>
 
@@ -114,7 +114,7 @@ const ClientsSection = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-w-full max-h-full object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain transition-all duration-300"
                   onError={(e) => {
                     const target = e.currentTarget;
                     target.style.display = "none";

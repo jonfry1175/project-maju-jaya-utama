@@ -23,7 +23,7 @@ const CareerEmployee = () => {
 
   const jobs = [
     {
-      title: isId ? "Production Supervisor" : "Production Supervisor",
+      title: isId ? "Supervisor Produksi" : "Production Supervisor",
       dept: isId ? "Operasional" : "Operations",
       location: "Tangerang",
       desc: isId
@@ -31,7 +31,7 @@ const CareerEmployee = () => {
         : "Lead daily production team, monitor output, and coordinate quality control.",
     },
     {
-      title: isId ? "Quality Control Staff" : "Quality Control Staff",
+      title: isId ? "Staf Quality Control" : "Quality Control Staff",
       dept: isId ? "Quality Assurance" : "Quality Assurance",
       location: "Tangerang",
       desc: isId
@@ -96,7 +96,7 @@ const CareerEmployee = () => {
                   </p>
                   <p className="text-body text-muted-foreground mt-3">{job.desc}</p>
                   <Button asChild className="mt-5 bg-primary hover:bg-primary/90">
-                    <a href={`mailto:${siteMetadata.contactEmail}?subject=${encodeURIComponent(`Application - ${job.title}`)}`}>
+                    <a href={`mailto:${siteMetadata.contactEmail}?subject=${encodeURIComponent(`${isId ? "Lamaran" : "Application"} - ${job.title}`)}`}>
                       {isId ? "Lamar" : "Apply"}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>

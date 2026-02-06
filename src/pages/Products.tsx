@@ -18,8 +18,8 @@ const Products = () => {
   }>;
   const meta = resolveMeta(getStaticPageMeta("products"));
   const title = isId
-    ? "Portofolio Produk Kemasan Industri MJUL"
-    : "MJUL Industrial Packaging Product Portfolio";
+    ? "Portofolio Produk Kemasan Industri PT Maju Jaya Utama Lestari"
+    : "PT Maju Jaya Utama Lestari Industrial Packaging Product Portfolio";
   const breadcrumbs = createBreadcrumbJsonLd([
     { name: isId ? "Beranda" : "Home", url: "/" },
     { name: isId ? "Produk" : "Products", url: "/products" },
@@ -56,8 +56,8 @@ const Products = () => {
           </p>
           <h1 className="heading-lg mt-3">
             {isId
-              ? "Portofolio Produk Kemasan Industri MJUL"
-              : "MJUL Industrial Packaging Product Portfolio"}
+              ? "Portofolio Produk Kemasan Industri PT Maju Jaya Utama Lestari"
+              : "PT Maju Jaya Utama Lestari Industrial Packaging Product Portfolio"}
           </h1>
           <p className="text-body text-muted-foreground mt-4 max-w-3xl">
             {isId

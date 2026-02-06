@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const { t, i18n } = useTranslation("footer");
+  const { t } = useTranslation("footer");
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -82,7 +82,7 @@ const Footer = () => {
                 </div>
                 <div className="space-y-1">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">
-                    Office & Factory
+                    {t("contact.officeFactoryLabel")}
                   </span>
                   <a
                     href={mapsUrl}
@@ -101,7 +101,7 @@ const Footer = () => {
                 </div>
                 <div className="space-y-1">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">
-                    Inquiries
+                    {t("contact.inquiriesLabel")}
                   </span>
                   <a
                     href={`tel:${siteMetadata.contactPhone.replace(/[^+\d]/g, "")}`}
@@ -118,7 +118,7 @@ const Footer = () => {
                 </div>
                 <div className="space-y-1">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">
-                    Email Support
+                    {t("contact.emailSupportLabel")}
                   </span>
                   <a
                     href={`mailto:${siteMetadata.contactEmail}`}
@@ -146,9 +146,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <p className="text-xs text-secondary-foreground/40 font-medium tracking-tight">
-                {i18n.language === "id"
-                  ? "Kualitas Konsisten untuk Kemitraan Jangka Panjang"
-                  : "Consistent Quality for Long-Term Partnerships"}
+                {t("meta.partnershipTagline")}
               </p>
             </div>
           </div>
@@ -156,7 +154,7 @@ const Footer = () => {
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-white/10 hidden sm:block" />
             <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-white/20">
-              BANTEN, INDONESIA
+              {t("meta.location").toUpperCase()}
             </p>
           </div>
         </div>

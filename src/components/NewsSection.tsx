@@ -30,8 +30,8 @@ const NewsSection = () => {
           </h2>
           <p className="text-body text-muted-foreground mt-3">
             {isId
-              ? "Ringkasan informasi perusahaan yang disusun dari profil resmi MJUL dan pembaruan internal."
-              : "Company highlights compiled from official MJUL profile materials and internal updates."}
+              ? "Ringkasan informasi perusahaan yang disusun dari profil resmi PT Maju Jaya Utama Lestari dan pembaruan internal."
+              : "Company highlights compiled from official PT Maju Jaya Utama Lestari profile materials and internal updates."}
           </p>
         </div>
 

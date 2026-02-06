@@ -86,7 +86,7 @@ const CareerIntern = () => {
                   <h3 className="heading-sm mt-3">{program.title}</h3>
                   <p className="text-body text-muted-foreground mt-3">{program.desc}</p>
                   <Button asChild className="mt-5 bg-primary hover:bg-primary/90">
-                    <a href={`mailto:${siteMetadata.contactEmail}?subject=${encodeURIComponent(`Internship - ${program.title}`)}`}>
+                    <a href={`mailto:${siteMetadata.contactEmail}?subject=${encodeURIComponent(`${isId ? "Magang" : "Internship"} - ${program.title}`)}`}>
                       {isId ? "Daftar" : "Apply"}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>

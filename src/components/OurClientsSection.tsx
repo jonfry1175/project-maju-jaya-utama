@@ -48,7 +48,7 @@ const OurClientsSection = () => {
                 </div>
                 <div className="pt-2 border-t border-primary/10">
                   <p className="text-body-small text-muted-foreground">
-                    Trusted partnership in logistics and transportation excellence
+                    {t("mainClients.cardCaption")}
                   </p>
                 </div>
               </div>
