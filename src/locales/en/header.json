@@ -4,8 +4,12 @@
     "home": "Home",
     "about": "About",
     "products": "Products",
+    "gallery": "Gallery",
     "capabilities": "Services",
     "sustainability": "News",
+    "career": "Career",
+    "careerEmployee": "Career Opportunities",
+    "careerIntern": "Internship Program",
     "contact": "Contact"
   },
   "cta": {

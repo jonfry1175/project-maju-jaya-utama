@@ -2,7 +2,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
@@ -11,6 +11,7 @@ type NavItem = {
   label: string;
   path: string;
   matcher?: (pathname: string) => boolean;
+  children?: Array<{ label: string; path: string }>;
 };
 
 const Header = () => {
@@ -41,8 +42,18 @@ const Header = () => {
         matcher: (pathname) => pathname.startsWith("/about-us"),
       },
       { label: t("nav.products"), path: "/products" },
+      { label: t("nav.gallery"), path: "/gallery" },
       { label: t("nav.capabilities"), path: "/services" },
       { label: t("nav.sustainability"), path: "/news" },
+      {
+        label: t("nav.career"),
+        path: "/career/employee",
+        matcher: (pathname) => pathname.startsWith("/career"),
+        children: [
+          { label: t("nav.careerEmployee"), path: "/career/employee" },
+          { label: t("nav.careerIntern"), path: "/career/intern" },
+        ],
+      },
       { label: t("nav.contact"), path: "/contact" },
     ],
     [t],
@@ -91,6 +102,43 @@ const Header = () => {
               <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none" />
               {navItems.map((item) => {
                 const active = isActive(item);
+                if (item.children?.length) {
+                  return (
+                    <div key={item.path} className="relative group/career">
+                      <Link
+                        to={item.path}
+                        className={cn(
+                          "px-4 py-2 text-xs sm:text-sm font-semibold relative inline-flex items-center gap-1 transition-all duration-300 rounded-full",
+                          active
+                            ? "text-primary bg-primary/10"
+                            : "text-foreground/70 hover:text-primary",
+                        )}
+                      >
+                        <span className="relative z-10">{item.label}</span>
+                        <ChevronDown className="w-3.5 h-3.5" />
+                        <span className="absolute inset-0 bg-primary/10 scale-0 group-hover/career:scale-100 transition-transform duration-300 rounded-full" />
+                      </Link>
+
+                      <div className="absolute left-1/2 top-[calc(100%+10px)] -translate-x-1/2 min-w-[200px] rounded-2xl border border-white/20 bg-card/95 backdrop-blur-xl p-2 shadow-2xl opacity-0 invisible translate-y-2 group-hover/career:opacity-100 group-hover/career:visible group-hover/career:translate-y-0 transition-all duration-200">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.path}
+                            to={child.path}
+                            className={cn(
+                              "block rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors",
+                              location.pathname === child.path
+                                ? "bg-primary text-white"
+                                : "text-foreground/80 hover:bg-primary/10 hover:text-primary",
+                            )}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={item.path}
@@ -159,13 +207,34 @@ const Header = () => {
                   initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
+                  className="w-full max-w-xs"
                 >
-                  <Link
-                    to={item.path}
-                    className="heading-1 hover:text-primary transition-all duration-300 transform hover:scale-110"
-                  >
-                    {item.label}
-                  </Link>
+                  <div className="space-y-3">
+                    <Link
+                      to={item.path}
+                      className="heading-1 hover:text-primary transition-all duration-300 transform hover:scale-110 block"
+                    >
+                      {item.label}
+                    </Link>
+                    {item.children?.length ? (
+                      <div className="mx-auto w-full rounded-2xl border border-primary/20 bg-card/70 p-2 backdrop-blur-md">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.path}
+                            to={child.path}
+                            className={cn(
+                              "block rounded-xl px-3 py-2 text-base font-semibold transition-colors",
+                              location.pathname === child.path
+                                ? "bg-primary text-white"
+                                : "text-foreground/80 hover:bg-primary/10 hover:text-primary",
+                            )}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
                 </motion.div>
               ))}
 
