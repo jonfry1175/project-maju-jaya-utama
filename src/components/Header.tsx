@@ -98,8 +98,8 @@ const Header = () => {
 
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-2 bg-white/5 backdrop-blur-xl px-2 py-2 rounded-full border border-white/20 shadow-xl overflow-hidden relative group">
-              <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none" />
+            <nav className="hidden lg:flex items-center gap-2 bg-white/5 backdrop-blur-xl px-2 py-2 rounded-full border border-white/20 shadow-xl relative group">
+              <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none rounded-full" />
               {navItems.map((item) => {
                 const active = isActive(item);
                 if (item.children?.length) {
