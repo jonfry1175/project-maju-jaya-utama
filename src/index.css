@@ -42,6 +42,35 @@
     --input: 36 28% 90%;
     --ring: 10 100% 55%;
 
+    /* Additional non-color tokens for KH parity while preserving MJU palette */
+    --background-secondary: 36 34% 92%;
+    --background-muted: 36 30% 90%;
+    --card-border: 30 20% 70%;
+    --primary-light: 10 82% 48%;
+    --primary-glow: 10 100% 60%;
+    --accent-light: 38 92% 58%;
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(var(--accent)) 0%,
+      hsl(var(--success)) 100%
+    );
+    --gradient-overlay: linear-gradient(
+      135deg,
+      hsl(var(--primary) / 0.92) 0%,
+      hsl(var(--secondary) / 0.82) 100%
+    );
+    --shadow-soft: 0 2px 8px hsl(var(--primary) / 0.08);
+    --shadow-medium: 0 8px 25px hsl(var(--primary) / 0.15);
+    --shadow-strong: 0 25px 50px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
@@ -145,6 +174,23 @@
     @apply text-sm sm:text-base lg:text-lg font-semibold leading-tight tracking-normal;
   }
 
+  /* KH-compatible typography aliases */
+  .heading-xl {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+  }
+
+  .heading-lg {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .heading-md {
+    @apply font-display text-2xl md:text-3xl font-semibold leading-tight;
+  }
+
+  .heading-sm {
+    @apply font-display text-xl md:text-2xl font-semibold;
+  }
+
   /* Body Text Sizes - More Professional */
   .text-body-large {
     @apply text-base sm:text-lg font-normal leading-relaxed;
@@ -158,6 +204,14 @@
     @apply text-xs sm:text-sm font-normal leading-relaxed;
   }
 
+  .text-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .text-small {
+    @apply text-sm leading-normal;
+  }
+
   /* Section Spacing */
   .section-padding {
     @apply py-8 sm:py-12 lg:py-16 xl:py-20;
@@ -169,6 +223,10 @@
 
   .container-padding {
     @apply px-4 sm:px-6;
+  }
+
+  .layout-container {
+    @apply mx-auto w-full max-w-[1400px] px-4 sm:px-6 md:px-8 lg:px-10;
   }
 
   /* Card Padding Variants */
@@ -225,6 +283,20 @@
 
   .border-primary-medium {
     @apply border-primary/30;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/90 border border-white/20;
+  }
+
+  .card-hover {
+    transition: var(--transition-smooth);
+    @apply shadow-soft hover:shadow-medium hover:-translate-y-1;
+  }
+
+  .button-glow {
+    transition: var(--transition-smooth);
+    @apply hover:shadow-glow;
   }
 
   .gradient-brand {
@@ -345,11 +417,13 @@
 @layer utilities {
   /* Standard animation classes for consistent usage */
   .animate-fade-up {
-    animation: fade-up 0.8s ease-out forwards;
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .animate-fade-up-delay {
-    animation: fade-up 0.8s ease-out 0.2s forwards;
+    animation: fadeUp 0.6s ease-out 0.2s forwards;
     opacity: 0;
   }
 
@@ -358,11 +432,11 @@
   }
 
   .animate-slide-in-right {
-    animation: slide-in-right 0.8s ease-out forwards;
+    animation: slideInRight 0.6s ease-out forwards;
   }
 
   .animate-scale-in {
-    animation: scale-in 0.6s ease-out forwards;
+    animation: scaleIn 0.5s ease-out forwards;
   }
 
   .animate-counter {
@@ -387,8 +461,48 @@
   }
 
   .animate-hero-stats {
-    animation: fade-up 0.8s ease-out 0.3s forwards;
+    animation: fadeUp 0.6s ease-out 0.3s forwards;
     opacity: 0;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 
   @keyframes fade-up {
@@ -585,4 +699,3 @@
     }
   }
 }
-
