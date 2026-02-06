@@ -5,67 +5,79 @@ import { useTranslation } from "react-i18next";
 const clients = [
   {
     name: "Family Mart",
-    logo: "https://placehold.co/200x80/white/475569?text=Family+Mart",
+    logo: "/images/clients/FAMILYMART.png",
   },
   {
     name: "PT Indorama Synthetics Tbk",
-    logo: "https://placehold.co/200x80/white/475569?text=Indorama",
+    logo: "/images/clients/INDORAMA.png",
   },
   {
     name: "PT Lotte Mart Indonesia",
-    logo: "https://placehold.co/200x80/white/475569?text=Lotte+Mart",
+    logo: "/images/clients/LOTTE.png",
   },
   {
     name: "PT Matahari Department Store Tbk",
-    logo: "https://placehold.co/200x80/white/475569?text=Matahari",
+    logo: "/images/clients/MATAHARI.png",
   },
   {
     name: "PT Ramayana Lestari Sentosa Tbk",
-    logo: "https://placehold.co/200x80/white/475569?text=Ramayana",
+    logo: "/images/clients/RAMAYANA.png",
   },
   {
     name: "PT Kawan Lama Sejahtera",
-    logo: "https://placehold.co/200x80/white/475569?text=Kawan+Lama",
+    logo: "/images/clients/KAWAN-LAMA.png",
   },
   {
     name: "Miniso",
-    logo: "https://placehold.co/200x80/white/475569?text=Miniso",
+    logo: "/images/clients/MINISO.png",
   },
   {
     name: "Yoshinoya Indonesia",
-    logo: "https://placehold.co/200x80/white/475569?text=Yoshinoya",
+    logo: "/images/clients/YOSHINOYA.png",
   },
   {
     name: "Holland Bakery",
-    logo: "https://placehold.co/200x80/white/475569?text=Holland+Bakery",
+    logo: "/images/clients/HOLAND-BAKERY.png",
   },
   {
     name: "Indomaret",
-    logo: "https://placehold.co/200x80/white/475569?text=Indomaret",
+    logo: "/images/clients/INDOMART.png",
   },
   {
     name: "Wings Group Indonesia",
-    logo: "https://placehold.co/200x80/white/475569?text=Wings+Group",
+    logo: "/images/clients/WINGS.png",
   },
   {
     name: "Lion Superindo",
-    logo: "https://placehold.co/200x80/white/475569?text=Superindo",
+    logo: "/images/clients/SUPERINDO.png",
   },
   {
     name: "Sriwijaya Air",
-    logo: "https://placehold.co/200x80/white/475569?text=Sriwijaya+Air",
+    logo: "/images/clients/SRIWIJAYA.png",
   },
   {
     name: "Depo Bangunan",
-    logo: "https://placehold.co/200x80/white/475569?text=Depo+Bangunan",
+    logo: "/images/clients/DEPO.png",
   },
   {
     name: "Alfamart",
-    logo: "https://placehold.co/200x80/white/475569?text=Alfamart",
+    logo: "/images/clients/ALFA.png",
   },
   {
     name: "Hypermart",
-    logo: "https://placehold.co/200x80/white/475569?text=Hypermart",
+    logo: "/images/clients/HYPERMART.png",
+  },
+  {
+    name: "Belfoods",
+    logo: "/images/clients/BELFOODS.png",
+  },
+  {
+    name: "Forisa Nusapersada",
+    logo: "/images/clients/FORISA.png",
+  },
+  {
+    name: "Grand Lucky",
+    logo: "/images/clients/GRAND-LUCKY.png",
   },
 ];
 
