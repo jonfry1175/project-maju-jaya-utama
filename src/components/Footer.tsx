@@ -42,7 +42,7 @@ const Footer = () => {
                   <img
                     src="/logo.png"
                     alt="Maju Jaya Utama Lestari"
-                    className="h-14 w-auto"
+                    className="h-32 w-auto"
                   />
                 </div>
 

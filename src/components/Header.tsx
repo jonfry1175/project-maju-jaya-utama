@@ -34,6 +34,7 @@ const Header = () => {
 
   const navItems = useMemo<NavItem[]>(
     () => [
+      { label: t("nav.home"), path: "/" },
       {
         label: t("nav.about"),
         path: "/about-us/our-company",
@@ -79,7 +80,7 @@ const Header = () => {
                   alt="Maju Jaya Utama Lestari"
                   className={cn(
                     "relative z-10 w-auto transition-all duration-500",
-                    isScrolled ? "h-10 md:h-12" : "h-12 md:h-14",
+                    isScrolled ? "h-16 md:h-20" : "h-20 md:h-32",
                   )}
                 />
               </div>

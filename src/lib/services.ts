@@ -22,7 +22,7 @@ export const services: Service[] = [
       "Clean-cut edges for smooth runnability",
       "Wide range of core sizes available",
     ],
-    image: "/assets/images/products/paper-rolls.jpg",
+    image: "/assets/images/services/paper-converting.png",
   },
   {
     id: "industrial-paper",
@@ -37,7 +37,7 @@ export const services: Service[] = [
       "Various basis weights (GSM) available",
       "Consistent quality and finish",
     ],
-    image: "/assets/images/products/packaging-materials.jpg",
+    image: "/assets/images/services/industrial-packaging.png",
   },
   {
     id: "custom-formats",
@@ -52,7 +52,7 @@ export const services: Service[] = [
       "Optimized yield to reduce scrap",
       "Flexible minimum order quantities",
     ],
-    image: "/assets/images/products/paper-sheets.jpg",
+    image: "/assets/images/services/paper-slitting.png",
   },
   {
     id: "contract-manufacturing",
@@ -67,7 +67,7 @@ export const services: Service[] = [
       "Strict quality control standards",
       "Confidential partnership model",
     ],
-    image: "/assets/images/factory-interior.jpg",
+    image: "/assets/images/services/quality-assurance.png",
   },
 ];
 
