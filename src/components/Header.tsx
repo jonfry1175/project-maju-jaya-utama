@@ -40,6 +40,15 @@ const Header = () => {
         label: t("nav.about"),
         path: "/about-us/our-company",
         matcher: (pathname) => pathname.startsWith("/about-us"),
+        children: [
+          { label: t("nav.aboutCompany"), path: "/about-us/our-company" },
+          { label: t("nav.aboutTeam"), path: "/about-us/our-team" },
+          {
+            label: t("nav.aboutCertifications"),
+            path: "/about-us/certifications",
+          },
+          { label: t("nav.aboutAwards"), path: "/about-us/company-awards" },
+        ],
       },
       { label: t("nav.products"), path: "/products" },
       { label: t("nav.gallery"), path: "/gallery" },

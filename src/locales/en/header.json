@@ -2,7 +2,11 @@
   "companyName": "PT Maju Jaya Utama Lestari",
   "nav": {
     "home": "Home",
-    "about": "About",
+    "about": "About Us",
+    "aboutCompany": "Our Company",
+    "aboutTeam": "Our Team",
+    "aboutCertifications": "Certifications",
+    "aboutAwards": "Company Awards",
     "products": "Products",
     "gallery": "Gallery",
     "capabilities": "Services",
