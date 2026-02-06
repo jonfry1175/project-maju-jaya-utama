@@ -38,11 +38,11 @@ const Footer = () => {
               className="space-y-6"
             >
               <div className="flex items-center gap-5">
-                <div className="relative p-2 bg-white/5 rounded-2xl border border-white/10 shrink-0">
+                <div className="relative shrink-0">
                   <img
                     src="/logo.png"
                     alt="Maju Jaya Utama Lestari"
-                    className="h-32 w-auto"
+                    className="h-16 w-auto"
                   />
                 </div>
 
