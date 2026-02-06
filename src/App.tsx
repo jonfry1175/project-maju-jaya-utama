@@ -18,6 +18,8 @@ import {
 const queryClient = new QueryClient();
 
 const Index = lazy(() => import("./pages/Index"));
+const Services = lazy(() => import("./pages/Services"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const Page = ({ children }: { children: ReactNode }) => (
@@ -146,7 +148,7 @@ const AnimatedRoutes = () => {
             path="/services"
             element={
               <Page>
-                <RoutePlaceholder title="Services" />
+                <Services />
               </Page>
             }
           />
@@ -154,7 +156,7 @@ const AnimatedRoutes = () => {
             path="/services/:slug"
             element={
               <Page>
-                <RoutePlaceholder title="Service Detail" />
+                <ServiceDetail />
               </Page>
             }
           />
