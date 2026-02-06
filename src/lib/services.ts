@@ -10,94 +10,64 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    id: "plastic-packaging",
-    slug: "plastic-packaging-manufacturing",
-    title: "Plastic Packaging Manufacturing",
+    id: "paper-converting",
+    slug: "paper-converting-slitting",
+    title: "Paper Converting & Slitting",
     shortDescription:
-      "Production of PP, HDPE, and LDPE packaging products for industrial and retail use.",
+      "Precision resizing of parent rolls into custom widths and diameters for your specific applications.",
     description:
-      "Since 1993, PT Maju Jaya Utama Lestari has produced packaging materials based on PP, HDPE, and LDPE for clients that require consistent quality and reliable supply.",
+      "We offer high-precision slitting and rewinding services to convert master rolls into smaller sizes that fit your exact machinery requirements. Our advanced equipment ensures clean cuts and perfectly wound rolls.",
     features: [
-      "PP, HDPE, and LDPE material options",
-      "Custom dimensions and specifications",
-      "Quality-focused production process",
+      "Custom width and diameter capabilities",
+      "Clean-cut edges for smooth runnability",
+      "Wide range of core sizes available",
     ],
-    image: "/placeholder.svg",
+    image: "/assets/images/products/paper-rolls.jpg",
   },
   {
-    id: "go-green-plastic",
-    slug: "go-green-plastic",
-    title: "Go Green Plastic",
+    id: "industrial-paper",
+    slug: "industrial-packaging-paper",
+    title: "Industrial Packaging Paper",
     shortDescription:
-      "Environment-conscious plastic solutions designed to degrade within approximately two years.",
+      "High-durability grades designed to protect your goods during storage and transit.",
     description:
-      "MJUL provides Go Green plastic products as part of its environmental commitment. The material is designed to degrade in around two years under suitable conditions.",
+      "Our industrial packaging papers are engineered for strength and protection. Ideal for wrapping, interleaving, and void filling, ensuring your products arrive safely.",
     features: [
-      "Eco-label certified",
-      "Designed to degrade in around 2 years",
-      "Suitable for responsible packaging programs",
+      "High tensile and tear strength",
+      "Various basis weights (GSM) available",
+      "Consistent quality and finish",
     ],
-    image: "/placeholder.svg",
+    image: "/assets/images/products/packaging-materials.jpg",
   },
   {
-    id: "biodegradable-plastic",
-    slug: "biodegradable-plastic-tapioca",
-    title: "Biodegradable Plastic (Tapioca-Based)",
+    id: "custom-formats",
+    slug: "custom-formats",
+    title: "Custom Formats",
     shortDescription:
-      "Biodegradable plastic made with tapioca/cassava material and designed to break down in about six months.",
+      "Flexible roll and sheet options to minimize waste and maximize efficiency in your facility.",
     description:
-      "This product line uses tapioca/cassava as a primary biodegradable component and is intended to break down faster than conventional plastic alternatives.",
+      "We understand that standard sizes don't fit every application. Our custom sheeting and formatting services provide you with the exact paper dimensions you need, reducing waste and optimizing your production process.",
     features: [
-      "Tapioca/cassava based material",
-      "Designed to degrade in around 6 months",
-      "Eco-label and SNI certified",
+      "Precise sheeting to custom lengths",
+      "Optimized yield to reduce scrap",
+      "Flexible minimum order quantities",
     ],
-    image: "/placeholder.svg",
+    image: "/assets/images/products/paper-sheets.jpg",
   },
   {
-    id: "paper-bag",
-    slug: "paper-bag-production",
-    title: "Paper Bag Production",
+    id: "contract-manufacturing",
+    slug: "contract-manufacturing",
+    title: "Contract Manufacturing",
     shortDescription:
-      "Paper bag production for retail, food service, and general commercial packaging needs.",
+      "Reliable toll manufacturing services to expand your production capacity without capital investment.",
     description:
-      "In addition to plastic products, MJUL manufactures paper bags to support clients that need practical and sustainable packaging formats.",
+      "Leverage our manufacturing expertise and facilities to produce your paper products. We act as your production partner, ensuring high quality and timely delivery under your brand.",
     features: [
-      "Retail and F&B suitable formats",
-      "Custom print and size support",
-      "Batch production for recurring needs",
+      "Scalable production capacity",
+      "Strict quality control standards",
+      "Confidential partnership model",
     ],
-    image: "/placeholder.svg",
-  },
-  {
-    id: "spunbond",
-    slug: "spunbond-non-woven-bag",
-    title: "Spunbond / Non-Woven Bag",
-    shortDescription:
-      "Reusable spunbond and non-woven bag products for brand and operational use.",
-    description:
-      "MJUL offers spunbond/non-woven bags as reusable alternatives for customer programs, merchandising, and distribution operations.",
-    features: [
-      "Reusable non-woven materials",
-      "Custom logo and design options",
-      "Durable for repeated use",
-    ],
-    image: "/placeholder.svg",
-  },
-  {
-    id: "integrated-packaging",
-    slug: "integrated-packaging-solutions",
-    title: "Integrated Packaging Solutions",
-    shortDescription:
-      "Consultative packaging support based on product needs, sustainability targets, and budget.",
-    description:
-      "MJUL combines product knowledge, production capability, and service responsiveness to deliver packaging solutions aligned to each client workflow.",
-    features: [
-      "Packaging consultation and recommendations",
-      "Competitive pricing and quality focus",
-      "Service model oriented to long-term partnership",
-    ],
-    image: "/placeholder.svg",
+    image: "/assets/images/factory-interior.jpg",
   },
 ];
 

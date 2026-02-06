@@ -38,5 +38,15 @@
     "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800",
     "localPath": "/assets/images/sustainability.jpg",
     "description": "Eco-friendly sustainability"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1920",
+    "localPath": "/assets/images/industrial-bg.jpg",
+    "description": "Industrial factory background"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=800",
+    "localPath": "/assets/images/products/paper-sheets.jpg",
+    "description": "Stacked paper sheets"
   }
 ]
