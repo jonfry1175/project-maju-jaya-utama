@@ -83,14 +83,7 @@ const Header = () => {
                   )}
                 />
               </div>
-              <span
-                className={cn(
-                  "font-display font-bold leading-none text-foreground transition-all duration-500 whitespace-nowrap",
-                  isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl",
-                )}
-              >
-                Maju Jaya <span className="text-primary">Utama Lestari</span>
-              </span>
+
             </Link>
 
             <nav className="hidden lg:flex items-center gap-2 bg-white/5 backdrop-blur-xl px-2 py-2 rounded-full border border-white/20 shadow-xl overflow-hidden relative group">

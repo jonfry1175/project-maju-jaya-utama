@@ -45,16 +45,7 @@ const Footer = () => {
                     className="h-14 w-auto"
                   />
                 </div>
-                <div className="space-y-1">
-                  <h3 className="text-2xl font-display font-bold text-white leading-tight lg:whitespace-nowrap">
-                    Maju Jaya <span className="text-primary">Utama Lestari</span>
-                  </h3>
-                  <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-primary/80 font-semibold">
-                    {i18n.language === "id"
-                      ? "Produsen Solusi Kemasan"
-                      : "Packaging Solutions Manufacturer"}
-                  </p>
-                </div>
+
               </div>
               <p className="text-secondary-foreground/60 leading-relaxed text-lg font-light">
                 {t("description")}
