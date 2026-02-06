@@ -3,26 +3,70 @@ import { Card } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
 
 const clients = [
-  "Family Mart",
-  "PT Indorama Synthetics Tbk",
-  "PT Lotte Mart Indonesia",
-  "PT Matahari Department Store Tbk",
-  "PT Ramayana Lestari Sentosa Tbk",
-  "PT Diamond Cold Storage",
-  "PT Forisa Nusa Persada",
-  "PT Kawan Lama Sejahtera",
-  "Miniso",
-  "Yoshinoya Indonesia",
-  "Holland Bakery",
-  "Indomaret",
-  "PT Belfood",
-  "Wings Group Indonesia",
-  "Lion Superindo",
-  "Grand Lucky Superstore",
-  "Sriwijaya Air",
-  "Depo Bangunan",
-  "Alfamart",
-  "Hypermart",
+  {
+    name: "Family Mart",
+    logo: "https://placehold.co/200x80/white/475569?text=Family+Mart",
+  },
+  {
+    name: "PT Indorama Synthetics Tbk",
+    logo: "https://placehold.co/200x80/white/475569?text=Indorama",
+  },
+  {
+    name: "PT Lotte Mart Indonesia",
+    logo: "https://placehold.co/200x80/white/475569?text=Lotte+Mart",
+  },
+  {
+    name: "PT Matahari Department Store Tbk",
+    logo: "https://placehold.co/200x80/white/475569?text=Matahari",
+  },
+  {
+    name: "PT Ramayana Lestari Sentosa Tbk",
+    logo: "https://placehold.co/200x80/white/475569?text=Ramayana",
+  },
+  {
+    name: "PT Kawan Lama Sejahtera",
+    logo: "https://placehold.co/200x80/white/475569?text=Kawan+Lama",
+  },
+  {
+    name: "Miniso",
+    logo: "https://placehold.co/200x80/white/475569?text=Miniso",
+  },
+  {
+    name: "Yoshinoya Indonesia",
+    logo: "https://placehold.co/200x80/white/475569?text=Yoshinoya",
+  },
+  {
+    name: "Holland Bakery",
+    logo: "https://placehold.co/200x80/white/475569?text=Holland+Bakery",
+  },
+  {
+    name: "Indomaret",
+    logo: "https://placehold.co/200x80/white/475569?text=Indomaret",
+  },
+  {
+    name: "Wings Group Indonesia",
+    logo: "https://placehold.co/200x80/white/475569?text=Wings+Group",
+  },
+  {
+    name: "Lion Superindo",
+    logo: "https://placehold.co/200x80/white/475569?text=Superindo",
+  },
+  {
+    name: "Sriwijaya Air",
+    logo: "https://placehold.co/200x80/white/475569?text=Sriwijaya+Air",
+  },
+  {
+    name: "Depo Bangunan",
+    logo: "https://placehold.co/200x80/white/475569?text=Depo+Bangunan",
+  },
+  {
+    name: "Alfamart",
+    logo: "https://placehold.co/200x80/white/475569?text=Alfamart",
+  },
+  {
+    name: "Hypermart",
+    logo: "https://placehold.co/200x80/white/475569?text=Hypermart",
+  },
 ];
 
 const ClientsSection = () => {
@@ -49,13 +93,26 @@ const ClientsSection = () => {
         </div>
 
         <div className="overflow-hidden">
-          <div className="flex gap-4 animate-scroll-left py-2">
+          <div className="flex gap-4 animate-scroll-left py-4">
             {[...clients, ...clients].map((client, index) => (
               <Card
-                key={`${client}-${index}`}
-                className="shrink-0 min-w-[220px] px-5 py-4 border-card-border bg-card/80"
+                key={`${client.name}-${index}`}
+                className="shrink-0 min-w-[200px] h-24 flex items-center justify-center px-6 py-4 border-card-border bg-white/50 backdrop-blur-sm transition-all hover:bg-white hover:shadow-soft group"
               >
-                <p className="text-sm font-semibold text-foreground text-center">{client}</p>
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="max-w-full max-h-full object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    target.style.display = "none";
+                    const next = target.nextElementSibling;
+                    if (next) next.classList.remove("hidden");
+                  }}
+                />
+                <p className="hidden text-xs font-semibold text-foreground text-center line-clamp-2">
+                  {client.name}
+                </p>
               </Card>
             ))}
           </div>
