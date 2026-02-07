@@ -100,9 +100,13 @@ const TeamMemberDetail = () => {
     <>
       <SEO title={`${member.name} - ${member.role}`} description={member.bio} />
 
-      <main className="bg-background-secondary">
+      <main className="relative overflow-hidden bg-background-secondary">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
+          <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
+        </div>
         <MotionSection className="pt-28 pb-20">
-          <div className="container mx-auto max-w-6xl container-padding">
+          <div className="container relative z-10 mx-auto max-w-6xl container-padding">
             <Button asChild variant="ghost" className="mb-6 h-auto p-0 text-primary hover:text-primary/80">
               <Link to="/about-us/our-team">
                 <ArrowLeft className="mr-2 h-4 w-4" />
@@ -124,6 +128,9 @@ const TeamMemberDetail = () => {
                   <div className="space-y-5 p-6">
                     <div>
                       <h1 className="heading-md text-white">{member.name}</h1>
+                      {member.tenure ? (
+                        <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-accent/90">{member.tenure}</p>
+                      ) : null}
                       <p className="mt-3 text-sm text-white/80">{member.focus}</p>
                     </div>
 

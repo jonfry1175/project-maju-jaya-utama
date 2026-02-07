@@ -54,6 +54,8 @@ const OurTeam = () => {
               ? "Tim PT Maju Jaya Utama Lestari menggabungkan kepemimpinan lapangan, disiplin produksi, dan komunikasi pelanggan untuk menjaga kualitas di setiap pengiriman."
               : "The PT Maju Jaya Utama Lestari team combines field leadership, production discipline, and customer communication to protect quality in every delivery."
           }
+          backgroundImage="/assets/images/team-workers.jpg"
+          watermark={isId ? "Tim & Budaya Kerja" : "Team & Work Culture"}
           stats={[
             {
               label: isId ? "Anggota Tim" : "Team Members",

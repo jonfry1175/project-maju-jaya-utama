@@ -54,6 +54,8 @@ const OurCompany = () => {
               ? "PT Maju Jaya Utama Lestari menghadirkan solusi kemasan industri dengan proses yang terukur, respons yang cepat, dan komitmen jangka panjang untuk tiap pelanggan."
               : "PT Maju Jaya Utama Lestari delivers industrial packaging solutions with measured process execution, fast response, and long-term partnership commitment."
           }
+          backgroundImage="/assets/images/hero-manufacturing-v2.png"
+          watermark="PT MJUL"
           stats={[
             {
               label: isId ? "Tahun Berdiri" : "Founded",

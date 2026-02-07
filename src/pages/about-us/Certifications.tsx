@@ -99,6 +99,8 @@ const Certifications = () => {
               ? "Kami menjaga kualitas melalui kombinasi standar formal, audit internal, dan kontrol proses yang terukur pada setiap tahapan produksi."
               : "We protect quality through formal standards, internal audits, and measured process controls at every stage of production."
           }
+          backgroundImage="/assets/images/quality-control.jpg"
+          watermark={isId ? "Quality Assurance" : "Quality Assurance"}
           stats={[
             {
               label: isId ? "Item Sertifikasi" : "Certification Items",

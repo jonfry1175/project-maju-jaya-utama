@@ -16,6 +16,8 @@ type AboutPageHeroProps = {
   title: string;
   description: string;
   stats?: AboutPageHeroStat[];
+  backgroundImage?: string;
+  watermark?: string;
 };
 
 type AboutLinkItem = {
@@ -24,7 +26,14 @@ type AboutLinkItem = {
   matcher: (pathname: string) => boolean;
 };
 
-const AboutPageHero = ({ eyebrow, title, description, stats = [] }: AboutPageHeroProps) => {
+const AboutPageHero = ({
+  eyebrow,
+  title,
+  description,
+  stats = [],
+  backgroundImage,
+  watermark,
+}: AboutPageHeroProps) => {
   const location = useLocation();
   const { t } = useTranslation("header");
 
@@ -54,10 +63,26 @@ const AboutPageHero = ({ eyebrow, title, description, stats = [] }: AboutPageHer
   return (
     <section className="relative overflow-hidden border-b border-border/40 bg-secondary/95 pt-32 pb-12 text-secondary-foreground">
       <div className="pointer-events-none absolute inset-0">
+        {backgroundImage ? (
+          <>
+            <img
+              src={backgroundImage}
+              alt=""
+              className="h-full w-full object-cover opacity-20"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/90 to-secondary/96" />
+          </>
+        ) : null}
         <div className="absolute -left-20 -top-24 h-80 w-80 rounded-full bg-primary/25 blur-3xl" />
         <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(255,210,120,0.16),transparent_50%)]" />
         <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] [background-size:36px_36px]" />
+        {watermark ? (
+          <p className="absolute right-4 bottom-3 text-[9px] font-semibold uppercase tracking-[0.38em] text-white/45 sm:right-8 sm:bottom-5">
+            {watermark}
+          </p>
+        ) : null}
       </div>
 
       <div className="container mx-auto max-w-6xl container-padding relative z-10">

@@ -99,6 +99,8 @@ const CompanyAwards = () => {
               ? "Perjalanan kami dibangun melalui konsistensi kualitas, penguatan proses operasional, dan kemitraan jangka panjang dengan pelanggan nasional."
               : "Our journey is built through quality consistency, operational process strengthening, and long-term partnerships with national customers."
           }
+          backgroundImage="/assets/images/factory-interior.jpg"
+          watermark={isId ? "Milestone Story" : "Milestone Story"}
           stats={[
             {
               label: isId ? "Tonggak Utama" : "Milestones",
