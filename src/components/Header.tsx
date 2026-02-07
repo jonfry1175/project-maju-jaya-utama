@@ -82,89 +82,124 @@ const Header = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out font-sans",
           isScrolled
-            ? "bg-background/80 backdrop-blur-xl border-b border-primary/10 py-3 shadow-2xl"
-            : "bg-transparent py-6 lg:py-8",
+            ? "bg-background/82 backdrop-blur-xl border-b border-border/60 py-3 shadow-2xl"
+            : "bg-transparent py-5 lg:py-6",
         )}
       >
-        {isScrolled && (
-          <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
-        )}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-noise opacity-[0.025]" />
+          {/* A subtle top scrim for hero readability without turning the header opaque */}
+          {!isScrolled ? (
+            <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/55 to-transparent" />
+          ) : null}
+        </div>
 
         <div className="container mx-auto container-padding relative z-10 max-w-7xl">
           <div className="flex items-center justify-between gap-4">
             <Link to="/" className="group flex items-center gap-3 select-none">
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div
+                className={cn(
+                  "relative rounded-2xl border backdrop-blur-xl px-3 py-2 shadow-[0_20px_60px_-38px_hsl(var(--foreground)_/_0.45)] transition-colors duration-500",
+                  isScrolled
+                    ? "bg-card/70 border-border/70"
+                    : "bg-background/45 border-white/18",
+                )}
+              >
+                <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none rounded-2xl" />
+                <div className="absolute -inset-8 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <img
                   src="/logo.png"
-                  alt="Maju Jaya Utama Lestari"
+                  alt={t("companyName")}
                   className={cn(
                     "relative z-10 w-auto transition-all duration-500",
-                    isScrolled ? "h-12 md:h-14" : "h-14 md:h-20",
+                    isScrolled ? "h-9 md:h-10" : "h-10 md:h-12",
                   )}
                 />
               </div>
-
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-2 bg-white/5 backdrop-blur-xl px-2 py-2 rounded-full border border-white/20 shadow-xl relative group">
-              <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none rounded-full" />
-              {navItems.map((item) => {
-                const active = isActive(item);
-                if (item.children?.length) {
-                  return (
-                    <div key={item.path} className="relative group/career">
-                      <Link
-                        to={item.path}
-                        className={cn(
-                          "px-4 py-2 text-xs sm:text-sm font-semibold relative inline-flex items-center gap-1 transition-all duration-300 rounded-full",
-                          active
-                            ? "text-primary bg-primary/10"
-                            : "text-foreground/70 hover:text-primary",
-                        )}
-                      >
-                        <span className="relative z-10">{item.label}</span>
-                        <ChevronDown className="w-3.5 h-3.5" />
-                        <span className="absolute inset-0 bg-primary/10 scale-0 group-hover/career:scale-100 transition-transform duration-300 rounded-full" />
-                      </Link>
-
-                      <div className="absolute left-1/2 top-[calc(100%+10px)] -translate-x-1/2 min-w-[200px] rounded-2xl border border-white/20 bg-card/95 backdrop-blur-xl p-2 shadow-2xl opacity-0 invisible translate-y-2 group-hover/career:opacity-100 group-hover/career:visible group-hover/career:translate-y-0 transition-all duration-200">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.path}
-                            to={child.path}
+            <div className="hidden lg:flex flex-1 justify-center">
+              <nav
+                className={cn(
+                  "flex items-center gap-1 rounded-full border backdrop-blur-xl px-2 py-2 shadow-[0_22px_70px_-42px_hsl(var(--foreground)_/_0.55)] relative",
+                  isScrolled
+                    ? "bg-card/65 border-border/70"
+                    : "bg-background/38 border-white/18",
+                )}
+                aria-label="Primary"
+              >
+                <div className="absolute inset-0 bg-noise opacity-[0.045] pointer-events-none rounded-full" />
+                <div className="absolute inset-0 rounded-full pointer-events-none card-inset opacity-70" />
+                {navItems.map((item) => {
+                  const active = isActive(item);
+                  if (item.children?.length) {
+                    return (
+                      <div key={item.path} className="relative group/career">
+                        <Link
+                          to={item.path}
+                          className={cn(
+                            "relative inline-flex items-center gap-1 rounded-full px-4 py-2.5 text-[13px] font-medium tracking-[0.01em] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                            active
+                              ? "text-foreground bg-foreground/5 font-semibold"
+                              : "text-foreground/70 hover:text-foreground hover:bg-foreground/5",
+                          )}
+                        >
+                          <span className="relative z-10">{item.label}</span>
+                          <ChevronDown className="w-3.5 h-3.5 opacity-70" />
+                          <span
                             className={cn(
-                              "block rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors",
-                              location.pathname === child.path
-                                ? "bg-primary text-white"
-                                : "text-foreground/80 hover:bg-primary/10 hover:text-primary",
+                              "absolute inset-x-4 bottom-1 h-px bg-primary/0 transition-colors duration-300",
+                              active
+                                ? "bg-primary/70"
+                                : "group-hover/career:bg-primary/35",
                             )}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                }
+                          />
+                        </Link>
 
-                return (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    className={cn(
-                      "px-4 py-2 text-xs sm:text-sm font-semibold relative group/item transition-all duration-300 rounded-full",
-                      active
-                        ? "text-primary bg-primary/10"
-                        : "text-foreground/70 hover:text-primary",
-                    )}
-                  >
-                    <span className="relative z-10">{item.label}</span>
-                    <span className="absolute inset-0 bg-primary/10 scale-0 group-hover/item:scale-100 transition-transform duration-300 rounded-full" />
-                  </Link>
-                );
-              })}
-            </nav>
+                        <div className="absolute left-1/2 top-[calc(100%+10px)] -translate-x-1/2 min-w-[220px] rounded-2xl border border-border/70 bg-background/85 backdrop-blur-xl p-2 shadow-2xl opacity-0 invisible translate-y-2 group-hover/career:opacity-100 group-hover/career:visible group-hover/career:translate-y-0 group-focus-within/career:opacity-100 group-focus-within/career:visible group-focus-within/career:translate-y-0 transition-all duration-200">
+                          <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none rounded-2xl" />
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.path}
+                              to={child.path}
+                              className={cn(
+                                "block rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35",
+                                location.pathname === child.path
+                                  ? "bg-primary text-primary-foreground"
+                                  : "text-foreground/80 hover:bg-foreground/5 hover:text-foreground",
+                              )}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className={cn(
+                        "relative rounded-full px-4 py-2.5 text-[13px] font-medium tracking-[0.01em] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                        active
+                          ? "text-foreground bg-foreground/5 font-semibold"
+                          : "text-foreground/70 hover:text-foreground hover:bg-foreground/5",
+                      )}
+                    >
+                      <span className="relative z-10">{item.label}</span>
+                      <span
+                        className={cn(
+                          "absolute inset-x-4 bottom-1 h-px bg-primary/0 transition-colors duration-300",
+                          active ? "bg-primary/70" : "group-hover:bg-primary/35",
+                        )}
+                      />
+                    </Link>
+                  );
+                })}
+              </nav>
+            </div>
 
             <div className="flex items-center gap-4">
               <div className="hidden sm:block">
@@ -173,17 +208,23 @@ const Header = () => {
 
               <Button
                 asChild
-                size={isScrolled ? "default" : "lg"}
                 className={cn(
-                  "hidden sm:inline-flex bg-primary hover:bg-primary/90 text-white font-display font-black tracking-wide shadow-[0_0_20px_rgba(255,65,27,0.2)] hover:shadow-[0_0_30px_rgba(255,65,27,0.4)] transition-all duration-500 rounded-xl",
-                  isScrolled ? "h-11 px-6" : "h-14 px-8",
+                  "hidden sm:inline-flex group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground font-semibold tracking-[0.02em] shadow-[0_18px_55px_-28px_hsl(var(--primary)_/_0.65)] hover:shadow-[0_22px_70px_-28px_hsl(var(--primary)_/_0.78)] transition-all duration-500 rounded-2xl h-11 px-6",
                 )}
               >
-                <Link to="/contact">{t("cta.contact")}</Link>
+                <Link to="/contact" className="relative">
+                  <span className="absolute -inset-x-6 -inset-y-3 bg-[linear-gradient(110deg,transparent_0%,rgba(255,255,255,0.25)_35%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="relative">{t("cta.contact")}</span>
+                </Link>
               </Button>
 
               <button
-                className="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-primary/5 border border-primary/20 text-foreground transition-all hover:bg-primary/10"
+                className={cn(
+                  "lg:hidden w-12 h-12 flex items-center justify-center rounded-2xl border backdrop-blur-xl transition-all",
+                  isScrolled
+                    ? "bg-card/70 border-border/70 text-foreground hover:bg-card"
+                    : "bg-background/45 border-white/18 text-foreground hover:bg-background/55",
+                )}
                 onClick={() => setIsMenuOpen((open) => !open)}
                 aria-label={t("accessibility.toggleMenu")}
               >
