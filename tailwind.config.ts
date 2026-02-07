@@ -20,11 +20,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        display: ["Poppins", "sans-serif"],
-        mono: ["Inter", "monospace"],
-        heading: ["Poppins", "system-ui", "sans-serif"],
-        body: ["Inter", "system-ui", "sans-serif"],
+        sans: ["Work Sans", "system-ui", "sans-serif"],
+        display: ["Fraunces", "Georgia", "serif"],
+        mono: ["IBM Plex Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+        heading: ["Fraunces", "Georgia", "serif"],
+        body: ["Work Sans", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

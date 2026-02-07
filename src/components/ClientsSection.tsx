@@ -104,12 +104,12 @@ const ClientsSection = () => {
           </p>
         </div>
 
-        <div className="overflow-hidden">
+        <div className="overflow-hidden mask-fade-x">
           <div className="flex gap-4 animate-scroll-left py-4">
             {[...clients, ...clients].map((client, index) => (
               <Card
                 key={`${client.name}-${index}`}
-                className="shrink-0 min-w-[200px] h-24 flex items-center justify-center px-6 py-4 border-card-border bg-white/50 backdrop-blur-sm transition-all hover:bg-white hover:shadow-soft group"
+                className="shrink-0 min-w-[200px] h-24 flex items-center justify-center px-6 py-4 border-card-border bg-card/60 backdrop-blur-sm transition-all hover:bg-card hover:shadow-soft group"
               >
                 <img
                   src={client.logo}

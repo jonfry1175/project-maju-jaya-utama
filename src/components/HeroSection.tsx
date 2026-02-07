@@ -9,6 +9,9 @@ const HeroSection = () => {
   const { t } = useTranslation("hero");
   const easing: [number, number, number, number] = [0.21, 0.47, 0.32, 0.98];
 
+  const chipsRaw = t("chips", { returnObjects: true });
+  const chips = Array.isArray(chipsRaw) ? (chipsRaw as string[]) : [];
+
   const stats = [
     {
       icon: Users,
@@ -50,7 +53,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen overflow-hidden bg-background pt-24 pb-16 flex items-center"
+      className="relative min-h-[92vh] overflow-hidden bg-background pt-28 pb-16 flex items-center"
     >
       <div className="absolute inset-0 z-0">
         <video
@@ -64,14 +67,16 @@ const HeroSection = () => {
           <source src="/assets/videos/hero-maju.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-grid-industrial opacity-[0.12]" />
-        <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
+        <div className="absolute inset-0 bg-dot-pattern opacity-[0.35]" />
+        <div className="absolute inset-0 bg-noise opacity-[0.035] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/55 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/35 via-transparent to-background/25" />
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background via-background/85 to-transparent pointer-events-none" />
 
       <div className="container mx-auto container-padding relative z-10 max-w-7xl">
-        <div className="grid lg:grid-cols-[1.25fr_0.75fr] gap-10 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-12 items-center">
           <motion.div
             className="space-y-7"
             variants={containerVariants}
@@ -79,15 +84,21 @@ const HeroSection = () => {
             animate="visible"
           >
             <motion.div
-              className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md"
+              className="inline-flex items-center gap-3 rounded-full border border-white/25 bg-white/10 px-4 py-2 backdrop-blur-md shadow-soft"
               variants={itemVariants}
             >
               <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-primary" />
+                <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-70 animate-ping" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
               </span>
-              <span className="text-xs font-mono uppercase tracking-[0.2em] text-foreground/80 font-semibold">
+              <span className="text-[11px] font-mono uppercase tracking-[0.22em] text-foreground/85 font-semibold">
                 {t("badge")}
+              </span>
+              <span className="hidden sm:inline text-[11px] font-mono uppercase tracking-[0.22em] text-white/45">
+                {"//"}
+              </span>
+              <span className="hidden sm:inline text-[11px] font-mono uppercase tracking-[0.22em] text-white/70">
+                {t("stats.location.value")}
               </span>
             </motion.div>
 
@@ -126,6 +137,22 @@ const HeroSection = () => {
                 <Link to="/services">{t("cta.secondary")}</Link>
               </Button>
             </motion.div>
+
+            {chips.length ? (
+              <motion.div
+                className="flex flex-wrap gap-2 pt-2"
+                variants={itemVariants}
+              >
+                {chips.slice(0, 6).map((chip) => (
+                  <span
+                    key={chip}
+                    className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.18em] text-white/80 backdrop-blur-md"
+                  >
+                    {chip}
+                  </span>
+                ))}
+              </motion.div>
+            ) : null}
           </motion.div>
 
           <motion.div
@@ -137,31 +164,66 @@ const HeroSection = () => {
             <div className="absolute -top-20 -right-14 h-56 w-56 rounded-full bg-primary/10 blur-[80px]" />
             <div className="absolute -bottom-16 -left-12 h-56 w-56 rounded-full bg-accent/10 blur-[80px]" />
 
-            <div className="grid gap-5 relative">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  variants={itemVariants}
-                  className={index === 1 ? "lg:translate-x-8" : ""}
-                >
-                  <Card className="group rounded-2xl border border-white/15 bg-white/10 backdrop-blur-xl p-6 lg:p-7 transition-all duration-500 hover:border-primary/40">
-                    <div className="flex items-center gap-5">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 transition-transform duration-500 group-hover:scale-105">
-                        <stat.icon className="h-7 w-7 text-primary" />
+            <motion.div variants={itemVariants} className="relative">
+              <Card className="relative overflow-hidden rounded-[2rem] border border-white/18 bg-white/10 backdrop-blur-xl p-7 lg:p-8 shadow-strong">
+                <div className="card-noise opacity-10" />
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/70 via-accent/30 to-transparent" />
+
+                <div className="relative">
+                  <div className="flex items-center justify-between gap-6">
+                    <div>
+                      <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-white/60">
+                        {t("stats.industry.label")}
                       </div>
-                      <div>
-                        <div className="text-[11px] font-mono uppercase tracking-widest text-muted-foreground mb-1">
-                          {stat.label}
-                        </div>
-                        <div className="text-xl sm:text-2xl font-display font-bold text-foreground">
-                          {stat.value}
-                        </div>
+                      <div className="mt-2 text-2xl sm:text-3xl font-display font-bold text-white leading-tight">
+                        {t("stats.industry.value")}
                       </div>
                     </div>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
+                    <div className="relative shrink-0">
+                      <div className="h-20 w-20 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm grid place-items-center">
+                        <div className="h-14 w-14 rounded-full border border-accent/40 bg-accent/10 grid place-items-center">
+                          <span className="font-mono text-xs font-semibold tracking-[0.22em] text-accent">
+                            QC
+                          </span>
+                        </div>
+                      </div>
+                      <div className="absolute inset-0 rounded-full border border-white/10 rotate-12" />
+                    </div>
+                  </div>
+
+                  <div className="mt-7 space-y-3">
+                    {stats.map((stat) => (
+                      <div
+                        key={stat.label}
+                        className="flex items-center gap-4 rounded-2xl border border-white/12 bg-white/5 px-5 py-4 hover:border-primary/30 transition-colors"
+                      >
+                        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 border border-primary/20">
+                          <stat.icon className="h-5 w-5 text-primary" />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-white/55">
+                            {stat.label}
+                          </div>
+                          <div className="mt-1 text-base sm:text-lg font-semibold text-white truncate">
+                            {stat.value}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-7 flex items-center gap-3">
+                    <div className="h-px flex-1 bg-gradient-to-r from-white/25 to-transparent" />
+                    <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-white/60">
+                      {t("badge")}
+                    </div>
+                    <div className="h-px flex-1 bg-gradient-to-l from-white/25 to-transparent" />
+                  </div>
+                </div>
+              </Card>
+
+              <div className="pointer-events-none absolute -left-5 -bottom-5 h-24 w-24 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm rotate-6" />
+            </motion.div>
           </motion.div>
         </div>
       </div>
