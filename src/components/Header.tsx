@@ -1,9 +1,10 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import * as PopoverPrimitive from "@radix-ui/react-popover";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
@@ -19,6 +20,8 @@ const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const closeDropdownTimer = useRef<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +34,7 @@ const Header = () => {
 
   useEffect(() => {
     setIsMenuOpen(false);
+    setOpenDropdown(null);
   }, [location.pathname]);
 
   const navItems = useMemo<NavItem[]>(
@@ -71,6 +75,41 @@ const Header = () => {
   const isActive = (item: NavItem) => {
     if (item.matcher) return item.matcher(location.pathname);
     return location.pathname === item.path;
+  };
+
+  const navPillClass = (active: boolean, open = false) =>
+    cn(
+      "group relative inline-flex items-center rounded-full",
+      "py-2 px-2 2xl:px-3.5",
+      "text-[14px] 2xl:text-[16px] font-medium tracking-[0.005em] whitespace-nowrap leading-none",
+      "transition-colors duration-300",
+      "ring-1 ring-transparent",
+      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+      active || open
+        ? "text-foreground bg-foreground/[0.06] ring-border/50 font-semibold"
+        : "text-foreground/70 hover:text-foreground hover:bg-foreground/[0.04] hover:ring-border/40",
+    );
+
+  const navUnderlineClass = (active: boolean, open = false) =>
+    cn(
+      "absolute left-3 right-3 bottom-1.5 h-[2px] rounded-full",
+      "bg-gradient-to-r from-primary via-primary to-accent/70 origin-left",
+      "transition-transform duration-300",
+      active || open ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
+    );
+
+  const clearCloseTimer = () => {
+    if (closeDropdownTimer.current) {
+      window.clearTimeout(closeDropdownTimer.current);
+      closeDropdownTimer.current = null;
+    }
+  };
+
+  const scheduleClose = () => {
+    clearCloseTimer();
+    closeDropdownTimer.current = window.setTimeout(() => {
+      setOpenDropdown(null);
+    }, 260);
   };
 
   return (
@@ -139,58 +178,120 @@ const Header = () => {
                 {navItems.map((item) => {
                   const active = isActive(item);
                   if (item.children?.length) {
+                    const open = openDropdown === item.path;
                     return (
-                      <div key={item.path} className="relative group/career">
-                        <Link
-                          to={item.path}
-                          className={cn(
-                            "relative inline-flex items-center gap-1 rounded-full px-2 2xl:px-3.5 py-2 text-[14px] 2xl:text-[16px] font-medium tracking-[0.005em] transition-colors duration-300 whitespace-nowrap leading-none",
-                            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                            active
-                              ? "text-foreground bg-muted/60 font-semibold"
-                              : "text-foreground/70 hover:text-foreground hover:bg-muted/40",
-                          )}
+                      <PopoverPrimitive.Root
+                        key={item.path}
+                        open={openDropdown === item.path}
+                        onOpenChange={(nextOpen) =>
+                          setOpenDropdown(nextOpen ? item.path : null)
+                        }
+                      >
+                        <div
+                          className="relative"
+                          onMouseEnter={() => {
+                            clearCloseTimer();
+                            setOpenDropdown(item.path);
+                          }}
+                          onMouseLeave={() => {
+                            scheduleClose();
+                          }}
                         >
-                          <span className="relative z-10">{item.label}</span>
-                          <ChevronDown className="w-4 h-4 opacity-70 shrink-0" />
-                          <span
-                            className={cn(
-                              "absolute left-3 right-3 bottom-1.5 h-[2px] rounded-full bg-gradient-to-r from-primary via-primary to-accent/70 origin-left transition-transform duration-300",
-                              active
-                                ? "scale-x-100"
-                                : "scale-x-0 group-hover/career:scale-x-100",
-                            )}
-                          />
-                        </Link>
-
-                        <div className="absolute left-1/2 top-[calc(100%+12px)] -translate-x-1/2 min-w-[260px] rounded-2xl border border-border/70 bg-white p-2 shadow-2xl opacity-0 invisible translate-y-2 group-hover/career:opacity-100 group-hover/career:visible group-hover/career:translate-y-0 group-focus-within/career:opacity-100 group-focus-within/career:visible group-focus-within/career:translate-y-0 transition-all duration-200 overflow-hidden">
-                          <div className="absolute left-1/2 -top-2 h-4 w-4 -translate-x-1/2 rotate-45 bg-white border-l border-t border-border/60" />
-                          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/70 via-accent/35 to-transparent" />
-                          <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none rounded-2xl" />
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.path}
-                              to={child.path}
-                              className={cn(
-                                "group/item flex items-center gap-3 rounded-xl px-4 py-2.5 text-[14px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35",
-                                location.pathname === child.path
-                                  ? "bg-primary text-primary-foreground"
-                                  : "text-foreground/85 hover:bg-muted/60 hover:text-foreground",
-                              )}
-                            >
-                              <span
+                          <PopoverPrimitive.Anchor asChild>
+                            <div className={navPillClass(active, open)}>
+                              <Link
+                                to={item.path}
                                 className={cn(
-                                  "h-2 w-2 rounded-full bg-border transition-colors",
-                                  location.pathname === child.path
-                                    ? "bg-primary-foreground/90"
-                                    : "group-hover/item:bg-primary/70",
+                                  "relative z-10 px-1.5",
+                                  "rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                                 )}
-                              />
-                              <span className="flex-1">{child.label}</span>
-                            </Link>
-                          ))}
+                                aria-current={active ? "page" : undefined}
+                              >
+                                {item.label}
+                              </Link>
+
+                              <PopoverPrimitive.Trigger asChild>
+                                <button
+                                  type="button"
+                                  className={cn(
+                                    "relative z-10 ml-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full",
+                                    "text-foreground/55 group-hover:text-foreground/85",
+                                    "hover:text-foreground hover:bg-transparent",
+                                    "transition-colors duration-200",
+                                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35",
+                                    "data-[state=open]:bg-transparent data-[state=open]:text-foreground",
+                                    "data-[state=open]:[&>svg]:rotate-180 [&>svg]:transition-transform [&>svg]:duration-200",
+                                  )}
+                                  aria-label={`${item.label} menu`}
+                                  aria-expanded={open}
+                                >
+                                  <ChevronDown className="h-4 w-4 opacity-70" />
+                                </button>
+                              </PopoverPrimitive.Trigger>
+
+                              <span className={navUnderlineClass(active, open)} />
+                            </div>
+                          </PopoverPrimitive.Anchor>
+
+                          <PopoverPrimitive.Portal>
+                            <PopoverPrimitive.Content
+                              align="center"
+                              side="bottom"
+                              sideOffset={12}
+                              onOpenAutoFocus={(e) => e.preventDefault()}
+                              className={cn(
+                                "relative min-w-[260px] rounded-2xl border border-border/70 bg-white p-2 shadow-2xl overflow-hidden outline-none",
+                                "data-[state=open]:animate-in data-[state=closed]:animate-out",
+                                "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+                                "data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+                                "data-[side=bottom]:slide-in-from-top-2",
+                              )}
+                              onMouseEnter={() => {
+                                clearCloseTimer();
+                                setOpenDropdown(item.path);
+                              }}
+                              onMouseLeave={() => {
+                                scheduleClose();
+                              }}
+                            >
+                              <div className="absolute left-1/2 -top-2 h-4 w-4 -translate-x-1/2 rotate-45 bg-white border-l border-t border-border/60" />
+                              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/70 via-accent/35 to-transparent" />
+                              <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none rounded-2xl" />
+
+                              <div className="relative">
+                                {item.children.map((child) => {
+                                  const childActive = location.pathname === child.path;
+                                  return (
+                                    <Link
+                                      key={child.path}
+                                      to={child.path}
+                                      onClick={() => setOpenDropdown(null)}
+                                      className={cn(
+                                        "group flex items-center gap-3 rounded-xl px-4 py-2.5 text-[14px] font-semibold outline-none",
+                                        "transition-colors duration-200",
+                                        "focus-visible:ring-2 focus-visible:ring-primary/30",
+                                        childActive
+                                          ? "bg-primary text-primary-foreground"
+                                          : "text-foreground/80 hover:bg-muted/60 hover:text-foreground focus-visible:bg-muted/60 focus-visible:text-foreground",
+                                      )}
+                                    >
+                                      <span
+                                        className={cn(
+                                          "h-2 w-2 rounded-full transition-colors",
+                                          childActive
+                                            ? "bg-primary-foreground/90"
+                                            : "bg-border group-hover:bg-primary/70 group-focus-visible:bg-primary/70",
+                                        )}
+                                      />
+                                      <span className="flex-1">{child.label}</span>
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            </PopoverPrimitive.Content>
+                          </PopoverPrimitive.Portal>
                         </div>
-                      </div>
+                      </PopoverPrimitive.Root>
                     );
                   }
 
@@ -198,21 +299,11 @@ const Header = () => {
                     <Link
                       key={item.path}
                       to={item.path}
-                      className={cn(
-                        "group relative rounded-full px-2 2xl:px-3.5 py-2 text-[14px] 2xl:text-[16px] font-medium tracking-[0.005em] transition-colors duration-300 whitespace-nowrap leading-none",
-                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                        active
-                          ? "text-foreground bg-muted/60 font-semibold"
-                          : "text-foreground/70 hover:text-foreground hover:bg-muted/40",
-                      )}
+                      className={navPillClass(active)}
+                      aria-current={active ? "page" : undefined}
                     >
                       <span className="relative z-10">{item.label}</span>
-                      <span
-                        className={cn(
-                          "absolute left-3 right-3 bottom-1.5 h-[2px] rounded-full bg-gradient-to-r from-primary via-primary to-accent/70 origin-left transition-transform duration-300",
-                          active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
-                        )}
-                      />
+                      <span className={navUnderlineClass(active)} />
                     </Link>
                   );
                 })}
