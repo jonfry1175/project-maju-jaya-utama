@@ -144,7 +144,7 @@ const Header = () => {
                         <Link
                           to={item.path}
                           className={cn(
-                            "relative inline-flex items-center gap-1 rounded-full px-2 2xl:px-3.5 py-2 text-[13px] 2xl:text-[16px] font-medium tracking-[0.005em] transition-colors duration-300 whitespace-nowrap leading-none",
+                            "relative inline-flex items-center gap-1 rounded-full px-2 2xl:px-3.5 py-2 text-[14px] 2xl:text-[16px] font-medium tracking-[0.005em] transition-colors duration-300 whitespace-nowrap leading-none",
                             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                             active
                               ? "text-foreground bg-muted/60 font-semibold"
@@ -199,7 +199,7 @@ const Header = () => {
                       key={item.path}
                       to={item.path}
                       className={cn(
-                        "group relative rounded-full px-2 2xl:px-3.5 py-2 text-[13px] 2xl:text-[16px] font-medium tracking-[0.005em] transition-colors duration-300 whitespace-nowrap leading-none",
+                        "group relative rounded-full px-2 2xl:px-3.5 py-2 text-[14px] 2xl:text-[16px] font-medium tracking-[0.005em] transition-colors duration-300 whitespace-nowrap leading-none",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                         active
                           ? "text-foreground bg-muted/60 font-semibold"
