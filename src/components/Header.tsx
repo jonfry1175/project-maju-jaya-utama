@@ -82,54 +82,60 @@ const Header = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out font-sans",
           isScrolled
-            ? "bg-background/82 backdrop-blur-xl border-b border-border/60 py-3 shadow-2xl"
+            ? "bg-transparent py-3"
             : "bg-transparent py-5 lg:py-6",
         )}
       >
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-noise opacity-[0.025]" />
-          {/* A subtle top scrim for hero readability without turning the header opaque */}
-          {!isScrolled ? (
-            <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/55 to-transparent" />
-          ) : null}
+          <div className="absolute inset-0 bg-noise opacity-[0.02]" />
         </div>
 
         <div className="container mx-auto container-padding relative z-10 max-w-7xl">
-          <div className="flex items-center justify-between gap-4">
-            <Link to="/" className="group flex items-center gap-3 select-none">
-              <div
+          <div
+            className={cn(
+              "relative mx-auto flex items-center justify-between gap-3 rounded-[2rem] border px-4 xl:px-5 py-3 bg-white shadow-[0_22px_70px_-50px_hsl(var(--foreground)_/_0.45)]",
+              isScrolled
+                ? "border-border/70 shadow-[0_22px_70px_-48px_hsl(var(--foreground)_/_0.55)]"
+                : "border-border/60",
+            )}
+          >
+            <div className="absolute inset-0 bg-noise opacity-[0.045] pointer-events-none rounded-[2rem]" />
+            <div className="absolute inset-0 pointer-events-none rounded-[2rem] card-inset opacity-70" />
+
+            <Link
+              to="/"
+              className="group flex items-center gap-3 select-none shrink-0"
+            >
+              <div className="absolute -inset-10 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <img
+                src="/logo.png"
+                alt={t("companyName")}
                 className={cn(
-                  "relative rounded-2xl border backdrop-blur-xl px-3 py-2 shadow-[0_20px_60px_-38px_hsl(var(--foreground)_/_0.45)] transition-colors duration-500",
-                  isScrolled
-                    ? "bg-card/70 border-border/70"
-                    : "bg-background/45 border-white/18",
+                  "relative z-10 w-auto object-contain transition-all duration-300",
+                  "h-10 sm:h-11 md:h-12",
+                  "max-w-[170px] sm:max-w-[200px] md:max-w-[220px] xl:max-w-[220px] 2xl:max-w-[260px]",
                 )}
-              >
-                <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none rounded-2xl" />
-                <div className="absolute -inset-8 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                <img
-                  src="/logo.png"
-                  alt={t("companyName")}
-                  className={cn(
-                    "relative z-10 w-auto transition-all duration-500",
-                    isScrolled ? "h-9 md:h-10" : "h-10 md:h-12",
-                  )}
-                />
-              </div>
+              />
             </Link>
 
-            <div className="hidden lg:flex flex-1 justify-center">
-              <nav
+            <div className="hidden xl:flex flex-1 justify-center min-w-0">
+              <div
                 className={cn(
-                  "flex items-center gap-1 rounded-full border backdrop-blur-xl px-2 py-2 shadow-[0_22px_70px_-42px_hsl(var(--foreground)_/_0.55)] relative",
-                  isScrolled
-                    ? "bg-card/65 border-border/70"
-                    : "bg-background/38 border-white/18",
+                  "relative max-w-full overflow-hidden",
+                  // Soft edge fades to hint horizontal scroll when space is tight.
+                  "before:absolute before:inset-y-0 before:left-0 before:w-10 before:bg-gradient-to-r before:from-white before:to-transparent before:pointer-events-none before:z-10",
+                  "after:absolute after:inset-y-0 after:right-0 after:w-10 after:bg-gradient-to-l after:from-white after:to-transparent after:pointer-events-none after:z-10",
                 )}
-                aria-label="Primary"
               >
-                <div className="absolute inset-0 bg-noise opacity-[0.045] pointer-events-none rounded-full" />
-                <div className="absolute inset-0 rounded-full pointer-events-none card-inset opacity-70" />
+                <nav
+                  className={cn(
+                    "flex items-center gap-0.5 px-1",
+                    "max-w-full overflow-x-auto overscroll-x-contain",
+                    // Hide scrollbar (cross-browser) to keep the header clean.
+                    "[-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+                  )}
+                  aria-label="Primary"
+                >
                 {navItems.map((item) => {
                   const active = isActive(item);
                   if (item.children?.length) {
@@ -138,38 +144,49 @@ const Header = () => {
                         <Link
                           to={item.path}
                           className={cn(
-                            "relative inline-flex items-center gap-1 rounded-full px-4 py-2.5 text-[13px] font-medium tracking-[0.01em] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                            "relative inline-flex items-center gap-1 rounded-full px-2 2xl:px-3.5 py-2 text-[13px] 2xl:text-[16px] font-medium tracking-[0.005em] transition-colors duration-300 whitespace-nowrap leading-none",
+                            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                             active
-                              ? "text-foreground bg-foreground/5 font-semibold"
-                              : "text-foreground/70 hover:text-foreground hover:bg-foreground/5",
+                              ? "text-foreground bg-muted/60 font-semibold"
+                              : "text-foreground/70 hover:text-foreground hover:bg-muted/40",
                           )}
                         >
                           <span className="relative z-10">{item.label}</span>
-                          <ChevronDown className="w-3.5 h-3.5 opacity-70" />
+                          <ChevronDown className="w-4 h-4 opacity-70 shrink-0" />
                           <span
                             className={cn(
-                              "absolute inset-x-4 bottom-1 h-px bg-primary/0 transition-colors duration-300",
+                              "absolute left-3 right-3 bottom-1.5 h-[2px] rounded-full bg-gradient-to-r from-primary via-primary to-accent/70 origin-left transition-transform duration-300",
                               active
-                                ? "bg-primary/70"
-                                : "group-hover/career:bg-primary/35",
+                                ? "scale-x-100"
+                                : "scale-x-0 group-hover/career:scale-x-100",
                             )}
                           />
                         </Link>
 
-                        <div className="absolute left-1/2 top-[calc(100%+10px)] -translate-x-1/2 min-w-[220px] rounded-2xl border border-border/70 bg-background/85 backdrop-blur-xl p-2 shadow-2xl opacity-0 invisible translate-y-2 group-hover/career:opacity-100 group-hover/career:visible group-hover/career:translate-y-0 group-focus-within/career:opacity-100 group-focus-within/career:visible group-focus-within/career:translate-y-0 transition-all duration-200">
-                          <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none rounded-2xl" />
+                        <div className="absolute left-1/2 top-[calc(100%+12px)] -translate-x-1/2 min-w-[260px] rounded-2xl border border-border/70 bg-white p-2 shadow-2xl opacity-0 invisible translate-y-2 group-hover/career:opacity-100 group-hover/career:visible group-hover/career:translate-y-0 group-focus-within/career:opacity-100 group-focus-within/career:visible group-focus-within/career:translate-y-0 transition-all duration-200 overflow-hidden">
+                          <div className="absolute left-1/2 -top-2 h-4 w-4 -translate-x-1/2 rotate-45 bg-white border-l border-t border-border/60" />
+                          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/70 via-accent/35 to-transparent" />
+                          <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none rounded-2xl" />
                           {item.children.map((child) => (
                             <Link
                               key={child.path}
                               to={child.path}
                               className={cn(
-                                "block rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35",
+                                "group/item flex items-center gap-3 rounded-xl px-4 py-2.5 text-[14px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35",
                                 location.pathname === child.path
                                   ? "bg-primary text-primary-foreground"
-                                  : "text-foreground/80 hover:bg-foreground/5 hover:text-foreground",
+                                  : "text-foreground/85 hover:bg-muted/60 hover:text-foreground",
                               )}
                             >
-                              {child.label}
+                              <span
+                                className={cn(
+                                  "h-2 w-2 rounded-full bg-border transition-colors",
+                                  location.pathname === child.path
+                                    ? "bg-primary-foreground/90"
+                                    : "group-hover/item:bg-primary/70",
+                                )}
+                              />
+                              <span className="flex-1">{child.label}</span>
                             </Link>
                           ))}
                         </div>
@@ -182,26 +199,28 @@ const Header = () => {
                       key={item.path}
                       to={item.path}
                       className={cn(
-                        "relative rounded-full px-4 py-2.5 text-[13px] font-medium tracking-[0.01em] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                        "group relative rounded-full px-2 2xl:px-3.5 py-2 text-[13px] 2xl:text-[16px] font-medium tracking-[0.005em] transition-colors duration-300 whitespace-nowrap leading-none",
+                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                         active
-                          ? "text-foreground bg-foreground/5 font-semibold"
-                          : "text-foreground/70 hover:text-foreground hover:bg-foreground/5",
+                          ? "text-foreground bg-muted/60 font-semibold"
+                          : "text-foreground/70 hover:text-foreground hover:bg-muted/40",
                       )}
                     >
                       <span className="relative z-10">{item.label}</span>
                       <span
                         className={cn(
-                          "absolute inset-x-4 bottom-1 h-px bg-primary/0 transition-colors duration-300",
-                          active ? "bg-primary/70" : "group-hover:bg-primary/35",
+                          "absolute left-3 right-3 bottom-1.5 h-[2px] rounded-full bg-gradient-to-r from-primary via-primary to-accent/70 origin-left transition-transform duration-300",
+                          active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
                         )}
                       />
                     </Link>
                   );
                 })}
-              </nav>
+                </nav>
+              </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 xl:gap-3 shrink-0">
               <div className="hidden sm:block">
                 <LanguageSwitcher />
               </div>
@@ -209,7 +228,7 @@ const Header = () => {
               <Button
                 asChild
                 className={cn(
-                  "hidden sm:inline-flex group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground font-semibold tracking-[0.02em] shadow-[0_18px_55px_-28px_hsl(var(--primary)_/_0.65)] hover:shadow-[0_22px_70px_-28px_hsl(var(--primary)_/_0.78)] transition-all duration-500 rounded-2xl h-11 px-6",
+                  "hidden sm:inline-flex group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground text-[14px] 2xl:text-[16px] font-semibold tracking-[0.01em] shadow-[0_18px_55px_-28px_hsl(var(--primary)_/_0.65)] hover:shadow-[0_22px_70px_-28px_hsl(var(--primary)_/_0.78)] transition-all duration-500 rounded-2xl h-11 2xl:h-12 px-4 2xl:px-7 whitespace-nowrap",
                 )}
               >
                 <Link to="/contact" className="relative">
@@ -219,12 +238,7 @@ const Header = () => {
               </Button>
 
               <button
-                className={cn(
-                  "lg:hidden w-12 h-12 flex items-center justify-center rounded-2xl border backdrop-blur-xl transition-all",
-                  isScrolled
-                    ? "bg-card/70 border-border/70 text-foreground hover:bg-card"
-                    : "bg-background/45 border-white/18 text-foreground hover:bg-background/55",
-                )}
+                className="xl:hidden w-12 h-12 flex items-center justify-center rounded-2xl border border-border/70 bg-white hover:bg-muted/50 transition-all"
                 onClick={() => setIsMenuOpen((open) => !open)}
                 aria-label={t("accessibility.toggleMenu")}
               >
@@ -242,7 +256,7 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 200 }}
-            className="fixed inset-0 z-40 lg:hidden bg-background flex flex-col pt-32 px-6 overflow-hidden"
+            className="fixed inset-0 z-40 xl:hidden bg-background flex flex-col pt-32 px-6 overflow-hidden"
           >
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-grid-industrial opacity-[0.05]" />

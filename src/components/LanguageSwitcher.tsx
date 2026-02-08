@@ -29,23 +29,25 @@ const LanguageSwitcher = () => {
         <Button 
           variant="outline" 
           size="sm" 
-          className="h-11 px-3.5 bg-background/40 backdrop-blur-xl border-white/18 hover:border-primary/35 text-foreground rounded-2xl transition-all duration-300 shadow-[0_18px_55px_-40px_hsl(var(--foreground)_/_0.45)]"
+          className="h-11 2xl:h-12 px-2.5 2xl:px-3 bg-white border-border/70 hover:border-primary/35 text-foreground rounded-2xl transition-all duration-300 shadow-[0_18px_55px_-48px_hsl(var(--foreground)_/_0.35)]"
         >
           <img
             src={currentLanguage.flag}
             alt={currentLanguage.name}
             className="w-5 h-3.5 object-cover rounded-sm mr-2 shadow-sm"
           />
-          <span className="text-[11px] font-mono font-semibold uppercase tracking-[0.28em]">
+          <span className="text-[12px] font-mono font-semibold uppercase tracking-[0.28em]">
             {currentLanguage.code}
           </span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent 
         align="end" 
-        className="z-[100] mt-2 bg-background/88 backdrop-blur-xl border border-border/70 rounded-2xl p-1 shadow-2xl overflow-hidden"
+        className="z-[100] mt-2 bg-white border border-border/70 rounded-2xl p-1 shadow-2xl overflow-hidden"
       >
-        <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none" />
+        <div className="absolute left-6 -top-2 h-4 w-4 rotate-45 bg-white border-l border-t border-border/60" />
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/70 via-accent/35 to-transparent" />
+        <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
@@ -54,7 +56,7 @@ const LanguageSwitcher = () => {
               "gap-3 px-4 py-3 rounded-xl transition-all duration-300 cursor-pointer focus:bg-foreground/5 focus:text-foreground",
               i18n.language === lang.code
                 ? "bg-primary/10 text-primary"
-                : "text-foreground/70 hover:bg-foreground/5 hover:text-foreground",
+                : "text-foreground/70 hover:bg-muted/60 hover:text-foreground",
             )}
           >
             <img
