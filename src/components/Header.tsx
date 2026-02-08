@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import * as PopoverPrimitive from "@radix-ui/react-popover";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
@@ -86,8 +86,8 @@ const Header = () => {
       "ring-1 ring-transparent",
       "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
       active || open
-        ? "text-foreground bg-foreground/[0.06] ring-border/50 font-semibold"
-        : "text-foreground/70 hover:text-foreground hover:bg-foreground/[0.04] hover:ring-border/40",
+        ? "text-foreground bg-foreground/[0.06] ring-border/60 font-semibold"
+        : "text-foreground/70 hover:text-foreground hover:bg-foreground/[0.045] hover:ring-border/45",
     );
 
   const navUnderlineClass = (active: boolean, open = false) =>
@@ -233,63 +233,112 @@ const Header = () => {
                             </div>
                           </PopoverPrimitive.Anchor>
 
-                          <PopoverPrimitive.Portal>
-                            <PopoverPrimitive.Content
-                              align="center"
-                              side="bottom"
-                              sideOffset={12}
-                              onOpenAutoFocus={(e) => e.preventDefault()}
-                              className={cn(
-                                "relative min-w-[260px] rounded-2xl border border-border/70 bg-white p-2 shadow-2xl overflow-hidden outline-none",
-                                "data-[state=open]:animate-in data-[state=closed]:animate-out",
-                                "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
-                                "data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
-                                "data-[side=bottom]:slide-in-from-top-2",
-                              )}
-                              onMouseEnter={() => {
-                                clearCloseTimer();
-                                setOpenDropdown(item.path);
-                              }}
-                              onMouseLeave={() => {
-                                scheduleClose();
-                              }}
-                            >
-                              <div className="absolute left-1/2 -top-2 h-4 w-4 -translate-x-1/2 rotate-45 bg-white border-l border-t border-border/60" />
-                              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary/70 via-accent/35 to-transparent" />
-                              <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none rounded-2xl" />
+                              <PopoverPrimitive.Portal>
+                                <PopoverPrimitive.Content
+                                  align="center"
+                                  side="bottom"
+                                  sideOffset={12}
+                                  onOpenAutoFocus={(e) => e.preventDefault()}
+                                  className={cn(
+                                    "relative min-w-[280px] rounded-2xl border border-border/70 bg-white/95 shadow-[0_30px_90px_-55px_hsl(var(--foreground)_/_0.85)] outline-none backdrop-blur-xl",
+                                    "data-[state=open]:animate-in data-[state=closed]:animate-out",
+                                    "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+                                    "data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+                                    "data-[side=bottom]:slide-in-from-top-2",
+                                  )}
+                                  onMouseEnter={() => {
+                                    clearCloseTimer();
+                                    setOpenDropdown(item.path);
+                                  }}
+                                  onMouseLeave={() => {
+                                    scheduleClose();
+                                  }}
+                                >
+                                  <div className="absolute inset-0 bg-noise opacity-[0.035] pointer-events-none rounded-2xl" />
+                                  <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-primary/70 via-accent/30 to-transparent" />
+                                  <div className="absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
 
-                              <div className="relative">
-                                {item.children.map((child) => {
-                                  const childActive = location.pathname === child.path;
-                                  return (
-                                    <Link
-                                      key={child.path}
-                                      to={child.path}
-                                      onClick={() => setOpenDropdown(null)}
-                                      className={cn(
-                                        "group flex items-center gap-3 rounded-xl px-4 py-2.5 text-[14px] font-semibold outline-none",
-                                        "transition-colors duration-200",
-                                        "focus-visible:ring-2 focus-visible:ring-primary/30",
-                                        childActive
-                                          ? "bg-primary text-primary-foreground"
-                                          : "text-foreground/80 hover:bg-muted/60 hover:text-foreground focus-visible:bg-muted/60 focus-visible:text-foreground",
-                                      )}
-                                    >
-                                      <span
-                                        className={cn(
-                                          "h-2 w-2 rounded-full transition-colors",
-                                          childActive
-                                            ? "bg-primary-foreground/90"
-                                            : "bg-border group-hover:bg-primary/70 group-focus-visible:bg-primary/70",
-                                        )}
-                                      />
-                                      <span className="flex-1">{child.label}</span>
-                                    </Link>
-                                  );
-                                })}
-                              </div>
-                            </PopoverPrimitive.Content>
-                          </PopoverPrimitive.Portal>
+                                  <div className="relative rounded-2xl overflow-hidden">
+                                    <div className="px-4 pt-3 pb-2">
+                                      <div className="flex items-center justify-between gap-3">
+                                        <p className="text-[11px] font-mono font-semibold uppercase tracking-[0.26em] text-foreground/55">
+                                          {item.label}
+                                        </p>
+                                        <Link
+                                          to={item.path}
+                                          onClick={() => setOpenDropdown(null)}
+                                          className={cn(
+                                            "inline-flex items-center justify-center h-8 w-8 rounded-xl",
+                                            "text-foreground/55 hover:text-foreground hover:bg-foreground/[0.04]",
+                                            "transition-colors duration-200",
+                                            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30",
+                                          )}
+                                          aria-label={`${item.label} overview`}
+                                        >
+                                          <ArrowUpRight className="h-4 w-4" />
+                                        </Link>
+                                      </div>
+                                    </div>
+
+                                    <div className="mx-3 h-px bg-gradient-to-r from-border/50 via-border to-transparent" />
+
+                                    <div className="p-2">
+                                      {item.children.map((child) => {
+                                        const childActive =
+                                          location.pathname === child.path;
+                                        return (
+                                          <Link
+                                            key={child.path}
+                                            to={child.path}
+                                            onClick={() => setOpenDropdown(null)}
+                                            className={cn(
+                                              "group relative isolate flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-semibold outline-none",
+                                              "transition-colors duration-200",
+                                              "focus-visible:ring-2 focus-visible:ring-primary/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white",
+                                              childActive
+                                                ? "bg-primary/10 text-foreground ring-1 ring-primary/20"
+                                                : "text-foreground/80 hover:bg-foreground/[0.04] hover:text-foreground focus-visible:bg-foreground/[0.04] focus-visible:text-foreground",
+                                            )}
+                                          >
+                                            <span
+                                              className={cn(
+                                                "pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-200",
+                                                "bg-[radial-gradient(120%_120%_at_20%_0%,rgba(255,80,0,0.12)_0%,transparent_55%)]",
+                                                childActive
+                                                  ? "opacity-100"
+                                                  : "group-hover:opacity-100 group-focus-visible:opacity-100",
+                                              )}
+                                            />
+
+                                            <span
+                                              className={cn(
+                                                "relative h-2 w-2 rounded-full transition-colors",
+                                                childActive
+                                                  ? "bg-primary"
+                                                  : "bg-border group-hover:bg-primary/70 group-focus-visible:bg-primary/70",
+                                              )}
+                                            />
+                                            <span className="relative flex-1">
+                                              {child.label}
+                                            </span>
+                                            <ChevronRight
+                                              className={cn(
+                                                "relative h-4 w-4",
+                                                "text-foreground/45 opacity-0 -translate-x-1 transition-all duration-200",
+                                                "group-hover:opacity-100 group-hover:translate-x-0",
+                                                "group-focus-visible:opacity-100 group-focus-visible:translate-x-0",
+                                                childActive
+                                                  ? "opacity-100 translate-x-0 text-primary"
+                                                  : null,
+                                              )}
+                                            />
+                                          </Link>
+                                        );
+                                      })}
+                                    </div>
+                                  </div>
+                                </PopoverPrimitive.Content>
+                              </PopoverPrimitive.Portal>
                         </div>
                       </PopoverPrimitive.Root>
                     );
