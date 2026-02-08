@@ -79,23 +79,40 @@ const Header = () => {
 
   const navPillClass = (active: boolean, open = false) =>
     cn(
-      "group relative inline-flex items-center rounded-full",
+      "group relative isolate inline-flex items-center rounded-full",
       "py-2 px-2 2xl:px-3.5",
       "text-[14px] 2xl:text-[16px] font-medium tracking-[0.005em] whitespace-nowrap leading-none",
-      "transition-colors duration-300",
+      "transition-[color,background-color,box-shadow,border-color] duration-300",
       "ring-1 ring-transparent",
       "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
       active || open
-        ? "text-foreground bg-foreground/[0.06] ring-border/60 font-semibold"
-        : "text-foreground/70 hover:text-foreground hover:bg-foreground/[0.045] hover:ring-border/45",
+        ? cn(
+            "text-foreground font-semibold",
+            "bg-foreground/[0.055] ring-primary/25",
+            "shadow-[0_18px_55px_-46px_hsl(var(--primary)_/_0.70)]",
+            "before:absolute before:inset-0 before:rounded-full before:pointer-events-none",
+            "before:bg-[radial-gradient(140%_120%_at_20%_0%,hsl(var(--primary)_/_0.18)_0%,transparent_60%)] before:opacity-100",
+            "after:absolute after:left-3 after:right-3 after:top-1.5 after:h-px after:pointer-events-none",
+            "after:bg-gradient-to-r after:from-white/70 after:via-white/25 after:to-transparent after:opacity-80",
+          )
+        : cn(
+            "text-foreground/70",
+            "hover:text-foreground hover:bg-foreground/[0.045] hover:ring-border/45",
+            "hover:shadow-[0_14px_40px_-44px_hsl(var(--foreground)_/_0.65)]",
+            "before:absolute before:inset-0 before:rounded-full before:pointer-events-none",
+            "before:bg-[radial-gradient(140%_120%_at_20%_0%,hsl(var(--primary)_/_0.12)_0%,transparent_60%)] before:opacity-0",
+            "hover:before:opacity-100",
+          ),
     );
 
   const navUnderlineClass = (active: boolean, open = false) =>
     cn(
-      "absolute left-3 right-3 bottom-1.5 h-[2px] rounded-full",
+      "absolute left-3 right-3 bottom-1.5 rounded-full",
       "bg-gradient-to-r from-primary via-primary to-accent/70 origin-left",
       "transition-transform duration-300",
-      active || open ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
+      active || open
+        ? "scale-x-100 h-[3px] shadow-[0_10px_24px_-14px_hsl(var(--primary)_/_0.95)]"
+        : "scale-x-0 h-[2px] group-hover:scale-x-100",
     );
 
   const clearCloseTimer = () => {
@@ -162,13 +179,14 @@ const Header = () => {
                 className={cn(
                   "relative max-w-full overflow-hidden",
                   // Soft edge fades to hint horizontal scroll when space is tight.
-                  "before:absolute before:inset-y-0 before:left-0 before:w-10 before:bg-gradient-to-r before:from-white before:to-transparent before:pointer-events-none before:z-10",
-                  "after:absolute after:inset-y-0 after:right-0 after:w-10 after:bg-gradient-to-l after:from-white after:to-transparent after:pointer-events-none after:z-10",
+                  "before:absolute before:inset-y-0 before:left-0 before:w-8 before:bg-gradient-to-r before:from-white/95 before:to-transparent before:pointer-events-none before:z-10",
+                  "after:absolute after:inset-y-0 after:right-0 after:w-8 after:bg-gradient-to-l after:from-white/95 after:to-transparent after:pointer-events-none after:z-10",
                 )}
               >
                 <nav
                   className={cn(
-                    "flex items-center gap-0.5 px-1",
+                    // Padding ensures first/last items don't sit under the fade masks.
+                    "flex items-center gap-0.5 px-9 2xl:px-10",
                     "max-w-full overflow-x-auto overscroll-x-contain",
                     // Hide scrollbar (cross-browser) to keep the header clean.
                     "[-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
