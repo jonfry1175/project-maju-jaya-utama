@@ -143,7 +143,7 @@ const AboutPageHero = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, delay: 0.24, ease: "easeOut" }}
           className="mt-8 flex flex-wrap items-center gap-2"
-          aria-label="About section navigation"
+          aria-label={t("accessibility.aboutSectionNavigation")}
         >
           {aboutLinks.map((item) => {
             const active = item.matcher(location.pathname);

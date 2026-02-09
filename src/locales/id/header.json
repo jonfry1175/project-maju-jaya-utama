@@ -20,6 +20,8 @@
     "contact": "Hubungi Kami"
   },
   "accessibility": {
-    "toggleMenu": "Buka/tutup menu"
+    "toggleMenu": "Buka/tutup menu",
+    "primaryNavigation": "Navigasi utama",
+    "aboutSectionNavigation": "Navigasi bagian tentang"
   }
 }

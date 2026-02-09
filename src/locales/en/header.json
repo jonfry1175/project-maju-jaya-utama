@@ -20,6 +20,8 @@
     "contact": "Contact Us"
   },
   "accessibility": {
-    "toggleMenu": "Toggle menu"
+    "toggleMenu": "Toggle menu",
+    "primaryNavigation": "Primary navigation",
+    "aboutSectionNavigation": "About section navigation"
   }
 }
