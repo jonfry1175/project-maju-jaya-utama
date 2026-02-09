@@ -1,16 +1,16 @@
 {
-  "badge": "Solusi Kertas Industri",
-  "title": "Konversi Kertas Presisi",
-  "titleHighlight": "untuk Industri Skala Besar",
-  "description": "Jaga kelancaran lini produksi Anda dengan produk kertas konversi yang presisi. Kami menyediakan ukuran kustom, kualitas konsisten, dan pengiriman andal dari fasilitas kami di Tangerang.",
-  "chips": ["Ukuran kustom", "Batch konsisten", "Pengiriman andal"],
+  "badge": "Manufaktur Kemasan Plastik",
+  "title": "Kemasan Plastik Presisi",
+  "titleHighlight": "dengan Rotogravure Printing",
+  "description": "Jaga kelancaran lini produksi Anda dengan kemasan plastik yang konsisten dan presisi cetak rotogravure. Kami mendukung spesifikasi kustom, kualitas batch stabil, dan pengiriman andal dari Tangerang.",
+  "chips": ["Spesifikasi kustom", "Kualitas batch stabil", "Pengiriman andal"],
   "cta": {
     "primary": "Dapatkan Penawaran",
     "secondary": "Hubungi Kami"
   },
   "stats": {
     "employees": { "label": "Karyawan", "value": "100" },
-    "industry": { "label": "Industri", "value": "Produk Kertas Konversi" },
+    "industry": { "label": "Industri", "value": "Kemasan Plastik & Rotogravure" },
     "location": { "label": "Lokasi", "value": "Tangerang, Indonesia" }
   }
 }

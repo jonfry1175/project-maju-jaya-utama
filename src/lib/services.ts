@@ -10,11 +10,11 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    id: "paper-converting",
+    id: "film-packaging-slitting",
     slug: "paper-converting-slitting",
-    title: "Paper Converting & Slitting",
+    title: "Film Packaging & Slitting",
     shortDescription:
-      "Precision resizing of parent rolls into custom widths and diameters for your specific applications.",
+      "Precision resizing of film material into custom widths and diameters for your specific applications.",
     description:
       "We offer high-precision slitting and rewinding services to convert master rolls into smaller sizes that fit your exact machinery requirements. Our advanced equipment ensures clean cuts and perfectly wound rolls.",
     features: [
@@ -25,32 +25,32 @@ export const services: Service[] = [
     image: "/assets/images/services/paper-converting.png",
   },
   {
-    id: "industrial-paper",
+    id: "industrial-plastic-packaging",
     slug: "industrial-packaging-paper",
-    title: "Industrial Packaging Paper",
+    title: "Industrial Plastic Packaging",
     shortDescription:
-      "High-durability grades designed to protect your goods during storage and transit.",
+      "High-durability plastic packaging materials designed to protect your goods during storage and distribution.",
     description:
-      "Our industrial packaging papers are engineered for strength and protection. Ideal for wrapping, interleaving, and void filling, ensuring your products arrive safely.",
+      "Our industrial plastic packaging solutions are engineered for strength, stability, and consistent quality. Suitable for retail, distribution, and high-volume manufacturing operations.",
     features: [
       "High tensile and tear strength",
-      "Various basis weights (GSM) available",
+      "Material options based on application",
       "Consistent quality and finish",
     ],
     image: "/assets/images/services/industrial-packaging.png",
   },
   {
-    id: "custom-formats",
+    id: "custom-rotogravure-printing",
     slug: "custom-formats",
-    title: "Custom Formats",
+    title: "Custom Rotogravure Printing",
     shortDescription:
-      "Flexible roll and sheet options to minimize waste and maximize efficiency in your facility.",
+      "High-precision rotogravure printing for consistent branding and product information on packaging.",
     description:
-      "We understand that standard sizes don't fit every application. Our custom sheeting and formatting services provide you with the exact paper dimensions you need, reducing waste and optimizing your production process.",
+      "Our rotogravure printing service delivers sharp print detail, stable batch output, and alignment with your packaging design specifications.",
     features: [
-      "Precise sheeting to custom lengths",
-      "Optimized yield to reduce scrap",
-      "Flexible minimum order quantities",
+      "Sharp and consistent print quality",
+      "Color consistency across batches",
+      "Support for custom design specifications",
     ],
     image: "/assets/images/services/paper-slitting.png",
   },
@@ -59,9 +59,9 @@ export const services: Service[] = [
     slug: "contract-manufacturing",
     title: "Contract Manufacturing",
     shortDescription:
-      "Reliable toll manufacturing services to expand your production capacity without capital investment.",
+      "Reliable toll manufacturing services to expand your production capacity without major capital investment.",
     description:
-      "Leverage our manufacturing expertise and facilities to produce your paper products. We act as your production partner, ensuring high quality and timely delivery under your brand.",
+      "Leverage our manufacturing expertise and facilities to produce your packaging products. We act as your production partner, ensuring high quality and timely delivery under your brand.",
     features: [
       "Scalable production capacity",
       "Strict quality control standards",

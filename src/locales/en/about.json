@@ -2,11 +2,11 @@
   "section": {
     "badge": "Company Profile",
     "title": "PT Maju Jaya Utama Lestari",
-    "description": "Your trusted partner in industrial paper converting, committed to precision, reliability, and scale."
+    "description": "Your trusted partner for plastic packaging manufacturing and rotogravure printing at industrial scale."
   },
   "profile": {
     "title": "Company Profile",
-    "description": "Maju Jaya Utama Lestari, Pt is located in Tangerang, Indonesia and is part of the Converted Paper Products Manufacturing Industry. Maju Jaya Utama Lestari, Pt has 100 total employees across all of its locations and generates 2.58 million in sales (USD)."
+    "description": "Maju Jaya Utama Lestari, Pt is located in Tangerang, Indonesia and operates in plastic packaging manufacturing with rotogravure printing services. Maju Jaya Utama Lestari, Pt has 100 total employees across all locations and generates 2.58 million in sales (USD)."
   },
   "stats": {
     "employees": { "label": "Employees", "value": "100" },
@@ -23,7 +23,7 @@
   },
   "industry": {
     "title": "Category",
-    "value": "Converted Paper Products Manufacturing Industry"
+    "value": "Plastic Packaging Manufacturing & Rotogravure Printing"
   },
   "mainClients": {
     "badge": "Main Clients",

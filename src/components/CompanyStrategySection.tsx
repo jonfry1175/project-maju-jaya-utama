@@ -26,8 +26,8 @@ const CompanyStrategySection = () => {
       icon: Lightbulb,
       title: isId ? "Inovasi Produk" : "Product Innovation",
       description: isId
-        ? "Pengembangan produk go green dan biodegradable berdasarkan kebutuhan pasar."
-        : "Development of go-green and biodegradable products based on market needs.",
+        ? "Pengembangan kemasan plastik, produk go green, dan biodegradable berdasarkan kebutuhan pasar."
+        : "Development of plastic packaging, go-green, and biodegradable products based on market needs.",
     },
     {
       icon: Handshake,

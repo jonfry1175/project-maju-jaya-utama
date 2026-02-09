@@ -61,8 +61,8 @@ const Products = () => {
           </h1>
           <p className="text-body text-muted-foreground mt-4 max-w-3xl">
             {isId
-              ? "Lini produk kami mencakup solusi plastik, biodegradable, paper bag, dan non-woven untuk kebutuhan retail, F&B, dan industri skala besar."
-              : "Our portfolio includes plastic, biodegradable, paper bag, and non-woven solutions for retail, F&B, and large-scale industrial operations."}
+              ? "Lini produk kami mencakup kemasan plastik dan rotogravure printing, dengan opsi biodegradable, paper bag, dan non-woven untuk kebutuhan retail, F&B, dan industri skala besar."
+              : "Our portfolio includes plastic packaging and rotogravure printing, with biodegradable, paper bag, and non-woven options for retail, F&B, and large-scale industrial operations."}
           </p>
         </div>
       </MotionSection>

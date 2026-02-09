@@ -19,8 +19,8 @@ const OurCompany = () => {
       icon: Building2,
       title: isId ? "Beroperasi Sejak 1993" : "Operating Since 1993",
       description: isId
-        ? "Didirikan di kawasan industri Tangerang dengan fokus utama pada kemasan industri dan konversi kertas."
-        : "Founded in Tangerang's industrial area with a core focus on industrial packaging and paper converting.",
+        ? "Didirikan di kawasan industri Tangerang dengan fokus utama pada manufaktur kemasan plastik dan rotogravure printing."
+        : "Founded in Tangerang's industrial area with a core focus on plastic packaging manufacturing and rotogravure printing.",
     },
     {
       icon: ShieldCheck,

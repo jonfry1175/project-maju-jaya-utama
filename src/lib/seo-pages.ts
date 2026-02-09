@@ -41,14 +41,14 @@ export const staticPageMeta: Record<StaticPageKey, PageMeta> = {
   services: {
     title: "Services",
     description:
-      "Explore PT Maju Jaya Utama Lestari service portfolio covering plastic packaging, biodegradable products, paper bags, and integrated packaging consultation.",
+      "Explore PT Maju Jaya Utama Lestari service portfolio covering plastic packaging, rotogravure printing, biodegradable products, and integrated packaging consultation.",
     path: "/services",
     image: defaultImage,
   },
   products: {
     title: "Products",
     description:
-      "Browse PT Maju Jaya Utama Lestari products for industrial, retail, and commercial packaging requirements.",
+      "Browse PT Maju Jaya Utama Lestari products for industrial, retail, and commercial plastic packaging requirements.",
     path: "/products",
     image: defaultImage,
   },

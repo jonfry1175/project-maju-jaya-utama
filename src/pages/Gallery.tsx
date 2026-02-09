@@ -157,8 +157,8 @@ const kalimantan: ImgItem[] = [
     id: "kal-1",
     src: "/assets/images/services/paper-converting.png",
     alt: {
-      en: "Paper converting system",
-      id: "Sistem konversi kertas",
+      en: "Rotogravure printing system",
+      id: "Sistem rotogravure printing",
     },
     project: "kalimantan",
   },
@@ -218,7 +218,7 @@ const getCopy = (isId: boolean): GalleryCopy => {
       featuredAlts: {
         operations: "Sorotan operasional pabrik",
         productionFloor: "Sorotan area produksi",
-        paperConverting: "Sorotan proses konversi kertas",
+        paperConverting: "Sorotan proses rotogravure printing",
         industrialPackaging: "Sorotan proses kemasan industri",
       },
       categories: {
@@ -235,7 +235,7 @@ const getCopy = (isId: boolean): GalleryCopy => {
         kalimantan: {
           title: "Produk dan Packaging",
           badge: "Packaging",
-          description: "Hasil akhir konversi dan kemasan produk.",
+          description: "Hasil akhir kemasan plastik dan cetak produk.",
         },
       },
     };
@@ -276,7 +276,7 @@ const getCopy = (isId: boolean): GalleryCopy => {
     featuredAlts: {
       operations: "Featured factory operations",
       productionFloor: "Featured production floor",
-      paperConverting: "Featured paper converting",
+      paperConverting: "Featured rotogravure printing",
       industrialPackaging: "Featured industrial packaging",
     },
     categories: {
@@ -293,7 +293,7 @@ const getCopy = (isId: boolean): GalleryCopy => {
       kalimantan: {
         title: "Products and Packaging",
         badge: "Packaging",
-        description: "Final converted paper and packaging output.",
+        description: "Final plastic packaging and printed packaging output.",
       },
     },
   };

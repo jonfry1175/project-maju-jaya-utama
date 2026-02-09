@@ -36,13 +36,13 @@ const ProjectsSection = () => {
           </span>
           <h2 className="heading-md mt-2">
             {isId
-              ? "Kapabilitas Utama untuk Solusi Kemasan"
-              : "Core Capabilities for Packaging Solutions"}
+              ? "Kapabilitas Utama untuk Kemasan Plastik & Rotogravure"
+              : "Core Capabilities for Plastic Packaging & Rotogravure"}
           </h2>
           <p className="text-body text-muted-foreground mt-3">
             {isId
-              ? "Sorotan layanan utama kami untuk mendukung kebutuhan kemasan dan supply chain Anda."
-              : "A curated view of our core services designed to support your packaging and supply chain needs."}
+              ? "Sorotan layanan utama kami untuk mendukung kebutuhan kemasan plastik dan supply chain Anda."
+              : "A curated view of our core services designed to support your plastic packaging and supply chain needs."}
           </p>
         </div>
 

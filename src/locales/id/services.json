@@ -1,13 +1,13 @@
 {
   "section": {
     "badge": "Produk Kami",
-    "title": "Solusi Kertas untuk Industri",
-    "description": "Dari kemasan pelindung hingga roll konversi kustom, kami menyediakan material esensial untuk operasi Anda."
+    "title": "Solusi Kemasan Plastik untuk Industri",
+    "description": "Dari film packaging hingga rotogravure printing kustom, kami menyediakan solusi kemasan untuk operasi Anda."
   },
   "items": [
     {
-      "title": "Konversi & Slitting Kertas",
-      "description": "Pemotongan presisi dari parent roll menjadi ukuran dan diameter spesifik untuk aplikasi Anda.",
+      "title": "Film Packaging & Slitting",
+      "description": "Pemotongan presisi material film menjadi lebar dan diameter sesuai kebutuhan aplikasi Anda.",
       "detailDescription": "Kami menyediakan layanan slitting dan rewinding presisi tinggi untuk mengonversi master roll menjadi ukuran yang sesuai dengan kebutuhan mesin Anda. Peralatan modern kami menghasilkan potongan rapi dan gulungan yang stabil.",
       "features": [
         "Kemampuan lebar dan diameter kustom",
@@ -16,29 +16,29 @@
       ]
     },
     {
-      "title": "Kertas Kemasan Industri",
-      "description": "Grade kertas berdaya tahan tinggi yang dirancang untuk melindungi barang Anda selama penyimpanan dan transit.",
-      "detailDescription": "Kertas kemasan industri kami dirancang untuk kekuatan dan perlindungan maksimal. Cocok untuk wrapping, interleaving, dan void filling agar produk Anda tiba dengan aman.",
+      "title": "Kemasan Plastik Industri",
+      "description": "Material kemasan plastik berdaya tahan tinggi untuk melindungi produk selama penyimpanan dan distribusi.",
+      "detailDescription": "Solusi kemasan plastik industri kami dirancang untuk kekuatan, stabilitas, dan konsistensi kualitas. Cocok untuk kebutuhan retail, distribusi, dan operasi manufaktur berskala besar.",
       "features": [
         "Kekuatan tarik dan sobek yang tinggi",
-        "Beragam gramatur (GSM) tersedia",
+        "Pilihan material sesuai aplikasi",
         "Kualitas dan hasil akhir konsisten"
       ]
     },
     {
-      "title": "Format Kustom",
-      "description": "Opsi roll dan lembaran fleksibel untuk meminimalkan limbah dan memaksimalkan efisiensi di fasilitas Anda.",
-      "detailDescription": "Kami memahami bahwa ukuran standar tidak selalu cocok untuk setiap aplikasi. Layanan sheeting dan formatting kustom kami menyediakan dimensi kertas yang tepat, mengurangi limbah, dan mengoptimalkan proses produksi Anda.",
+      "title": "Rotogravure Printing Kustom",
+      "description": "Pencetakan rotogravure presisi tinggi untuk identitas merek dan informasi produk yang konsisten.",
+      "detailDescription": "Layanan rotogravure printing kami mendukung hasil cetak detail, stabil antar batch, dan sesuai spesifikasi desain kemasan Anda.",
       "features": [
-        "Sheeting presisi sesuai panjang kustom",
-        "Optimasi yield untuk mengurangi scrap",
-        "Minimum order quantity yang fleksibel"
+        "Kualitas cetak tajam dan konsisten",
+        "Presisi warna antar batch",
+        "Dukungan spesifikasi desain kustom"
       ]
     },
     {
       "title": "Maklon Manufaktur",
-      "description": "Layanan toll manufacturing (maklon) yang andal untuk memperluas kapasitas produksi Anda tanpa investasi modal.",
-      "detailDescription": "Manfaatkan keahlian dan fasilitas manufaktur kami untuk memproduksi produk kertas Anda. Kami bertindak sebagai mitra produksi yang memastikan kualitas tinggi dan pengiriman tepat waktu atas nama merek Anda.",
+      "description": "Layanan toll manufacturing (maklon) untuk memperluas kapasitas produksi Anda tanpa investasi modal besar.",
+      "detailDescription": "Manfaatkan keahlian dan fasilitas manufaktur kami untuk memproduksi produk kemasan Anda. Kami bertindak sebagai mitra produksi yang memastikan kualitas tinggi dan pengiriman tepat waktu atas nama merek Anda.",
       "features": [
         "Kapasitas produksi yang dapat diskalakan",
         "Standar kontrol kualitas yang ketat",

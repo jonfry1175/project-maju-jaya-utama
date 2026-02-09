@@ -38,8 +38,8 @@ const CompanyAwards = () => {
         year: "2010+",
         title: isId ? "Ekspansi Lini Produk" : "Product Line Expansion",
         description: isId
-          ? "Perluasan portofolio ke produk go green, biodegradable, paper bag, dan non-woven."
-          : "Portfolio expansion into go-green, biodegradable, paper bag, and non-woven products.",
+          ? "Perluasan portofolio kemasan plastik, go green, biodegradable, paper bag, dan non-woven."
+          : "Portfolio expansion into plastic packaging, go-green, biodegradable, paper bag, and non-woven products.",
         image: "/assets/images/hero-manufacturing-v2.png",
       },
       {

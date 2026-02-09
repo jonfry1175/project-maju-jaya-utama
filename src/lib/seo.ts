@@ -7,13 +7,14 @@ export const siteMetadata = {
   siteUrl: "https://majujaya-utama-lestari.com",
   locale: "id_ID",
   defaultTitle:
-    "PT Maju Jaya Utama Lestari | Packaging and Converted Paper Products",
+    "PT Maju Jaya Utama Lestari | Plastic Packaging and Rotogravure Printing",
   defaultDescription:
-    "PT Maju Jaya Utama Lestari is a packaging manufacturer established in 1993, serving PP, HDPE, LDPE, biodegradable products, paper bags, and non-woven solutions.",
+    "PT Maju Jaya Utama Lestari is a packaging manufacturer established in 1993, focused on plastic packaging and rotogravure printing, serving PP, HDPE, LDPE, biodegradable, paper bag, and non-woven portfolio needs.",
   defaultKeywords: [
     "PT Maju Jaya Utama Lestari",
     "plastic packaging Indonesia",
     "biodegradable plastic",
+    "rotogravure printing Indonesia",
     "paper bag manufacturer",
     "spunbond bag",
     "Tangerang packaging factory",
@@ -182,7 +183,7 @@ export const createContactPageJsonLd = () => ({
   name: `${siteMetadata.name} Contact`,
   url: buildCanonicalUrl("/contact"),
   description:
-    "Contact PT Maju Jaya Utama Lestari for packaging product inquiries, custom specifications, and partnership opportunities.",
+    "Contact PT Maju Jaya Utama Lestari for plastic packaging and rotogravure printing inquiries, custom specifications, and partnership opportunities.",
   inLanguage: siteMetadata.locale,
   publisher: {
     "@id": siteMetadata.organizationId,

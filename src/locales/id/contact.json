@@ -30,35 +30,35 @@
     "heading": "Kirim Pesan",
     "subheading": "Pertanyaan langsung ke tim manufaktur kami",
     "fields": {
-      "name": { 
+      "name": {
         "label": "Nama Lengkap",
-        "placeholder": "Masukkan nama Anda" 
+        "placeholder": "Masukkan nama Anda"
       },
-      "email": { 
+      "email": {
         "label": "Email Bisnis",
-        "placeholder": "nama@perusahaan.com" 
+        "placeholder": "nama@perusahaan.com"
       },
-      "company": { 
+      "company": {
         "label": "Nama Perusahaan",
-        "placeholder": "Organisasi Anda" 
+        "placeholder": "Organisasi Anda"
       },
-      "phone": { 
+      "phone": {
         "label": "Nomor Telepon",
-        "placeholder": "+62 812-3456-7890" 
+        "placeholder": "+62 812-3456-7890"
       },
       "product": {
         "label": "Produk yang Diminati",
         "placeholder": "Pilih kategori produk",
         "options": [
-          "Roll Kertas Konversi",
-          "Kemasan Industri",
-          "Layanan Slitting Kustom",
+          "Kemasan Plastik Industri",
+          "Film Packaging & Slitting",
+          "Rotogravure Printing Kustom",
           "Lainnya / Pertanyaan Umum"
         ]
       },
-      "message": { 
+      "message": {
         "label": "Detail Proyek",
-        "placeholder": "Jelaskan spesifikasi, estimasi volume, dan persyaratan khusus lainnya." 
+        "placeholder": "Jelaskan spesifikasi, estimasi volume, dan persyaratan khusus lainnya."
       }
     },
     "submit": "Minta Penawaran",

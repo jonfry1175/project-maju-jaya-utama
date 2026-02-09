@@ -2,11 +2,11 @@
   "section": {
     "badge": "Profil Perusahaan",
     "title": "PT Maju Jaya Utama Lestari",
-    "description": "Mitra terpercaya Anda dalam konversi kertas industri, berkomitmen pada presisi, keandalan, dan skala."
+    "description": "Mitra terpercaya manufaktur kemasan plastik dan rotogravure printing untuk kebutuhan industri skala besar."
   },
   "profile": {
     "title": "Profil Perusahaan",
-    "description": "Maju Jaya Utama Lestari, Pt berlokasi di Tangerang, Indonesia dan merupakan bagian dari Industri Manufaktur Produk Kertas Konversi. Maju Jaya Utama Lestari, Pt memiliki total 100 karyawan di seluruh lokasi dan menghasilkan penjualan sebesar 2,58 juta (USD)."
+    "description": "Maju Jaya Utama Lestari, Pt berlokasi di Tangerang, Indonesia dan bergerak di bidang manufaktur kemasan plastik serta layanan rotogravure printing. Maju Jaya Utama Lestari, Pt memiliki total 100 karyawan di seluruh lokasi dan menghasilkan penjualan sebesar 2,58 juta (USD)."
   },
   "stats": {
     "employees": { "label": "Karyawan", "value": "100" },
@@ -23,7 +23,7 @@
   },
   "industry": {
     "title": "Kategori",
-    "value": "Industri Manufaktur Produk Kertas Konversi"
+    "value": "Manufaktur Kemasan Plastik & Rotogravure Printing"
   },
   "mainClients": {
     "badge": "Klien Utama",

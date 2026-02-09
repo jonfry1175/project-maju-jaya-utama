@@ -1,16 +1,16 @@
 {
-  "badge": "Industrial Paper Solutions",
-  "title": "Precision Paper Converting",
-  "titleHighlight": "for High-Volume Industries",
-  "description": "Keep your production lines running with precision-converted paper products. We deliver custom sizing, consistent quality, and reliable supply chains from our Tangerang facility.",
-  "chips": ["Custom sizing", "Consistent batches", "Reliable dispatch"],
+  "badge": "Plastic Packaging Manufacturing",
+  "title": "Precision Plastic Packaging",
+  "titleHighlight": "with Rotogravure Printing",
+  "description": "Keep your production lines running with consistent plastic packaging and precise rotogravure print quality. We support custom specifications, stable batch quality, and reliable delivery from our Tangerang facility.",
+  "chips": ["Custom specifications", "Stable batch quality", "Reliable delivery"],
   "cta": {
     "primary": "Get a Quote",
     "secondary": "Contact Us"
   },
   "stats": {
     "employees": { "label": "Employees", "value": "100" },
-    "industry": { "label": "Industry", "value": "Converted Paper Products" },
+    "industry": { "label": "Industry", "value": "Plastic Packaging & Rotogravure" },
     "location": { "label": "Location", "value": "Tangerang, Indonesia" }
   }
 }

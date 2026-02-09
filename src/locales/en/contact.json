@@ -30,35 +30,35 @@
     "heading": "Send a Message",
     "subheading": "Direct inquiries to our manufacturing team",
     "fields": {
-      "name": { 
+      "name": {
         "label": "Full Name",
-        "placeholder": "Enter your name" 
+        "placeholder": "Enter your name"
       },
-      "email": { 
+      "email": {
         "label": "Business Email",
-        "placeholder": "name@company.com" 
+        "placeholder": "name@company.com"
       },
-      "company": { 
+      "company": {
         "label": "Company Name",
-        "placeholder": "Your organization" 
+        "placeholder": "Your organization"
       },
-      "phone": { 
+      "phone": {
         "label": "Phone Number",
-        "placeholder": "+62 812-3456-7890" 
+        "placeholder": "+62 812-3456-7890"
       },
       "product": {
         "label": "Product Interest",
         "placeholder": "Select a product category",
         "options": [
-          "Converted Paper Rolls",
-          "Industrial Packaging",
-          "Custom Slitting Services",
+          "Industrial Plastic Packaging",
+          "Film Packaging & Slitting",
+          "Custom Rotogravure Printing",
           "Other / General Inquiry"
         ]
       },
-      "message": { 
+      "message": {
         "label": "Project Details",
-        "placeholder": "Please describe your specifications, estimated volume, and any special requirements." 
+        "placeholder": "Please describe your specifications, estimated volume, and any special requirements."
       }
     },
     "submit": "Request Quote",

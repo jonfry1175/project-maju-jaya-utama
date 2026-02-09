@@ -49,8 +49,8 @@ const VisionMissionSection = () => {
               <ul className="space-y-2 text-body text-muted-foreground list-disc pl-5">
                 <li>
                   {isId
-                    ? "Menyediakan solusi kemasan berbasis kebutuhan pelanggan dengan spesifikasi yang tepat."
-                    : "Deliver customer-needs-based packaging solutions with accurate specifications."}
+                    ? "Menyediakan solusi kemasan plastik berbasis kebutuhan pelanggan dengan spesifikasi yang tepat."
+                    : "Deliver customer-needs-based plastic packaging solutions with accurate specifications."}
                 </li>
                 <li>
                   {isId
