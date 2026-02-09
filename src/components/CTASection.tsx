@@ -44,7 +44,7 @@ const CTASection = () => {
                 <Button
                   asChild
                   variant="outline"
-                  className="border-white/30 text-white hover:text-white hover:bg-white/15"
+                  className="bg-transparent border-white/30 text-white hover:text-white hover:bg-transparent"
                 >
                   <a href={`mailto:${siteMetadata.contactEmail}`}>
                     <Mail className="mr-2 h-4 w-4" />
