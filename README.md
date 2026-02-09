@@ -1,4 +1,4 @@
-# PT Maju Jaya Utama Lestari
+# PT Maju Jaya Utama Lestari.
 
 A modern single-page application for PT Maju Jaya Utama Lestari, an Indonesian converted paper products manufacturer based in Tangerang.
 
