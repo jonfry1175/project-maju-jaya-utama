@@ -29,8 +29,6 @@ const Location = lazy(() => import("./pages/Location"));
 const CareerEmployee = lazy(() => import("./pages/CareerEmployee"));
 const CareerIntern = lazy(() => import("./pages/CareerIntern"));
 const OurCompany = lazy(() => import("./pages/about-us/OurCompany"));
-const OurTeam = lazy(() => import("./pages/about-us/OurTeam"));
-const TeamMemberDetail = lazy(() => import("./pages/about-us/TeamMemberDetail"));
 const Certifications = lazy(() => import("./pages/about-us/Certifications"));
 const CompanyAwards = lazy(() => import("./pages/about-us/CompanyAwards"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -69,7 +67,7 @@ const AnimatedRoutes = () => {
               </Page>
             }
           />
-          <Route
+          {/* <Route
             path="/about-us/our-team"
             element={
               <Page>
@@ -84,7 +82,7 @@ const AnimatedRoutes = () => {
                 <TeamMemberDetail />
               </Page>
             }
-          />
+          /> */}
           <Route
             path="/about-us/certifications"
             element={

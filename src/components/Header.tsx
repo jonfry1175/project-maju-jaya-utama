@@ -46,7 +46,6 @@ const Header = () => {
         matcher: (pathname) => pathname.startsWith("/about-us"),
         children: [
           { label: t("nav.aboutCompany"), path: "/about-us/our-company" },
-          { label: t("nav.aboutTeam"), path: "/about-us/our-team" },
           {
             label: t("nav.aboutCertifications"),
             path: "/about-us/certifications",
@@ -57,7 +56,6 @@ const Header = () => {
       { label: t("nav.products"), path: "/products" },
       { label: t("nav.gallery"), path: "/gallery" },
       { label: t("nav.capabilities"), path: "/services" },
-      { label: t("nav.sustainability"), path: "/news" },
       {
         label: t("nav.career"),
         path: "/career/employee",
@@ -67,6 +65,7 @@ const Header = () => {
           { label: t("nav.careerIntern"), path: "/career/intern" },
         ],
       },
+      { label: t("nav.sustainability"), path: "/news" },
       { label: t("nav.contact"), path: "/contact" },
     ],
     [t],
@@ -191,7 +190,7 @@ const Header = () => {
                     // Hide scrollbar (cross-browser) to keep the header clean.
                     "[-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
                   )}
-                  aria-label="Primary"
+                  aria-label={t("accessibility.primaryNavigation")}
                 >
                 {navItems.map((item) => {
                   const active = isActive(item);
