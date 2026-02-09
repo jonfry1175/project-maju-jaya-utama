@@ -29,14 +29,14 @@ const LanguageSwitcher = () => {
         <Button 
           variant="outline" 
           size="sm" 
-          className="h-11 2xl:h-12 px-2.5 2xl:px-3 bg-white border-border/70 hover:border-primary/35 text-foreground rounded-2xl transition-all duration-300 shadow-[0_18px_55px_-48px_hsl(var(--foreground)_/_0.35)]"
+          className="h-10 xl:h-10 2xl:h-12 px-2 xl:px-2 2xl:px-3 bg-white border-border/70 hover:border-primary/35 text-foreground rounded-2xl transition-all duration-300 shadow-[0_18px_55px_-48px_hsl(var(--foreground)_/_0.35)]"
         >
           <img
             src={currentLanguage.flag}
             alt={currentLanguage.name}
-            className="w-5 h-3.5 object-cover rounded-sm mr-2 shadow-sm"
+            className="w-5 h-3.5 object-cover rounded-sm mr-1.5 2xl:mr-2 shadow-sm"
           />
-          <span className="text-[12px] font-mono font-semibold uppercase tracking-[0.28em]">
+          <span className="text-[11px] 2xl:text-[12px] font-mono font-semibold uppercase tracking-[0.24em] 2xl:tracking-[0.28em]">
             {currentLanguage.code}
           </span>
         </Button>

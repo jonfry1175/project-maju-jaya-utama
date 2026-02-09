@@ -79,8 +79,8 @@ const Header = () => {
   const navPillClass = (active: boolean, open = false) =>
     cn(
       "group relative isolate inline-flex items-center rounded-full",
-      "py-2 px-2 2xl:px-3.5",
-      "text-[14px] 2xl:text-[16px] font-medium tracking-[0.005em] whitespace-nowrap leading-none",
+      "py-1.5 px-1.5 xl:px-1.5 2xl:px-3",
+      "text-[13px] 2xl:text-[15px] font-medium tracking-[0.004em] whitespace-nowrap leading-none",
       "transition-[color,background-color,box-shadow,border-color] duration-300",
       "ring-1 ring-transparent",
       "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
@@ -106,7 +106,7 @@ const Header = () => {
 
   const navUnderlineClass = (active: boolean, open = false) =>
     cn(
-      "absolute left-3 right-3 bottom-1.5 rounded-full",
+      "absolute left-3 right-3 bottom-0 rounded-full",
       "bg-gradient-to-r from-primary via-primary to-accent/70 origin-left",
       "transition-transform duration-300",
       active || open
@@ -145,10 +145,10 @@ const Header = () => {
           <div className="absolute inset-0 bg-noise opacity-[0.02]" />
         </div>
 
-        <div className="container mx-auto container-padding relative z-10 max-w-7xl">
+        <div className="container mx-auto container-padding relative z-10 max-w-[90rem]">
           <div
             className={cn(
-              "relative mx-auto flex items-center justify-between gap-3 rounded-[2rem] border px-4 xl:px-5 py-3 bg-white shadow-[0_22px_70px_-50px_hsl(var(--foreground)_/_0.45)]",
+              "relative mx-auto flex items-center justify-between gap-2 xl:gap-2.5 rounded-[2rem] border px-4 xl:px-4.5 py-3 bg-white shadow-[0_22px_70px_-50px_hsl(var(--foreground)_/_0.45)]",
               isScrolled
                 ? "border-border/70 shadow-[0_22px_70px_-48px_hsl(var(--foreground)_/_0.55)]"
                 : "border-border/60",
@@ -159,36 +159,25 @@ const Header = () => {
 
             <Link
               to="/"
-              className="group flex items-center gap-3 select-none shrink-0"
+              className="group relative flex items-center gap-3 select-none shrink-0"
             >
-              <div className="absolute -inset-10 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="pointer-events-none absolute -inset-10 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <img
                 src="/logo.png"
                 alt={t("companyName")}
                 className={cn(
                   "relative z-10 w-auto object-contain transition-all duration-300",
                   "h-10 sm:h-11 md:h-12",
-                  "max-w-[170px] sm:max-w-[200px] md:max-w-[220px] xl:max-w-[220px] 2xl:max-w-[260px]",
+                  "max-w-[170px] sm:max-w-[200px] md:max-w-[220px] xl:max-w-[185px] 2xl:max-w-[240px]",
                 )}
               />
             </Link>
 
             <div className="hidden xl:flex flex-1 justify-center min-w-0">
-              <div
-                className={cn(
-                  "relative max-w-full overflow-hidden",
-                  // Soft edge fades to hint horizontal scroll when space is tight.
-                  "before:absolute before:inset-y-0 before:left-0 before:w-8 before:bg-gradient-to-r before:from-white/95 before:to-transparent before:pointer-events-none before:z-10",
-                  "after:absolute after:inset-y-0 after:right-0 after:w-8 after:bg-gradient-to-l after:from-white/95 after:to-transparent after:pointer-events-none after:z-10",
-                )}
-              >
+              <div className="relative max-w-full">
                 <nav
                   className={cn(
-                    // Padding ensures first/last items don't sit under the fade masks.
-                    "flex items-center gap-0.5 px-9 2xl:px-10",
-                    "max-w-full overflow-x-auto overscroll-x-contain",
-                    // Hide scrollbar (cross-browser) to keep the header clean.
-                    "[-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+                    "flex items-center gap-0 px-1 2xl:px-4",
                   )}
                   aria-label={t("accessibility.primaryNavigation")}
                 >
@@ -377,7 +366,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 xl:gap-3 shrink-0">
+            <div className="flex items-center gap-2 xl:gap-2.5 shrink-0">
               <div className="hidden sm:block">
                 <LanguageSwitcher />
               </div>
@@ -385,7 +374,7 @@ const Header = () => {
               <Button
                 asChild
                 className={cn(
-                  "hidden sm:inline-flex group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground text-[14px] 2xl:text-[16px] font-semibold tracking-[0.01em] shadow-[0_18px_55px_-28px_hsl(var(--primary)_/_0.65)] hover:shadow-[0_22px_70px_-28px_hsl(var(--primary)_/_0.78)] transition-all duration-500 rounded-2xl h-11 2xl:h-12 px-4 2xl:px-7 whitespace-nowrap",
+                  "hidden sm:inline-flex group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground text-[14px] 2xl:text-[16px] font-semibold tracking-[0.01em] shadow-[0_18px_55px_-28px_hsl(var(--primary)_/_0.65)] hover:shadow-[0_22px_70px_-28px_hsl(var(--primary)_/_0.78)] transition-all duration-500 rounded-2xl h-11 2xl:h-12 px-4 xl:px-4 2xl:px-6 whitespace-nowrap",
                 )}
               >
                 <Link to="/contact" className="relative">
