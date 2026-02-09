@@ -20,11 +20,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Work Sans", "system-ui", "sans-serif"],
-        display: ["Fraunces", "Georgia", "serif"],
+        sans: ["Outfit", "system-ui", "sans-serif"],
+        display: ["Source Serif 4", "Georgia", "Times New Roman", "serif"],
         mono: ["IBM Plex Mono", "ui-monospace", "SFMono-Regular", "monospace"],
-        heading: ["Fraunces", "Georgia", "serif"],
-        body: ["Work Sans", "system-ui", "sans-serif"],
+        heading: ["Source Serif 4", "Georgia", "Times New Roman", "serif"],
+        body: ["Outfit", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
