@@ -17,6 +17,7 @@ const namespaces = Array.from(
 
 i18n.use(LanguageDetector).use(initReactI18next).init({
   resources,
+  lng: "id",
   fallbackLng: "id",
   defaultNS: "common",
   ns: namespaces,
@@ -25,7 +26,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
     escapeValue: false,
   },
   detection: {
-    order: ["localStorage", "navigator", "htmlTag"],
+    order: ["localStorage", "htmlTag"],
     caches: ["localStorage"],
   },
 });
