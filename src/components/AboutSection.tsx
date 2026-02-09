@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Building2, MapPin, Phone, Users } from "lucide-react";
+import { MapPin, Phone, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -12,11 +12,6 @@ const AboutSection = () => {
       icon: Users,
       label: t("stats.employees.label"),
       value: t("stats.employees.value"),
-    },
-    {
-      icon: Building2,
-      label: t("stats.sales.label"),
-      value: t("stats.sales.value"),
     },
     {
       icon: MapPin,
@@ -74,15 +69,15 @@ const AboutSection = () => {
             </AnimatedSection>
 
             <motion.div 
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {stats.map((stat) => (
-                <motion.div key={stat.label} variants={itemVariants} className="group">
-                  <div className="p-6 bg-card/40 backdrop-blur-md border border-primary/10 rounded-2xl hover:border-primary/30 transition-all duration-300">
+                <motion.div key={stat.label} variants={itemVariants} className="group h-full">
+                  <div className="h-full p-6 bg-card/40 backdrop-blur-md border border-primary/10 rounded-2xl hover:border-primary/30 transition-all duration-300 flex flex-col">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <stat.icon className="w-6 h-6 text-primary" />
                     </div>

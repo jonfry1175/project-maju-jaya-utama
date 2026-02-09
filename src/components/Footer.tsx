@@ -11,7 +11,6 @@ const Footer = () => {
   const quickLinks = [
     { name: t("links.about"), to: "/about-us/our-company" },
     { name: t("links.products"), to: "/products" },
-    { name: t("links.capabilities"), to: "/services" },
     { name: t("links.sustainability"), to: "/news" },
     { name: t("links.contact"), to: "/contact" },
   ];

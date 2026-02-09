@@ -18,8 +18,8 @@ import {
 const queryClient = new QueryClient();
 
 const Index = lazy(() => import("./pages/Index"));
-const Services = lazy(() => import("./pages/Services"));
-const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+// const Services = lazy(() => import("./pages/Services"));
+// const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
 const Products = lazy(() => import("./pages/Products"));
 const News = lazy(() => import("./pages/News"));
 const NewsDetail = lazy(() => import("./pages/NewsDetail"));
@@ -139,7 +139,7 @@ const AnimatedRoutes = () => {
               </Page>
             }
           />
-          <Route
+          {/* <Route
             path="/services"
             element={
               <Page>
@@ -154,7 +154,7 @@ const AnimatedRoutes = () => {
                 <ServiceDetail />
               </Page>
             }
-          />
+          /> */}
           <Route
             path="/career"
             element={<Navigate to="/career/employee" replace />}
