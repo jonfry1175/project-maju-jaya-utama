@@ -79,25 +79,21 @@ const Header = () => {
   const navPillClass = (active: boolean, open = false) =>
     cn(
       "group relative isolate inline-flex items-center rounded-full",
-      "py-1.5 px-1.5 xl:px-1.5 2xl:px-3",
-      "text-[13px] 2xl:text-[15px] font-medium tracking-[0.004em] whitespace-nowrap leading-none",
+      "py-1.5 px-2.5 xl:px-2.5 2xl:px-3.5",
+      "text-[14px] 2xl:text-[15px] font-medium tracking-[0.004em] whitespace-nowrap leading-none",
       "transition-[color,background-color,box-shadow,border-color] duration-300",
       "ring-1 ring-transparent",
       "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
       active || open
         ? cn(
             "text-foreground font-semibold",
-            "bg-foreground/[0.055] ring-primary/25",
-            "shadow-[0_18px_55px_-46px_hsl(var(--primary)_/_0.70)]",
+            "bg-foreground/[0.055] ring-primary/15",
             "before:absolute before:inset-0 before:rounded-full before:pointer-events-none",
-            "before:bg-[radial-gradient(140%_120%_at_20%_0%,hsl(var(--primary)_/_0.18)_0%,transparent_60%)] before:opacity-100",
-            "after:absolute after:left-3 after:right-3 after:top-1.5 after:h-px after:pointer-events-none",
-            "after:bg-gradient-to-r after:from-white/70 after:via-white/25 after:to-transparent after:opacity-80",
+            "before:bg-[radial-gradient(140%_120%_at_20%_0%,hsl(var(--primary)_/_0.10)_0%,transparent_60%)] before:opacity-100",
           )
         : cn(
             "text-foreground/70",
             "hover:text-foreground hover:bg-foreground/[0.045] hover:ring-border/45",
-            "hover:shadow-[0_14px_40px_-44px_hsl(var(--foreground)_/_0.65)]",
             "before:absolute before:inset-0 before:rounded-full before:pointer-events-none",
             "before:bg-[radial-gradient(140%_120%_at_20%_0%,hsl(var(--primary)_/_0.12)_0%,transparent_60%)] before:opacity-0",
             "hover:before:opacity-100",
@@ -110,7 +106,7 @@ const Header = () => {
       "bg-gradient-to-r from-primary via-primary to-accent/70 origin-left",
       "transition-transform duration-300",
       active || open
-        ? "scale-x-100 h-[3px] shadow-[0_10px_24px_-14px_hsl(var(--primary)_/_0.95)]"
+        ? "scale-x-100 h-[3px]"
         : "scale-x-0 h-[2px] group-hover:scale-x-100",
     );
 
@@ -125,7 +121,7 @@ const Header = () => {
     clearCloseTimer();
     closeDropdownTimer.current = window.setTimeout(() => {
       setOpenDropdown(null);
-    }, 260);
+    }, 350);
   };
 
   return (
@@ -137,21 +133,17 @@ const Header = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out font-sans",
           isScrolled
-            ? "bg-transparent py-3"
+            ? "bg-white/70 backdrop-blur-xl py-2 border-b border-border/30"
             : "bg-transparent py-5 lg:py-6",
         )}
       >
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-noise opacity-[0.02]" />
-        </div>
-
         <div className="container mx-auto container-padding relative z-10 max-w-[90rem]">
           <div
             className={cn(
-              "relative mx-auto flex items-center justify-between gap-2 xl:gap-2.5 rounded-[2rem] border px-4 xl:px-4.5 py-3 bg-white shadow-[0_22px_70px_-50px_hsl(var(--foreground)_/_0.45)]",
+              "relative mx-auto flex items-center justify-between gap-2 xl:gap-2.5 border px-4 xl:px-4.5 transition-all duration-500",
               isScrolled
-                ? "border-border/70 shadow-[0_22px_70px_-48px_hsl(var(--foreground)_/_0.55)]"
-                : "border-border/60",
+                ? "rounded-[1.25rem] py-2 bg-white/80 backdrop-blur-sm border-border/70 shadow-[0_8px_30px_-12px_hsl(var(--foreground)_/_0.12)]"
+                : "rounded-[2rem] py-3 bg-white border-border/60 shadow-[0_22px_70px_-50px_hsl(var(--foreground)_/_0.45)]",
             )}
           >
             <div className="absolute inset-0 bg-noise opacity-[0.045] pointer-events-none rounded-[2rem]" />
@@ -167,7 +159,9 @@ const Header = () => {
                 alt={t("companyName")}
                 className={cn(
                   "relative z-10 w-auto object-contain transition-all duration-300",
-                  "h-10 sm:h-11 md:h-12",
+                  isScrolled
+                    ? "h-8 sm:h-9 md:h-10"
+                    : "h-10 sm:h-11 md:h-12",
                   "max-w-[170px] sm:max-w-[200px] md:max-w-[220px] xl:max-w-[185px] 2xl:max-w-[240px]",
                 )}
               />
@@ -246,7 +240,7 @@ const Header = () => {
                                   sideOffset={12}
                                   onOpenAutoFocus={(e) => e.preventDefault()}
                                   className={cn(
-                                    "relative min-w-[280px] rounded-2xl border border-border/70 bg-white/95 shadow-[0_30px_90px_-55px_hsl(var(--foreground)_/_0.85)] outline-none backdrop-blur-xl",
+                                    "relative min-w-[280px] rounded-2xl border border-border/70 bg-white/95 shadow-[0_30px_90px_-55px_hsl(var(--foreground)_/_0.15)] outline-none backdrop-blur-xl",
                                     "data-[state=open]:animate-in data-[state=closed]:animate-out",
                                     "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
                                     "data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
@@ -262,7 +256,6 @@ const Header = () => {
                                 >
                                   <div className="absolute inset-0 bg-noise opacity-[0.035] pointer-events-none rounded-2xl" />
                                   <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-primary/70 via-accent/30 to-transparent" />
-                                  <div className="absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
 
                                   <div className="relative rounded-2xl overflow-hidden">
                                     <div className="px-4 pt-3 pb-2">
@@ -367,14 +360,12 @@ const Header = () => {
             </div>
 
             <div className="flex items-center gap-2 xl:gap-2.5 shrink-0">
-              <div className="hidden sm:block">
-                <LanguageSwitcher />
-              </div>
+              <LanguageSwitcher />
 
               <Button
                 asChild
                 className={cn(
-                  "hidden sm:inline-flex group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground text-[14px] 2xl:text-[16px] font-semibold tracking-[0.01em] shadow-[0_18px_55px_-28px_hsl(var(--primary)_/_0.65)] hover:shadow-[0_22px_70px_-28px_hsl(var(--primary)_/_0.78)] transition-all duration-500 rounded-2xl h-11 2xl:h-12 px-4 xl:px-4 2xl:px-6 whitespace-nowrap",
+                  "hidden sm:inline-flex group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground text-[14px] 2xl:text-[16px] font-semibold tracking-[0.01em] border-2 border-white/20 shadow-[0_18px_55px_-28px_hsl(var(--primary)_/_0.65)] hover:shadow-[0_22px_70px_-28px_hsl(var(--primary)_/_0.78)] transition-all duration-500 rounded-2xl h-11 2xl:h-12 px-4 xl:px-4 2xl:px-6 whitespace-nowrap",
                 )}
               >
                 <Link to="/contact" className="relative">
@@ -397,81 +388,91 @@ const Header = () => {
 
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 30, stiffness: 200 }}
-            className="fixed inset-0 z-40 xl:hidden bg-background flex flex-col pt-32 px-6 overflow-hidden"
-          >
-            <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 bg-grid-industrial opacity-[0.05]" />
-              <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64" />
-            </div>
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40 xl:hidden bg-black/40 backdrop-blur-sm"
+              onClick={() => setIsMenuOpen(false)}
+            />
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 30, stiffness: 200 }}
+              className="fixed top-0 right-0 bottom-0 z-40 xl:hidden w-full sm:w-[380px] bg-background flex flex-col pt-24 px-6 overflow-y-auto"
+            >
+              <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-grid-industrial opacity-[0.05]" />
+                <div className="absolute inset-0 bg-noise opacity-[0.03] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64" />
+              </div>
 
-            <nav className="relative z-10 flex flex-col gap-8 items-center text-center">
-              {navItems.map((item, index) => (
+              <nav className="relative z-10 flex flex-col gap-4 sm:gap-5 items-center text-center">
+                {navItems.map((item, index) => (
+                  <motion.div
+                    key={item.path}
+                    initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ delay: 0.08 + index * 0.04, duration: 0.4 }}
+                    className="w-full max-w-xs"
+                  >
+                    <div className="space-y-2">
+                      <Link
+                        to={item.path}
+                        className="text-xl sm:text-2xl font-semibold font-display hover:text-primary transition-all duration-300 block"
+                      >
+                        {item.label}
+                      </Link>
+                      {item.children?.length ? (
+                        <div className="mx-auto w-full rounded-2xl border border-primary/20 bg-card/70 p-2 backdrop-blur-md">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.path}
+                              to={child.path}
+                              className={cn(
+                                "block rounded-xl px-3 py-2 text-base font-semibold transition-colors",
+                                location.pathname === child.path
+                                  ? "bg-primary text-white"
+                                  : "text-foreground/80 hover:bg-primary/10 hover:text-primary",
+                              )}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+                  </motion.div>
+                ))}
+
                 <motion.div
-                  key={item.path}
-                  initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
-                  className="w-full max-w-xs"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="pt-8 flex flex-col gap-5 w-full max-w-xs"
                 >
-                  <div className="space-y-3">
-                    <Link
-                      to={item.path}
-                      className="heading-1 hover:text-primary transition-all duration-300 transform hover:scale-110 block"
-                    >
-                      {item.label}
-                    </Link>
-                    {item.children?.length ? (
-                      <div className="mx-auto w-full rounded-2xl border border-primary/20 bg-card/70 p-2 backdrop-blur-md">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.path}
-                            to={child.path}
-                            className={cn(
-                              "block rounded-xl px-3 py-2 text-base font-semibold transition-colors",
-                              location.pathname === child.path
-                                ? "bg-primary text-white"
-                                : "text-foreground/80 hover:bg-primary/10 hover:text-primary",
-                            )}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    ) : null}
+                  <div className="flex justify-center">
+                    <LanguageSwitcher />
                   </div>
+                  <Button
+                    asChild
+                    className="w-full h-14 text-lg sm:text-xl font-display font-black tracking-widest bg-primary hover:bg-primary/90 text-white shadow-2xl shadow-primary/30 rounded-2xl"
+                  >
+                    <Link to="/contact">{t("cta.contact")}</Link>
+                  </Button>
                 </motion.div>
-              ))}
+              </nav>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="pt-12 flex flex-col gap-6 w-full max-w-xs"
-              >
-                <div className="flex justify-center">
-                  <LanguageSwitcher />
-                </div>
-                <Button
-                  asChild
-                  className="w-full h-16 text-lg sm:text-xl font-display font-black tracking-widest bg-primary hover:bg-primary/90 text-white shadow-2xl shadow-primary/30 rounded-2xl"
-                >
-                  <Link to="/contact">{t("cta.contact")}</Link>
-                </Button>
-              </motion.div>
-            </nav>
-
-            <div className="absolute bottom-12 left-0 right-0 text-center">
-              <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-muted-foreground opacity-50">
-                PT MAJU JAYA UTAMA LESTARI
-              </p>
-            </div>
-          </motion.div>
+              <div className="absolute bottom-12 left-0 right-0 text-center">
+                <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-muted-foreground opacity-50">
+                  {t("companyName")}
+                </p>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
