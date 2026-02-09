@@ -7,6 +7,7 @@ const HeroSection = () => {
   const { t } = useTranslation("hero");
   const prefersReducedMotion = useReducedMotion();
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isPointerHolding, setIsPointerHolding] = useState(false);
   const dragStartX = useRef<number | null>(null);
   const isDragging = useRef(false);
   const [dragOffset, setDragOffset] = useState(0);
@@ -30,14 +31,14 @@ const HeroSection = () => {
   );
 
   useEffect(() => {
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion || isPointerHolding) return;
 
     const timer = window.setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
     }, 2000);
 
     return () => window.clearInterval(timer);
-  }, [prefersReducedMotion, slides.length]);
+  }, [prefersReducedMotion, isPointerHolding, slides.length]);
 
   const goToSlide = (nextIndex: number) => {
     const normalized = (nextIndex + slides.length) % slides.length;
@@ -53,6 +54,7 @@ const HeroSection = () => {
 
   const handlePointerDown = (event: React.PointerEvent<HTMLElement>) => {
     if ((event.target as HTMLElement).closest("button")) return;
+    setIsPointerHolding(true);
     event.currentTarget.setPointerCapture(event.pointerId);
     dragStartX.current = event.clientX;
     isDragging.current = true;
@@ -65,24 +67,25 @@ const HeroSection = () => {
   };
 
   const handlePointerUp = (event: React.PointerEvent<HTMLElement>) => {
-    if (!isDragging.current || dragStartX.current === null) return;
-
     if (event.currentTarget.hasPointerCapture(event.pointerId)) {
       event.currentTarget.releasePointerCapture(event.pointerId);
     }
 
-    const deltaX = event.clientX - dragStartX.current;
-    const swipeThreshold = 70;
+    if (isDragging.current && dragStartX.current !== null) {
+      const deltaX = event.clientX - dragStartX.current;
+      const swipeThreshold = 70;
 
-    if (deltaX > swipeThreshold) {
-      goToSlide(activeSlide - 1);
-    } else if (deltaX < -swipeThreshold) {
-      goToSlide(activeSlide + 1);
+      if (deltaX > swipeThreshold) {
+        goToSlide(activeSlide - 1);
+      } else if (deltaX < -swipeThreshold) {
+        goToSlide(activeSlide + 1);
+      }
     }
 
     dragStartX.current = null;
     isDragging.current = false;
     setDragOffset(0);
+    setIsPointerHolding(false);
   };
 
   return (
@@ -100,6 +103,12 @@ const HeroSection = () => {
         dragStartX.current = null;
         isDragging.current = false;
         setDragOffset(0);
+        setIsPointerHolding(false);
+      }}
+      onPointerLeave={() => {
+        if (!isDragging.current) {
+          setIsPointerHolding(false);
+        }
       }}
       style={{ touchAction: "pan-y", userSelect: "none" }}
     >
