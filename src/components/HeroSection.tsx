@@ -55,15 +55,15 @@ const HeroSection = () => {
   const slides = useMemo(
     () => [
       {
-        src: "/assets/images/hero-manufacturing.jpg",
+        src: "/assets/images/hero/beranda-1.jpg",
         objectPosition: "center 45%",
       },
       {
-        src: "/assets/images/hero-manufacturing-v2.png",
+        src: "/assets/images/hero/beranda-2.jpg",
         objectPosition: "center 50%",
       },
       {
-        src: "/assets/images/factory-interior.jpg",
+        src: "/assets/images/hero/beranda-3.jpg",
         objectPosition: "center 35%",
       },
     ],

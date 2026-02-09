@@ -9,9 +9,19 @@ type HeroConfig = {
 
 const HERO_CONFIGS: HeroConfig[] = [
   {
+    matcher: (pathname) => pathname.startsWith("/about-us/certifications"),
+    image: "/assets/images/hero/pages/sertifikasi.jpg",
+    objectPosition: "center 38%",
+  },
+  {
+    matcher: (pathname) => pathname.startsWith("/about-us/company-awards"),
+    image: "/assets/images/hero/pages/penghargaan-perusahaan.jpg",
+    objectPosition: "center 38%",
+  },
+  {
     matcher: (pathname) => pathname.startsWith("/about-us"),
-    image: "/assets/images/team-workers.jpg",
-    objectPosition: "center 30%",
+    image: "/assets/images/hero/pages/perusahaan-kami.jpg",
+    objectPosition: "center 36%",
   },
   {
     matcher: (pathname) => pathname.startsWith("/services"),
@@ -20,27 +30,32 @@ const HERO_CONFIGS: HeroConfig[] = [
   },
   {
     matcher: (pathname) => pathname.startsWith("/products"),
-    image: "/assets/images/products/packaging-materials.jpg",
+    image: "/assets/images/hero/pages/produk.jpg",
     objectPosition: "center 40%",
   },
   {
     matcher: (pathname) => pathname.startsWith("/gallery"),
-    image: "/assets/images/factory-interior.jpg",
+    image: "/assets/images/hero/pages/galeri.jpg",
     objectPosition: "center 34%",
   },
   {
     matcher: (pathname) => pathname.startsWith("/news"),
-    image: "/assets/images/news/factory-production.jpg",
+    image: "/assets/images/hero/pages/berita.jpg",
     objectPosition: "center 36%",
   },
   {
+    matcher: (pathname) => pathname.startsWith("/career/intern"),
+    image: "/assets/images/hero/pages/program-magang.jpg",
+    objectPosition: "center 38%",
+  },
+  {
     matcher: (pathname) => pathname.startsWith("/career"),
-    image: "/assets/images/quality-control.jpg",
+    image: "/assets/images/hero/pages/peluang-karir.jpg",
     objectPosition: "center 38%",
   },
   {
     matcher: (pathname) => pathname.startsWith("/contact"),
-    image: "/assets/images/industrial-bg.jpg",
+    image: "/assets/images/hero/pages/kontak.jpg",
     objectPosition: "center 42%",
   },
   {
@@ -50,7 +65,7 @@ const HERO_CONFIGS: HeroConfig[] = [
   },
 ];
 
-const DEFAULT_HERO_IMAGE = "/assets/images/hero-manufacturing-v2.png";
+const DEFAULT_HERO_IMAGE = "/assets/images/hero/pages/perusahaan-kami.jpg";
 
 const InnerPageHero = () => {
   const { pathname } = useLocation();
